@@ -410,14 +410,14 @@ function dayTrips(ds, tStart){
     const first = r.stops.find(s => s.t && /^\d/.test(s.t));
     const t0 = Math.max(tStart, first ? toMin(first.t) : 9*60);
     const ctx = mkCtx(ds, t0, fmt(ret), "taxi", {});
-    const stops = r.stops.filter(s => s.p).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+    const stops = r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
     let cur = "home", t = t0; const issues = [];
     for (const k of stops){
-      const tr = travel(cur, k, t, "taxi"); const ev = evaluate(k, t + tr.min, ctx);
+      const tr = travel(cur, k, t, "auto"); const ev = evaluate(k, t + tr.min, ctx);
       ev.notes.filter(n => n[0] === "bad" && !/домой/.test(n[1])).forEach(n => issues.push(`${P[k].n}: ${n[1]}`));
       cur = k; t = ev.leave;
     }
-    const home = t + travel(cur, "home", t, "taxi").min;
+    const home = t + travel(cur, "home", t, "auto").min;
     const late = home > ret;
     return {r, t0, home, issues, late, score: issues.length*100 + (late ? 500 : 0) + Math.max(0, home - 20*60)/10};
   }).sort((a, b) => a.score - b.score).slice(0, 5);
@@ -434,7 +434,7 @@ function tripItem(x){
 }
 function openRouteInPlan(r, ds, t){
   if (!r) return;
-  const stops = r.stops.filter(s => s.p).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+  const stops = r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
   const walkStart = r.kind === "ev" && !r.stops[0].drive;
   plan.start = walkStart ? stops[0] : "home"; plan.chain = walkStart ? stops.slice(1) : stops;
   plan.t = t || (r.stops.find(s => s.t && /^\d/.test(s.t)) || {t: "17:00"}).t; plan.stay = {}; plan.date = ds || todayStr();
@@ -665,13 +665,13 @@ function renderRoutes(){
   view().querySelectorAll("[data-route]").forEach(b => b.onclick = () => { S.route = b.dataset.route; store.set("y.route", S.route); renderRoutes(); $("rdetail")?.scrollIntoView({behavior: "smooth", block: "start"}); });
   $("r-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
   bindCommon();
-  if (r){ const keys = r.stops.filter(s => s.p).map(s => s.p); drawStops(keys, {foot: r.kind === "ev" && !r.stops.some(s => s.drive)}); }
+  if (r){ const keys = r.stops.filter(s => s.p && P[s.p]).map(s => s.p); drawStops(keys, {foot: keys.every(k => inCity(k))}); }
 }
 function routeDetail(r){
   let i = 0;
   const items = r.stops.map(s => {
     if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4></div></li>`;
-    i++; const p = P[s.p];
+    i++; const p = P[s.p] || {n: "…"};
     return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}</div></li>`;
   }).join("");
   return `<div class="detail" id="rdetail"><h2>${esc(r.title)}</h2><p class="why">${r.why}</p>
@@ -679,7 +679,7 @@ function routeDetail(r){
     <ol class="tl">${items}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
 }
 function routeGmaps(r){
-  const pts = r.stops.filter(s => s.p).map(s => P[s.p].ll.join(",")).filter((p, i, a) => p !== a[i-1]);
+  const pts = r.stops.filter(s => s.p && P[s.p]).map(s => P[s.p].ll.join(",")).filter((p, i, a) => p !== a[i-1]);
   const walk = r.kind === "ev" && !r.stops.some(s => s.drive);
   if (walk) return `https://www.google.com/maps/dir/?api=1&origin=${pts[0]}&destination=${pts[pts.length-1]}${pts.length > 2 ? `&waypoints=${enc(pts.slice(1,-1).join("|"))}` : ""}&travelmode=walking`;
   const home = P.home.ll.join(",");
