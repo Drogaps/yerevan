@@ -1,5 +1,5 @@
 "use strict";
-// Ереван по вечерам: карта, рекомендации, план на день, маршруты, афиша.
+// Ереван: куда сегодня. Карта, рекомендации, план на день, маршруты, афиша.
 // Данные мест и маршрутов лежат в js/data.js, афиша в data/events.json.
 
 // ---------- helpers ----------
@@ -37,7 +37,7 @@ const S = {
   me: null, meAcc: null, watchId: null,
   placesFilter: "all", placesQuery: "",
   afishaFilter: "all",
-  nowAt: "now", dish: null, nowDish: null,
+  nowAt: null, dish: null, nowDish: null, foodDish: null, foodOpen: true, foodSort: "near",
 };
 const homeSaved = store.get("y.home", null);
 if (homeSaved) { P.home.ll = homeSaved; P.home.n = "Дом"; }
@@ -235,8 +235,9 @@ function drawPlaces(){
   const css = getComputedStyle(document.documentElement);
   for (const k in P){
     if (k === "home" || k === "me" || k.startsWith("ev_")) continue;
+    if (k.startsWith("f_") && S.favs[k] !== "want") continue;
     const f = S.favs[k];
-    const m = L.circleMarker(P[k].ll, {radius: f === "want" ? 7 : 5, weight: f === "want" ? 2 : 1, color: f === "want" ? css.getPropertyValue("--accent").trim() : "#fff", fillColor: f === "been" ? css.getPropertyValue("--ok").trim() : css.getPropertyValue("--muted").trim(), fillOpacity: .8});
+    const m = L.circleMarker(P[k].ll, {radius: f === "want" ? 6 : 4, weight: f === "want" ? 2 : 1, color: f === "want" ? css.getPropertyValue("--accent").trim() : "#fff", fillColor: f === "been" ? css.getPropertyValue("--ok").trim() : css.getPropertyValue("--muted").trim(), fillOpacity: .6});
     m.bindTooltip(P[k].n, {direction: "top"}); m.on("click", () => openPlace(k));
     placeLayer.addLayer(m);
   }
@@ -320,7 +321,7 @@ function placeLinks(k){
 const yandexPt = ll => `https://yandex.ru/maps/?pt=${ll[1]},${ll[0]}&z=16&l=map`;
 
 // ---------- tabs ----------
-const TABS = [["now","Сейчас"],["plan","План"],["routes","Маршруты"],["afisha","Афиша"],["places","Места"],["info","Полезно"]];
+const TABS = [["now","Сейчас"],["food","Еда"],["plan","План"],["routes","Маршруты"],["afisha","Афиша"],["places","Места"],["info","Полезно"]];
 function renderTabs(){
   const nav = $("tabs"); nav.innerHTML = "";
   TABS.forEach(([k, l]) => { const b = document.createElement("button"); b.setAttribute("role","tab"); b.setAttribute("aria-selected", S.tab === k); b.textContent = l;
@@ -337,7 +338,7 @@ function renderStrip(){
 function render(){ renderTabs(); renderStrip(); renderView(); }
 function renderView(){
   evLayer.clearLayers();
-  ({now: renderNow, plan: renderPlan, routes: renderRoutes, afisha: renderAfisha, places: renderPlaces, info: renderInfo}[S.tab] || renderNow)();
+  ({now: renderNow, food: renderFood, plan: renderPlan, routes: renderRoutes, afisha: renderAfisha, places: renderPlaces, info: renderInfo}[S.tab] || renderNow)();
 }
 const view = () => $("view");
 const thumb = k => { const ph = (PHOTOS[k] || [])[0]; return ph ? `<img class="thumb" src="${ph.src}" alt="" loading="lazy">` : `<span class="thumb"></span>`; };
@@ -348,7 +349,12 @@ const firstSentence = s => { if (!s) return ""; const m = String(s).match(/^.*?[
 function renderNow(){
   const ds = todayStr(); const n = nowMin();
   const dow = dowOf(ds), weekday = dow < 5;
-  const tStart = S.nowAt === "17" ? 17*60 : Math.ceil(n/5)*5;
+  if (!S.nowAt) S.nowAt = (weekday && n >= 8*60 && n < 17*60) ? "17" : "now";
+  if (weekday && S.nowAt === "10") S.nowAt = "now";
+  if (!weekday && S.nowAt === "17") S.nowAt = "now";
+  const tStart = S.nowAt === "17" ? 17*60 : S.nowAt === "10" ? 10*60 : Math.ceil(n/5)*5;
+  const atLabel = S.nowAt === "17" ? "после работы" : S.nowAt === "10" ? "с утра" : "сейчас";
+  const trips = weekday ? [] : dayTrips(ds, Math.max(tStart, S.nowAt === "now" ? 0 : tStart));
   const ctx = mkCtx(ds, tStart, plan.ret, plan.mode, {});
   const origin = originKey();
   const ss = ctx.sunset;
@@ -373,28 +379,67 @@ function renderNow(){
       ${wy && wy.pp >= 40 ? `<div class="card"><span class="lab">Дождь</span><span class="big">${wy.pp}%</span><span class="small">ближайшие часы, выбирайте места под крышей</span></div>` : ""}
     </div>
     <div class="summary">
-      <span class="muted small">Считаю ${originName()}, ${S.nowAt === "17" ? "с 17:00" : "с текущего времени"}, домой к ${plan.ret}.</span>
+      <span class="muted small">Считаю ${originName()}, ${S.nowAt === "now" ? "с текущего времени" : "с " + fmt(tStart)}, домой к ${plan.ret}.</span>
       ${!S.me ? `<button class="btn sm ghost" id="geoNow">Включить геопозицию</button>` : ""}
-      <span class="filt" style="margin:0"><button data-at="now" aria-pressed="${S.nowAt !== "17"}">Сейчас</button><button data-at="17" aria-pressed="${S.nowAt === "17"}">С 17:00</button></span>
+      <span class="filt" style="margin:0"><button data-at="now" aria-pressed="${S.nowAt === "now"}">Сейчас</button>${weekday ? `<button data-at="17" aria-pressed="${S.nowAt === "17"}">После работы, 17:00</button>` : `<button data-at="10" aria-pressed="${S.nowAt === "10"}">С утра, 10:00</button>`}</span>
     </div>
 
     ${evToday.length ? `<div class="sect">Сегодня в городе</div><div class="evrow">${evToday.slice(0,10).map(x => eventItem(x.e, x.tr, x.ev)).join("")}</div>` : ""}
 
-    <div class="sect">Куда сходить ${S.nowAt === "17" ? "после работы" : "сейчас"}</div>
-    <div class="list">${recs.length ? recs.map((r, i) => recItem(r, i + 1)).join("") : `<p class="muted">Сейчас ничего не успевается. Попробуйте «С 17:00» или поменяйте «Дома к» во вкладке «План».</p>`}</div>
+    ${trips.length ? `<div class="sect">Выезд на день</div><div class="list">${trips.map(tripItem).join("")}</div>` : ""}
+    <div class="sect">${weekday ? "Куда сходить " + atLabel : "В городе " + atLabel}</div>
+    <div class="list">${recs.length ? recs.map((r, i) => recItem(r, i + 1)).join("") : `<p class="muted">Сейчас ничего не успевается. Попробуйте другое время или поменяйте «Дома к» во вкладке «План».</p>`}</div>
 
     ${wantRows.length ? `<div class="sect">Вы хотели посетить</div><div class="list">${wantRows.slice(0,6).map(r => recItem(r)).join("")}</div>` : ""}
-    <div class="sect">Поесть рядом</div>${dishChips(S.nowDish, "data-ndish")}
-    <div class="list">${foodRows.length ? foodRows.map(foodItem).join("") : `<p class="muted">Ничего подходящего открытого рядом не нашлось.</p>`}</div>
+    <div class="sect">Поесть рядом</div>${dishTiles(S.nowDish, "data-ndish", true)}
+    <div class="fgrid">${foodRows.length ? foodRows.map(foodCard).join("") : `<p class="muted">Ничего подходящего открытого рядом не нашлось.</p>`}</div>
     ${soon.length ? `<div class="sect">Скоро в афише</div><div class="evrow">${soon.map(x => eventItem(x.e, null, null, x.d)).join("")}</div>` : ""}
-    ${!weekday ? `<p class="small muted" style="margin-top:14px">Сегодня выходной. Готовые выезды на целый день во вкладке «Маршруты».</p>` : ""}
   `;
   $("geoNow")?.addEventListener("click", () => startGeo(true));
   view().querySelectorAll("[data-at]").forEach(b => b.onclick = () => { S.nowAt = b.dataset.at; renderNow(); });
-  view().querySelectorAll("[data-ndish]").forEach(b => b.onclick = () => { S.nowDish = b.dataset.ndish || null; renderNow(); });
+  view().querySelectorAll("[data-trip]").forEach(b => b.onclick = () => openRouteInPlan(R.find(r => r.id === b.dataset.trip), ds, b.dataset.t));
+  view().querySelectorAll("[data-ndish]").forEach(b => b.onclick = () => { S.nowDish = S.nowDish === b.dataset.ndish ? null : b.dataset.ndish; renderNow(); });
   bindCommon();
   drawStops([origin, ...recs.map(r => r.k)], {line: false, offset: 0, withMe: true});
   drawEvents(evToday.map(x => x.e));
+}
+// выезды на день: прогоняем маршрут от дома с заданного времени и смотрим, что закрыто и когда вернёмся
+function dayTrips(ds, tStart){
+  const ret = Math.max(toMin(plan.ret), 22*60);
+  return R.filter(r => r.kind === "day").map(r => {
+    const first = r.stops.find(s => s.t && /^\d/.test(s.t));
+    const t0 = Math.max(tStart, first ? toMin(first.t) : 9*60);
+    const ctx = mkCtx(ds, t0, fmt(ret), "taxi", {});
+    const stops = r.stops.filter(s => s.p).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+    let cur = "home", t = t0; const issues = [];
+    for (const k of stops){
+      const tr = travel(cur, k, t, "taxi"); const ev = evaluate(k, t + tr.min, ctx);
+      ev.notes.filter(n => n[0] === "bad" && !/домой/.test(n[1])).forEach(n => issues.push(`${P[k].n}: ${n[1]}`));
+      cur = k; t = ev.leave;
+    }
+    const home = t + travel(cur, "home", t, "taxi").min;
+    const late = home > ret;
+    return {r, t0, home, issues, late, score: issues.length*100 + (late ? 500 : 0) + Math.max(0, home - 20*60)/10};
+  }).sort((a, b) => a.score - b.score).slice(0, 5);
+}
+function tripItem(x){
+  const k0 = x.r.stops.find(s => s.p).p;
+  return `<div class="item ${x.late || x.issues.length > 1 ? "dim" : ""}">
+    ${thumb(k0)}
+    <div style="min-width:0"><span class="nm">${esc(x.r.title)}</span>
+      <div class="mt"><span>выезд ${fmt(x.t0)}</span><span>дома ≈ ${fmt(x.home)}</span>${x.late ? `<span class="st bad">поздно</span>` : !x.issues.length ? `<span class="st ok">успеваете</span>` : ""}${x.issues.slice(0, 2).map(i => `<span class="st warn">${esc(i)}</span>`).join("")}</div>
+      <div class="why muted">${esc(firstSentence(x.r.why))}</div></div>
+    <div class="acts"><button class="btn sm ghost" data-trip="${x.r.id}" data-t="${fmt(x.t0)}">В план</button></div>
+  </div>`;
+}
+function openRouteInPlan(r, ds, t){
+  if (!r) return;
+  const stops = r.stops.filter(s => s.p).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+  const walkStart = r.kind === "ev" && !r.stops[0].drive;
+  plan.start = walkStart ? stops[0] : "home"; plan.chain = walkStart ? stops.slice(1) : stops;
+  plan.t = t || (r.stops.find(s => s.t && /^\d/.test(s.t)) || {t: "17:00"}).t; plan.stay = {}; plan.date = ds || todayStr();
+  if (r.kind !== "ev") plan.ret = fmt(Math.max(toMin(plan.ret), 22*60));
+  savePlan(); S.tab = "plan"; store.set("y.tab", "plan"); render();
 }
 function recItem(r, num){
   const I = INFO[r.k] || {};
@@ -424,6 +469,72 @@ function eventItem(e, tr, ev, dateShown){
       <div class="evacts">${P[k] ? `<button class="btn sm ghost" data-add="${k}" data-date="${dateShown || ""}">В план</button>` : ""}${e.link ? `<a class="btn sm" href="${esc(e.link)}" target="_blank" rel="noopener">Источник</a>` : ""}</div>
     </div>
   </article>`;
+}
+// ---------- ratings ----------
+let DISH_IMG = {};
+function ratingsOf(k){
+  const f = FOOD[k]; if (!f) return {};
+  if (f.R) return f.R;
+  const txt = String(f.rating || ""), out = {};
+  const g = txt.match(/Google\s*([\d.,]+)\s*(?:\((\d[\d\s,]*)\))?/i), y = txt.match(/(?:Yandex|Яндекс)\s*([\d.,]+)\s*(?:\((\d[\d\s,]*)\))?/i), z = txt.match(/2\s?(?:GIS|ГИС)\s*([\d.,]+)\s*(?:\((\d[\d\s,]*)\))?/i);
+  const num = m => m ? [parseFloat(m[1].replace(",", ".")), m[2] ? parseInt(m[2].replace(/[\s,]/g, "")) : null] : null;
+  out.google = num(g); out.yandex = num(y); out.gis = num(z);
+  return (f.R = out);
+}
+function rankScore(k){
+  const R = ratingsOf(k); const adj = (x, prior, shift = 0) => x ? ((x[0] - shift) * (x[1] || 20) + prior * 40) / ((x[1] || 20) + 40) : null;
+  const vals = [adj(R.google, 4.3), adj(R.gis, 4.3), adj(R.yandex, 4.3, 0.35)].filter(v => v != null);
+  return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 4.0;
+}
+const kfmt = n => n == null ? "" : n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1).replace(".0", "") + "k" : String(n);
+function ratingBadges(k, withLinks){
+  const R = ratingsOf(k), Lk = withLinks ? placeLinks(k) : {};
+  const b = (cls, lab, x, url) => x ? (url ? `<a class="rt ${cls}" href="${url}" target="_blank" rel="noopener">` : `<span class="rt ${cls}">`) + `<b>${lab}</b> ${x[0].toFixed(1)}${x[1] ? ` <small>${kfmt(x[1])}</small>` : ""}` + (url ? "</a>" : "</span>") : "";
+  return b("g", "G", R.google, Lk.google) + b("y", "Я", R.yandex, Lk.yandex) + b("z", "2ГИС", R.gis, (FOOD[k] && FOOD[k].R && FOOD[k].R.gis_url) || Lk.gis);
+}
+function dishTiles(sel, attr, compact){
+  const counts = {}; Object.keys(FOOD).forEach(k => { if (P[k]) (FOOD[k].dishes || []).forEach(d => counts[d] = (counts[d] || 0) + 1); });
+  const list = DISHES.filter(d => counts[d]);
+  return `<div class="tiles ${compact ? "compact" : ""}">${list.map(d => { const im = DISH_IMG[d];
+    return `<button class="tile" ${attr}="${d}" aria-pressed="${sel === d}">${im ? `<img src="${im.src}" alt="" loading="lazy">` : `<span class="tile-ph"></span>`}<span class="tl">${esc(d)}</span>${compact ? "" : `<span class="tc">${counts[d]}</span>`}</button>`; }).join("")}</div>`;
+}
+function foodCard(r){
+  const k = r.k, f = FOOD[k] || {};
+  const ph = (PHOTOS[k] || [])[0] || (f.dishes && DISH_IMG[(f.top_for && f.top_for[0]) || f.dishes[0]]);
+  const openNote = r.ev.notes.find(n => /открыто|откроется|закрыт|часы/.test(n[1]));
+  return `<div class="fcard">
+    <button class="fimg" data-open="${k}" aria-label="${esc(P[k].n)}">${ph ? `<img src="${ph.src}" alt="" loading="lazy">` : ""}</button>
+    <div class="fbody">
+      <button class="plink nm" data-open="${k}">${esc(P[k].n)}</button>
+      <div class="rts">${ratingBadges(k)}</div>
+      <div class="mt"><span>${modeTxt(r.tr)}</span>${openNote ? chipsHtml([openNote]) : ""}${S.foodDish && (f.top_for || []).includes(S.foodDish) ? `<span class="st ok">топ по блюду</span>` : ""}${S.favs[k] === "want" ? `<span class="st fav">хотели</span>` : ""}</div>
+      ${f.order ? `<div class="why">${esc(f.order)}</div>` : ""}
+      <div class="facts"><button class="btn sm ghost" data-add="${k}">В план</button><a class="btn sm" href="${r.tr.mode === "walk" ? gdir(P[k].ll, true) : taxiLink(P[k].ll)}" target="_blank" rel="noopener">${r.tr.mode === "walk" ? "Идти" : "Такси"}</a></div>
+    </div>
+  </div>`;
+}
+function renderFood(){
+  const ds = todayStr(); const t = Math.ceil(nowMin()/5)*5; const origin = originKey();
+  const ctx = mkCtx(ds, t, "23:59", "auto", {});
+  let keys = Object.keys(FOOD).filter(k => P[k] && (!S.foodDish || (FOOD[k].dishes || []).includes(S.foodDish)));
+  let rows = rank(origin, t, ctx, keys);
+  if (S.foodOpen) rows = rows.filter(r => !r.ev.notes.some(n => /закрыт|выходной/.test(n[1])));
+  if (S.foodSort === "rating") rows.sort((a, b) => rankScore(b.k) - rankScore(a.k));
+  else if (S.foodDish) rows.sort((a, b) => ((FOOD[b.k].top_for || []).includes(S.foodDish) - (FOOD[a.k].top_for || []).includes(S.foodDish)) || (a.tr.min - b.tr.min));
+  else rows.sort((a, b) => a.tr.min - b.tr.min);
+  view().innerHTML = `
+    ${dishTiles(S.foodDish, "data-fd")}
+    <div class="summary">
+      <span class="filt" style="margin:0"><button data-fo="1" aria-pressed="${S.foodOpen}">Открыто сейчас</button><button data-fs="near" aria-pressed="${S.foodSort === "near"}">Рядом</button><button data-fs="rating" aria-pressed="${S.foodSort === "rating"}">По рейтингу</button>${S.foodDish ? `<button data-fd="">Сбросить: ${esc(S.foodDish)}</button>` : ""}</span>
+      <span class="small muted">${rows.length} мест ${originName()}</span>
+    </div>
+    <div class="fgrid">${rows.slice(0, 60).map(foodCard).join("") || `<p class="muted">Ничего не нашлось. Снимите «Открыто сейчас» или выберите другое блюдо.</p>`}</div>
+    <p class="small muted" style="margin-top:12px">Рейтинги из Google, Яндекс Карт и 2ГИС на октябрь 2026. У Яндекса оценки обычно выше, поэтому при сортировке они учитываются с поправкой.</p>`;
+  view().querySelectorAll("[data-fd]").forEach(b => b.onclick = () => { S.foodDish = (b.dataset.fd && S.foodDish !== b.dataset.fd) ? b.dataset.fd : null; renderFood(); });
+  view().querySelector("[data-fo]").onclick = () => { S.foodOpen = !S.foodOpen; renderFood(); };
+  view().querySelectorAll("[data-fs]").forEach(b => b.onclick = () => { S.foodSort = b.dataset.fs; renderFood(); });
+  bindCommon();
+  drawStops(rows.slice(0, 20).map(r => r.k), {line: false, noNumbers: true, withMe: true});
 }
 function foodItem(r){
   const f = FOOD[r.k] || {};
@@ -552,12 +663,7 @@ function renderRoutes(){
     ${r ? routeDetail(r) : ""}`;
   view().querySelectorAll("[data-kind]").forEach(b => b.onclick = () => { S.routeKind = b.dataset.kind; store.set("y.rkind", S.routeKind); S.route = null; renderRoutes(); });
   view().querySelectorAll("[data-route]").forEach(b => b.onclick = () => { S.route = b.dataset.route; store.set("y.route", S.route); renderRoutes(); $("rdetail")?.scrollIntoView({behavior: "smooth", block: "start"}); });
-  $("r-toplan")?.addEventListener("click", () => {
-    const stops = r.stops.filter(s => s.p).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
-    const first = r.stops.find(s => s.t && /^\d/.test(s.t));
-    plan.start = r.kind === "ev" && !r.stops[0].drive ? stops[0] : "home"; plan.chain = plan.start === "home" ? stops : stops.slice(1);
-    plan.t = first ? first.t : "17:00"; plan.stay = {}; plan.date = todayStr(); if (r.kind !== "ev") plan.ret = "22:30";
-    savePlan(); S.tab = "plan"; store.set("y.tab", "plan"); render(); });
+  $("r-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
   bindCommon();
   if (r){ const keys = r.stops.filter(s => s.p).map(s => s.p); drawStops(keys, {foot: r.kind === "ev" && !r.stops.some(s => s.drive)}); }
 }
@@ -635,7 +741,7 @@ function renderPlaces(){
     <p class="small muted">Отсортировано по расстоянию ${originName()}${S.dish && f === "food" ? ", лучшие по блюду сверху" : ""}. Звёздочкой ★ отмечайте, куда хотите, галочкой ✓ где уже были.</p>
     <div class="list">${keys.map(k => { const tr = travel(origin, k, t, "auto"); const fv = S.favs[k];
       return `<div class="item">${thumb(k)}<div style="min-width:0"><button class="plink nm" data-open="${k}">${esc(P[k].n)}</button>
-        <div class="mt"><span>${modeTxt(tr)}</span>${FOOD[k] && FOOD[k].rating ? `<span>${esc(String(FOOD[k].rating).split("/")[0])}</span>` : ""}${fv ? `<span class="st ${fv === "want" ? "fav" : "ok"}">${fv === "want" ? "хочу" : "были"}</span>` : ""}${S.dish && FOOD[k] && (FOOD[k].top_for || []).includes(S.dish) ? `<span class="st ok">топ</span>` : ""}</div>
+        <div class="mt"><span>${modeTxt(tr)}</span>${FOOD[k] ? `<span class="rts">${ratingBadges(k)}</span>` : ""}${fv ? `<span class="st ${fv === "want" ? "fav" : "ok"}">${fv === "want" ? "хочу" : "были"}</span>` : ""}${S.dish && FOOD[k] && (FOOD[k].top_for || []).includes(S.dish) ? `<span class="st ok">топ</span>` : ""}</div>
         ${FOOD[k] && FOOD[k].order ? `<div class="why">${esc(FOOD[k].order)}</div>` : ""}</div>
         <div class="acts"><button class="btn sm toggle" data-fav="${k}" data-v="want" aria-pressed="${fv === "want"}" aria-label="Хочу">★</button><button class="btn sm toggle" data-fav="${k}" data-v="been" aria-pressed="${fv === "been"}" aria-label="Были">✓</button></div></div>`; }).join("")}</div>
     ${extra.length ? `<div class="sect">Ещё заведения</div><div class="list">${extra.map(c => `<div class="item"><span class="thumb"></span><div style="min-width:0"><div class="nm">${esc(c.n)}</div><div class="mt"><span>${esc(c.w)}</span></div><div class="why">${esc(c.d)}</div></div><div class="acts"><a class="btn sm" href="${c.u || `https://www.google.com/maps/search/?api=1&query=${enc(c.q)}`}" target="_blank" rel="noopener">${c.u ? "Пост" : "Карта"}</a></div></div>`).join("")}</div>` : ""}`;
@@ -678,7 +784,7 @@ function renderInfo(){
   </div>`;
   $("setHome").onclick = () => { if (!S.me){ startGeo(true); toast("Включаю геопозицию, нажмите ещё раз через пару секунд"); return; } store.set("y.home", S.me); location.reload(); };
   $("resetHome")?.addEventListener("click", () => { store.set("y.home", null); location.reload(); });
-  $("shareFavs").onclick = () => shareLink("f", S.favs, "Мои отметки в «Ереван по вечерам»");
+  $("shareFavs").onclick = () => shareLink("f", S.favs, "Мои отметки в «Ереван: куда сегодня»");
   $("refreshWx").onclick = async () => { store.set("y.wx", null); await loadWeather(); render(); toast("Погода обновлена"); };
   routeLayer.clearLayers();
 }
@@ -707,7 +813,7 @@ function openPlace(k){
        <span class="st info">${originName()}: ${modeTxt(tr)}</span>
      </div>
      ${isEv ? `<div><h5>Когда</h5><p>${evDates || "даты прошли"}</p></div>${e.desc ? `<div><h5>Что это</h5><p>${esc(e.desc)}</p></div>` : ""}` : ""}
-     ${FOOD[k] && (FOOD[k].order || FOOD[k].rating || FOOD[k].verdict) ? `<div><h5>Что заказать</h5><p>${esc(FOOD[k].order || "")}</p>${FOOD[k].rating ? `<p class="src" style="margin-top:4px">Рейтинг: ${esc(FOOD[k].rating)}</p>` : ""}${FOOD[k].verdict ? `<p style="margin-top:6px">${esc(FOOD[k].verdict)}</p>` : ""}${(FOOD[k].dishes || []).length ? `<div class="chips" style="margin-top:6px">${FOOD[k].dishes.map(d => `<span class="st info">${esc(d)}</span>`).join("")}</div>` : ""}</div>` : ""}
+     ${FOOD[k] && (FOOD[k].order || FOOD[k].rating || FOOD[k].verdict || FOOD[k].R) ? `<div><h5>Что заказать</h5><p>${esc(FOOD[k].order || "")}</p><div class="rts" style="margin-top:6px">${ratingBadges(k, true)}</div>${FOOD[k].verdict ? `<p style="margin-top:6px">${esc(FOOD[k].verdict)}</p>` : ""}${(FOOD[k].dishes || []).length ? `<div class="chips" style="margin-top:6px">${FOOD[k].dishes.map(d => `<span class="st info">${esc(d)}</span>`).join("")}</div>` : ""}</div>` : ""}
      ${I.fact ? `<div><h5>Интересно</h5><p>${esc(I.fact)}</p></div>` : ""}
      ${I.best ? `<div><h5>Когда лучше приходить</h5><p>${esc(I.best)}</p></div>` : ""}
      ${I.praise && I.praise.length ? `<div><h5>За что хвалят</h5><ul>${I.praise.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
@@ -768,7 +874,8 @@ function importFromHash(){
 }
 async function loadJson(u){ try { const r = await fetch(u, {cache: "no-cache"}); return r.ok ? await r.json() : null; } catch(e){ return null; } }
 async function loadExtra(){
-  const [fu, ft, cx] = await Promise.all([loadJson("data/food_user.json"), loadJson("data/food_top.json"), loadJson("data/city_extra.json")]);
+  const [fu, ft, cx, dj, rj] = await Promise.all([loadJson("data/food_user.json"), loadJson("data/food_top.json"), loadJson("data/city_extra.json"), loadJson("data/dishes.json"), loadJson("data/ratings.json")]);
+  DISH_IMG = dj || {};
   const seen = new Set();
   [...(fu || []), ...(ft || [])].forEach(f => {
     if (!f || !f.id || !f.ll || seen.has(f.id)) return; seen.add(f.id);
@@ -778,6 +885,8 @@ async function loadExtra(){
     PHOTOS[f.id] = (f.photos || []).filter(x => x && x.src).map(x => ({src: x.src, author: /google/.test(x.source || "") ? "Google Maps" : /yandex/.test(x.source || "") ? "Яндекс Карты" : hostOf(x.source || ""), license: "фото посетителей и заведения", page: x.source || "#"}));
     CAT.food.push(f.id); LIGHT[f.id] = "any"; INDOOR.add(f.id);
   });
+  const RI = (rj && rj.items) || {};
+  Object.entries(RI).forEach(([id, r]) => { if (!FOOD[id]) FOOD[id] = {dishes: []}; const base = ratingsOf(id); FOOD[id].R = {google: r.google || base.google, yandex: r.yandex || base.yandex, gis: r.gis || base.gis, gis_url: r.gis_url || null}; });
   (cx || []).forEach(x => {
     if (!x || !x.id || !x.ll || P[x.id]) return;
     P[x.id] = {n: x.n, ll: x.ll, g: x.n + ", Ереван"};
