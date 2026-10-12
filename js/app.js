@@ -177,6 +177,7 @@ function evaluate(k, A, ctx){
   }
   if (k === "sevan" || k === "parz"){ const ws = wxAt("sevan", ctx.ds, start); if (ws && ws.wind >= 30) notes.push(["warn", `ветер ${Math.round(ws.wind)} км/ч`]); }
   if (k === "kari" || k === "amberd"){ const wg = wxAt("aragats", ctx.ds, start); if (wg && (wg.temp <= 0 || wg.snow > 0)) { notes.push(["warn", `на Арагаце ${Math.round(wg.temp)}°${wg.snow > 0 ? ", снег" : ""}`]); sev = Math.max(sev, 1); } }
+  const dn = dayNote(k, ctx); if (dn){ notes.push(dn.note); bonus += dn.bonus; }
   if (S.favs[k] === "want"){ bonus += 20; notes.push(["fav", "хотели"]); }
   if (S.favs[k] === "been") bonus -= 15;
   const stay = ctx.stay && ctx.stay[k] != null ? ctx.stay[k] : V;
@@ -184,6 +185,19 @@ function evaluate(k, A, ctx){
   const back = travel(k, "home", leave, ctx.mode);
   if (leave + back.min > ctx.ret){ notes.push(["bad", `домой к ${fmt(ctx.ret)} не успеть`]); sev = 2; }
   return {start, leave, notes, sev, bonus, wait: start - A, back};
+}
+// поправки по дню недели: где в будни пусто, где что-то только по выходным
+const DAYNOTE = {
+  verni: {weekday: ["warn", "в будни мало продавцов"], weekend: ["ok", "по выходным полный рынок"], wdPen: 25, weBonus: 20},
+  cafs: {weekday: ["info", "галереи центра только пт–вс"], fri: true},
+  x_gum: {weekend: ["ok", "по выходным оживлённо"], weBonus: 5},
+};
+function dayNote(k, ctx){
+  const d = DAYNOTE[k]; if (!d) return null;
+  const we = ctx.dow >= 5;
+  if (we && d.weekend) return {note: d.weekend, bonus: d.weBonus || 0};
+  if (!we && d.weekday && !(d.fri && ctx.dow === 4)) return {note: d.weekday, bonus: -(d.wdPen || 0)};
+  return null;
 }
 function rank(origin, t, ctx, keys){
   return keys.filter(k => P[k] && k !== origin && !SKIP_PLAN.has(k)).map(k => {
@@ -322,10 +336,21 @@ const yandexPt = ll => `https://yandex.ru/maps/?pt=${ll[1]},${ll[0]}&z=16&l=map`
 
 // ---------- tabs ----------
 const TABS = [["now","Сейчас"],["food","Еда"],["plan","План"],["routes","Маршруты"],["afisha","Афиша"],["places","Места"],["info","Полезно"]];
+const ICONS = {
+  now: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  food: '<path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 2-2.5 5-2.5 8h3V21M16.5 3v8"/>',
+  plan: '<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/>',
+  routes: '<circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/>',
+  afisha: '<path d="M4 8V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a2 2 0 0 0 0 4v2a2 2 0 0 0 0 4v0a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a2 2 0 0 0 0-4V12a2 2 0 0 0 0-4z"/><path d="M10 5v14" stroke-dasharray="2 2"/>',
+  places: '<path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
+};
+const icon = k => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k] || ""}</svg>`;
+function goTab(k){ S.tab = k; store.set("y.tab", k); render(); window.scrollTo({top: Math.min(window.scrollY, Math.max(0, $("tabs").offsetTop - 4)), behavior: "smooth"}); }
 function renderTabs(){
   const nav = $("tabs"); nav.innerHTML = "";
-  TABS.forEach(([k, l]) => { const b = document.createElement("button"); b.setAttribute("role","tab"); b.setAttribute("aria-selected", S.tab === k); b.textContent = l;
-    b.onclick = () => { S.tab = k; store.set("y.tab", k); render(); window.scrollTo({top: Math.min(window.scrollY, $("tabs").offsetTop - 4), behavior: "smooth"}); }; nav.appendChild(b); });
+  TABS.forEach(([k, l]) => { const b = document.createElement("button"); b.setAttribute("role","tab"); b.setAttribute("aria-selected", S.tab === k); b.innerHTML = `${icon(k)}<span>${l}</span>`;
+    b.onclick = () => goTab(k); nav.appendChild(b); });
 }
 function renderStrip(){
   const ds = todayStr(), ss = sunsetMin(parseYmd(ds)), n = nowMin();
@@ -377,6 +402,12 @@ function renderNow(){
       <div class="card"><span class="lab">Закат</span><span class="big">${fmt(ss)}</span><span class="small">${ss - n > 0 ? `через ${durTxt(ss - n)}` : "уже стемнело"}</span></div>
       <div class="card"><span class="lab">Арарат сегодня</span><span class="big">${wa ? (araratVisible(wa) ? "видно" : "в облаках") : "—"}</span><span class="small">${wa ? `облачность ${wa.cloud}%` : "нет прогноза"}</span></div>
       ${wy && wy.pp >= 40 ? `<div class="card"><span class="lab">Дождь</span><span class="big">${wy.pp}%</span><span class="small">ближайшие часы, выбирайте места под крышей</span></div>` : ""}
+    </div>
+    <div class="quick">
+      <button data-goto="food">${icon("food")}<span>Поесть</span></button>
+      <button data-goto="afisha" data-af="today">${icon("afisha")}<span>Сегодня в афише</span></button>
+      <button data-goto="routes" data-rk="${weekday ? "ev" : "day"}">${icon("routes")}<span>${weekday ? "Маршрут на вечер" : "Выезд на день"}</span></button>
+      <button data-goto="plan">${icon("plan")}<span>Мой план${plan.chain.length ? ` (${plan.chain.length})` : ""}</span></button>
     </div>
     <div class="summary">
       <span class="muted small">Считаю ${originName()}, ${S.nowAt === "now" ? "с текущего времени" : "с " + fmt(tStart)}, домой к ${plan.ret}.</span>
@@ -516,13 +547,15 @@ function foodCard(r){
 function renderFood(){
   const ds = todayStr(); const t = Math.ceil(nowMin()/5)*5; const origin = originKey();
   const ctx = mkCtx(ds, t, "23:59", "auto", {});
-  let keys = Object.keys(FOOD).filter(k => P[k] && (!S.foodDish || (FOOD[k].dishes || []).includes(S.foodDish)));
+  const fq = (S.foodQ || "").trim().toLowerCase();
+  let keys = Object.keys(FOOD).filter(k => P[k] && (!S.foodDish || (FOOD[k].dishes || []).includes(S.foodDish)) && (!fq || (P[k].n + " " + (FOOD[k].order || "") + " " + (FOOD[k].dishes || []).join(" ")).toLowerCase().includes(fq)));
   let rows = rank(origin, t, ctx, keys);
   if (S.foodOpen) rows = rows.filter(r => !r.ev.notes.some(n => /закрыт|выходной/.test(n[1])));
   if (S.foodSort === "rating") rows.sort((a, b) => rankScore(b.k) - rankScore(a.k));
   else if (S.foodDish) rows.sort((a, b) => ((FOOD[b.k].top_for || []).includes(S.foodDish) - (FOOD[a.k].top_for || []).includes(S.foodDish)) || (a.tr.min - b.tr.min));
   else rows.sort((a, b) => a.tr.min - b.tr.min);
   view().innerHTML = `
+    <input class="search" id="fq" type="search" placeholder="Найти: название, блюдо, «хинкали», «24/7»…" value="${esc(S.foodQ || "")}" aria-label="Поиск еды">
     ${dishTiles(S.foodDish, "data-fd")}
     <div class="summary">
       <span class="filt" style="margin:0"><button data-fo="1" aria-pressed="${S.foodOpen}">Открыто сейчас</button><button data-fs="near" aria-pressed="${S.foodSort === "near"}">Рядом</button><button data-fs="rating" aria-pressed="${S.foodSort === "rating"}">По рейтингу</button>${S.foodDish ? `<button data-fd="">Сбросить: ${esc(S.foodDish)}</button>` : ""}</span>
@@ -531,6 +564,7 @@ function renderFood(){
     <div class="fgrid">${rows.slice(0, 60).map(foodCard).join("") || `<p class="muted">Ничего не нашлось. Снимите «Открыто сейчас» или выберите другое блюдо.</p>`}</div>
     <p class="small muted" style="margin-top:12px">Рейтинги из Google, Яндекс Карт и 2ГИС на октябрь 2026. У Яндекса оценки обычно выше, поэтому при сортировке они учитываются с поправкой.</p>`;
   view().querySelectorAll("[data-fd]").forEach(b => b.onclick = () => { S.foodDish = (b.dataset.fd && S.foodDish !== b.dataset.fd) ? b.dataset.fd : null; renderFood(); });
+  const fqi = $("fq"); fqi.addEventListener("input", () => { S.foodQ = fqi.value; const pos = fqi.selectionStart; renderFood(); const n = $("fq"); n.focus(); n.setSelectionRange(pos, pos); });
   view().querySelector("[data-fo]").onclick = () => { S.foodOpen = !S.foodOpen; renderFood(); };
   view().querySelectorAll("[data-fs]").forEach(b => b.onclick = () => { S.foodSort = b.dataset.fs; renderFood(); });
   bindCommon();
@@ -655,11 +689,12 @@ function renderRoutes(){
   const r = R.find(x => x.id === S.route);
   view().innerHTML = `
     <div class="filt">${[["ev","Вечер после 17:00"],["day","Целый день"],["ovn","С ночёвкой"]].map(([k, l]) => `<button data-kind="${k}" aria-pressed="${S.routeKind === k}">${l} <span class="muted">${R.filter(x => x.kind === k).length}</span></button>`).join("")}</div>
-    <div class="list">${list.map(x => {
+    <div class="rgrid">${list.map(x => {
       const n = x.stops.filter(s => s.p).length;
-      return `<button class="rcard" data-route="${x.id}" aria-pressed="${x.id === S.route}"><h3>${esc(x.title)}</h3>
-        <span style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">${x.friends ? '<span class="chip you">для гостей</span>' : ""}<span class="chip ${x.kind}">${KLABEL[x.kind]}</span></span>
-        <span class="meta"><span>${x.time}</span><span>${x.km}</span><span>${n} точ${n === 1 ? "ка" : n < 5 ? "ки" : "ек"}</span></span></button>`; }).join("")}</div>
+      const cover = routeCover(x);
+      return `<button class="rcard2" data-route="${x.id}" aria-pressed="${x.id === S.route}">
+        <span class="rcov" ${cover ? `style="background-image:url('${cover}')"` : ""}><span class="rchips">${x.friends ? '<span class="chip you">для гостей</span>' : ""}<span class="chip ${x.kind}">${KLABEL[x.kind]}</span></span></span>
+        <span class="rbody"><b>${esc(x.title)}</b><span class="meta"><span>${x.time}</span><span>${x.km}</span><span>${n} точ${n === 1 ? "ка" : n < 5 ? "ки" : "ек"}</span></span></span></button>`; }).join("")}</div>
     ${r ? routeDetail(r) : ""}`;
   view().querySelectorAll("[data-kind]").forEach(b => b.onclick = () => { S.routeKind = b.dataset.kind; store.set("y.rkind", S.routeKind); S.route = null; renderRoutes(); });
   view().querySelectorAll("[data-route]").forEach(b => b.onclick = () => { S.route = b.dataset.route; store.set("y.route", S.route); renderRoutes(); $("rdetail")?.scrollIntoView({behavior: "smooth", block: "start"}); });
@@ -667,12 +702,25 @@ function renderRoutes(){
   bindCommon();
   if (r){ const keys = r.stops.filter(s => s.p && P[s.p]).map(s => s.p); drawStops(keys, {foot: keys.every(k => inCity(k))}); }
 }
+function routeCover(r){
+  const ks = r.stops.filter(s => s.p).map(s => s.p);
+  const pick = ks.find(k => (PHOTOS[k] || []).length && !["rep","north","home"].includes(k)) || ks.find(k => (PHOTOS[k] || []).length);
+  return pick ? PHOTOS[pick][0].src : null;
+}
+function todayChip(k){
+  if (!P[k]) return "";
+  const ds = todayStr(), ctx = mkCtx(ds, 12*60, "23:59", "auto", {}), h = hoursFor(k, ctx.dow, ds), dn = dayNote(k, ctx);
+  const out = [];
+  if (h.closed) out.push(["bad", "сегодня закрыто"]);
+  if (dn) out.push(dn.note);
+  return out.length ? " " + chipsHtml(out) : "";
+}
 function routeDetail(r){
   let i = 0;
   const items = r.stops.map(s => {
     if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4></div></li>`;
     i++; const p = P[s.p] || {n: "…"};
-    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}</div></li>`;
+    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}</div></li>`;
   }).join("");
   return `<div class="detail" id="rdetail"><h2>${esc(r.title)}</h2><p class="why">${r.why}</p>
     <div class="actions"><button class="btn primary" id="r-toplan">Открыть в «Плане» на сегодня</button><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a></div>
@@ -722,7 +770,7 @@ function renderAfisha(){
 function renderPlaces(){
   const origin = originKey(); const t = Math.max(nowMin(), 17*60);
   const f = S.placesFilter, q = S.placesQuery.trim().toLowerCase();
-  let keys = Object.keys(P).filter(k => !["home","me"].includes(k) && !k.startsWith("ev_"));
+  let keys = Object.keys(P).filter(k => !["home","me"].includes(k) && !k.startsWith("ev_") && (f === "want" || f === "been" || !k.startsWith("f_")));
   if (f === "want") keys = keys.filter(k => S.favs[k] === "want");
   if (f === "been") keys = keys.filter(k => S.favs[k] === "been");
   if (f === "food") keys = keys.filter(k => CAT.food.includes(k) || FOOD[k]);
@@ -736,17 +784,19 @@ function renderPlaces(){
   const extra = f === "food" || f === "all" ? CAFES.flatMap(s => s.items).filter(c => !c.p && c.q && (!q || c.n.toLowerCase().includes(q))) : [];
   view().innerHTML = `
     <input class="search" id="pq" type="search" placeholder="Найти место" value="${esc(S.placesQuery)}" aria-label="Поиск места">
-    <div class="filt">${[["all","Все"],["want","Хочу"],["been","Были"],["food","Где поесть"],["view","Виды и природа"],["culture","Музеи и прогулки"]].map(([k, l]) => `<button data-pf="${k}" aria-pressed="${f === k}">${l}</button>`).join("")}</div>
-    ${f === "food" ? dishChips(S.dish, "data-dish") : ""}
-    <p class="small muted">Отсортировано по расстоянию ${originName()}${S.dish && f === "food" ? ", лучшие по блюду сверху" : ""}. Звёздочкой ★ отмечайте, куда хотите, галочкой ✓ где уже были.</p>
-    <div class="list">${keys.map(k => { const tr = travel(origin, k, t, "auto"); const fv = S.favs[k];
-      return `<div class="item">${thumb(k)}<div style="min-width:0"><button class="plink nm" data-open="${k}">${esc(P[k].n)}</button>
-        <div class="mt"><span>${modeTxt(tr)}</span>${FOOD[k] ? `<span class="rts">${ratingBadges(k)}</span>` : ""}${fv ? `<span class="st ${fv === "want" ? "fav" : "ok"}">${fv === "want" ? "хочу" : "были"}</span>` : ""}${S.dish && FOOD[k] && (FOOD[k].top_for || []).includes(S.dish) ? `<span class="st ok">топ</span>` : ""}</div>
-        ${FOOD[k] && FOOD[k].order ? `<div class="why">${esc(FOOD[k].order)}</div>` : ""}</div>
-        <div class="acts"><button class="btn sm toggle" data-fav="${k}" data-v="want" aria-pressed="${fv === "want"}" aria-label="Хочу">★</button><button class="btn sm toggle" data-fav="${k}" data-v="been" aria-pressed="${fv === "been"}" aria-label="Были">✓</button></div></div>`; }).join("")}</div>
+    <div class="filt">${[["all","Все"],["want","Хочу"],["been","Были"],["view","Виды и природа"],["culture","Музеи и прогулки"],["food","Бары и вино"]].map(([k, l]) => `<button data-pf="${k}" aria-pressed="${f === k}">${l}</button>`).join("")}</div>
+    <p class="small muted">Отсортировано по расстоянию ${originName()}. ★ куда хотите, ✓ где уже были. Еда во вкладке <button class="plink" data-goto="food">«Еда»</button>.</p>
+    <div class="pgrid">${keys.map(k => { const tr = travel(origin, k, t, "auto"); const fv = S.favs[k]; const ph = (PHOTOS[k] || [])[0]; const I = INFO[k] || {};
+      return `<div class="pcard">
+        <button class="pimg" data-open="${k}" aria-label="${esc(P[k].n)}" ${ph ? `style="background-image:url('${ph.src}')"` : ""}><span class="pdist">${modeTxt(tr)}</span></button>
+        <div class="pbody"><button class="plink nm" data-open="${k}">${esc(P[k].n)}</button>
+          ${FOOD[k] && (FOOD[k].R || FOOD[k].rating) ? `<div class="rts">${ratingBadges(k)}</div>` : ""}
+          <div class="why muted">${esc(firstSentence(I.fact || I.best || ""))}</div>
+          <div class="pacts"><button class="btn sm toggle" data-fav="${k}" data-v="want" aria-pressed="${fv === "want"}" aria-label="Хочу">★ Хочу</button><button class="btn sm toggle" data-fav="${k}" data-v="been" aria-pressed="${fv === "been"}" aria-label="Были">✓ Были</button></div>
+        </div></div>`; }).join("")}</div>
     ${extra.length ? `<div class="sect">Ещё заведения</div><div class="list">${extra.map(c => `<div class="item"><span class="thumb"></span><div style="min-width:0"><div class="nm">${esc(c.n)}</div><div class="mt"><span>${esc(c.w)}</span></div><div class="why">${esc(c.d)}</div></div><div class="acts"><a class="btn sm" href="${c.u || `https://www.google.com/maps/search/?api=1&query=${enc(c.q)}`}" target="_blank" rel="noopener">${c.u ? "Пост" : "Карта"}</a></div></div>`).join("")}</div>` : ""}`;
   const pq = $("pq"); pq.addEventListener("input", () => { S.placesQuery = pq.value; const pos = pq.selectionStart; renderPlaces(); const n = $("pq"); n.focus(); n.setSelectionRange(pos, pos); });
-  view().querySelectorAll("[data-pf]").forEach(b => b.onclick = () => { S.placesFilter = b.dataset.pf; if (b.dataset.pf !== "food") S.dish = null; renderPlaces(); });
+  view().querySelectorAll("[data-pf]").forEach(b => b.onclick = () => { S.placesFilter = b.dataset.pf; S.dish = null; renderPlaces(); });
   view().querySelectorAll("[data-dish]").forEach(b => b.onclick = () => { S.dish = b.dataset.dish || null; renderPlaces(); });
   bindCommon();
   drawStops(keys.slice(0, 25), {line: false, noNumbers: true, withMe: true, fit: keys.length < 60});
@@ -829,6 +879,7 @@ function openPlace(k){
      </div>
      ${!isEv ? (() => { const Lk = placeLinks(k); return `<div><h5>Отзывы и фото</h5><div class="actions" style="margin:4px 0 0"><a class="btn sm" href="${Lk.google}" target="_blank" rel="noopener">Google</a><a class="btn sm" href="${Lk.yandex}" target="_blank" rel="noopener">Яндекс</a><a class="btn sm" href="${Lk.gis}" target="_blank" rel="noopener">2ГИС</a>${Lk.site ? `<a class="btn sm" href="${esc(Lk.site)}" target="_blank" rel="noopener">Сайт</a>` : ""}</div></div>`; })() : ""}
      ${!isEv ? `<div class="actions" style="margin:0"><button class="btn toggle" id="fwant" aria-pressed="${fv === "want"}">★ Хочу</button><button class="btn toggle" id="fbeen" aria-pressed="${fv === "been"}">✓ Были</button></div>` : ""}
+     ${nearbyHtml(k)}
      ${srcs ? `<p class="src">Источники: ${srcs}</p>` : ""}
    </div>`;
   lastFocus = document.activeElement; panel.hidden = false; scrim.hidden = false; panel.scrollTop = 0;
@@ -837,11 +888,24 @@ function openPlace(k){
   $("fwant")?.addEventListener("click", () => { setFav(k, "want"); openPlace(k); });
   $("fbeen")?.addEventListener("click", () => { setFav(k, "been"); openPlace(k); });
 }
+function nearbyHtml(k){
+  const ll = P[k].ll;
+  const near = Object.keys(P).filter(x => x !== k && !["home","me"].includes(x) && !x.startsWith("ev_")).map(x => ({x, d: hav(ll, P[x].ll)})).filter(o => o.d < 0.9).sort((a, b) => a.d - b.d);
+  const food = near.filter(o => FOOD[o.x] && o.x.startsWith("f_")).slice(0, 4), sights = near.filter(o => !o.x.startsWith("f_")).slice(0, 4);
+  const evs = S.events.filter(e => e.ll && hav(ll, e.ll) < 0.9 && eventDates(e, todayStr(), 7).length).slice(0, 3);
+  if (!food.length && !sights.length && !evs.length) return "";
+  const row = o => `<button class="nb" data-open="${o.x}">${thumbSm(o.x)}<span><b>${esc(P[o.x].n)}</b><small>${Math.round(o.d*1000/10)*10} м, ${Math.max(1, Math.round(o.d*1.3/4.6*60))} мин пешком</small></span></button>`;
+  return `<div><h5>Рядом</h5><div class="nbl">${sights.map(row).join("")}${food.map(row).join("")}${evs.map(e => `<button class="nb" data-open="ev_${e.id}">${e.img ? `<img src="${e.img}" alt="">` : `<span class="nbph"></span>`}<span><b>${esc(e.title)}</b><small>${humanDate(eventDates(e, todayStr(), 7)[0])}${e.time ? ", " + e.time : ""}</small></span></button>`).join("")}</div></div>`;
+}
+const thumbSm = k => { const ph = (PHOTOS[k] || [])[0]; return ph ? `<img src="${ph.src}" alt="" loading="lazy">` : `<span class="nbph"></span>`; };
 function closePlace(){ panel.hidden = true; scrim.hidden = true; if (lastFocus) try { lastFocus.focus(); } catch(e){} }
 function setFav(k, v){ if (S.favs[k] === v) delete S.favs[k]; else S.favs[k] = v; store.set("y.favs", S.favs); drawPlaces(); if (S.tab === "places" || S.tab === "now") renderView(); }
 scrim.addEventListener("click", closePlace);
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !panel.hidden) closePlace(); });
 document.addEventListener("click", e => { const b = e.target.closest("[data-open]"); if (b){ e.preventDefault(); openPlace(b.dataset.open); } });
+document.addEventListener("click", e => { const g = e.target.closest("[data-goto]"); if (!g) return; e.preventDefault();
+  if (g.dataset.af) S.afishaFilter = g.dataset.af; if (g.dataset.rk){ S.routeKind = g.dataset.rk; S.route = null; }
+  closePlace(); goTab(g.dataset.goto); });
 function bindCommon(){
   view().querySelectorAll("[data-add]").forEach(b => b.onclick = () => { addToPlan(b.dataset.add, {fromHere: true, date: b.dataset.date || undefined}); });
   view().querySelectorAll("[data-fav]").forEach(b => b.onclick = () => setFav(b.dataset.fav, b.dataset.v));
@@ -887,7 +951,8 @@ async function loadExtra(){
   });
   const RI = (rj && rj.items) || {};
   Object.entries(RI).forEach(([id, r]) => { if (!FOOD[id]) FOOD[id] = {dishes: []}; const base = ratingsOf(id); FOOD[id].R = {google: r.google || base.google, yandex: r.yandex || base.yandex, gis: r.gis || base.gis, gis_url: r.gis_url || null}; });
-  (cx || []).forEach(x => {
+  (cx || []).forEach(x => { addPlace(x); });
+  (false ? [] : []).forEach(x => {
     if (!x || !x.id || !x.ll || P[x.id]) return;
     P[x.id] = {n: x.n, ll: x.ll, g: x.n + ", Ереван"};
     INFO[x.id] = {open: x.open || "unknown", hours_note: x.hours_note, visit: x.visit, price: x.price, best: x.best, praise: x.praise, cons: x.cons, sources: x.sources, fact: x.fact};
@@ -897,6 +962,21 @@ async function loadExtra(){
     if (x.cat === "food" || x.cat === "music") CAT.food.push(x.id); else if (x.cat === "view" || x.cat === "park") CAT.view.push(x.id);
     if (x.cat === "music" || x.cat === "culture") INDOOR.add(x.id);
   });
+}
+function addPlace(x){
+  if (!x || !x.id || !x.ll || P[x.id]) return;
+  P[x.id] = {n: x.n, ll: x.ll, g: x.n + (inYvnLL(x.ll) ? ", Ереван" : ", Армения")};
+  INFO[x.id] = {open: x.open || "unknown", hours_note: x.hours_note, visit: x.visit, price: x.price, best: x.best, praise: x.praise, cons: x.cons, sources: x.sources, fact: x.fact, logistics: x.logistics, drive_from_yerevan: x.drive_from_yerevan};
+  PHOTOS[x.id] = (x.photos || []).filter(p => p && p.src);
+  if (x.links) FOOD[x.id] = Object.assign(FOOD[x.id] || {}, {links: x.links});
+  LIGHT[x.id] = x.light || "any";
+  if (x.cat === "food" || x.cat === "music" || x.cat === "wine") CAT.food.push(x.id); else if (["view","park","nature"].includes(x.cat)) CAT.view.push(x.id);
+  if (x.cat === "music" || x.cat === "culture") INDOOR.add(x.id);
+}
+async function loadRoutes(){
+  const files = await Promise.all(["data/routes_city.json", "data/routes_trips.json"].map(loadJson));
+  files.forEach(f => { if (!f) return; (f.places || []).forEach(addPlace);
+    (f.routes || []).forEach(r => { if (r && r.id && r.stops && !R.find(x => x.id === r.id)) R.push(r); }); });
 }
 async function loadCinema(){
   try {
@@ -916,6 +996,6 @@ importFromHash();
 initMap();
 $("locBtn").addEventListener("click", () => startGeo(true));
 render();
-Promise.all([loadEvents(), loadCinema(), loadWeather(), loadExtra()]).then(() => { drawPlaces(); render(); });
+Promise.all([loadEvents(), loadCinema(), loadWeather(), loadExtra().then(loadRoutes)]).then(() => { drawPlaces(); render(); });
 if (store.get("y.geoOn", false)) startGeo(false);
 setInterval(() => { renderStrip(); if (S.tab === "now" && panel.hidden && document.visibilityState === "visible" && !document.activeElement?.matches("input,select")) renderNow(); }, 5*60*1000);
