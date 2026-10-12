@@ -1,0 +1,2244 @@
+{
+ "places": [
+  {
+   "id": "t_odzun",
+   "n": "Одзунская церковь",
+   "ll": [
+    41.0517,
+    44.6156
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Действующая церковь в селе, двор открыт всегда, внутрь обычно пускают в светлое время.",
+   "visit": 35,
+   "price": "бесплатно",
+   "drive_from_yerevan": 180,
+   "best": "Утром по пути в ущелье: с края плато видно Дебедский каньон, свет мягкий.",
+   "praise": [
+    "Одна из самых ранних больших церквей Армении",
+    "Необычный двухарочный памятник-стела во дворе",
+    "Вид на каньон Дебеда с края села"
+   ],
+   "cons": [
+    "Небольшой крюк в гору от трассы (около 10 минут)"
+   ],
+   "fact": "Базилика VI–VII веков. Во дворе стоит редкий раннехристианский памятник: две арки, под которыми стоят резные стелы со сценами из Евангелия.",
+   "logistics": "Поворот с трассы Ванадзор – Алаверди у Алаверди, дальше по серпантину на плато. Асфальт.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Odzun%20Church",
+    "yandex": "https://yandex.ru/maps/?ll=44.6156%2C41.0517&z=16&text=Odzun%20Church",
+    "gis": "https://2gis.am/search/Odzun%20Church"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Odzun_Church",
+    "https://armeniadiscovery.com/place/akhtala-monastery"
+   ],
+   "photos": [
+    {
+     "src": "img/t_odzun-1.jpg",
+     "author": "Emma YSU",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:12_%D5%95%D5%B1%D5%B8%D6%82%D5%B6%D5%AB_%D5%BF%D5%A1%D5%B3%D5%A1%D6%80_Emma_YSU.jpg"
+    },
+    {
+     "src": "img/t_odzun-2.jpg",
+     "author": "Armenak Margarian",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Odzun_Church_24-08-2018_v2.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_sanahin",
+   "n": "Монастырь Санаин",
+   "ll": [
+    41.0871,
+    44.6663
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Территория открыта, обычно смотрят в светлое время. Музей братьев Микоян в селе работает по своему графику (не в понедельник), уточняйте на месте.",
+   "visit": 60,
+   "price": "бесплатно",
+   "drive_from_yerevan": 195,
+   "best": "До обеда: в гавитах темно, зато в солнечный день через дымники в сводах падают лучи.",
+   "praise": [
+    "Объект ЮНЕСКО",
+    "Огромные гавиты с колоннами и хачкарами в полу",
+    "Тихо, мало туристов по сравнению с Гегардом"
+   ],
+   "cons": [
+    "Внутри полумрак, под ногами неровные плиты"
+   ],
+   "fact": "Монастырь основан в X веке. В 2000 году его добавили к Ахпату в общий объект <b>Всемирного наследия ЮНЕСКО</b>. В селе родились братья Микоян: Анастас (политик) и Артём, конструктор истребителей МиГ. У их дома-музея стоит настоящий МиГ-21.",
+   "logistics": "От Алаверди 15–20 минут вверх по серпантину. Парковка у монастыря.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Sanahin%20Monastery",
+    "yandex": "https://yandex.ru/maps/?ll=44.6663%2C41.0871&z=16&text=Sanahin%20Monastery",
+    "gis": "https://2gis.am/search/Sanahin%20Monastery"
+   },
+   "sources": [
+    "https://whc.unesco.org/en/list/777",
+    "https://en.wikipedia.org/wiki/Sanahin_Monastery"
+   ],
+   "photos": [
+    {
+     "src": "img/t_sanahin-1.jpg",
+     "author": "Diego Delso",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Monasterio_de_Sanahin,_Armenia,_2016-09-30,_DD_44-46_HDR.jpg"
+    },
+    {
+     "src": "img/t_sanahin-2.jpg",
+     "author": "Tiia Monto",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Sanahin_Monastery_2018.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_haghpat",
+   "n": "Монастырь Ахпат",
+   "ll": [
+    41.0937,
+    44.7118
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Действующий монастырь, территория открыта в светлое время.",
+   "visit": 60,
+   "price": "бесплатно",
+   "drive_from_yerevan": 200,
+   "best": "Днём; с края села хороший вид на ущелье. Осенью в конце октября склоны вокруг жёлто-красные.",
+   "praise": [
+    "Объект ЮНЕСКО с 1996 года",
+    "Фрески в главном храме Сурб Ншан",
+    "Знаменитый хачкар Аменапркич (1273)"
+   ],
+   "cons": [
+    "У входа бывают торговцы сувенирами"
+   ],
+   "fact": "Главный храм <b>Сурб Ншан</b> заложен в 976 году при царице Хосровануйш. Хачкар Аменапркич («Всеспаситель») 1273 года считается одним из лучших резных крестов Армении.",
+   "logistics": "От Санаина около 20 минут. Рядом пещерная крепость Зарни-Парни, если останется время.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Haghpat%20Monastery",
+    "yandex": "https://yandex.ru/maps/?ll=44.7118%2C41.0937&z=16&text=Haghpat%20Monastery",
+    "gis": "https://2gis.am/search/Haghpat%20Monastery"
+   },
+   "sources": [
+    "https://whc.unesco.org/en/list/777",
+    "https://en.wikipedia.org/wiki/Haghpat_Monastery"
+   ],
+   "photos": [
+    {
+     "src": "img/t_haghpat-1.jpg",
+     "author": "Սարո Հովհաննիսյան",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Haghpat_Monastery4.jpg"
+    },
+    {
+     "src": "img/t_haghpat-2.jpg",
+     "author": "Սարո Հովհաննիսյան",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Haghpat_Monastery2.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_akhtala",
+   "n": "Монастырь-крепость Ахтала",
+   "ll": [
+    41.1506,
+    44.7645
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Фиксированных часов нет, лучше приезжать до заката; иногда церковь открывает смотритель.",
+   "visit": 45,
+   "price": "вход обычно бесплатный, уточняйте на месте",
+   "drive_from_yerevan": 205,
+   "best": "Во второй половине дня, пока светло: фрески внутри лучше видно при дневном свете.",
+   "praise": [
+    "Лучшие средневековые фрески в Армении",
+    "Крепостные стены на скалистом мысе",
+    "Почти без людей"
+   ],
+   "cons": [
+    "Дальняя точка маршрута, оттуда около 3 ч 15 мин до Еревана",
+    "Ключ от церкви бывает у смотрителя"
+   ],
+   "fact": "Церковь Богородицы XIII века целиком расписана фресками: Богоматерь в апсиде, Тайная вечеря, Страшный суд. Надписи на фресках греческие и грузинские: монастырь принадлежал армянам-халкидонитам при князьях Захарянах.",
+   "logistics": "От Ахпата около 20 минут по трассе в сторону Грузии. Последняя точка дня.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Akhtala%20Monastery",
+    "yandex": "https://yandex.ru/maps/?ll=44.7645%2C41.1506&z=16&text=Akhtala%20Monastery",
+    "gis": "https://2gis.am/search/Akhtala%20Monastery"
+   },
+   "sources": [
+    "https://armeniapedia.org/wiki/Akhtala",
+    "https://www.ancient-history-sites.com/sites/akhtala-monastery/"
+   ],
+   "photos": [
+    {
+     "src": "img/t_akhtala-1.jpg",
+     "author": "Diego Delso",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Monasterio_de_Akhtala,_Armenia,_2016-09-30,_DD_02.jpg"
+    },
+    {
+     "src": "img/t_akhtala-2.jpg",
+     "author": "Diego Delso",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Monasterio_de_Akhtala,_Armenia,_2016-09-30,_DD_01.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_dendro",
+   "n": "Степанаванский дендропарк (Сочут)",
+   "ll": [
+    40.9653,
+    44.4713
+   ],
+   "cat": "park",
+   "light": "day",
+   "open": [
+    [
+     "10:00",
+     "19:00"
+    ],
+    [
+     "10:00",
+     "19:00"
+    ],
+    [
+     "10:00",
+     "19:00"
+    ],
+    [
+     "10:00",
+     "19:00"
+    ],
+    [
+     "10:00",
+     "19:00"
+    ],
+    [
+     "10:00",
+     "19:00"
+    ],
+    [
+     "10:00",
+     "19:00"
+    ]
+   ],
+   "hours_note": "По данным Armenia Discovery (2026) 10:00–19:00. Вход, по свежим отзывам, около 1000 драм, раньше был бесплатным.",
+   "visit": 75,
+   "price": "≈1000 драм",
+   "drive_from_yerevan": 150,
+   "best": "Октябрь: клёны и буки желтеют и краснеют, лучшее время года для парка.",
+   "praise": [
+    "Старый лес и аллеи хвойных",
+    "Пруд и тишина",
+    "Хороша осенью"
+   ],
+   "cons": [
+    "После дождя грязно, нужна удобная обувь",
+    "Последние 5 км по сельской дороге"
+   ],
+   "fact": "Парк основал в 1931 году польский лесник <b>Эдмунд Леонович</b>. Здесь растут сотни видов деревьев со всего мира.",
+   "logistics": "Через Спитак и Степанаван к селу Гюлагарак, дальше указатели. Около 2,5 часов от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Stepanavan%20Dendropark",
+    "yandex": "https://yandex.ru/maps/?ll=44.4713%2C40.9653&z=16&text=Stepanavan%20Dendropark",
+    "gis": "https://2gis.am/search/Stepanavan%20Dendropark"
+   },
+   "sources": [
+    "https://armeniadiscovery.com/en/articles/stepanavan-dendropark",
+    "https://www.birdingplaces.eu/birdingplaces/armenia/stepanavan-sochut-dendropark"
+   ],
+   "photos": [
+    {
+     "src": "img/t_dendro-1.jpg",
+     "author": "Valen1988",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Stepanavan_Dendropark,_Lori.jpg"
+    },
+    {
+     "src": "img/t_dendro-2.jpg",
+     "author": "Ashot Arzumanyan",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Stepanavan_Dendropark_2011_2.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_lori_berd",
+   "n": "Крепость Лори Берд",
+   "ll": [
+    41.0058,
+    44.4268
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": [
+    null,
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "16:00"
+    ]
+   ],
+   "hours_note": "По данным путеводителя: вт–сб 10:00–18:00, вс 10:00–16:00, пн выходной. Билет ≈1300 драм для иностранцев, 650 для граждан РА/ЕАЭС.",
+   "visit": 50,
+   "price": "≈650–1300 драм",
+   "drive_from_yerevan": 150,
+   "best": "Днём; стены стоят над двумя ущельями, осенью склоны цветные.",
+   "praise": [
+    "Огромная крепость над слиянием двух ущелий",
+    "Средневековый мост и бани внизу",
+    "Мало туристов"
+   ],
+   "cons": [
+    "Без экскурсовода мало табличек"
+   ],
+   "fact": "В XI веке здесь была столица Ташир-Дзорагетского царства. Крепость стоит на мысе между ущельями рек Дзорагет и Мисхана.",
+   "logistics": "15 минут от дендропарка через Степанаван.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Lori%20Berd%20fortress",
+    "yandex": "https://yandex.ru/maps/?ll=44.4268%2C41.0058&z=16&text=Lori%20Berd%20fortress",
+    "gis": "https://2gis.am/search/Lori%20Berd%20fortress"
+   },
+   "sources": [
+    "https://absolutearmenia.com/?p=6121",
+    "https://en.wikipedia.org/wiki/Lori_Fortress"
+   ],
+   "photos": [
+    {
+     "src": "img/t_lori_berd-1.jpg",
+     "author": "Diego Delso",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Lori_Berd,_Armenia,_2016-09-30,_DD_69.jpg"
+    },
+    {
+     "src": "img/t_lori_berd-2.jpg",
+     "author": "Diego Delso",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Lori_Berd,_Armenia,_2016-09-30,_DD_63-65_HDR.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_dsegh",
+   "n": "Дом-музей Ованеса Туманяна в Дсехе",
+   "ll": [
+    40.9634,
+    44.6476
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": [
+    null,
+    [
+     "11:00",
+     "17:30"
+    ],
+    [
+     "11:00",
+     "17:30"
+    ],
+    [
+     "11:00",
+     "17:30"
+    ],
+    [
+     "11:00",
+     "17:30"
+    ],
+    [
+     "11:00",
+     "17:30"
+    ],
+    [
+     "11:00",
+     "16:00"
+    ]
+   ],
+   "hours_note": "По сайту Музея Туманяна: вт–сб 11:00–17:30, вс 11:00–16:00, пн выходной. Взрослый билет 1000 драм, дети до 12 лет бесплатно.",
+   "visit": 50,
+   "price": "1000 драм",
+   "drive_from_yerevan": 170,
+   "best": "После обеда; из села красивый вид на Дебедское ущелье.",
+   "praise": [
+    "Дом, где родился главный армянский поэт",
+    "Тихое горное село",
+    "Рядом смотровые над ущельем"
+   ],
+   "cons": [
+    "Понедельник выходной",
+    "Узкая дорога в село"
+   ],
+   "fact": "Ованес Туманян родился здесь в 1869 году. По его сказкам и поэмам выросло несколько поколений: «Ануш», «Давид Сасунский», «Храбрый Назар».",
+   "logistics": "Подъём с трассы Ванадзор – Алаверди у Туманяна, около 15 минут.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Hovhannes%20Tumanyan%20House-Museum%20Dsegh",
+    "yandex": "https://yandex.ru/maps/?ll=44.6476%2C40.9634&z=16&text=Hovhannes%20Tumanyan%20House-Museum%20Dsegh",
+    "gis": "https://2gis.am/search/Hovhannes%20Tumanyan%20House-Museum%20Dsegh"
+   },
+   "sources": [
+    "https://gatmuseum.am/en/branches",
+    "https://en.wikipedia.org/wiki/Hovhannes_Tumanyan"
+   ],
+   "photos": [
+    {
+     "src": "img/t_dsegh-1.jpg",
+     "author": "23artashes",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:House-Museum_of_Hovhannes_Tumanyan,_Dsegh_2023,_%D4%B1%D4%B9_06.jpg"
+    },
+    {
+     "src": "img/t_dsegh-2.jpg",
+     "author": "23artashes",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:House-Museum_of_Hovhannes_Tumanyan,_Dsegh_2023,_%D4%B1%D4%B9_07.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_kobayr",
+   "n": "Монастырь Кобайр",
+   "ll": [
+    41.0051,
+    44.6349
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Руины монастыря на склоне, открыто всегда; подниматься лучше засветло.",
+   "visit": 45,
+   "price": "бесплатно",
+   "drive_from_yerevan": 170,
+   "best": "Во второй половине дня, пока светло: подъём по лестнице 15–20 минут.",
+   "praise": [
+    "Фрески XII–XIII веков",
+    "Монастырь буквально висит на склоне ущелья",
+    "Атмосфера заброшенности"
+   ],
+   "cons": [
+    "Подъём по ступеням через лес",
+    "Часть стен в лесах реставрации"
+   ],
+   "fact": "Монастырь XII века. Как и Ахтала, принадлежал халкидонитам, поэтому фрески написаны в грузинской манере и с грузинскими надписями.",
+   "logistics": "Парковка у железнодорожной станции Кобайр на трассе, дальше пешком вверх.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Kobayr%20Monastery",
+    "yandex": "https://yandex.ru/maps/?ll=44.6349%2C41.0051&z=16&text=Kobayr%20Monastery",
+    "gis": "https://2gis.am/search/Kobayr%20Monastery"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kobayr_monastery"
+   ],
+   "photos": [
+    {
+     "src": "img/t_kobayr-1.jpg",
+     "author": "Soghomon Matevosyan",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Kobayr_monastery_11.JPG"
+    },
+    {
+     "src": "img/t_kobayr-2.jpg",
+     "author": "Armen Manukov",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Kobayr_monastery_complex_01.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_jermuk_fall",
+   "n": "Джермукский водопад",
+   "ll": [
+    39.8367,
+    45.6682
+   ],
+   "cat": "nature",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Смотровая открыта всегда, бесплатно.",
+   "visit": 40,
+   "price": "бесплатно",
+   "drive_from_yerevan": 180,
+   "best": "Утром и днём; после обеда солнце уходит из ущелья.",
+   "praise": [
+    "Высокий водопад с тонкими струями",
+    "Ущелье реки Арпа",
+    "Рядом центр курорта"
+   ],
+   "cons": [
+    "Спуск к воде скользкий после дождя",
+    "У смотровой торгуют сувенирами"
+   ],
+   "fact": "Высота около <b>70 м</b>. Из-за тонких струй его называют «Волосы русалки».",
+   "logistics": "На въезде в Джермук, от центра 20 минут пешком вниз или 5 минут на машине.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Jermuk%20Waterfall",
+    "yandex": "https://yandex.ru/maps/?ll=45.6682%2C39.8367&z=16&text=Jermuk%20Waterfall",
+    "gis": "https://2gis.am/search/Jermuk%20Waterfall"
+   },
+   "sources": [
+    "https://guidesandstories.com/best-things-to-do-in-jermuk/",
+    "https://en.wikipedia.org/wiki/Jermuk"
+   ],
+   "photos": [
+    {
+     "src": "img/t_jermuk_fall-1.jpg",
+     "author": "Dav Sargsyan",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Jermuk_waterfall_26.jpg"
+    },
+    {
+     "src": "img/t_jermuk_fall-2.jpg",
+     "author": "Ավետիսյան91",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Jermuk_waterfall_03.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_jermuk_gallery",
+   "n": "Галерея минеральных вод в Джермуке",
+   "ll": [
+    39.8404,
+    45.6662
+   ],
+   "cat": "culture",
+   "light": "any",
+   "open": "always",
+   "hours_note": "Колоннада открыта круглосуточно, бесплатно.",
+   "visit": 25,
+   "price": "бесплатно",
+   "drive_from_yerevan": 180,
+   "best": "В любое время; возьмите свою кружку.",
+   "praise": [
+    "Можно попробовать воду «Джермук» прямо из источников",
+    "Краны с водой разной температуры",
+    "Красивая колоннада над ущельем"
+   ],
+   "cons": [
+    "Вода сильно минерализованная, много не пейте"
+   ],
+   "fact": "Джермук стоит на горячих источниках. Эту воду продают по всей Армении под маркой «Джермук». Символ города — олень: по легенде, раненый олень исцелился в местном источнике.",
+   "logistics": "В центре, у парка над ущельем.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Jermuk%20mineral%20water%20gallery",
+    "yandex": "https://yandex.ru/maps/?ll=45.6662%2C39.8404&z=16&text=Jermuk%20mineral%20water%20gallery",
+    "gis": "https://2gis.am/search/Jermuk%20mineral%20water%20gallery"
+   },
+   "sources": [
+    "https://guidesandstories.com/best-things-to-do-in-jermuk/"
+   ],
+   "photos": [
+    {
+     "src": "img/t_jermuk_gallery-1.jpg",
+     "author": "Marcin Konsek",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:2014_Prowincja_Wajoc_Dzor,_D%C5%BCermuk,_Pijalnia_w%C3%B3d_mineralnych_(12).jpg"
+    },
+    {
+     "src": "img/t_jermuk_gallery-2.jpg",
+     "author": "23artashes",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Jermuk-ympelasrah.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_jermuk_rope",
+   "n": "Канатная дорога Джермука",
+   "ll": [
+    39.831,
+    45.6738
+   ],
+   "cat": "view",
+   "light": "day",
+   "open": [
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ]
+   ],
+   "hours_note": "Обычно ежедневно около 10:00–18:00, в ветер и непогоду останавливают. Цена в разных источниках от 1500 до 9000 драм — уточняйте на кассе.",
+   "visit": 60,
+   "price": "уточнять на кассе",
+   "drive_from_yerevan": 180,
+   "best": "До 16:00 в ясный день: сверху видно плато и ущелье Арпы.",
+   "praise": [
+    "Подъём над курортом и лесом",
+    "Вид на плато",
+    "Хорош осенью в жёлтом лесу"
+   ],
+   "cons": [
+    "Открытые кресла, наверху холодно и ветрено",
+    "В непогоду не работает"
+   ],
+   "fact": "Кресельный подъёмник зимой работает для лыжников, в остальное время катают туристов.",
+   "logistics": "Нижняя станция на южной окраине, 5 минут на машине от центра.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Jermuk%20ropeway",
+    "yandex": "https://yandex.ru/maps/?ll=45.6738%2C39.831&z=16&text=Jermuk%20ropeway",
+    "gis": "https://2gis.am/search/Jermuk%20ropeway"
+   },
+   "sources": [
+    "https://hyurservice.com/en/attractions-activities-armenia/jermuk-ropeway",
+    "https://www.tripadvisor.com/Attraction_Review-g2708780-d12007028-Reviews-Ropeway-Jermuk_Vayots_Dzor_Province.html"
+   ],
+   "photos": [
+    {
+     "src": "img/t_jermuk_rope-1.jpg",
+     "author": "1987Tony1987",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Jermuk_ropeway.JPG"
+    }
+   ]
+  },
+  {
+   "id": "t_gndevank",
+   "n": "Монастырь Гндеванк",
+   "ll": [
+    39.7587,
+    45.611
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Действующий монастырь в ущелье, открыт в светлое время.",
+   "visit": 40,
+   "price": "бесплатно",
+   "drive_from_yerevan": 170,
+   "best": "Во второй половине дня, когда солнце освещает ущелье Арпы.",
+   "praise": [
+    "Монастырь в глубоком ущелье",
+    "Остатки фресок X века",
+    "Почти без людей"
+   ],
+   "cons": [
+    "Спуск с трассы по серпантину"
+   ],
+   "fact": "Монастырь основан в 930-х годах <b>княгиней Софьей</b>, женой сюникского князя.",
+   "logistics": "Поворот у села Гндеваз на трассе Вайк – Джермук, около 30 минут от Джермука.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Gndevank",
+    "yandex": "https://yandex.ru/maps/?ll=45.611%2C39.7587&z=16&text=Gndevank",
+    "gis": "https://2gis.am/search/Gndevank"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gndevank"
+   ],
+   "photos": [
+    {
+     "src": "img/t_gndevank-1.jpg",
+     "author": "Serouj",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Gndevank-2_(cropped).JPG"
+    },
+    {
+     "src": "img/t_gndevank-2.jpg",
+     "author": "Lubekar",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:%C2%AB%D4%B3%D5%B6%D5%A4%D5%A5%D5%BE%D5%A1%D5%B6%D6%84%C2%BB_%D5%BE%D5%A1%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6_%D5%B0%D5%A1%D5%B4%D5%A1%D5%AC%D5%AB%D6%80_16.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_selim",
+   "n": "Селимский караван-сарай",
+   "ll": [
+    39.9497,
+    45.2361
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Открыт всегда, бесплатно. Перевал Варденяц (Селим) в снегопад закрывают.",
+   "visit": 30,
+   "price": "бесплатно",
+   "drive_from_yerevan": 160,
+   "best": "Днём; при первом снеге очень атмосферно, но проверьте дорогу.",
+   "praise": [
+    "Лучше всех сохранившийся караван-сарай Армении",
+    "Высокогорье на 2400 м",
+    "Внутри зал с рядами колонн и яслями"
+   ],
+   "cons": [
+    "Холодно и ветрено даже в солнечный день",
+    "В ноябре возможен снег на перевале"
+   ],
+   "fact": "Построен в <b>1332 году</b> князем Чесаром Орбеляном для купцов Шёлкового пути. Над входом надписи на армянском и арабском.",
+   "logistics": "Трасса Ехегнадзор – Мартуни, у перевала Варденяц. Асфальт, серпантины.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Selim%20Caravanserai",
+    "yandex": "https://yandex.ru/maps/?ll=45.2361%2C39.9497&z=16&text=Selim%20Caravanserai",
+    "gis": "https://2gis.am/search/Selim%20Caravanserai"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Orbelian%27s_Caravanserai",
+    "https://rescue.mia.gov.am/en/articles/news/roads-03-02-1"
+   ],
+   "photos": [
+    {
+     "src": "img/t_selim-1.jpg",
+     "author": "Photographer: Mosbatho",
+     "license": "CC BY 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Orbelian%27s_Caravanserai,_Armenia.jpg"
+    },
+    {
+     "src": "img/t_selim-2.jpg",
+     "author": "franek2",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Caravanserai_(built_1332)_-_panoramio.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_noratus",
+   "n": "Кладбище хачкаров Норадуз",
+   "ll": [
+    40.3743,
+    45.1818
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Открыто всегда, бесплатно.",
+   "visit": 50,
+   "price": "бесплатно",
+   "drive_from_yerevan": 100,
+   "best": "Во второй половине дня: низкое солнце проявляет резьбу на камнях.",
+   "praise": [
+    "Крупнейшее собрание хачкаров",
+    "Поле резных крестов на фоне гор",
+    "Вид на Севан"
+   ],
+   "cons": [
+    "Бабушки у входа настойчиво предлагают носки и экскурсию"
+   ],
+   "fact": "Здесь около <b>900 хачкаров</b>, самые старые X века. После уничтожения кладбища в Джуге Норадуз стал самым большим сохранившимся полем хачкаров.",
+   "logistics": "У села Норадуз рядом с Гаваром, 5 минут от трассы вдоль Севана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Noratus%20cemetery",
+    "yandex": "https://yandex.ru/maps/?ll=45.1818%2C40.3743&z=16&text=Noratus%20cemetery",
+    "gis": "https://2gis.am/search/Noratus%20cemetery"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Noratus_cemetery"
+   ],
+   "photos": [
+    {
+     "src": "img/t_noratus-1.jpg",
+     "author": "Marcin Konsek",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:2014_Prowincja_Gegharkunik,_Cmentarz_Noratus_(03).jpg"
+    },
+    {
+     "src": "img/t_noratus-2.jpg",
+     "author": "Marcin Konsek",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:2014_Prowincja_Gegharkunik,_Cmentarz_Noratus_(16).jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_hayravank",
+   "n": "Монастырь Айраванк",
+   "ll": [
+    40.4327,
+    45.108
+   ],
+   "cat": "view",
+   "light": "sunset",
+   "open": "always",
+   "hours_note": "Открыт всегда, бесплатно.",
+   "visit": 40,
+   "price": "бесплатно",
+   "drive_from_yerevan": 90,
+   "best": "Перед закатом: тёплый свет на камне, Севан внизу синий.",
+   "praise": [
+    "Монастырь на скале над водой",
+    "Тише Севанаванка",
+    "Удобно на обратном пути"
+   ],
+   "cons": [
+    "Ветрено"
+   ],
+   "fact": "Монастырь IX–XII веков стоит на скалистом мысе прямо над западным берегом Севана.",
+   "logistics": "Трасса Севан – Мартуни, около 1,5 часа до Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Hayravank%20monastery",
+    "yandex": "https://yandex.ru/maps/?ll=45.108%2C40.4327&z=16&text=Hayravank%20monastery",
+    "gis": "https://2gis.am/search/Hayravank%20monastery"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hayravank_Monastery"
+   ],
+   "photos": [
+    {
+     "src": "img/t_hayravank-1.jpg",
+     "author": "Vahagn Grigoryan",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:DJI_-_Hayravanq.jpg"
+    },
+    {
+     "src": "img/t_hayravank-2.jpg",
+     "author": "Palickap",
+     "license": "CC BY 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Hayravank_Monastery_(19).jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_aruch",
+   "n": "Аручский собор",
+   "ll": [
+    40.2891,
+    44.0807
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Открыт в светлое время, бесплатно.",
+   "visit": 30,
+   "price": "бесплатно",
+   "drive_from_yerevan": 55,
+   "best": "Утром: тихо, на фоне снежный Арагац.",
+   "praise": [
+    "Один из крупнейших соборов VII века",
+    "Огромное пространство без купола",
+    "Вид на Арагац"
+   ],
+   "cons": [
+    "Купол обрушился, внутри голые стены"
+   ],
+   "fact": "Собор построил в 660-х годах князь Григор Мамиконян. В Аруче были летние лагеря армянских царей.",
+   "logistics": "Трасса Аштарак – Талин, около 50 минут от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Aruch%20Cathedral",
+    "yandex": "https://yandex.ru/maps/?ll=44.0807%2C40.2891&z=16&text=Aruch%20Cathedral",
+    "gis": "https://2gis.am/search/Aruch%20Cathedral"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aruchavank"
+   ],
+   "photos": [
+    {
+     "src": "img/t_aruch-1.jpg",
+     "author": "Tamara Areshian from London, UK",
+     "license": "CC BY 2.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Armenia_2007_Aruch_Cathedral_(2165273593).jpg"
+    },
+    {
+     "src": "img/t_aruch-2.jpg",
+     "author": "Soseh Aghaian",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Aruch_complex.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_byurakan",
+   "n": "Бюраканская астрофизическая обсерватория",
+   "ll": [
+    40.33,
+    44.273
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": [
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ]
+   ],
+   "hours_note": "Экскурсии только по записи по тел. 091 195903 (сайт bao.am). Дневные туры 10:00–17:00; ночные наблюдения в октябре–марте 20:30–00:30.",
+   "visit": 120,
+   "price": "иностранцы: территория 900, 2,6-м телескоп 1500, дом-музей 1500 драм с человека (для группы 1–5 чел. фикс. цена)",
+   "drive_from_yerevan": 45,
+   "best": "В ясный день; на ночные наблюдения — в безлунную ночь.",
+   "praise": [
+    "Внутри купола 2,6-метрового телескопа",
+    "Дом-музей Амбарцумяна",
+    "Старый парк-дендрарий"
+   ],
+   "cons": [
+    "Без записи могут не пустить",
+    "Купол телескопа внутри холодный"
+   ],
+   "fact": "Обсерваторию основал в 1946 году <b>Виктор Амбарцумян</b>. На метровом телескопе Шмидта Беньямин Маркарян составил знаменитый каталог «галактик Маркаряна». Телескоп 2,6 м до сих пор один из крупнейших на постсоветском пространстве.",
+   "logistics": "Село Бюракан, 45 минут от Еревана через Аштарак.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Byurakan%20Astrophysical%20Observatory",
+    "yandex": "https://yandex.ru/maps/?ll=44.273%2C40.33&z=16&text=Byurakan%20Astrophysical%20Observatory",
+    "gis": "https://2gis.am/search/Byurakan%20Astrophysical%20Observatory"
+   },
+   "sources": [
+    "https://www.bao.am/visits/tours.php",
+    "https://en.wikipedia.org/wiki/Byurakan_Observatory"
+   ],
+   "photos": [
+    {
+     "src": "img/t_byurakan-1.jpg",
+     "author": "Rita Willaert",
+     "license": "CC BY 2.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Byurakan_2.jpg"
+    },
+    {
+     "src": "img/t_byurakan-2.jpg",
+     "author": "XenonX88",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Byurakan_Observatory_main_building.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_aghtsk",
+   "n": "Усыпальница Аршакидов в Агцке",
+   "ll": [
+    40.31,
+    44.2549
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Руины под открытым небом, бесплатно.",
+   "visit": 20,
+   "price": "бесплатно",
+   "drive_from_yerevan": 50,
+   "best": "Днём; короткая остановка между Бюраканом и Ованаваном.",
+   "praise": [
+    "Редкий памятник IV века",
+    "Резные барельефы у входа в склеп"
+   ],
+   "cons": [
+    "Небольшие руины, без пояснений"
+   ],
+   "fact": "По преданию, в IV веке сюда перенесли останки армянских царей династии Аршакидов, вывезенные персами.",
+   "logistics": "Село Агцк, 10 минут от Бюракана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Aghtsk%20mausoleum",
+    "yandex": "https://yandex.ru/maps/?ll=44.2549%2C40.31&z=16&text=Aghtsk%20mausoleum",
+    "gis": "https://2gis.am/search/Aghtsk%20mausoleum"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aghts"
+   ],
+   "photos": [
+    {
+     "src": "img/t_aghtsk-1.jpg",
+     "author": "Մարի Ավետիսյան",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Arshacid_Mausoleum_in_Aghtsk,_2022_05.jpg"
+    },
+    {
+     "src": "img/t_aghtsk-2.jpg",
+     "author": "Մարի Ավետիսյան",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Arshacid_Mausoleum_in_Aghtsk,_2022_04.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_hovhannavank",
+   "n": "Ованаванк и каньон Касах",
+   "ll": [
+    40.3395,
+    44.3887
+   ],
+   "cat": "view",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Открыт в светлое время, бесплатно.",
+   "visit": 40,
+   "price": "бесплатно",
+   "drive_from_yerevan": 35,
+   "best": "Днём; осенью каньон Касаха ярко-рыжий.",
+   "praise": [
+    "Монастырь прямо на краю каньона",
+    "Резной портал XIII века",
+    "Близко к Еревану"
+   ],
+   "cons": [
+    "Ограждения у обрыва почти нет"
+   ],
+   "fact": "Главная церковь Сурб Карапет построена в 1216–1221 годах. Монастырь стоит над обрывом каньона реки Касах.",
+   "logistics": "Село Оганаван, 35 минут от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Hovhannavank",
+    "yandex": "https://yandex.ru/maps/?ll=44.3887%2C40.3395&z=16&text=Hovhannavank",
+    "gis": "https://2gis.am/search/Hovhannavank"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hovhannavank"
+   ],
+   "photos": [
+    {
+     "src": "img/t_hovhannavank-1.jpg",
+     "author": "Սարո Հովհաննիսյան",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Hovhannavank_Monastery_2019-05-11_v6.jpg"
+    },
+    {
+     "src": "img/t_hovhannavank-2.jpg",
+     "author": "Սարո Հովհաննիսյան",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Hovhannavank_Monastery_2019-05-11_v4.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_kasagh",
+   "n": "Касахская базилика в Апаране",
+   "ll": [
+    40.5934,
+    44.3567
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Открыта в светлое время, бесплатно.",
+   "visit": 25,
+   "price": "бесплатно",
+   "drive_from_yerevan": 65,
+   "best": "Днём.",
+   "praise": [
+    "Одна из древнейших церквей страны",
+    "Город на высоте около 1900 м"
+   ],
+   "cons": [
+    "В Апаране осенью заметно холоднее, чем в Ереване"
+   ],
+   "fact": "Базилика Сурб Хач датируется IV–V веками — одна из самых ранних сохранившихся церквей Армении.",
+   "logistics": "Центр Апарана, около часа от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Kasagh%20Basilica%20Aparan",
+    "yandex": "https://yandex.ru/maps/?ll=44.3567%2C40.5934&z=16&text=Kasagh%20Basilica%20Aparan",
+    "gis": "https://2gis.am/search/Kasagh%20Basilica%20Aparan"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kasagh_Basilica"
+   ],
+   "photos": [
+    {
+     "src": "img/t_kasagh-1.jpg",
+     "author": "Yerevantsi",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Kasagh_Basilica_portal.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_aparan_res",
+   "n": "Апаранское водохранилище",
+   "ll": [
+    40.5052,
+    44.434
+   ],
+   "cat": "view",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Смотровые вдоль дороги, всегда.",
+   "visit": 20,
+   "price": "бесплатно",
+   "drive_from_yerevan": 60,
+   "best": "После обеда, когда солнце сбоку подсвечивает воду и склоны Арагаца.",
+   "praise": [
+    "Синяя вода среди жёлтых холмов",
+    "Вид на Арагац"
+   ],
+   "cons": [
+    "Ветрено, удобных площадок мало"
+   ],
+   "fact": "Водохранилище на реке Касах. С берегов видны Арагац и Арайлер.",
+   "logistics": "У села Кучак по дороге Апаран – Ереван.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Aparan%20Reservoir",
+    "yandex": "https://yandex.ru/maps/?ll=44.434%2C40.5052&z=16&text=Aparan%20Reservoir",
+    "gis": "https://2gis.am/search/Aparan%20Reservoir"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aparan_Reservoir"
+   ],
+   "photos": [
+    {
+     "src": "img/t_aparan_res-1.jpg",
+     "author": "ՎԱՍ",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Aparan_Reservoir,_%D5%8E%D4%B1%D5%8D_02.jpg"
+    },
+    {
+     "src": "img/t_aparan_res-2.jpg",
+     "author": "Dav Sargsyan",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Aparan_Reservoir_0011_17.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_oshakan",
+   "n": "Ошакан: могила Месропа Маштоца",
+   "ll": [
+    40.2586,
+    44.3156
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Церковь открыта днём, бесплатно.",
+   "visit": 30,
+   "price": "бесплатно",
+   "drive_from_yerevan": 35,
+   "best": "Утром перед винодельнями.",
+   "praise": [
+    "Место погребения создателя армянского алфавита",
+    "Росписи внутри храма"
+   ],
+   "cons": [
+    "Небольшая остановка"
+   ],
+   "fact": "<b>Месроп Маштоц</b> похоронен здесь в 440 году. Нынешняя церковь над его могилой построена в 1870-х.",
+   "logistics": "Ошакан, 35 минут от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Oshakan%20Saint%20Mesrop%20Mashtots%20Church",
+    "yandex": "https://yandex.ru/maps/?ll=44.3156%2C40.2586&z=16&text=Oshakan%20Saint%20Mesrop%20Mashtots%20Church",
+    "gis": "https://2gis.am/search/Oshakan%20Saint%20Mesrop%20Mashtots%20Church"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oshakan"
+   ],
+   "photos": [
+    {
+     "src": "img/t_oshakan-1.jpg",
+     "author": "Yerevantsi",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Oshakan_Saint_Mesrop_Mashtots_Church_fresco.jpg"
+    },
+    {
+     "src": "img/t_oshakan-2.jpg",
+     "author": "Yerevantsi",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Oshakan_Mesrop_Mashtots_church_2019.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_voskevaz",
+   "n": "Винодельня «Воскеваз»",
+   "ll": [
+    40.27,
+    44.2937
+   ],
+   "cat": "wine",
+   "light": "day",
+   "open": "unknown",
+   "hours_note": "Экскурсия и дегустация по записи, звоните заранее.",
+   "visit": 75,
+   "price": "по программе, уточняйте при записи (частные туры ≈$45)",
+   "drive_from_yerevan": 40,
+   "best": "До обеда, пока не начались группы.",
+   "praise": [
+    "Старые подвалы и карасы — глиняные кувшины для вина",
+    "Небольшой музей истории вина",
+    "Вина из армянских сортов"
+   ],
+   "cons": [
+    "Бывают большие экскурсионные группы"
+   ],
+   "fact": "Одна из старейших действующих виноделен страны, с 1930-х годов. В подвалах хранят вино по старинке — в карасах.",
+   "logistics": "Село Воскеваз у Аштарака, 5 минут от Ошакана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Voskevaz%20winery",
+    "yandex": "https://yandex.ru/maps/?ll=44.2937%2C40.27&z=16&text=Voskevaz%20winery",
+    "gis": "https://2gis.am/search/Voskevaz%20winery"
+   },
+   "sources": [
+    "https://www.byfood.com/experiences/private-wine-tour-in-voskevaz-with-wine-tasting-41978",
+    "https://www.winetourism.com/local-wine-guide-experiences/timeless-monasteries-and-legendary-wines-of-aragatsotn"
+   ],
+   "photos": []
+  },
+  {
+   "id": "t_agarak",
+   "n": "Археологический парк Агарак",
+   "ll": [
+    40.2949,
+    44.2782
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "unknown",
+   "hours_note": "Открытая площадка; часы и цену уточняйте на месте.",
+   "visit": 40,
+   "price": "уточнять на месте",
+   "drive_from_yerevan": 40,
+   "best": "Днём, при солнце рельефы на скалах видно лучше.",
+   "praise": [
+    "Высеченные в скале площадки, ступени и чаши",
+    "5 тысяч лет истории"
+   ],
+   "cons": [
+    "Без гида непонятно, что смотреть"
+   ],
+   "fact": "Поселение и святилище раннего бронзового века: в туфовых скалах вырублены площадки, ступени, каналы и чаши.",
+   "logistics": "Село Агарак у трассы Аштарак – Талин.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Agarak%20archaeological%20site",
+    "yandex": "https://yandex.ru/maps/?ll=44.2782%2C40.2949&z=16&text=Agarak%20archaeological%20site",
+    "gis": "https://2gis.am/search/Agarak%20archaeological%20site"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Agarak,_Aragatsotn"
+   ],
+   "photos": [
+    {
+     "src": "img/t_agarak-1.jpg",
+     "author": "Vacio",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Archaeological_site_Agarak_01.JPG"
+    },
+    {
+     "src": "img/t_agarak-2.jpg",
+     "author": "Vacio",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Archaeological_site_Agarak_05.JPG"
+    }
+   ]
+  },
+  {
+   "id": "t_armas",
+   "n": "Винодельня и ресторан ArmAs",
+   "ll": [
+    40.2615,
+    44.1449
+   ],
+   "cat": "wine",
+   "light": "day",
+   "open": [
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ],
+    [
+     "10:00",
+     "18:00"
+    ]
+   ],
+   "hours_note": "По справочникам ежедневно 10:00–18:00. Программа «Wine & Dine» (прогулка по винограднику, дегустация 5 вин, обед) около 3 часов, только по брони.",
+   "visit": 150,
+   "price": "Wine & Dine ≈$60–65 с человека",
+   "drive_from_yerevan": 60,
+   "best": "Обед на балконе над виноградниками в солнечный день.",
+   "praise": [
+    "Красивое поместье среди виноградников",
+    "Обед из своих продуктов",
+    "Вид на Арагац и Арарат"
+   ],
+   "cons": [
+    "Нужна бронь",
+    "Удалённо, на такси обратно дорого"
+   ],
+   "fact": "Одно из самых красивых винных поместий страны, в селе Нор Едесиа.",
+   "logistics": "От Аштарака около 40 минут через Агарак.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=ArmAs%20winery",
+    "yandex": "https://yandex.ru/maps/?ll=44.1449%2C40.2615&z=16&text=ArmAs%20winery",
+    "gis": "https://2gis.am/search/ArmAs%20winery"
+   },
+   "sources": [
+    "https://livetheworld.com/post/a-hidden-gem-of-aragatsotn-armas-winery-and-restaurant-pqt1",
+    "https://www.winetourism.com/winery/armas-estate/"
+   ],
+   "photos": [
+    {
+     "src": "img/t_armas-1.jpg",
+     "author": "Chaojoker",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:%D4%B1%D6%80%D5%B4%D4%B1%D5%BD.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_armenia_wine",
+   "n": "Завод Armenia Wine",
+   "ll": [
+    40.2445,
+    44.3385
+   ],
+   "cat": "wine",
+   "light": "day",
+   "open": "unknown",
+   "hours_note": "Экскурсия по заводу и дегустация по записи.",
+   "visit": 60,
+   "price": "дегустация обычно 3 вина с сыром; цену уточняйте при записи",
+   "drive_from_yerevan": 35,
+   "best": "Последняя остановка перед Ереваном.",
+   "praise": [
+    "Большой современный завод",
+    "Экскурсии на русском",
+    "Магазин с хорошими ценами"
+   ],
+   "cons": [
+    "Похоже на производство, а не семейную винодельню"
+   ],
+   "fact": "Один из крупнейших винных заводов Армении. Рядом, в том же Сасунике, бутиковая винодельня <b>Van Ardi</b>.",
+   "logistics": "Село Сасуник, 30 минут от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Armenia%20Wine%20Sasunik",
+    "yandex": "https://yandex.ru/maps/?ll=44.3385%2C40.2445&z=16&text=Armenia%20Wine%20Sasunik",
+    "gis": "https://2gis.am/search/Armenia%20Wine%20Sasunik"
+   },
+   "sources": [
+    "https://www.armgeo.am/en/?p=37935",
+    "https://www.byfood.com/experiences/wine-tasting-activity-in-sasunik-village-private-group-42719"
+   ],
+   "photos": []
+  },
+  {
+   "id": "t_metsamor",
+   "n": "Музей-заповедник Мецамор",
+   "ll": [
+    40.1269,
+    44.186
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": [
+    null,
+    [
+     "10:30",
+     "17:00"
+    ],
+    [
+     "10:30",
+     "17:00"
+    ],
+    [
+     "10:30",
+     "17:00"
+    ],
+    [
+     "10:30",
+     "17:00"
+    ],
+    [
+     "10:30",
+     "17:00"
+    ],
+    [
+     "10:30",
+     "15:00"
+    ]
+   ],
+   "hours_note": "Вт–сб 10:30–17:00, вс 10:30–15:00, пн выходной (данные разных источников расходятся, уточняйте). Вход около 700 драм.",
+   "visit": 60,
+   "price": "≈700 драм",
+   "drive_from_yerevan": 45,
+   "best": "До обеда.",
+   "praise": [
+    "Золото и бронза из курганов",
+    "Холм древнего поселения рядом с музеем"
+   ],
+   "cons": [
+    "Подписи в основном на армянском"
+   ],
+   "fact": "Поселение существовало с эпохи бронзы. Здесь работали древние металлурги, находки показывают в музее у холма.",
+   "logistics": "У села Таронік, 45 минут от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Metsamor%20museum",
+    "yandex": "https://yandex.ru/maps/?ll=44.186%2C40.1269&z=16&text=Metsamor%20museum",
+    "gis": "https://2gis.am/search/Metsamor%20museum"
+   },
+   "sources": [
+    "https://armenia.travel/destination/the-metsamor-historical-archaeological-museum-reserve/",
+    "https://metsamor.uw.edu.pl/home/museum/"
+   ],
+   "photos": [
+    {
+     "src": "img/t_metsamor-1.jpg",
+     "author": "sedrakGr",
+     "license": "CC BY 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Armenian_Metsamor_museum_-_panoramio.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_sardarapat",
+   "n": "Мемориал Сардарапат",
+   "ll": [
+    40.0933,
+    43.9461
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Мемориал открыт всегда, бесплатно.",
+   "visit": 40,
+   "price": "бесплатно",
+   "drive_from_yerevan": 60,
+   "best": "Днём; в ясную погоду виден Арарат.",
+   "praise": [
+    "Монументальный ансамбль с быками и колокольней",
+    "Важное место для армян",
+    "Аллея к музею"
+   ],
+   "cons": [
+    "Тени почти нет"
+   ],
+   "fact": "Памятник битве в мае 1918 года, после которой появилась Первая Республика. Комплекс открыли в 1968 году к 50-летию битвы.",
+   "logistics": "У села Аракс, около часа от Еревана.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Sardarapat%20Memorial",
+    "yandex": "https://yandex.ru/maps/?ll=43.9461%2C40.0933&z=16&text=Sardarapat%20Memorial",
+    "gis": "https://2gis.am/search/Sardarapat%20Memorial"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sardarapat_Memorial"
+   ],
+   "photos": [
+    {
+     "src": "img/t_sardarapat-1.jpg",
+     "author": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+     "license": "CC BY-SA 3.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Sardarabad_Memorial.jpg"
+    },
+    {
+     "src": "img/t_sardarapat-2.jpg",
+     "author": "Tamara Areshian",
+     "license": "CC BY 2.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Sardarapat_Memorial_complex.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_sard_museum",
+   "n": "Музей этнографии в Сардарапате",
+   "ll": [
+    40.0899,
+    43.9559
+   ],
+   "cat": "culture",
+   "light": "day",
+   "open": [
+    null,
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ],
+    [
+     "10:00",
+     "17:00"
+    ]
+   ],
+   "hours_note": "Пн выходной; часы в справочниках от 9:00/11:00 до 18:00 — проверьте по тел. +374 60 687818.",
+   "visit": 75,
+   "price": "≈1000–2000 драм, уточнять",
+   "drive_from_yerevan": 60,
+   "best": "После мемориала.",
+   "praise": [
+    "Ковры, костюмы, украшения со всей Армении",
+    "Здание из розового туфа"
+   ],
+   "cons": [
+    "Зал о битве подписан только по-армянски"
+   ],
+   "fact": "Национальный музей этнографии армян и истории освободительной борьбы открыт в 1978 году.",
+   "logistics": "Через аллею от мемориала, 10 минут пешком.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Sardarapat%20ethnographic%20museum",
+    "yandex": "https://yandex.ru/maps/?ll=43.9559%2C40.0899&z=16&text=Sardarapat%20ethnographic%20museum",
+    "gis": "https://2gis.am/search/Sardarapat%20ethnographic%20museum"
+   },
+   "sources": [
+    "https://atb.am/en/armenia/sights/more/sardarapat/",
+    "https://en.wikipedia.org/wiki/Sardarapat_Memorial"
+   ],
+   "photos": [
+    {
+     "src": "img/t_sard_museum-1.jpg",
+     "author": "Well-read MountainMan",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Sardarapat_ethnographic_museum_2023.5_3.jpg"
+    },
+    {
+     "src": "img/t_sard_museum-2.jpg",
+     "author": "Well-read MountainMan",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Sardarapat_ethnographic_museum_2023.5_13.jpg"
+    }
+   ]
+  },
+  {
+   "id": "t_karas",
+   "n": "Поместье Karas Wines",
+   "ll": [
+    40.1725,
+    43.8708
+   ],
+   "cat": "wine",
+   "light": "day",
+   "open": "unknown",
+   "hours_note": "Только по брони через сайт или winetourism.com: экскурсия по погребу, поездка по виноградникам и дегустация 5–7 вин, около 2,5 часа.",
+   "visit": 150,
+   "price": "по программе, бронь заранее",
+   "drive_from_yerevan": 65,
+   "best": "После обеда.",
+   "praise": [
+    "Виноградники на фоне Арарата",
+    "Профессиональная экскурсия на русском",
+    "Хорошее соотношение цены и качества вина"
+   ],
+   "cons": [
+    "Только по брони",
+    "Ресторана может не быть — уточните"
+   ],
+   "fact": "Поместье семьи аргентинского армянина Эдуардо Эурнекяна. Виноградники в Армавирской области.",
+   "logistics": "Около 20 минут от Сардарапата.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Karas%20Wines%20Armavir",
+    "yandex": "https://yandex.ru/maps/?ll=43.8708%2C40.1725&z=16&text=Karas%20Wines%20Armavir",
+    "gis": "https://2gis.am/search/Karas%20Wines%20Armavir"
+   },
+   "sources": [
+    "https://www.winetourism.com/experience/karas-terroir-experience/"
+   ],
+   "photos": []
+  },
+  {
+   "id": "t_havuts",
+   "n": "Хавуц Тар (поход из Гарни)",
+   "ll": [
+    40.123,
+    44.7693
+   ],
+   "cat": "nature",
+   "light": "day",
+   "open": "always",
+   "hours_note": "Тропа открыта в светлое время. Возможен пост заповедника «Хосровский лес»: возьмите паспорт, плата за вход по разным данным 2000–4000 драм.",
+   "visit": 240,
+   "price": "≈2000–4000 драм (заповедник), уточнять",
+   "drive_from_yerevan": 45,
+   "best": "Октябрь: тепло, деревья в ущелье жёлтые, нет жары.",
+   "praise": [
+    "Руины монастыря над ущельем Азата",
+    "Вид сверху на Гарни и Симфонию камней",
+    "Почти никого нет"
+   ],
+   "cons": [
+    "Около 8 км туда-обратно и 350 м набора",
+    "Каменистая тропа, нужны треккинговые ботинки",
+    "Воды на тропе нет"
+   ],
+   "fact": "Руины монастыря XI–XIII веков на краю плато напротив Гарни. Главная церковь — Аменапркич («Всеспаситель»).",
+   "logistics": "Старт от Гарни: спуск в ущелье, мост через Азат и подъём. На машине — до Гарни 45 минут.",
+   "links": {
+    "google": "https://www.google.com/maps/search/?api=1&query=Havuts%20Tar",
+    "yandex": "https://yandex.ru/maps/?ll=44.7693%2C40.123&z=16&text=Havuts%20Tar",
+    "gis": "https://2gis.am/search/Havuts%20Tar"
+   },
+   "sources": [
+    "https://www.hikingproject.com/trail/7042673/the-pagan-temple-of-garni-and-havuts-tar-monastery",
+    "https://evendo.com/locations/armenia/shirak/attraction/havuts-tar-monastery-complex"
+   ],
+   "photos": [
+    {
+     "src": "img/t_havuts-1.jpg",
+     "author": "Beko",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Havuts_Tar_Monastery,_details_(73).jpg"
+    },
+    {
+     "src": "img/t_havuts-2.jpg",
+     "author": "Gardmanahay",
+     "license": "CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:Havuts_Tar_Monastery,_Qaravanatun_(5).jpg"
+    }
+   ]
+  }
+ ],
+ "routes": [
+  {
+   "id": "r_lori_debed",
+   "kind": "day",
+   "friends": true,
+   "title": "Лори: Дебедское ущелье — Одзун, Санаин, Ахпат, Ахтала",
+   "time": "07:30 – 19:45",
+   "km": "≈400 км",
+   "why": "Северная Армения: два монастыря ЮНЕСКО, лучшие фрески страны в Ахтале и каньон Дебеда. В середине–конце октября склоны ущелья жёлтые и красные. Длинный, но спокойный день, домой к 20:00.",
+   "stops": [
+    {
+     "drive": "Выезд через Аштарак – Спитак – Ванадзор, около 2 ч 50 мин с кофе-паузой",
+     "t": "07:30"
+    },
+    {
+     "p": "t_odzun",
+     "t": "10:20",
+     "stay": "35 мин",
+     "fact": "Базилика VI–VII веков, во дворе — необычный двухарочный памятник с резными стелами.",
+     "tip": "С края села посмотрите вниз на каньон Дебеда."
+    },
+    {
+     "drive": "До Санаина около 25 минут",
+     "t": "10:55"
+    },
+    {
+     "p": "t_sanahin",
+     "t": "11:20",
+     "stay": "60 мин",
+     "fact": "Монастырь X века, гавиты с колоннами. В селе дом-музей братьев Микоян с истребителем МиГ-21.",
+     "tip": "МиГ виден с дороги, остановиться можно на 5 минут."
+    },
+    {
+     "drive": "До Ахпата около 25 минут",
+     "t": "12:20"
+    },
+    {
+     "p": "t_haghpat",
+     "t": "12:45",
+     "stay": "60 мин + обед",
+     "fact": "Храм Сурб Ншан заложен в 976 году. Найдите хачкар Аменапркич 1273 года.",
+     "tip": "Обедать — в кафе и гостевых домах Ахпата или в Алаверди. Если осталось время, рядом пещерная крепость Зарни-Парни."
+    },
+    {
+     "drive": "До Ахталы около 25 минут",
+     "t": "14:30"
+    },
+    {
+     "p": "t_akhtala",
+     "t": "14:55",
+     "stay": "45 мин",
+     "fact": "Вся церковь XIII века расписана фресками с греческими и грузинскими надписями.",
+     "tip": "Если церковь закрыта, спросите смотрителя у входа."
+    },
+    {
+     "drive": "Домой около 3 ч 15 мин; последний час уже в темноте",
+     "t": "16:30"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Дорога",
+     "t": "Трасса Ванадзор – Алаверди идёт по узкому ущелью, бывают камнепады и ремонтные участки с реверсом. После заката ехать медленнее. Обратно не позже 16:30.",
+     "warn": true
+    },
+    {
+     "h": "Кошки",
+     "t": "Дома около 19:45–20:00. Если задержались в Ахтале, Ахталу можно пропустить и выехать из Ахпата в 14:15 — дома в 17:30."
+    },
+    {
+     "h": "Одежда",
+     "t": "В ущелье на 10° холоднее, чем в Ереване. В монастырях нужны закрытые плечи, женщинам желателен платок."
+    }
+   ]
+  },
+  {
+   "id": "r_lori_stepanavan",
+   "kind": "day",
+   "friends": false,
+   "title": "Лори осенью: дендропарк, Лори Берд и Дсех Туманяна",
+   "time": "08:00 – 20:00",
+   "km": "≈350 км",
+   "why": "Самый «лесной» день: старый дендропарк в осенних цветах, огромная средневековая крепость над двумя ущельями и родное село Туманяна. Лучше всего в середине октября. Только со вторника по воскресенье.",
+   "stops": [
+    {
+     "drive": "Выезд через Аштарак – Спитак – Степанаван, около 2,5 часов",
+     "t": "08:00"
+    },
+    {
+     "p": "t_dendro",
+     "t": "10:30",
+     "stay": "75 мин",
+     "fact": "Парк основал в 1931 году лесник Эдмунд Леонович.",
+     "tip": "Возьмите обувь, которую не жалко: после дождя тропы грязные."
+    },
+    {
+     "drive": "До Лори Берда 15–20 минут",
+     "t": "11:45"
+    },
+    {
+     "p": "t_lori_berd",
+     "t": "12:05",
+     "stay": "50 мин",
+     "fact": "В XI веке — столица Ташир-Дзорагетского царства.",
+     "tip": "Спуститесь к средневековому мосту в ущелье, 10 минут."
+    },
+    {
+     "drive": "Обед в Степанаване, дальше около часа через Ванадзор до Дсеха",
+     "t": "13:00"
+    },
+    {
+     "p": "t_dsegh",
+     "t": "15:15",
+     "stay": "50 мин",
+     "fact": "Туманян родился здесь в 1869 году.",
+     "tip": "В воскресенье музей закрывается в 16:00 — успейте к 15:00."
+    },
+    {
+     "drive": "К Кобайру 20 минут",
+     "t": "16:05"
+    },
+    {
+     "p": "t_kobayr",
+     "t": "16:25",
+     "stay": "45 мин",
+     "fact": "Фрески XII–XIII веков в грузинской манере.",
+     "tip": "Подъём по лестнице 15–20 минут. Если устали, пропустите."
+    },
+    {
+     "drive": "Домой около 2 ч 50 мин",
+     "t": "17:10"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Понедельник",
+     "t": "В понедельник закрыты и Лори Берд, и музей Туманяна.",
+     "warn": true
+    },
+    {
+     "h": "Обед",
+     "t": "В Степанаване несколько кафе в центре; можно взять с собой еду для пикника в дендропарке."
+    },
+    {
+     "h": "Возвращение",
+     "t": "Около 20:00. Последний отрезок Спитак – Аштарак уже в темноте, дорога хорошая."
+    }
+   ]
+  },
+  {
+   "id": "r_jermuk",
+   "kind": "day",
+   "friends": true,
+   "title": "Джермук: водопад, минеральные источники и канатка",
+   "time": "07:30 – 19:15",
+   "km": "≈360 км",
+   "why": "Горный курорт на 2000 м: водопад «Волосы русалки», колоннада с горячей минеральной водой, канатка над жёлтым лесом и древний Гндеванк в ущелье на обратном пути.",
+   "stops": [
+    {
+     "drive": "Выезд, около 3 часов через Арарат, Арени и Вайк (кофе в Ехегнадзоре)",
+     "t": "07:30"
+    },
+    {
+     "p": "t_jermuk_fall",
+     "t": "10:30",
+     "stay": "40 мин",
+     "fact": "Высота около 70 м.",
+     "tip": "К самой воде по тропе спускаться скользко."
+    },
+    {
+     "p": "t_jermuk_gallery",
+     "t": "11:20",
+     "stay": "25 мин",
+     "fact": "Краны с водой разной температуры.",
+     "tip": "Возьмите кружку. Рядом площадка с видом на ущелье и статуя оленя."
+    },
+    {
+     "p": "t_jermuk_rope",
+     "t": "12:00",
+     "stay": "60 мин",
+     "fact": "Кресельный подъёмник над городом.",
+     "tip": "Наверху холодно: шапка и куртка. В сильный ветер не работает."
+    },
+    {
+     "drive": "Обед в Джермуке (форель, хоровац), около часа",
+     "t": "13:00"
+    },
+    {
+     "drive": "До Гндеванка около 35 минут",
+     "t": "14:15"
+    },
+    {
+     "p": "t_gndevank",
+     "t": "14:50",
+     "stay": "40 мин",
+     "fact": "Монастырь основан в 930-х годах княгиней Софьей.",
+     "tip": "Остановитесь на смотровой у трассы перед спуском."
+    },
+    {
+     "drive": "Домой около 2 ч 45 мин",
+     "t": "15:30"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Погода",
+     "t": "Джермук на высоте около 2000 м: в ноябре там может лежать снег, а канатку останавливают в ветер. Проверьте прогноз.",
+     "warn": true
+    },
+    {
+     "h": "Вариант",
+     "t": "Если выехать в 07:00, на обратном пути можно заехать на 30 минут в Нораванк к закату — домой к 20:30."
+    },
+    {
+     "h": "Дорога",
+     "t": "Трасса Ереван – Ехегнадзор хорошая. Последние 25 км к Джермуку — серпантин."
+    }
+   ]
+  },
+  {
+   "id": "r_selim_sevan",
+   "kind": "day",
+   "friends": true,
+   "title": "Петля через Селимский перевал: караван-сарай, Норадуз, Айраванк",
+   "time": "09:00 – 19:45",
+   "km": "≈330 км",
+   "why": "Большое кольцо: через Вайоц Дзор на перевал 2400 м к караван-сараю Шёлкового пути, спуск к Севану, поле из 900 хачкаров в Норадузе и закат у монастыря над озером.",
+   "stops": [
+    {
+     "drive": "Выезд, около 2 ч 40 мин через Ехегнадзор и Шатин",
+     "t": "09:00"
+    },
+    {
+     "p": "t_selim",
+     "t": "11:40",
+     "stay": "30 мин",
+     "fact": "Построен в 1332 году князем Чесаром Орбеляном.",
+     "tip": "Внутри темно — фонарик в телефоне."
+    },
+    {
+     "drive": "Спуск к Мартуни и обед у Севана (форель, сиг), около 2 часов вместе с обедом",
+     "t": "12:10"
+    },
+    {
+     "p": "t_noratus",
+     "t": "14:30",
+     "stay": "50 мин",
+     "fact": "Около 900 хачкаров, самые старые X века.",
+     "tip": "Местные бабушки предложат экскурсию за деньги — можно отказаться."
+    },
+    {
+     "drive": "Свободное время на берегу Севана",
+     "t": "15:20"
+    },
+    {
+     "p": "t_hayravank",
+     "t": "17:30",
+     "stay": "50 мин",
+     "fact": "Монастырь IX–XII веков на мысе над Севаном.",
+     "tip": "Закат около 18:25 в середине октября и около 17:45 в середине ноября."
+    },
+    {
+     "drive": "Домой около 1,5 часа",
+     "t": "18:20"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Перевал",
+     "t": "Перевал Варденяц (Селим) в снегопад закрывают или пускают только с цепями. В ноябре проверьте сводку МЧС (rescue.mia.gov.am) утром. Если закрыт — сделайте маршрут наоборот только по Севану.",
+     "warn": true
+    },
+    {
+     "h": "Обед",
+     "t": "Рыбные рестораны вдоль трассы Мартуни – Гавар; в октябре на Севане ветрено, садитесь в зал."
+    }
+   ]
+  },
+  {
+   "id": "r_aragats_north",
+   "kind": "day",
+   "friends": true,
+   "title": "Бюракан и Апаран: обсерватория, Аруч, Ованаванк",
+   "time": "08:45 – 17:30",
+   "km": "≈200 км",
+   "why": "Звёздный день у подножия Арагаца: купол 2,6-метрового телескопа, собор VII века, монастырь на краю каньона Касах и одна из древнейших базилик в Апаране. Короткие переезды, можно взять друзей.",
+   "stops": [
+    {
+     "drive": "Выезд через Аштарак, около 55 минут",
+     "t": "08:45"
+    },
+    {
+     "p": "t_aruch",
+     "t": "09:40",
+     "stay": "30 мин",
+     "fact": "Собор 660-х годов князя Григора Мамиконяна.",
+     "tip": ""
+    },
+    {
+     "drive": "До Бюракана около 30 минут",
+     "t": "10:10"
+    },
+    {
+     "p": "t_byurakan",
+     "t": "10:40",
+     "stay": "2 часа",
+     "fact": "Основана в 1946 году Виктором Амбарцумяном.",
+     "tip": "Запишитесь заранее по тел. 091 195903: территория + телескоп 2,6 м + дом-музей. Для группы до 5 человек цена фиксированная."
+    },
+    {
+     "p": "t_aghtsk",
+     "t": "12:50",
+     "stay": "20 мин",
+     "fact": "По преданию, здесь перезахоронены цари Аршакиды.",
+     "tip": "Можно пропустить, если опаздываете."
+    },
+    {
+     "drive": "Обед в Аштараке или Бюракане, около часа",
+     "t": "13:10"
+    },
+    {
+     "p": "t_hovhannavank",
+     "t": "14:30",
+     "stay": "40 мин",
+     "fact": "Церковь 1216–1221 годов над каньоном Касах.",
+     "tip": "Осторожно у края обрыва."
+    },
+    {
+     "drive": "До Апарана около 30 минут",
+     "t": "15:10"
+    },
+    {
+     "p": "t_kasagh",
+     "t": "15:40",
+     "stay": "25 мин",
+     "fact": "Базилика IV–V веков.",
+     "tip": ""
+    },
+    {
+     "p": "t_aparan_res",
+     "t": "16:20",
+     "stay": "20 мин",
+     "fact": "Водохранилище на Касахе с видом на Арагац.",
+     "tip": ""
+    },
+    {
+     "drive": "Домой около часа",
+     "t": "16:40"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Запись в обсерваторию",
+     "t": "Без звонка заранее могут не пустить: туры планируют так, чтобы не мешать работе учёных.",
+     "warn": true
+    },
+    {
+     "h": "Ночной вариант",
+     "t": "В октябре–марте ночные наблюдения в небольшой телескоп с 20:30. Если взять сеанс 20:30–21:30, дома около 22:30 — покормите кошек перед выездом."
+    },
+    {
+     "h": "Погода",
+     "t": "В Апаране (1900 м) осенью на 5–8° холоднее, чем в Ереване."
+    }
+   ]
+  },
+  {
+   "id": "r_wine_aragatsotn",
+   "kind": "day",
+   "friends": true,
+   "title": "Винный выходной в Арагацотне",
+   "time": "10:00 – 18:30",
+   "km": "≈130 км",
+   "why": "Три винодельни в часе от Еревана: старые подвалы с карасами в Воскевазе, долгий обед над виноградниками ArmAs и дегустация в Сасунике. По пути могила Месропа Маштоца и скальное святилище бронзового века.",
+   "stops": [
+    {
+     "drive": "Выезд на такси или с трезвым водителем, около 35 минут",
+     "t": "10:00"
+    },
+    {
+     "p": "t_oshakan",
+     "t": "10:35",
+     "stay": "30 мин",
+     "fact": "Здесь похоронен Месроп Маштоц.",
+     "tip": ""
+    },
+    {
+     "p": "t_voskevaz",
+     "t": "11:15",
+     "stay": "75 мин",
+     "fact": "Подвалы с карасами, музей вина.",
+     "tip": "Запишитесь заранее."
+    },
+    {
+     "p": "t_agarak",
+     "t": "12:35",
+     "stay": "35 мин",
+     "fact": "Святилище бронзового века, вырубленное в скале.",
+     "tip": "Хорошая прогулка между дегустациями."
+    },
+    {
+     "drive": "До ArmAs около 35 минут",
+     "t": "13:10"
+    },
+    {
+     "p": "t_armas",
+     "t": "13:45",
+     "stay": "2,5 часа",
+     "fact": "Дегустация пяти вин и обед.",
+     "tip": "Бронь «Wine & Dine» за несколько дней."
+    },
+    {
+     "drive": "До Сасуника около 40 минут",
+     "t": "16:15"
+    },
+    {
+     "p": "t_armenia_wine",
+     "t": "17:00",
+     "stay": "60 мин",
+     "fact": "Крупный завод с экскурсиями на русском.",
+     "tip": "Если завод уже не принимает, через дорогу Van Ardi — тоже по записи."
+    },
+    {
+     "drive": "Домой около 30 минут",
+     "t": "18:00"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Кто за рулём",
+     "t": "После дегустаций за руль нельзя, а штрафы за вождение в нетрезвом виде большие. Возьмите Yandex Go или водителя на весь день (≈25 000–35 000 драм).",
+     "warn": true
+    },
+    {
+     "h": "Бронь",
+     "t": "Все три винодельни принимают по записи. Позвоните за 2–3 дня, особенно в выходные."
+    },
+    {
+     "h": "Покупки",
+     "t": "Вино в магазинах виноделен часто дешевле, чем в Ереване."
+    }
+   ]
+  },
+  {
+   "id": "r_sardarapat",
+   "kind": "day",
+   "friends": true,
+   "title": "Армавир: Мецамор, Сардарапат и вино Karas",
+   "time": "09:30 – 17:45",
+   "km": "≈170 км",
+   "why": "Спокойный день в Араратской долине: бронзовый век в Мецаморе, главный мемориал Первой Республики и музей этнографии, а потом дегустация в поместье Karas среди виноградников с видом на Арарат.",
+   "stops": [
+    {
+     "drive": "Выезд, около 45 минут",
+     "t": "09:30"
+    },
+    {
+     "p": "t_metsamor",
+     "t": "10:15",
+     "stay": "60 мин",
+     "fact": "Поселение древних металлургов.",
+     "tip": "Поднимитесь на холм за музеем."
+    },
+    {
+     "drive": "До Сардарапата около 30 минут",
+     "t": "11:15"
+    },
+    {
+     "p": "t_sardarapat",
+     "t": "11:45",
+     "stay": "40 мин",
+     "fact": "Битва мая 1918 года.",
+     "tip": ""
+    },
+    {
+     "p": "t_sard_museum",
+     "t": "12:25",
+     "stay": "60 мин",
+     "fact": "Ковры, костюмы, серебро.",
+     "tip": ""
+    },
+    {
+     "drive": "До Karas около 20 минут",
+     "t": "13:30"
+    },
+    {
+     "p": "t_karas",
+     "t": "14:00",
+     "stay": "2,5 часа",
+     "fact": "Поместье семьи Эурнекян.",
+     "tip": "Если ресторана нет, пообедайте в Армавире или Эчмиадзине по пути."
+    },
+    {
+     "drive": "Домой около 1 ч 10 мин",
+     "t": "16:30"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Понедельник",
+     "t": "Мецамор и музей Сардарапата в понедельник закрыты.",
+     "warn": true
+    },
+    {
+     "h": "Вино",
+     "t": "Если дегустируете — нужен трезвый водитель или такси."
+    }
+   ]
+  },
+  {
+   "id": "r_havuts_tar",
+   "kind": "day",
+   "friends": false,
+   "title": "Поход к Хавуц Тару и закат над Азатским водохранилищем",
+   "time": "10:00 – 19:15",
+   "km": "≈90 км + 8 км пешком",
+   "why": "Не обычный Гарни, а прогулка через ущелье Азата к руинам монастыря на краю заповедника «Хосровский лес». Сверху видно Гарни и Симфонию камней. Вечером закат над водохранилищем.",
+   "stops": [
+    {
+     "drive": "Выезд, около 45 минут до Гарни",
+     "t": "10:00"
+    },
+    {
+     "p": "t_havuts",
+     "t": "11:00",
+     "stay": "3,5 часа",
+     "fact": "Руины монастыря XI–XIII веков.",
+     "tip": "Возьмите 1,5 л воды на человека, перекус и паспорт."
+    },
+    {
+     "drive": "Обед в Гарни",
+     "t": "14:30"
+    },
+    {
+     "p": "garni",
+     "t": "16:00",
+     "stay": "40 мин",
+     "fact": "Если ещё не были внутри.",
+     "tip": "Можно пропустить."
+    },
+    {
+     "drive": "До водохранилища около 30 минут",
+     "t": "16:45"
+    },
+    {
+     "p": "azat",
+     "t": "17:30",
+     "stay": "60 мин",
+     "fact": "Закат над водохранилищем.",
+     "tip": "Закат около 18:25."
+    },
+    {
+     "drive": "Домой около 45 минут",
+     "t": "18:30"
+    }
+   ],
+   "notes": [
+    {
+     "h": "Обувь и снаряжение",
+     "t": "Каменистая тропа с набором около 350 м. Треккинговые ботинки и палки.",
+     "warn": true
+    },
+    {
+     "h": "Заповедник",
+     "t": "На тропе может быть пост заповедника: попросят паспорт и плату. Уточните заранее в инфоцентре Гарни."
+    },
+    {
+     "h": "Короткий день",
+     "t": "В ноябре темнеет около 17:45: выходите на тропу не позже 11:00."
+    }
+   ]
+  }
+ ]
+}
