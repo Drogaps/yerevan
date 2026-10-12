@@ -14,12 +14,14 @@
     44.5151
    ],
    "price": "от 3000 AMD",
+   "free": false,
    "tags": [
     "концерт",
     "фестиваль"
    ],
    "desc": "Два месяца симфонических и камерных концертов с приглашёнными дирижёрами и солистами и Национальным филармоническим оркестром. Билеты на большинство вечеров стоят около 3000 драмов.",
-   "link": "https://t.me/ErevanRus/7266"
+   "link": "https://t.me/ErevanRus/7266",
+   "img": "img/events/yimf-2026.jpg"
   },
   {
    "id": "berlin-museum-island",
@@ -34,18 +36,46 @@
     44.5139
    ],
    "price": null,
+   "free": false,
    "tags": [
     "выставка"
    ],
    "desc": "Более 50 экспонатов из шести берлинских музеев рядом с армянскими артефактами, в том числе бронзовая модель Вселенной из Севана. Это первая подобная совместная выставка Музейного острова за пределами Германии.",
-   "link": "https://t.me/ErevanRus/7321"
+   "link": "https://t.me/ErevanRus/7320",
+   "img": "img/events/berlin-museum-island.jpg"
+  },
+  {
+   "id": "vernissage",
+   "title": "Вернисаж: рынок ремёсел и антиквариата",
+   "date": "2026-10-12",
+   "end": "2026-11-30",
+   "time": "10:00",
+   "weekly": [
+    5,
+    6
+   ],
+   "venue": "Вернисаж, ул. Бузанда, у пл. Республики",
+   "ll": [
+    40.176,
+    44.5182
+   ],
+   "price": "бесплатно",
+   "free": true,
+   "tags": [
+    "бесплатно",
+    "на улице",
+    "маркет"
+   ],
+   "desc": "Главный блошиный и ремесленный рынок Еревана под открытым небом: ковры, чеканка, нарды, советский антиквариат, картины и сувениры. Работает каждый день, но по субботам и воскресеньям рядов больше всего. Торговаться можно и нужно.",
+   "link": "https://armeniadiscovery.com/en/articles/the-vernissage-outdoor-market",
+   "img": "img/events/vernissage.jpg"
   },
   {
    "id": "flamenco-evening",
    "title": "Вечер музыки и танца фламенко",
    "date": "2026-10-12",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -53,49 +83,130 @@
     44.5151
    ],
    "price": "3000–15000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Вечер фламенко с живой музыкой и танцем в Филармонии.",
-   "link": "https://www.tkt.am/ru/flamenkvoyi-erazhshtvouthyan-ev-pari-erekvo-2026-09-15-170038/eid/5034"
+   "link": "https://www.tkt.am/ru/flamenkvoyi-erazhshtvouthyan-ev-pari-erekvo-2026-09-15-170038/eid/5034",
+   "img": "img/events/flamenco-evening.jpg"
   },
   {
-   "id": "lit-quiz-shamrock",
-   "title": "Литературный квиз",
+   "id": "enoteca-jazz",
+   "title": "Джаз по выходным в Enoteca EVN",
    "date": "2026-10-12",
-   "end": null,
-   "time": "19:30",
-   "weekly": null,
-   "venue": "Паб Shamrock, ул. Казара Парпеци, 26",
+   "end": "2026-11-30",
+   "time": "20:00",
+   "weekly": [
+    4,
+    5
+   ],
+   "venue": "Винный бар Enoteca EVN, пр. Саят-Новы, 6",
    "ll": [
-    40.1787,
-    44.5072
+    40.1839,
+    44.5182
    ],
-   "price": null,
+   "price": "без билета, счёт в баре",
+   "free": true,
    "tags": [
-    "квиз"
+    "живая музыка",
+    "джаз",
+    "бесплатно"
    ],
-   "desc": "Командная игра про книги: аудиофрагменты, «Своя игра», вопросы на 60 секунд и финал со ставками. Нужна регистрация на сайте организаторов.",
-   "link": "https://t.me/ErevanRus/7375"
+   "desc": "Винный бар у Оперы, где по пятницам и субботам играют армянские джазмены. Билетов нет, платите только за вино и еду. Время начала и состав на вечер лучше уточнить в баре.",
+   "link": "https://armeniadiscovery.com/en/articles/nightlife-in-yerevan-clubs-and-pubs",
+   "img": null
   },
   {
-   "id": "relocant-writers",
-   "title": "Писательский клуб «Авторская Координата»",
-   "date": "2026-10-13",
-   "end": null,
-   "time": "19:00",
+   "id": "republic-fountains",
+   "title": "Поющие фонтаны на площади Республики",
+   "date": "2026-10-12",
+   "end": "2026-10-31",
+   "time": "21:00",
    "weekly": [
-    1
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
    ],
-   "venue": "Бар «Релокантъ», ул. Ханджяна, 7",
+   "venue": "Площадь Республики, фонтаны у Музея истории",
    "ll": [
-    40.1738,
-    44.5163
+    40.1782,
+    44.5136
    ],
-   "price": "донаты",
-   "tags": [],
-   "desc": "Каждый вторник: разговоры о литературе и чтение текстов участников, можно получить отзывы на свои тексты. На русском языке.",
-   "link": "https://t.me/ErevanRus/7362"
+   "price": "бесплатно",
+   "free": true,
+   "tags": [
+    "бесплатно",
+    "на улице",
+    "шоу"
+   ],
+   "desc": "Вечернее музыкально-световое шоу фонтанов перед Музеем истории Армении. Сезон обычно идёт с мая до конца октября, но точного расписания на осень 2026 года нет: в прохладные вечера и в дни чистки шоу отменяют. Даже без фонтанов площадь вечером красиво подсвечена.",
+   "link": "https://eurasia.travel/armenia/yerevan/republic-square/",
+   "img": "img/events/republic-fountains.jpg"
+  },
+  {
+   "id": "malkhas-jazz",
+   "title": "Живой джаз в клубе Malkhas",
+   "date": "2026-10-12",
+   "end": "2026-11-30",
+   "time": "21:00",
+   "weekly": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "venue": "Malkhas Jazz Club, ул. Пушкина, 52/1",
+   "ll": [
+    40.1844,
+    44.5106
+   ],
+   "price": "вход платный, уточняйте",
+   "free": false,
+   "tags": [
+    "живая музыка",
+    "джаз"
+   ],
+   "desc": "Главный джаз-клуб Еревана, основанный пианистом Левоном Малхасяном. Живая музыка каждый вечер примерно с 21:00, сам Малхас с бэндом обычно выходит ближе к полуночи. Столик лучше бронировать: +374 10 535350.",
+   "link": "https://armeniadiscovery.com/en/activity/live-jazz-at-malkhas-jazz-club",
+   "img": "img/events/malkhas-jazz.jpg"
+  },
+  {
+   "id": "mezzo-live",
+   "title": "Живая музыка в Mezzo Classic House",
+   "date": "2026-10-12",
+   "end": "2026-11-30",
+   "time": "22:00",
+   "weekly": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "venue": "Mezzo Classic House, ул. Исаакяна, 28",
+   "ll": [
+    40.1889,
+    44.5198
+   ],
+   "price": "уточняйте",
+   "free": false,
+   "tags": [
+    "живая музыка",
+    "джаз"
+   ],
+   "desc": "Клуб с живой музыкой каждый вечер, обычно примерно с 22:00 до часу ночи: джаз, соул, каверы. Интерьер старомодный, зато атмосфера камерная. Программу на вечер лучше проверить на их странице в Facebook.",
+   "link": "https://www.lonelyplanet.com/pois/1523341",
+   "img": null
   },
   {
    "id": "arkhangelsky-dissidents",
@@ -110,11 +221,14 @@
     44.5115
    ],
    "price": "донат, любая купюра",
+   "free": true,
    "tags": [
-    "кино"
+    "лекция",
+    "бесплатно"
    ],
    "desc": "Встреча с писателем, лауреатом «Большой книги»: смотрят видеоинтервью участников диссидентского движения и обсуждают их с автором. Вход по записи.",
-   "link": "https://t.me/ErevanRus/7381"
+   "link": "https://t.me/ErevanRus/7381",
+   "img": "img/events/arkhangelsky-dissidents.jpg"
   },
   {
    "id": "arakel-paronyan",
@@ -129,18 +243,20 @@
     44.5109
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр"
    ],
    "desc": "Постановка в театре музыкальной комедии им. Пароняна.",
-   "link": "https://t.me/guideyerevan/1551"
+   "link": "https://t.me/guideyerevan/1551",
+   "img": null
   },
   {
    "id": "masquerade-ballet",
    "title": "Балет Хачатуряна «Маскарад»",
    "date": "2026-10-14",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -148,12 +264,14 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "Балет на знаменитую музыку Арама Хачатуряна к «Маскараду» по Лермонтову, на главной сцене Оперного театра.",
-   "link": "https://www.tkt.am/ru/akhachatryan-dimakahandes-2026-08-08-003201/eid/4751"
+   "link": "https://www.tkt.am/ru/akhachatryan-dimakahandes-2026-08-08-003201/eid/4751",
+   "img": "img/events/masquerade-ballet.jpg"
   },
   {
    "id": "roditel-stanislavsky",
@@ -168,56 +286,42 @@
     44.5164
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр"
    ],
    "desc": "Спектакль на русском языке в Русском драмтеатре им. Станиславского.",
-   "link": "https://t.me/guideyerevan/1551"
+   "link": "https://t.me/guideyerevan/1551",
+   "img": null
   },
   {
-   "id": "relocant-boardgames",
-   "title": "Вечер настольных игр в «Релоканте»",
+   "id": "scherzo-candle",
+   "title": "Scherzo String Quartet: вечер при свечах",
    "date": "2026-10-14",
    "end": null,
-   "time": "20:00",
-   "weekly": [
-    2
-   ],
-   "venue": "Бар «Релокантъ», ул. Ханджяна, 7",
-   "ll": [
-    40.1738,
-    44.5163
-   ],
-   "price": "донаты",
-   "tags": [],
-   "desc": "Каждую среду играют в барные настолки, можно принести свои. Удобный способ познакомиться с русскоязычным комьюнити.",
-   "link": "https://t.me/ErevanRus/7365"
-  },
-  {
-   "id": "shostakovich-1",
-   "title": "Шостакович: Симфония №1 и современная музыка",
-   "date": "2026-10-15",
-   "end": null,
-   "time": null,
+   "time": "20:30",
    "weekly": null,
-   "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
+   "venue": "Ember Bar & Restaurant, ул. Пап Тагавори, 2",
    "ll": [
-    40.1863,
-    44.5151
+    40.1788,
+    44.5111
    ],
-   "price": "3000–5000 AMD",
+   "price": "6000 AMD",
+   "free": false,
    "tags": [
+    "живая музыка",
     "концерт"
    ],
-   "desc": "Государственный симфонический оркестр Армении играет Первую симфонию Шостаковича и современные сочинения. Недорогой билет на хорошую симфоническую программу.",
-   "link": "https://www.tkt.am/ru/shostakovich-symphony-no-1-and-contemporary-sounds-armenian-state-symphony-orchestra-15-oct-2026/eid/4478"
+   "desc": "Струнный квартет играет при свечах в баре-ресторане Ember, рядом с площадью Республики.",
+   "link": "https://www.tkt.am/ru/scherzo-strings-quartet-candle-light-night-14-oct-2026/eid/5378",
+   "img": "img/events/scherzo-candle.jpg"
   },
   {
    "id": "bakian-aznavour",
    "title": "Bakian поёт Азнавура",
    "date": "2026-10-15",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арно Бабаджаняна",
    "ll": [
@@ -225,56 +329,41 @@
     44.5137
    ],
    "price": "10000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Вечер песен Шарля Азнавура в камерном зале рядом с площадью Республики.",
-   "link": "https://www.tkt.am/ru/bakian-sings-aznavour-15-oct-2026/eid/5062"
+   "link": "https://www.tkt.am/ru/bakian-sings-aznavour-15-oct-2026/eid/5062",
+   "img": "img/events/bakian-aznavour.jpg"
   },
   {
-   "id": "armenian-speaking-club",
-   "title": "Армянский разговорный клуб",
+   "id": "shostakovich-1",
+   "title": "Шостакович: Симфония №1 и современная музыка",
    "date": "2026-10-15",
    "end": null,
-   "time": "18:30",
-   "weekly": [
-    3
-   ],
-   "venue": "Forest Burger, ул. Закяна, 8",
+   "time": "19:30",
+   "weekly": null,
+   "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
-    40.1769,
-    44.5062
+    40.1863,
+    44.5151
    ],
-   "price": "любая купюра",
-   "tags": [],
-   "desc": "По четвергам учат разговорный армянский с нуля в непринуждённой обстановке.",
-   "link": "https://t.me/ErevanRus/7367"
-  },
-  {
-   "id": "relocant-wine",
-   "title": "Четверг с Василием Боровковым (винная лекция)",
-   "date": "2026-10-15",
-   "end": null,
-   "time": "20:00",
-   "weekly": [
-    3
+   "price": "3000–5000 AMD",
+   "free": false,
+   "tags": [
+    "концерт"
    ],
-   "venue": "Бар «Релокантъ», ул. Ханджяна, 7",
-   "ll": [
-    40.1738,
-    44.5163
-   ],
-   "price": "донаты",
-   "tags": [],
-   "desc": "Каждый четверг сомелье рассказывает о винных регионах и терруарах, обычно с дегустацией.",
-   "link": "https://t.me/ErevanRus/7369"
+   "desc": "Государственный симфонический оркестр Армении играет Первую симфонию Шостаковича и современные сочинения. Недорогой билет на хорошую симфоническую программу.",
+   "link": "https://www.tkt.am/ru/shostakovich-symphony-no-1-and-contemporary-sounds-armenian-state-symphony-orchestra-15-oct-2026/eid/4478",
+   "img": "img/events/shostakovich-1.jpg"
   },
   {
    "id": "piazzolla-tango",
    "title": "Астор Пьяццолла. Танго",
    "date": "2026-10-16",
    "end": null,
-   "time": null,
+   "time": "19:30",
    "weekly": null,
    "venue": "Концертный зал им. Арно Бабаджаняна",
    "ll": [
@@ -282,11 +371,13 @@
     44.5137
    ],
    "price": "5000–10000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Концерт из музыки Пьяццоллы, классики нуэво-танго.",
-   "link": "https://www.tkt.am/ru/astor-piazzolla-tango-16-oct-2026/eid/4729"
+   "link": "https://www.tkt.am/ru/astor-piazzolla-tango-16-oct-2026/eid/4729",
+   "img": "img/events/piazzolla-tango.jpg"
   },
   {
    "id": "alt-rewind-2",
@@ -300,12 +391,36 @@
     40.1894,
     44.5128
    ],
-   "price": "напиток в баре",
+   "price": "вход — напиток из бара",
+   "free": true,
    "tags": [
-    "вечеринка"
+    "вечеринка",
+    "бесплатно"
    ],
    "desc": "Вторая серия вечеринок с хардкором, панком и эмо-хитами нулевых. Вход по чеку с бара.",
-   "link": "https://t.me/ErevanRus/7389"
+   "link": "https://t.me/ErevanRus/7389",
+   "img": "img/events/alt-rewind-2.jpg"
+  },
+  {
+   "id": "scherzo-rock",
+   "title": "Scherzo String Quartet: хиты рока",
+   "date": "2026-10-17",
+   "end": null,
+   "time": "20:00",
+   "weekly": null,
+   "venue": "A1 Art Space, ул. Абовяна, 1",
+   "ll": [
+    40.1797,
+    44.5149
+   ],
+   "price": "8000 AMD",
+   "free": false,
+   "tags": [
+    "концерт"
+   ],
+   "desc": "Рок-хиты в аранжировке для струнного квартета.",
+   "link": "https://www.tkt.am/ru/scherzo-string-quartet-presents-the-best-of-rock-hits-17-oct-2026/eid/5382",
+   "img": "img/events/scherzo-rock.jpg"
   },
   {
    "id": "musical-1984",
@@ -320,61 +435,21 @@
     44.5073
    ],
    "price": "от 12000 AMD",
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "Мюзикл по Оруэллу на музыку Александра Красовицкого (Animal ДжаZ), тексты песен написала Вера Полозкова. На премьеру осталось мало билетов, 18-го дают дополнительный показ.",
-   "link": "https://t.me/ErevanRus/7378"
-  },
-  {
-   "id": "relocant-karaoke",
-   "title": "Караоке в «Релоканте»",
-   "date": "2026-10-17",
-   "end": null,
-   "time": "19:00",
-   "weekly": [
-    5
-   ],
-   "venue": "Бар «Релокантъ», ул. Ханджяна, 7",
-   "ll": [
-    40.1738,
-    44.5163
-   ],
-   "price": "донаты",
-   "tags": [
-    "вечеринка"
-   ],
-   "desc": "Каждую субботу с 19:00 до полуночи поют всё подряд, от советской эстрады до K-pop. Стол лучше забронировать: 041505765.",
-   "link": "https://t.me/ErevanRus/7376"
-  },
-  {
-   "id": "english-ecosystem",
-   "title": "English Ecosystem: разговорный клуб",
-   "date": "2026-10-17",
-   "end": null,
-   "time": "19:30",
-   "weekly": [
-    5
-   ],
-   "venue": "Dors Craft Beer & Kitchen, ул. Пап Тагавори, 4/6",
-   "ll": [
-    40.1804,
-    44.5108
-   ],
-   "price": "бесплатно",
-   "tags": [
-    "бесплатно"
-   ],
-   "desc": "Каждую субботу собирается англоязычное комьюнити, в том числе гости из Великобритании и США. После встречи компания часто идёт дальше по барам.",
-   "link": "https://t.me/ErevanRus/7288"
+   "link": "https://t.me/ErevanRus/7378",
+   "img": "img/events/musical-1984.jpg"
   },
   {
    "id": "gayane-ballet",
    "title": "Балет Хачатуряна «Гаянэ»",
    "date": "2026-10-21",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -382,18 +457,20 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр"
    ],
    "desc": "Главный армянский балет, тот самый, где «Танец с саблями». Хороший повод впервые сходить в Ереванскую оперу.",
-   "link": "https://www.tkt.am/ru/akhachatryan-gayane-2026-08-08-003203/eid/4752"
+   "link": "https://www.tkt.am/ru/akhachatryan-gayane-2026-08-08-003203/eid/4752",
+   "img": "img/events/gayane-ballet.jpg"
   },
   {
    "id": "turandot",
    "title": "Опера Пуччини «Турандот»",
    "date": "2026-10-22",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -401,19 +478,21 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "Последняя опера Пуччини, в которой звучит ария «Nessun dorma».",
-   "link": "https://www.tkt.am/ru/jpvouchini-tvourandvot-2026-09-01-163257/eid/4886"
+   "link": "https://www.tkt.am/ru/jpvouchini-tvourandvot-2026-09-01-163257/eid/4886",
+   "img": "img/events/turandot.jpg"
   },
   {
    "id": "dj-meets-orchestra",
    "title": "DJ Meets Orchestra",
    "date": "2026-10-23",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -421,37 +500,20 @@
     44.5151
    ],
    "price": "5000–15000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Симфонический оркестр и диджей на одной сцене: электронные хиты в оркестровой аранжировке.",
-   "link": "https://www.tkt.am/ru/dj-meets-orchestra-2026-09-22-130044/eid/5052"
-  },
-  {
-   "id": "alice-sara-ott",
-   "title": "Алис Сара Отт и Госсимфонический оркестр",
-   "date": "2026-10-24",
-   "end": null,
-   "time": null,
-   "weekly": null,
-   "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
-   "ll": [
-    40.1863,
-    44.5151
-   ],
-   "price": "3000 AMD",
-   "tags": [
-    "концерт"
-   ],
-   "desc": "Программа «Symphonic Europe» с одной из самых известных пианисток своего поколения. Билет всего 3000 драмов.",
-   "link": "https://www.tkt.am/ru/symphonic-europe-alice-sara-ott-armenian-state-symphony-orchestra-24-oct-2026/eid/5055"
+   "link": "https://www.tkt.am/ru/dj-meets-orchestra-2026-09-22-130044/eid/5052",
+   "img": "img/events/dj-meets-orchestra.jpg"
   },
   {
    "id": "hans-zimmer-tribute",
    "title": "Tribute to Hans Zimmer: Mystery Ensemble",
    "date": "2026-10-24",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арно Бабаджаняна",
    "ll": [
@@ -459,11 +521,34 @@
     44.5137
    ],
    "price": "9300–13300 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Музыка Ханса Циммера из «Интерстеллара», «Начала» и «Гладиатора» в живом исполнении ансамбля.",
-   "link": "https://www.tkt.am/ru/tribute-to-hans-zimmer-by-mystery-ensemble-24-oct-2026/eid/4475"
+   "link": "https://www.tkt.am/ru/tribute-to-hans-zimmer-by-mystery-ensemble-24-oct-2026/eid/4475",
+   "img": "img/events/hans-zimmer-tribute.jpg"
+  },
+  {
+   "id": "alice-sara-ott",
+   "title": "Алис Сара Отт и Госсимфонический оркестр",
+   "date": "2026-10-24",
+   "end": null,
+   "time": "19:30",
+   "weekly": null,
+   "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
+   "ll": [
+    40.1863,
+    44.5151
+   ],
+   "price": "3000 AMD",
+   "free": false,
+   "tags": [
+    "концерт"
+   ],
+   "desc": "Программа «Symphonic Europe» с одной из самых известных пианисток своего поколения. Билет всего 3000 драмов.",
+   "link": "https://www.tkt.am/ru/symphonic-europe-alice-sara-ott-armenian-state-symphony-orchestra-24-oct-2026/eid/5055",
+   "img": "img/events/alice-sara-ott.jpg"
   },
   {
    "id": "world-opera-day-gala",
@@ -478,11 +563,13 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Солисты и оркестр Оперного театра исполняют фрагменты знаменитых опер армянских и западноевропейских композиторов. Концерт дневной.",
-   "link": "https://t.me/ErevanRus/7317"
+   "link": "https://t.me/ErevanRus/7317",
+   "img": "img/events/world-opera-day-gala.jpg"
   },
   {
    "id": "junona-avos",
@@ -497,19 +584,21 @@
     44.513
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "Тбилисский театр мюзикла привозит легендарную рок-оперу: живой вокал, 90 минут, на русском языке.",
-   "link": "https://t.me/ErevanRus/7286"
+   "link": "https://t.me/ErevanRus/7286",
+   "img": "img/events/junona-avos.jpg"
   },
   {
    "id": "star-wars-planets",
    "title": "«Звёздные войны» и «Планеты»",
    "date": "2026-10-28",
    "end": null,
-   "time": null,
+   "time": "19:30",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -517,18 +606,20 @@
     44.5151
    ],
    "price": "4000–10000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Госсимфонический оркестр Армении играет музыку Джона Уильямса к «Звёздным войнам» и сюиту Холста «Планеты».",
-   "link": "https://www.tkt.am/ru/star-wars-and-the-planets-armenian-state-symphony-orchestra-28-oct-2026/eid/4518"
+   "link": "https://www.tkt.am/ru/star-wars-and-the-planets-armenian-state-symphony-orchestra-28-oct-2026/eid/4518",
+   "img": "img/events/star-wars-planets.jpg"
   },
   {
    "id": "traviata-oct",
    "title": "Опера Верди «Травиата»",
    "date": "2026-10-29",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -536,39 +627,21 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "Классическая «Травиата» на сцене Ереванской оперы. Повторный показ 18 ноября.",
-   "link": "https://www.tkt.am/ru/jverdi-traviata-2026-09-01-163306/eid/4889"
-  },
-  {
-   "id": "nutcracker-oct",
-   "title": "Балет Чайковского «Щелкунчик»",
-   "date": "2026-10-30",
-   "end": null,
-   "time": null,
-   "weekly": null,
-   "venue": "Театр оперы и балета им. Спендиаряна",
-   "ll": [
-    40.1857,
-    44.5151
-   ],
-   "price": null,
-   "tags": [
-    "театр",
-    "для детей"
-   ],
-   "desc": "«Щелкунчик» в Оперном театре, подходит для похода с детьми. Повторные показы 15 и 26 ноября.",
-   "link": "https://www.tkt.am/ru/pchaykvovski-karapi-litchy-2026-08-08-003205/eid/4753"
+   "link": "https://www.tkt.am/ru/jverdi-traviata-2026-09-01-163306/eid/4889",
+   "img": "img/events/traviata-oct.jpg"
   },
   {
    "id": "sergey-khachatryan",
    "title": "Сергей Хачатрян: к 100-летию Анаит Цицикян",
    "date": "2026-10-30",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -576,18 +649,20 @@
     44.5151
    ],
    "price": "3000–10000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Один из лучших скрипачей мира играет вместе с пианистом Айком Овсепяном в честь столетия скрипачки Анаит Цицикян.",
-   "link": "https://www.tkt.am/ru/anahit-tsitsikyan-100-sergey-khachatryan-hayk-hovsepyan-30-oct-2026/eid/5298"
+   "link": "https://www.tkt.am/ru/anahit-tsitsikyan-100-sergey-khachatryan-hayk-hovsepyan-30-oct-2026/eid/5298",
+   "img": "img/events/sergey-khachatryan.jpg"
   },
   {
    "id": "tim-burton-universe",
    "title": "Вселенная Тима Бёртона: Mystery Ensemble",
    "date": "2026-10-30",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Дом камерной музыки им. Комитаса",
    "ll": [
@@ -595,18 +670,20 @@
     44.5232
    ],
    "price": "9300 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Музыка Дэнни Эльфмана к фильмам Тима Бёртона в камерном зале, как раз к Хэллоуину.",
-   "link": "https://www.tkt.am/ru/tim-burtons-universe-by-mystery-ensemble-30-oct-2026/eid/4465"
+   "link": "https://www.tkt.am/ru/tim-burtons-universe-by-mystery-ensemble-30-oct-2026/eid/4465",
+   "img": "img/events/tim-burton-universe.jpg"
   },
   {
-   "id": "spendiaryan-155",
-   "title": "Концерт к 155-летию Спендиаряна",
-   "date": "2026-11-01",
+   "id": "swan-lake-oct",
+   "title": "Балет Чайковского «Лебединое озеро»",
+   "date": "2026-10-30",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -614,11 +691,34 @@
     44.5151
    ],
    "price": null,
+   "free": false,
+   "tags": [
+    "театр"
+   ],
+   "desc": "Классическое «Лебединое озеро» в двух действиях на сцене Оперного театра.",
+   "link": "https://www.tkt.am/ru/pchaykvovski-karapi-litchy-2026-08-08-003205/eid/4753",
+   "img": "img/events/swan-lake-oct.jpg"
+  },
+  {
+   "id": "spendiaryan-155",
+   "title": "Концерт к 155-летию Спендиаряна",
+   "date": "2026-11-01",
+   "end": null,
+   "time": "18:00",
+   "weekly": null,
+   "venue": "Театр оперы и балета им. Спендиаряна",
+   "ll": [
+    40.1857,
+    44.5151
+   ],
+   "price": null,
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Юбилейный вечер в честь композитора, имя которого носит Оперный театр.",
-   "link": "https://www.tkt.am/ru/aspendiaryan-155-amyak-2026-10-09-110220/eid/5354"
+   "link": "https://www.tkt.am/ru/aspendiaryan-155-amyak-2026-10-09-110220/eid/5354",
+   "img": "img/events/spendiaryan-155.jpg"
   },
   {
    "id": "flute-festival",
@@ -630,19 +730,43 @@
    "venue": "Ереван, разные площадки",
    "ll": null,
    "price": null,
+   "free": false,
    "tags": [
     "концерт",
     "фестиваль"
    ],
    "desc": "Неделя сольных и камерных концертов и мастер-классов с флейтистами из Италии, Германии, Венгрии, Казахстана и Армении. Площадки и расписание уточняйте у организаторов.",
-   "link": "https://flutealmanac.com/forum/topic/yerevan-international-flute-festival-2026/"
+   "link": "https://flutealmanac.com/forum/topic/yerevan-international-flute-festival-2026/",
+   "img": null
+  },
+  {
+   "id": "jazz-aznavour",
+   "title": "Jazz Aznavour",
+   "date": "2026-11-05",
+   "end": null,
+   "time": "19:30",
+   "weekly": null,
+   "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
+   "ll": [
+    40.1863,
+    44.5151
+   ],
+   "price": "от 5000 AMD",
+   "free": false,
+   "tags": [
+    "концерт",
+    "джаз"
+   ],
+   "desc": "Песни Шарля Азнавура в джазовых аранжировках.",
+   "link": "https://eventix.am/en/concert/jazz-aznavour-1c8537a8-b636-4340-924c-b3d8b949fe65",
+   "img": "img/events/jazz-aznavour.jpg"
   },
   {
    "id": "sasuntsi-davit",
    "title": "Балет-оратория «Сасунци Давид»",
    "date": "2026-11-07",
    "end": "2026-11-08",
-   "time": null,
+   "time": "18:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -650,11 +774,13 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр"
    ],
    "desc": "Постановка по армянскому эпосу о Давиде Сасунском, герое, которому стоит памятник у вокзала.",
-   "link": "https://www.tkt.am/ru/sasvounci-davith-balet-oratvoria-2026-09-01-163311/eid/4891"
+   "link": "https://www.tkt.am/ru/sasvounci-davith-balet-oratvoria-2026-09-01-163311/eid/4891",
+   "img": "img/events/sasuntsi-davit.jpg"
   },
   {
    "id": "aigel-10",
@@ -669,18 +795,20 @@
     44.5345
    ],
    "price": "от 15000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Айгель Гайсина и Илья Барамия собрали десять лет музыки на стыке трип-хопа и электроники, от «Пыялы» и «Татарина» до новых треков.",
-   "link": "https://t.me/ErevanRus/7276"
+   "link": "https://t.me/ErevanRus/7276",
+   "img": "img/events/aigel-10.jpg"
   },
   {
    "id": "pene-pati",
    "title": "Пене Пати в Ереване",
    "date": "2026-11-09",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -688,19 +816,21 @@
     44.5151
    ],
    "price": "5000–20000 AMD",
+   "free": false,
    "tags": [
     "концерт",
     "фестиваль"
    ],
    "desc": "Самоанский тенор, одна из главных звёзд современной оперы, выступает в рамках Ереванского музыкального фестиваля.",
-   "link": "https://www.tkt.am/ru/pene-pati-in-yerevan-18th-yerevan-international-music-festival-09-nov-2026/eid/5182"
+   "link": "https://www.tkt.am/ru/pene-pati-in-yerevan-18th-yerevan-international-music-festival-09-nov-2026/eid/5182",
+   "img": "img/events/pene-pati.jpg"
   },
   {
    "id": "anush-nov",
    "title": "Опера Тиграняна «Ануш»",
    "date": "2026-11-10",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -708,19 +838,21 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "Главная армянская опера по поэме Туманяна, о любви Ануш и пастуха Саро.",
-   "link": "https://www.tkt.am/ru/atigranyan-anvoush-2026-09-11-203321/eid/5014"
+   "link": "https://www.tkt.am/ru/atigranyan-anvoush-2026-09-11-203321/eid/5014",
+   "img": "img/events/anush-nov.jpg"
   },
   {
    "id": "best-of-abba",
    "title": "The Best of ABBA",
    "date": "2026-11-12",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -728,18 +860,20 @@
     44.5151
    ],
    "price": "5000–15000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Шоу с хитами ABBA в Филармонии.",
-   "link": "https://www.tkt.am/ru/the-best-of-abba-2026-08-27-183015/eid/4791"
+   "link": "https://www.tkt.am/ru/the-best-of-abba-2026-08-27-183015/eid/4791",
+   "img": "img/events/best-of-abba.jpg"
   },
   {
    "id": "miyazaki-dreams",
    "title": "Сны Хаяо Миядзаки: Mystery Ensemble",
    "date": "2026-11-13",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Дом камерной музыки им. Комитаса",
    "ll": [
@@ -747,18 +881,20 @@
     44.5232
    ],
    "price": "9300 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Музыка Дзё Хисаиси к «Унесённым призраками», «Тоторо» и другим фильмам Миядзаки.",
-   "link": "https://www.tkt.am/ru/hayao-miyazakis-dreams-by-mystery-ensemble-13-nov-2026/eid/4466"
+   "link": "https://www.tkt.am/ru/hayao-miyazakis-dreams-by-mystery-ensemble-13-nov-2026/eid/4466",
+   "img": "img/events/miyazaki-dreams.jpg"
   },
   {
    "id": "carmen-nov",
    "title": "Опера Бизе «Кармен»",
    "date": "2026-11-14",
    "end": null,
-   "time": null,
+   "time": "18:00",
    "weekly": null,
    "venue": "Театр оперы и балета им. Спендиаряна",
    "ll": [
@@ -766,19 +902,21 @@
     44.5151
    ],
    "price": null,
+   "free": false,
    "tags": [
     "театр",
     "концерт"
    ],
    "desc": "«Кармен» на сцене Оперного театра.",
-   "link": "https://www.tkt.am/ru/zh-bize-karmen-2026-09-11-203329/eid/5017"
+   "link": "https://www.tkt.am/ru/zh-bize-karmen-2026-09-11-203329/eid/5017",
+   "img": "img/events/carmen-nov.jpg"
   },
   {
    "id": "grigory-sokolov",
    "title": "Григорий Соколов: сольный концерт",
    "date": "2026-11-14",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -786,18 +924,20 @@
     44.5151
    ],
    "price": "10000–70000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Сольный вечер одного из величайших ныне живущих пианистов. Такие концерты бывают редко, билеты лучше брать заранее.",
-   "link": "https://www.tkt.am/ru/grigvori-svokvolvov-menahamerg-2026-07-30-113153/eid/4516"
+   "link": "https://www.tkt.am/ru/grigvori-svokvolvov-menahamerg-2026-07-30-113153/eid/4516",
+   "img": "img/events/grigory-sokolov.jpg"
   },
   {
    "id": "raksha-lecture",
    "title": "Алексей Ракша: «Прогнозы в эпоху неопределённости»",
    "date": "2026-11-18",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Дом кино, ул. Вардананц, 18",
    "ll": [
@@ -805,9 +945,56 @@
     44.5196
    ],
    "price": "8000–45000 AMD",
-   "tags": [],
+   "free": false,
+   "tags": [
+    "лекция"
+   ],
    "desc": "Лекция демографа Алексея Ракши на русском языке.",
-   "link": "https://www.tkt.am/ru/aleksei-raksa-prognozy-v-epoxu-neopredelennosti-18-nov-2026/eid/5381"
+   "link": "https://www.tkt.am/ru/aleksei-raksa-prognozy-v-epoxu-neopredelennosti-18-nov-2026/eid/5381",
+   "img": "img/events/raksha-lecture.jpg"
+  },
+  {
+   "id": "digitec-2026",
+   "title": "DIGITEC 2026: выставка технологий и ИИ",
+   "date": "2026-11-20",
+   "end": "2026-11-22",
+   "time": "10:00",
+   "weekly": null,
+   "venue": "Meridian Expo Center, пр. Аршакуняц",
+   "ll": [
+    40.1649,
+    44.501
+   ],
+   "price": "бесплатно по онлайн-регистрации",
+   "free": true,
+   "tags": [
+    "бесплатно",
+    "выставка"
+   ],
+   "desc": "Крупнейшая технологическая выставка региона, в этом году про ИИ: больше 200 компаний, стартапы, спикеры из NVIDIA, OpenAI и Mozilla. Вход на экспозицию бесплатный по регистрации на digitec.am.",
+   "link": "https://visityerevan.am/events/details/1498/en/",
+   "img": "img/events/digitec-2026.jpg"
+  },
+  {
+   "id": "queen-vs-beatles",
+   "title": "Queen vs Beatles: Mystery Ensemble",
+   "date": "2026-11-20",
+   "end": null,
+   "time": "19:00",
+   "weekly": null,
+   "venue": "Дом камерной музыки им. Комитаса",
+   "ll": [
+    40.1854,
+    44.5232
+   ],
+   "price": "9300 AMD",
+   "free": false,
+   "tags": [
+    "концерт"
+   ],
+   "desc": "Mystery Ensemble играет хиты Queen и The Beatles в инструментальных аранжировках.",
+   "link": "https://www.tkt.am/ru/queen-vs-beatles-mystery-ensemble-20-nov-2026/eid/4467",
+   "img": "img/events/queen-vs-beatles.jpg"
   },
   {
    "id": "james-cameron",
@@ -822,18 +1009,20 @@
     44.4798
    ],
    "price": null,
+   "free": false,
    "tags": [
     "кино"
    ],
    "desc": "Режиссёр «Титаника», «Аватара» и «Терминатора» расскажет о кино, своём творческом пути и технологиях.",
-   "link": "https://t.me/guideyerevan/1541"
+   "link": "https://t.me/guideyerevan/1541",
+   "img": "img/events/james-cameron.jpg"
   },
   {
    "id": "rachmaninoff-gevorgyan",
    "title": "Все концерты Рахманинова: Ева Геворгян",
    "date": "2026-11-26",
    "end": "2026-11-27",
-   "time": null,
+   "time": "19:30",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -841,18 +1030,20 @@
     44.5151
    ],
    "price": "3000–4000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Молодая пианистка Ева Геворгян за два вечера с Госсимфоническим оркестром играет фортепианные концерты Рахманинова: в первый вечер №1 и №3, во второй №2 и №4.",
-   "link": "https://www.tkt.am/ru/rachmaninoff-piano-concertos-no-1-no-3-eva-gevorgyan-armenian-state-symphony-orchestra-26-nov-2026/eid/4779"
+   "link": "https://www.tkt.am/ru/rachmaninoff-piano-concertos-no-1-no-3-eva-gevorgyan-armenian-state-symphony-orchestra-26-nov-2026/eid/4779",
+   "img": "img/events/rachmaninoff-gevorgyan.jpg"
   },
   {
    "id": "john-williams-world",
    "title": "Мир Джона Уильямса: Mystery Ensemble",
    "date": "2026-11-28",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арно Бабаджаняна",
    "ll": [
@@ -860,18 +1051,20 @@
     44.5137
    ],
    "price": "9300–13300 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Темы из «Звёздных войн», «Гарри Поттера», «Индианы Джонса» и «Парка Юрского периода».",
-   "link": "https://www.tkt.am/ru/the-world-of-john-williams-by-mystery-ensemble-28-nov-2026/eid/4476"
+   "link": "https://www.tkt.am/ru/the-world-of-john-williams-by-mystery-ensemble-28-nov-2026/eid/4476",
+   "img": "img/events/john-williams-world.jpg"
   },
   {
    "id": "beatles-symphonic",
    "title": "The Beatles в симфоническом звучании",
    "date": "2026-11-30",
    "end": null,
-   "time": null,
+   "time": "19:00",
    "weekly": null,
    "venue": "Концертный зал им. Арама Хачатуряна (Филармония)",
    "ll": [
@@ -879,11 +1072,13 @@
     44.5151
    ],
    "price": "5000 AMD",
+   "free": false,
    "tags": [
     "концерт"
    ],
    "desc": "Главные хиты Beatles в оркестровой аранжировке.",
-   "link": "https://www.tkt.am/ru/the-best-of-the-beatles-legendar-hithery-simfvonik-hnchvoghvouthyamb-2026-09-01-170011/eid/4893"
+   "link": "https://www.tkt.am/ru/the-best-of-the-beatles-legendar-hithery-simfvonik-hnchvoghvouthyamb-2026-09-01-170011/eid/4893",
+   "img": "img/events/beatles-symphonic.jpg"
   }
  ]
 }

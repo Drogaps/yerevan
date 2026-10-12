@@ -1,0 +1,3532 @@
+[
+ {
+  "id": "f_kamancha",
+  "n": "Kamancha (Каманча)",
+  "ll": [
+   40.184229,
+   44.514201
+  ],
+  "addr": "улица Туманяна, 23",
+  "dishes": [
+   "армянская кухня",
+   "долма",
+   "шашлык",
+   "хаш"
+  ],
+  "top_for": [
+   "армянская кухня",
+   "хаш"
+  ],
+  "order": "Каре ягнёнка, ариса, долма, телятина с овощами на гриле; зимой с утра — хаш",
+  "price": "≈6–9 тыс. AMD на человека",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.2 (866) / Яндекс 5.0 (2578 оценок, 819 отзывов)",
+  "praise": [
+   "Каре ягнёнка и ариса — самые хвалимые блюда",
+   "Живая армянская музыка и уютный интерьер",
+   "Цены называют демократичными для центра"
+  ],
+  "cons": [
+   "Вечером бывает долгое ожидание блюд"
+  ],
+  "why_top": "В чатах релокантов хвалят трижды («Каманча тоже топ»), плюс в топ-19 Absolute Armenia и 2,5 тыс. оценок на Яндексе.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJb81Spca9akARp9P36tTt57Y",
+   "yandex": "https://yandex.ru/maps/org/kamancha/127227352592/",
+   "gis": "https://2gis.am/yerevan/search/Kamancha",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/37324",
+   "https://t.me/erevan12/15632",
+   "https://t.me/erevan12/11835",
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://yandex.ru/maps/org/kamancha/127227352592/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_kamancha-1.jpg",
+    "source": "https://yandex.ru/maps/org/kamancha/127227352592/gallery/"
+   },
+   {
+    "src": "img/food/f_kamancha-2.jpg",
+    "source": "https://yandex.ru/maps/org/kamancha/127227352592/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_ktoor",
+  "n": "Ktoor (Ктур)",
+  "ll": [
+   40.183536,
+   44.504512
+  ],
+  "addr": "улица Сарьяна, 24",
+  "dishes": [
+   "шашлык",
+   "армянская кухня",
+   "хаш",
+   "долма"
+  ],
+  "top_for": [
+   "шашлык",
+   "армянская кухня"
+  ],
+  "order": "Ассорти хоровац в лаваше, табуле в бастурме, толманчи пиде, свиная корейка; зимой — хаш (сезонно, не проверено)",
+  "price": "≈7–10 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.1 (537) / Яндекс 5.0 (2101 оценок, 747 отзывов)",
+  "praise": [
+   "Огромное меню, по выражению «Сноба», «энциклопедия армянской кухни»",
+   "Порции большие, шашлык хвалят в чатах",
+   "Летняя веранда на винной улице Сарьяна"
+  ],
+  "cons": [
+   "В меню не указан вес, легко заказать лишнего",
+   "На Google всего 4.1, жалуются на сервис"
+  ],
+  "why_top": "Четыре независимых рекомендации в чатах («огромный плюс к Ktoor»), плюс «Сноб», Advantour и Absolute Armenia.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJG9yQuYC9akARjOYVAp7NY0U",
+   "yandex": "https://yandex.ru/maps/org/ktur/76402054437/",
+   "gis": "https://2gis.am/yerevan/search/Ktoor",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/44562",
+   "https://t.me/erevan12/44609",
+   "https://t.me/erevan12/37331",
+   "https://t.me/erevan12/36207",
+   "https://snob.ru/food/gde-poest-v-erevane-6-mest-dlya-lyubitelej-tradicionnoj-i-eksperimentalnoj-kuhni/",
+   "https://www.advantour.com/armenia/yerevan/restaurants.htm",
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://yandex.ru/maps/org/ktur/76402054437/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_ktoor-1.jpg",
+    "source": "https://yandex.ru/maps/org/ktur/76402054437/gallery/"
+   },
+   {
+    "src": "img/food/f_ktoor-2.jpg",
+    "source": "https://yandex.ru/maps/org/ktur/76402054437/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_dolmama",
+  "n": "Dolmama",
+  "ll": [
+   40.180537,
+   44.515852
+  ],
+  "addr": "улица Пушкина, 10",
+  "dishes": [
+   "долма",
+   "армянская кухня",
+   "вино",
+   "хаш"
+  ],
+  "top_for": [
+   "долма"
+  ],
+  "order": "Фирменная долма с вырезкой вместо фарша, хоровац с тутовым соусом, армянские вина",
+  "price": "≈12–20 тыс. AMD (дорого)",
+  "open": [
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.2 (877) / Яндекс 4.9 (611 оценок, 318 отзывов)",
+  "praise": [
+   "Lonely Planet: «часто называют лучшим рестораном Еревана»",
+   "Авторская долма — главный повод прийти",
+   "Винная карта строго из армянских вин"
+  ],
+  "cons": [
+   "Дорого для Еревана",
+   "На Google 4.2, часть гостей считает место переоценённым"
+  ],
+  "why_top": "Лучшее место для долмы по Lonely Planet, Absolute Armenia и гастрогиду OneTwoTrip: три гида сходятся.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJqarqOvu8akAR7HIdHA85RO0",
+   "yandex": "https://yandex.ru/maps/org/dolmama/122012101675/",
+   "gis": "https://2gis.am/yerevan/search/Dolmama",
+   "site": null
+  },
+  "sources": [
+   "https://www.lonelyplanet.com/armenia/restaurants",
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://www.onetwotrip.com/ru/blog/guides/asia/dolma-falafel-i-eksperimentalnye-koktejli-gastrogid-po-erevanu/",
+   "https://yandex.ru/maps/org/dolmama/122012101675/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_dolmama-1.jpg",
+    "source": "https://yandex.ru/maps/org/dolmama/122012101675/gallery/"
+   },
+   {
+    "src": "img/food/f_dolmama-2.jpg",
+    "source": "https://yandex.ru/maps/org/dolmama/122012101675/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_karas",
+  "n": "Karas (Карас) на Туманяна",
+  "ll": [
+   40.18285,
+   44.516578
+  ],
+  "addr": "улица Туманяна, 19",
+  "dishes": [
+   "армянская кухня",
+   "шашлык",
+   "кебаб"
+  ],
+  "top_for": [
+   "круглосуточно"
+  ],
+  "order": "Салат из печёных перца, моркови и баклажана, кебаб, хоровац, супы; бокал домашнего вина за 800 AMD",
+  "price": "≈3–6 тыс. AMD",
+  "open": "always",
+  "rating": "Google 4.0 / Яндекс 4.9 (760 оценок, 324 отзывов)",
+  "praise": [
+   "Работает 24/7, выручит ночью или после раннего рейса",
+   "Недорогая сеть, по T—Ж «вкусно и бюджетно»",
+   "Хвалят супы и мясо"
+  ],
+  "cons": [
+   "Сетевой уровень, сервис нестабильный",
+   "Google 4.0"
+  ],
+  "why_top": "Рекомендуют в чатах (вместе с Лаваш и Шереп), T—Ж включил в свой гид, а для ночи это самый надёжный центральный вариант.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ--erYuO8akARZo-FJ-s4OtA",
+   "yandex": "https://yandex.ru/maps/org/karas/95569599532/",
+   "gis": "https://2gis.am/yerevan/search/Karas",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/12616",
+   "https://t-j.ru/list/food-erevan/",
+   "https://yandex.ru/maps/org/karas/95569599532/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_karas-1.jpg",
+    "source": "https://yandex.ru/maps/org/karas/95569599532/gallery/"
+   },
+   {
+    "src": "img/food/f_karas-2.jpg",
+    "source": "https://yandex.ru/maps/org/karas/95569599532/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_grill_am",
+  "n": "Grill.am",
+  "ll": [
+   40.165011,
+   44.515232
+  ],
+  "addr": "улица Мовсеса Хоренаци, 88",
+  "dishes": [
+   "шашлык",
+   "кебаб",
+   "шаурма"
+  ],
+  "top_for": [
+   "шашлык",
+   "круглосуточно"
+  ],
+  "order": "Выбрать любой шампур (свинина, телятина, люля) — жарят на углях и сразу заворачивают в лаваш",
+  "price": "≈2–4 тыс. AMD",
+  "open": "always",
+  "rating": "Google 4.1 (59) / Яндекс 4.6 (253 оценок, 77 отзывов)",
+  "praise": [
+   "Круглосуточно, ответ чата на вопрос «где хоровац ночью»",
+   "Мясо жарят на углях при тебе, «супер вкусно»",
+   "Нормальные цены"
+  ],
+  "cons": [
+   "Это стрит-фуд, не ресторан",
+   "Google 4.1"
+  ],
+  "why_top": "В чатах три независимых рекомендации за 2 месяца (хоровац 24/7, «кебабная, супер вкусно», «норм цены»).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJW0vR92a8akARdEjPDIaRi5Q",
+   "yandex": "https://yandex.ru/maps/org/grill_am/99174676853/",
+   "gis": "https://2gis.am/yerevan/search/Grill.am",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/30602",
+   "https://t.me/erevan12/49692",
+   "https://t.me/erevan12/50088",
+   "https://yandex.ru/maps/org/grill_am/99174676853/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_grill_am-1.jpg",
+    "source": "https://yandex.ru/maps/org/grill_am/99174676853/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_artashi_mot",
+  "n": "У Арташа (Artashi Mot)",
+  "ll": [
+   40.186629,
+   44.513402
+  ],
+  "addr": "улица Московян, 31/1",
+  "dishes": [
+   "шашлык",
+   "шаурма",
+   "кебаб",
+   "хинкали"
+  ],
+  "top_for": [
+   "шашлык",
+   "шаурма"
+  ],
+  "order": "Хоровац из телятины (хорти) и грибной хоровац, шаурма/хоровац в лаваше",
+  "price": "≈2–5 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.1 / Яндекс 4.9 (1122 оценок, 456 отзывов)",
+  "praise": [
+   "TasteAtlas: местный фаворит, №3 по хоровацу в Ереване",
+   "В чатах: «бюджетно и свежо, вкусно»",
+   "Яндекс 4.9 при 1100+ оценках"
+  ],
+  "cons": [
+   "Простое заведение, на Google 4.1"
+  ],
+  "why_top": "TasteAtlas и Armenia Discovery называют его местом для хоровца, в чатах его советуют вместе с Тун Лахмаджо.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJjdOy9R29akAR3WDpiSnel6Q",
+   "yandex": "https://yandex.ru/maps/org/u_artasha/188971559323/",
+   "gis": "https://2gis.am/yerevan/search/%D0%A3%20%D0%90%D1%80%D1%82%D0%B0%D1%88%D0%B0",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/12619",
+   "https://tasteatlas.com/artashimot",
+   "https://armeniadiscovery.com/de/restaurants?page=13",
+   "https://yandex.ru/maps/org/u_artasha/188971559323/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_artashi_mot-1.jpg",
+    "source": "https://yandex.ru/maps/org/u_artasha/188971559323/gallery/"
+   },
+   {
+    "src": "img/food/f_artashi_mot-2.jpg",
+    "source": "https://yandex.ru/maps/org/u_artasha/188971559323/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_tun_lahmajo",
+  "n": "Tun Lahmajo (Тун Лахмаджо)",
+  "ll": [
+   40.182889,
+   44.514385
+  ],
+  "addr": "улица Терьяна, 25",
+  "dishes": [
+   "лахмаджо",
+   "армянская кухня",
+   "шашлык"
+  ],
+  "top_for": [
+   "лахмаджо",
+   "круглосуточно"
+  ],
+  "order": "Классический и острый лахмаджо (≈800 AMD), с айраном или таном; можно кебаб",
+  "price": "≈2–4 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "04:00"
+   ],
+   [
+    "10:00",
+    "04:00"
+   ],
+   [
+    "10:00",
+    "04:00"
+   ],
+   [
+    "10:00",
+    "04:00"
+   ],
+   [
+    "10:00",
+    "04:00"
+   ],
+   [
+    "10:00",
+    "04:00"
+   ],
+   [
+    "10:00",
+    "04:00"
+   ]
+  ],
+  "rating": "Google 4.1 / Яндекс 5.0 (6304 оценок, 2770 отзывов)",
+  "praise": [
+   "Самое упоминаемое место для лахмаджо: чаты, T—Ж, тревел-гайды",
+   "Открыто до 04:00",
+   "Яндекс 5.0 при 6300 оценках"
+  ],
+  "cons": [
+   "Бывают очереди и долгое ожидание",
+   "Сервис хвалят и ругают примерно поровну"
+  ],
+  "why_top": "Самая частая рекомендация в чатах (4 сообщения), его же советуют T—Ж, Culture Trip и The Cascade Travel.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJg2a7R-O8akARAzxZ_EdHfOU",
+   "yandex": "https://yandex.ru/maps/org/tun_lagmadzho/4697390764/",
+   "gis": "https://2gis.am/yerevan/search/Tun%20Lahmajo",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/44561",
+   "https://t.me/erevan12/26200",
+   "https://t.me/erevan12/44609",
+   "https://t.me/erevan12/12619",
+   "https://t-j.ru/list/food-erevan/",
+   "https://thecascadetravel.com/blog/top-5-must-taste-armenian-fast-food/",
+   "https://yandex.ru/maps/org/tun_lagmadzho/4697390764/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_tun_lahmajo-1.jpg",
+    "source": "https://yandex.ru/maps/org/tun_lagmadzho/4697390764/gallery/"
+   },
+   {
+    "src": "img/food/f_tun_lahmajo-2.jpg",
+    "source": "https://yandex.ru/maps/org/tun_lagmadzho/4697390764/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_anteb",
+  "n": "Anteb",
+  "ll": [
+   40.18191,
+   44.511487
+  ],
+  "addr": "улица Езника Кохбаци, 30",
+  "dishes": [
+   "лахмаджо",
+   "кебаб",
+   "армянская кухня",
+   "десерты"
+  ],
+  "top_for": [
+   "лахмаджо",
+   "кебаб"
+  ],
+  "order": "Лахмаджо на тончайшем тесте, кебаб с йогуртом, манты, шиш-тавук, пахлава",
+  "price": "≈3–6 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "23:30"
+   ],
+   [
+    "11:00",
+    "23:30"
+   ],
+   [
+    "11:00",
+    "23:30"
+   ],
+   [
+    "11:00",
+    "23:30"
+   ],
+   [
+    "11:00",
+    "23:30"
+   ],
+   [
+    "11:00",
+    "23:30"
+   ],
+   [
+    "11:00",
+    "23:30"
+   ]
+  ],
+  "rating": "Google 4.5 (1085) / Яндекс 5.0 (264 оценок, 90 отзывов)",
+  "praise": [
+   "Западноармянская кухня Антепа (Газиантепа) с сирийским акцентом",
+   "Хрустящий «бумажный» лахмаджо",
+   "Google 4.5 при 1000+ отзывах"
+  ],
+  "cons": [],
+  "why_top": "Рекомендуют чаты («очень вкусно»), Moskvich Mag, Absolute Armenia и фуд-блогер (лахмаджо за 900 AMD): четыре источника.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJqb0D6fy8akARM2wP6bp_fjM",
+   "yandex": "https://yandex.ru/maps/org/anteb/198526187645/",
+   "gis": "https://2gis.am/yerevan/search/Anteb",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/26200",
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://www.jidlonacestach.cz/en/lahmajun/",
+   "https://yandex.ru/maps/org/anteb/198526187645/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_anteb-1.jpg",
+    "source": "https://yandex.ru/maps/org/anteb/198526187645/gallery/"
+   },
+   {
+    "src": "img/food/f_anteb-2.jpg",
+    "source": "https://yandex.ru/maps/org/anteb/198526187645/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_elies_lahmajun",
+  "n": "Elie's Lahmajun",
+  "ll": [
+   40.174307,
+   44.510954
+  ],
+  "addr": "улица Хоренаци, 25",
+  "dishes": [
+   "лахмаджо",
+   "кебаб"
+  ],
+  "top_for": [
+   "лахмаджо"
+  ],
+  "order": "Лёгкий ливанско-армянский лахмаджун, хумус",
+  "price": "≈1,5–3 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ]
+  ],
+  "rating": "Google 4.9 (933) / Яндекс 4.9 (92 оценок, 40 отзывов)",
+  "praise": [
+   "Google 4.9 при 900+ отзывах, лучший рейтинг среди лахмаджо",
+   "Дёшево, меню с картинками",
+   "Хумус тоже хвалят"
+  ],
+  "cons": [
+   "Работает только до 21:00"
+  ],
+  "why_top": "Любимое место экспата из Moskvich Mag, и почти идеальные оценки на Google и Яндексе.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJOxAN91-9akARDElHoWLaj5E",
+   "yandex": "https://yandex.ru/maps/org/elie_s_lahmajun/142511624199/",
+   "gis": "https://2gis.am/yerevan/search/Elie%27s%20Lahmajun",
+   "site": null
+  },
+  "sources": [
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://yandex.ru/maps/org/elie_s_lahmajun/142511624199/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_elies_lahmajun-1.jpg",
+    "source": "https://yandex.ru/maps/org/elie_s_lahmajun/142511624199/gallery/"
+   },
+   {
+    "src": "img/food/f_elies_lahmajun-2.jpg",
+    "source": "https://yandex.ru/maps/org/elie_s_lahmajun/142511624199/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_lahmajun_gaidz",
+  "n": "Lahmajun Gaidz",
+  "ll": [
+   40.179863,
+   44.519601
+  ],
+  "addr": "улица Туманяна, 9/9",
+  "dishes": [
+   "лахмаджо"
+  ],
+  "top_for": [
+   "лахмаджо"
+  ],
+  "order": "Лахмаджо из печи, самый дешёвый в центре (от ≈350–500 AMD)",
+  "price": "≈1–2 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "18:30"
+   ],
+   [
+    "11:00",
+    "18:30"
+   ],
+   [
+    "11:00",
+    "18:30"
+   ],
+   [
+    "11:00",
+    "18:30"
+   ],
+   [
+    "11:00",
+    "18:30"
+   ],
+   [
+    "11:00",
+    "18:30"
+   ],
+   null
+  ],
+  "rating": "Google 4.9 / Яндекс 5.0 (177 оценок, 71 отзывов)",
+  "praise": [
+   "В гайдах: «многие скажут, лучший лахмаджо в Ереване»",
+   "Копеечные цены",
+   "Google 4.9, Яндекс 5.0"
+  ],
+  "cons": [
+   "Очень маленький зал",
+   "Пн–сб до 18:30, в воскресенье закрыто"
+  ],
+  "why_top": "Medium-гайд «Cheap eats» и обзоры Wanderlog называют его лучшим лахмаджо, рейтинги около 4.9.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJpWl69_q8akARycvjFnXC7FM",
+   "yandex": "https://yandex.ru/maps/org/lahmajun_gaidz/146367931818/",
+   "gis": "https://2gis.am/yerevan/search/Lahmajun%20Gaidz",
+   "site": null
+  },
+  "sources": [
+   "https://medium.com/@lizastephanian/cheap-eats-467651cb79b5",
+   "https://thecascadetravel.com/blog/top-5-must-taste-armenian-fast-food/",
+   "https://yandex.ru/maps/org/lahmajun_gaidz/146367931818/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_lahmajun_gaidz-1.jpg",
+    "source": "https://yandex.ru/maps/org/lahmajun_gaidz/146367931818/gallery/"
+   },
+   {
+    "src": "img/food/f_lahmajun_gaidz-2.jpg",
+    "source": "https://yandex.ru/maps/org/lahmajun_gaidz/146367931818/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_mer_taghe",
+  "n": "Mer Taghe (Мер Тахы)",
+  "ll": [
+   40.183162,
+   44.516143
+  ],
+  "addr": "улица Туманяна, 21/1",
+  "dishes": [
+   "лахмаджо",
+   "армянская кухня"
+  ],
+  "top_for": [
+   "лахмаджо"
+  ],
+  "order": "Лахмаджо из дровяной печи с конвейером, манты (очень чесночные), манакиш",
+  "price": "≈2–4 тыс. AMD",
+  "open": [
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.5 / Яндекс 5.0 (264 оценок, 98 отзывов)",
+  "praise": [
+   "Лахмаджо пекут при тебе в дровяной печи",
+   "Манты, по словам блогера, «лучшие в городе»",
+   "Уютная атмосфера"
+  ],
+  "cons": [],
+  "why_top": "TasteAtlas, The Cascade Travel («одно из двух лучших мест для лахмаджо») и Absolute Armenia (манты).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ9YbteuO8akARvC6aTYOlWEc",
+   "yandex": "https://yandex.ru/maps/org/mer_takhy/7784678994/",
+   "gis": "https://2gis.am/yerevan/search/Mer%20Taghe",
+   "site": null
+  },
+  "sources": [
+   "https://tasteatlas.com/mer-taghe/lahmacun",
+   "https://thecascadetravel.com/blog/top-5-must-taste-armenian-fast-food/",
+   "https://absolutearmenia.com/?p=9534",
+   "https://yandex.ru/maps/org/mer_takhy/7784678994/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_mer_taghe-1.jpg",
+    "source": "https://yandex.ru/maps/org/mer_takhy/7784678994/gallery/"
+   },
+   {
+    "src": "img/food/f_mer_taghe-2.jpg",
+    "source": "https://yandex.ru/maps/org/mer_takhy/7784678994/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_tumanyan_khinkali",
+  "n": "Tumanyan Khinkali (Туманяни Хинкали)",
+  "ll": [
+   40.183054,
+   44.516294
+  ],
+  "addr": "улица Туманяна, 21",
+  "dishes": [
+   "хинкали",
+   "грузинская кухня"
+  ],
+  "top_for": [
+   "хинкали"
+  ],
+  "order": "Хинкали с говядиной и с грибами (варёные; жареные тяжелее), шашлык из ягнёнка",
+  "price": "≈4–6 тыс. AMD (хинкали ≈450–500 AMD/шт)",
+  "open": [
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 3.9 (1294) / Яндекс 5.0 (2529 оценок, 1028 отзывов)",
+  "praise": [
+   "Фуд-блогер: «лучшие хинкали в жизни», очень сочная начинка",
+   "В чатах ставят выше Кавказской пленницы",
+   "Около Лебединого озера и Северного проспекта"
+  ],
+  "cons": [
+   "Сервис часто ругают (Google 3.9)",
+   "Бывает долго"
+  ],
+  "why_top": "Чаты, T—Ж, блог Mission Food и Wanderlog: хинкальную советуют четыре источника, хоть сервис и спорный.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJE1oLe-O8akARWHPNTpJPnQc",
+   "yandex": "https://yandex.ru/maps/org/tumanyani_khinkali/198507173358/",
+   "gis": "https://2gis.am/yerevan/search/Tumanyan%20Khinkali",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/28443",
+   "https://t-j.ru/list/food-erevan/",
+   "https://mission-food.com/exploring-armenia-3-yerevan-dining-out/",
+   "https://wanderlog.com/place/details/1137207/tumanyan-khinkali",
+   "https://yandex.ru/maps/org/tumanyani_khinkali/198507173358/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_tumanyan_khinkali-1.jpg",
+    "source": "https://yandex.ru/maps/org/tumanyani_khinkali/198507173358/gallery/"
+   },
+   {
+    "src": "img/food/f_tumanyan_khinkali-2.jpg",
+    "source": "https://yandex.ru/maps/org/tumanyani_khinkali/198507173358/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_lali",
+  "n": "Lali Kitchen & Bar",
+  "ll": [
+   40.179303,
+   44.512576
+  ],
+  "addr": "улица Павстоса Бюзанда, 5",
+  "dishes": [
+   "хинкали",
+   "хачапури",
+   "грузинская кухня",
+   "вино"
+  ],
+  "top_for": [
+   "грузинская кухня",
+   "хинкали"
+  ],
+  "order": "Хинкали (в т.ч. жареные), хачапури, домашние лимонады, десерты",
+  "price": "≈6–9 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ]
+  ],
+  "rating": "Google 4.5 / Яндекс 5.0 (922 оценок, 338 отзывов)",
+  "praise": [
+   "Стильный интерьер, «самое красивое» грузинское место",
+   "Хинкали и сервис хвалят на Яндексе (5.0 при 900+ оценках)",
+   "Работает до 01:00 по выходным"
+  ],
+  "cons": [
+   "Дороже обычных хинкальных",
+   "Иногда мало мяса в хинкали"
+  ],
+  "why_top": "Высокие оценки на Яндексе и Google (4.5), обзоры на Wanderlog и Яндекс-отзывы хвалят именно хинкали.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJo1x7Gxe9akARMsKVku5BhQg",
+   "yandex": "https://yandex.ru/maps/org/lali/130513271477/",
+   "gis": "https://2gis.am/yerevan/search/Lali%20Kitchen%20%26%20Bar",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.com.ge/maps/org/lali/130513271477/reviews",
+   "https://yandex.ru/maps/org/lali/130513271477/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_lali-1.jpg",
+    "source": "https://yandex.ru/maps/org/lali/130513271477/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_golden_khinkali",
+  "n": "Golden Khinkali",
+  "ll": [
+   40.183084,
+   44.516875
+  ],
+  "addr": "улица Туманяна, 32",
+  "dishes": [
+   "хинкали",
+   "грузинская кухня"
+  ],
+  "top_for": [
+   "хинкали"
+  ],
+  "order": "Классические хинкали с говядиной-свининой, жареные хинкали",
+  "price": "≈3–5 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.1 (228) / Яндекс 5.0 (256 оценок, 137 отзывов)",
+  "praise": [
+   "В отзывах на Яндексе: «хинкали несравненные»",
+   "Широкое меню, доступные цены",
+   "Узнаёшь по огромному золотому хинкали у входа"
+  ],
+  "cons": [
+   "Google 4.1"
+  ],
+  "why_top": "На Яндексе 82 из 96 упоминаний хинкали положительные, плюс положительные отзывы на Yandex и Wanderlog.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJWxq7EwC9akARMMx5sxzoA_c",
+   "yandex": "https://yandex.ru/maps/org/golden_khinkali/2185213809/",
+   "gis": "https://2gis.am/yerevan/search/Golden%20Khinkali",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.com.ge/navi/org/golden_khinkali/2185213809",
+   "https://yandex.ru/maps/org/golden_khinkali/2185213809/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_golden_khinkali-1.jpg",
+    "source": "https://yandex.ru/maps/org/golden_khinkali/2185213809/gallery/"
+   },
+   {
+    "src": "img/food/f_golden_khinkali-2.jpg",
+    "source": "https://yandex.ru/maps/org/golden_khinkali/2185213809/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_puri",
+  "n": "Пури (Puri) на Комитаса",
+  "ll": [
+   40.207234,
+   44.508488
+  ],
+  "addr": "проспект Комитаса, 35/4",
+  "dishes": [
+   "хачапури",
+   "хинкали",
+   "грузинская кухня"
+  ],
+  "top_for": [
+   "хачапури"
+  ],
+  "order": "Хачапури по-аджарски и по-имеретински, хинкали, чахохбили",
+  "price": "≈4–6 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google — не найдено / Яндекс 4.9 (767 оценок, 206 отзывов)",
+  "praise": [
+   "Нашлось по запросу «хачапури» на Яндексе, 4.9 при 767 оценках",
+   "Грузинская пекарня-ресторан в Арабкире",
+   "Работает до полуночи"
+  ],
+  "cons": [
+   "Далеко от центра (Комитаса)",
+   "Сервис хвалят и ругают поровну (не проверено)"
+  ],
+  "why_top": "Один из двух лидеров Яндекса по хачапури; независимых рекомендаций в чатах нет, так что это выбор по рейтингу (не проверено).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D1%83%D1%80%D0%B8%20Yerevan",
+   "yandex": "https://yandex.ru/maps/org/puri/50918727165/",
+   "gis": "https://2gis.am/yerevan/search/%D0%9F%D1%83%D1%80%D0%B8",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/puri/50918727165/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_puri-1.jpg",
+    "source": "https://yandex.ru/maps/org/puri/50918727165/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_genatsvale",
+  "n": "Генацвале (Genatsvale) на Пароняна",
+  "ll": [
+   40.177547,
+   44.502876
+  ],
+  "addr": "улица Пароняна, 1",
+  "dishes": [
+   "хачапури",
+   "хинкали",
+   "грузинская кухня",
+   "завтраки"
+  ],
+  "top_for": [
+   "хачапури",
+   "грузинская кухня"
+  ],
+  "order": "Хачапури (на завтрак), хинкали с говядиной, баклажаны с орехами, солянка",
+  "price": "≈4–6 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.5 (333) / Яндекс 4.8 (764 оценок, 286 отзывов)",
+  "praise": [
+   "Kojaro: лучший кавказский завтрак, известен хачапури",
+   "Несколько филиалов, разумные цены",
+   "Google 4.5, Яндекс 4.8"
+  ],
+  "cons": [
+   "Часть отзывов: хинкали и хачапури пресноваты"
+  ],
+  "why_top": "Kojaro (топ-10 завтраков), Wanderlog и Яндекс-отзывы: самое известное грузинское место в городе.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJsZKwAHO9akARXUkIo3yB7sw",
+   "yandex": "https://yandex.ru/maps/org/genatsvale/159368791299/",
+   "gis": "https://2gis.am/yerevan/search/%D0%93%D0%B5%D0%BD%D0%B0%D1%86%D0%B2%D0%B0%D0%BB%D0%B5",
+   "site": null
+  },
+  "sources": [
+   "https://www.kojaro.com/food/178195-10-best-breakfasts-brunches-yerevan-armenia/",
+   "https://wanderlog.com/place/details/1174114/genatsvale-isahakyan-branch",
+   "https://yandex.ru/maps/org/genatsvale/159368791299/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_genatsvale-1.jpg",
+    "source": "https://yandex.ru/maps/org/genatsvale/159368791299/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_taverna_gata",
+  "n": "Таверна Гата (Gata Tavern)",
+  "ll": [
+   40.18149,
+   44.519
+  ],
+  "addr": "улица Туманяна, 22",
+  "dishes": [
+   "десерты",
+   "армянская кухня",
+   "долма",
+   "шашлык"
+  ],
+  "top_for": [
+   "десерты",
+   "армянская кухня"
+  ],
+  "order": "Гату прямо из печи (можно посмотреть, как пекут), долму, хоровац",
+  "price": "≈5–8 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.7 / Яндекс 5.0 (1503 оценок, 930 отзывов)",
+  "praise": [
+   "Гату пекут при гостях",
+   "Яндекс 5.0 при 1500 оценках, сервис хвалят почти единодушно",
+   "Живая музыка, этно-атмосфера"
+  ],
+  "cons": [],
+  "why_top": "Absolute Armenia ставит её первой в топе за гату, на Яндексе 930 отзывов почти без негатива по сервису.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJK9wL4-S8akARNfBgcxYUeCk",
+   "yandex": "https://yandex.ru/maps/org/taverna_gata/204989500909/",
+   "gis": "https://2gis.am/yerevan/search/%D0%A2%D0%B0%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%20%D0%93%D0%B0%D1%82%D0%B0",
+   "site": null
+  },
+  "sources": [
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://yandex.ru/maps/org/taverna_gata/204989500909/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_taverna_gata-1.jpg",
+    "source": "https://yandex.ru/maps/org/taverna_gata/204989500909/gallery/"
+   },
+   {
+    "src": "img/food/f_taverna_gata-2.jpg",
+    "source": "https://yandex.ru/maps/org/taverna_gata/204989500909/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_dalan",
+  "n": "Dalan / Abovyan 12",
+  "ll": [
+   40.18099,
+   44.516069
+  ],
+  "addr": "улица Абовяна, 12",
+  "dishes": [
+   "армянская кухня",
+   "долма",
+   "лахмаджо",
+   "шашлык",
+   "вино"
+  ],
+  "top_for": [
+   "армянская кухня",
+   "долма"
+  ],
+  "order": "Толма, ишли кюфта, суп спас, салат с бастурмой, ишхан (севанская форель), печёное яблоко",
+  "price": "≈5–8 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.5 (1317) / Яндекс 5.0 (312 оценок, 110 отзывов)",
+  "praise": [
+   "Дворик с виноградом и клетчатыми скатертями",
+   "Ресторан при художественной галерее",
+   "Хорошая винная карта"
+  ],
+  "cons": [
+   "Туристическое место в самом центре"
+  ],
+  "why_top": "Его советуют сразу четыре гида (T—Ж, Moskvich Mag, OneTwoTrip, Absolute Armenia), Google 4.5 при 1300 отзывах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJNdKwNfu8akARE-93PiIm_l4",
+   "yandex": "https://yandex.ru/maps/org/khudozhestvennaya_galereya_dalana/26334151128/",
+   "gis": "https://2gis.am/yerevan/search/Dalan%20/%20Abovyan%2012",
+   "site": null
+  },
+  "sources": [
+   "https://t-j.ru/list/food-erevan/",
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://www.onetwotrip.com/ru/blog/guides/asia/yerevan-cafes/",
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://yandex.ru/maps/org/khudozhestvennaya_galereya_dalana/26334151128/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_dalan-1.jpg",
+    "source": "https://yandex.ru/maps/org/khudozhestvennaya_galereya_dalana/26334151128/gallery/"
+   },
+   {
+    "src": "img/food/f_dalan-2.jpg",
+    "source": "https://yandex.ru/maps/org/khudozhestvennaya_galereya_dalana/26334151128/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_katsin",
+  "n": "Katsin (Кацин)",
+  "ll": [
+   40.18,
+   44.510735
+  ],
+  "addr": "улица Амиряна, 4/6 (вход с ул. Антона Кочиняна)",
+  "dishes": [
+   "армянская кухня",
+   "стейк",
+   "суши"
+  ],
+  "top_for": [
+   "армянская кухня"
+  ],
+  "order": "Осьминог на подносе, стейк, маринованная утка на печёном картофеле",
+  "price": "≈10–15 тыс. AMD",
+  "open": [
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ]
+  ],
+  "rating": "Google 4.3 / Яндекс 5.0 (1774 оценок, 504 отзывов)",
+  "praise": [
+   "Современная армянская кухня в красивом интерьере",
+   "Живая музыка и танцы по вечерам",
+   "Яндекс 5.0 при 1700+ оценках"
+  ],
+  "cons": [
+   "Дорого",
+   "Шумно вечером из-за музыки"
+  ],
+  "why_top": "В чатах его ставят в один ряд с Лаваш и Таверной, Absolute Armenia тоже включает в топ-19.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJJWDNhuC9akARgaXocKMUoAw",
+   "yandex": "https://yandex.ru/maps/org/katsin/170742179466/",
+   "gis": "https://2gis.am/yerevan/search/Katsin",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/17254",
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://yandex.ru/maps/org/katsin/170742179466/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_katsin-1.jpg",
+    "source": "https://yandex.ru/maps/org/katsin/170742179466/gallery/"
+   },
+   {
+    "src": "img/food/f_katsin-2.jpg",
+    "source": "https://yandex.ru/maps/org/katsin/170742179466/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_napoletana",
+  "n": "Napoletana Pizza",
+  "ll": [
+   40.184003,
+   44.505608
+  ],
+  "addr": "улица Павстоса Бюзанда, 107/1",
+  "dishes": [
+   "пицца"
+  ],
+  "top_for": [
+   "пицца"
+  ],
+  "order": "Маргарита, капричоза, кальцоне (рипьено), тартуфата",
+  "price": "≈4–7 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "23:30"
+   ],
+   [
+    "10:00",
+    "23:30"
+   ],
+   [
+    "10:00",
+    "23:30"
+   ],
+   [
+    "10:00",
+    "23:30"
+   ],
+   [
+    "10:00",
+    "23:30"
+   ],
+   [
+    "10:00",
+    "23:30"
+   ],
+   [
+    "10:00",
+    "23:30"
+   ]
+  ],
+  "rating": "Google 4.5 (363) / Яндекс 5.0 (444 оценок, 159 отзывов)",
+  "praise": [
+   "Единственный в регионе член Associazione Verace Pizza Napoletana",
+   "Большой зал, удобно компанией",
+   "Google 4.5, Яндекс 5.0"
+  ],
+  "cons": [
+   "Далековато от самого центра (Бюзанда/Демирчяна)"
+  ],
+  "why_top": "Absolute Armenia выделяет её маргариту, у пиццерии сертификат AVPN, высокие рейтинги на двух картах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ64mQ6tO9akARhC8ypQaVmp4",
+   "yandex": "https://yandex.ru/maps/org/napoletana/81408761386/",
+   "gis": "https://2gis.am/yerevan/search/Napoletana%20Pizza",
+   "site": null
+  },
+  "sources": [
+   "https://absolutearmenia.com/?p=15434",
+   "https://yandex.ru/maps/org/napoletana/81408761386/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_napoletana-1.jpg",
+    "source": "https://yandex.ru/maps/org/napoletana/81408761386/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_pizza_ria",
+  "n": "Pizza RIA",
+  "ll": [
+   40.186159,
+   44.507692
+  ],
+  "addr": "улица Сарьяна, 12/2",
+  "dishes": [
+   "пицца"
+  ],
+  "top_for": [
+   "пицца"
+  ],
+  "order": "Диавола (острая), маргарита с песто, прошутто крудо",
+  "price": "≈4–6 тыс. AMD",
+  "open": [
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.3 (129) / Яндекс 5.0 (145 оценок, 62 отзывов)",
+  "praise": [
+   "Основательница год училась пиццемейкерству в Неаполе",
+   "Отличное тесто, местные продукты",
+   "Маленькая терраса на улице Сарьяна"
+  ],
+  "cons": [
+   "Маленькое заведение, сервис иногда ругают"
+  ],
+  "why_top": "Её рекомендуют Absolute Armenia (топ-4 пиццерий), Restaurant Guru («тесто отличное») и Wanderlog.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJKTylKQS9akARG173SehiDHQ",
+   "yandex": "https://yandex.ru/maps/org/pitstsa_ria/220891119500/",
+   "gis": "https://2gis.am/yerevan/search/Pizza%20RIA",
+   "site": null
+  },
+  "sources": [
+   "https://absolutearmenia.com/?p=15434",
+   "https://restaurantguru.com/Pizza-RIA-Yerevan",
+   "https://yandex.ru/maps/org/pitstsa_ria/220891119500/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_pizza_ria-1.jpg",
+    "source": "https://yandex.ru/maps/org/pitstsa_ria/220891119500/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_tumanyan_shaurma",
+  "n": "Tumanyan Shaurma (Туманян Шаурма)",
+  "ll": [
+   40.183221,
+   44.516602
+  ],
+  "addr": "улица Туманяна, 32",
+  "dishes": [
+   "шаурма"
+  ],
+  "top_for": [
+   "шаурма",
+   "круглосуточно"
+  ],
+  "order": "Классическую шаурму в лаваше (свинина или курица)",
+  "price": "≈1,5–2,5 тыс. AMD",
+  "open": "always",
+  "rating": "Google 3.7 / Яндекс 4.8 (1089 оценок, 373 отзывов)",
+  "praise": [
+   "Культовая шаурмичная, 24/7 на Туманяна, 32",
+   "В чатах первой называют её («Туманян шаурма!»)",
+   "1000+ оценок на Яндексе"
+  ],
+  "cons": [
+   "Google 3.7: качество скачет",
+   "Бывают очереди"
+  ],
+  "why_top": "Первая рекомендация чата по стрит-фуду, Яндекс 4.8 при тысяче оценок.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJSbEifOO8akARxjfkwHZLsVM",
+   "yandex": "https://yandex.ru/maps/org/tumanyan_shaurma/140827877898/",
+   "gis": "https://2gis.am/yerevan/search/Tumanyan%20Shaurma",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/44561",
+   "https://yandex.ru/maps/org/tumanyan_shaurma/140827877898/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_tumanyan_shaurma-1.jpg",
+    "source": "https://yandex.ru/maps/org/tumanyan_shaurma/140827877898/gallery/"
+   },
+   {
+    "src": "img/food/f_tumanyan_shaurma-2.jpg",
+    "source": "https://yandex.ru/maps/org/tumanyan_shaurma/140827877898/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_mr_gyros",
+  "n": "Mr. Gyros (Баграмяна, 21)",
+  "ll": [
+   40.191826,
+   44.50546
+  ],
+  "addr": "проспект Баграмяна, 21",
+  "dishes": [
+   "гирос"
+  ],
+  "top_for": [
+   "гирос"
+  ],
+  "order": "Гирос со свининой в пите, картошка фри",
+  "price": "≈2–3 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.1 (40) / Яндекс 4.8 (119 оценок, 21 отзывов)",
+  "praise": [
+   "Сеть греческого стрит-фуда, много точек",
+   "Филиал на Баграмяна лучший по рейтингу (Яндекс 4.8)",
+   "Часть точек работает до 04:00"
+  ],
+  "cons": [
+   "Сильный разброс качества между филиалами (3.8–4.8)"
+  ],
+  "why_top": "В чатах называют рядом с Туманян Шаурмой («Мр Гирос!»), выбран филиал с лучшими оценками.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ3__jZQe9akARrRAAmYsjXLI",
+   "yandex": "https://yandex.ru/maps/org/mr_gyros/122250391501/",
+   "gis": "https://2gis.am/yerevan/search/Mr.%20Gyros",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/44561",
+   "https://yandex.ru/maps/org/mr_gyros/122250391501/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_mr_gyros-1.jpg",
+    "source": "https://yandex.ru/maps/org/mr_gyros/122250391501/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_evn_diner",
+  "n": "EVN Diner",
+  "ll": [
+   40.187046,
+   44.512199
+  ],
+  "addr": "улица Туманяна, 40/28",
+  "dishes": [
+   "бургеры"
+  ],
+  "top_for": [
+   "бургеры"
+  ],
+  "order": "Бургер Heart Attack (три котлеты), классический чизбургер, шейк",
+  "price": "≈4–6 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "02:00"
+   ],
+   [
+    "10:00",
+    "02:00"
+   ],
+   [
+    "10:00",
+    "02:00"
+   ],
+   [
+    "10:00",
+    "02:00"
+   ],
+   [
+    "10:00",
+    "02:00"
+   ],
+   [
+    "10:00",
+    "02:00"
+   ],
+   [
+    "10:00",
+    "02:00"
+   ]
+  ],
+  "rating": "Google 4.7 (188) / Яндекс 4.9 (117 оценок, 56 отзывов)",
+  "praise": [
+   "Гайды: «одни из лучших бургеров в городе»",
+   "Американский дайнер в центре",
+   "Google 4.7, на Яндексе по бургерам 45 из 45 положительных"
+  ],
+  "cons": [],
+  "why_top": "Eurasia Travel и обзоры на Яндексе называют его бургеры лучшими, оценки 4.7–4.9 на двух картах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJOUDK4Aq9akAR74lar_eRc4s",
+   "yandex": "https://yandex.ru/maps/org/evn_diner/55854588422/",
+   "gis": "https://2gis.am/yerevan/search/EVN%20Diner",
+   "site": null
+  },
+  "sources": [
+   "https://eurasia.travel/armenia/yerevan/where-to-eat/",
+   "https://yandex.com.ge/maps/org/evn_diner/55854588422/reviews",
+   "https://yandex.ru/maps/org/evn_diner/55854588422/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_evn_diner-1.jpg",
+    "source": "https://yandex.ru/maps/org/evn_diner/55854588422/gallery/"
+   },
+   {
+    "src": "img/food/f_evn_diner-2.jpg",
+    "source": "https://yandex.ru/maps/org/evn_diner/55854588422/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_black_angus",
+  "n": "Black Angus (Абовяна, 2/5)",
+  "ll": [
+   40.180155,
+   44.514888
+  ],
+  "addr": "улица Абовяна, 2/5",
+  "dishes": [
+   "бургеры",
+   "стейк"
+  ],
+  "top_for": [
+   "бургеры"
+  ],
+  "order": "Бургер с говядиной ангус, крылышки",
+  "price": "≈4–6 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "02:00"
+   ],
+   [
+    "11:00",
+    "02:00"
+   ],
+   [
+    "11:00",
+    "02:00"
+   ],
+   [
+    "11:00",
+    "02:00"
+   ],
+   [
+    "11:00",
+    "02:00"
+   ],
+   [
+    "11:00",
+    "02:00"
+   ],
+   [
+    "11:00",
+    "02:00"
+   ]
+  ],
+  "rating": "Google 4.6 (989) / Яндекс 5.0 (440 оценок, 128 отзывов)",
+  "praise": [
+   "№2 среди бургерных Еревана на Foursquare",
+   "Google 4.6 при почти 1000 отзывах",
+   "Открыто до 02:00"
+  ],
+  "cons": [
+   "Есть мнение: «достойно, но не лучшие в Ереване»"
+  ],
+  "why_top": "Foursquare, Яндекс и Google сходятся: стабильно хорошие бургеры в самом центре.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJsVP4Pfu8akARRHkflcqjVTg",
+   "yandex": "https://yandex.ru/maps/org/blek_angus/116583460050/",
+   "gis": "https://2gis.am/yerevan/search/Black%20Angus",
+   "site": null
+  },
+  "sources": [
+   "https://redirect.foursquare.com/blackang6239506",
+   "https://yandex.com.ge/navi/org/black_angus/116583460050/reviews",
+   "https://yandex.ru/maps/org/blek_angus/116583460050/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_black_angus-1.jpg",
+    "source": "https://yandex.ru/maps/org/blek_angus/116583460050/gallery/"
+   },
+   {
+    "src": "img/food/f_black_angus-2.jpg",
+    "source": "https://yandex.ru/maps/org/blek_angus/116583460050/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_pit_stop",
+  "n": "Pit Stop Burger",
+  "ll": [
+   40.183386,
+   44.511482
+  ],
+  "addr": "улица Пушкина, 35/22",
+  "dishes": [
+   "бургеры"
+  ],
+  "top_for": [
+   "бургеры"
+  ],
+  "order": "Фирменный бургер, хот-дог",
+  "price": "≈3–4 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "04:00"
+   ],
+   [
+    "11:00",
+    "04:00"
+   ],
+   [
+    "11:00",
+    "04:00"
+   ],
+   [
+    "11:00",
+    "04:00"
+   ],
+   [
+    "11:00",
+    "04:00"
+   ],
+   [
+    "11:00",
+    "04:00"
+   ],
+   [
+    "11:00",
+    "04:00"
+   ]
+  ],
+  "rating": "Google 4.1 (450) / Яндекс 4.9 (792 оценок, 182 отзывов)",
+  "praise": [
+   "Яндекс 4.9 при почти 800 оценках",
+   "Открыто до 04:00",
+   "Бюджетно"
+  ],
+  "cons": [
+   "Google 4.1, жалуются на ожидание"
+  ],
+  "why_top": "Лидер Яндекса по запросу «бургерная» по числу оценок, хороший ночной вариант.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ6aIgsuK8akARxuvtP49-PtI",
+   "yandex": "https://yandex.ru/maps/org/pit_stop_burger/127959744992/",
+   "gis": "https://2gis.am/yerevan/search/Pit%20Stop%20Burger",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/pit_stop_burger/127959744992/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_pit_stop-1.jpg",
+    "source": "https://yandex.ru/maps/org/pit_stop_burger/127959744992/gallery/"
+   },
+   {
+    "src": "img/food/f_pit_stop-2.jpg",
+    "source": "https://yandex.ru/maps/org/pit_stop_burger/127959744992/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_forest_burger",
+  "n": "Forest Burger",
+  "ll": [
+   40.176914,
+   44.506144
+  ],
+  "addr": "улица Закяна, 8",
+  "dishes": [
+   "бургеры",
+   "пиво"
+  ],
+  "top_for": [
+   "бургеры"
+  ],
+  "order": "Фирменный бургер и крафтовое пиво; по воскресеньям караоке",
+  "price": "≈3–5 тыс. AMD",
+  "open": [
+   null,
+   [
+    "14:00",
+    "23:00"
+   ],
+   [
+    "14:00",
+    "23:00"
+   ],
+   [
+    "14:00",
+    "23:00"
+   ],
+   [
+    "14:00",
+    "23:00"
+   ],
+   [
+    "14:00",
+    "23:00"
+   ],
+   [
+    "14:00",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.9 (73) / Яндекс 5.0 (248 оценок, 140 отзывов)",
+  "praise": [
+   "Google 4.9, на Яндексе по бургерам 98 из 101 положительных",
+   "Тусовка русскоязычных: джемы и караоке",
+   "Дружелюбный персонал"
+  ],
+  "cons": [
+   "Пн выходной, открывается в 14:00"
+  ],
+  "why_top": "Регулярно в афише русскоязычного канала ErevanRus и почти без негатива в отзывах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJcQV8-629akAR8FQrxdc4WjA",
+   "yandex": "https://yandex.ru/maps/org/forest_burger/21608840507/",
+   "gis": "https://2gis.am/yerevan/search/Forest%20Burger",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/ErevanRus/7354",
+   "https://t.me/ErevanRus/6834",
+   "https://yandex.ru/maps/org/forest_burger/21608840507/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_forest_burger-1.jpg",
+    "source": "https://yandex.ru/maps/org/forest_burger/21608840507/gallery/"
+   },
+   {
+    "src": "img/food/f_forest_burger-2.jpg",
+    "source": "https://yandex.ru/maps/org/forest_burger/21608840507/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_ramen_ten",
+  "n": "Ramen Ten (Рамен Тен)",
+  "ll": [
+   40.18005,
+   44.514745
+  ],
+  "addr": "улица Абовяна, 2/5",
+  "dishes": [
+   "рамен",
+   "азиатская"
+  ],
+  "top_for": [
+   "рамен"
+  ],
+  "order": "Тонкоцу или мисо-рамен, гёдза",
+  "price": "≈5–7 тыс. AMD",
+  "open": [
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.7 (1100) / Яндекс 5.0 (1638 оценок, 1005 отзывов)",
+  "praise": [
+   "Яндекс 5.0 при 1600 оценках, Google 4.7 при 1100",
+   "Рамен хвалят в 343 отзывах",
+   "Внимательный персонал"
+  ],
+  "cons": [
+   "Вечером очередь"
+  ],
+  "why_top": "Самый высоко и массово оценённый рамен в городе (Яндекс и Google); Neko Ramen идёт вторым.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJmZMtCl69akARElB7RYYch-E",
+   "yandex": "https://yandex.ru/maps/org/ramen_ten/173610871219/",
+   "gis": "https://2gis.am/yerevan/search/Ramen%20Ten",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/ramen_ten/173610871219/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_ramen_ten-1.jpg",
+    "source": "https://yandex.ru/maps/org/ramen_ten/173610871219/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_mao",
+  "n": "Mao",
+  "ll": [
+   40.189116,
+   44.520057
+  ],
+  "addr": "улица Геворга Кочара, 21/7",
+  "dishes": [
+   "суши",
+   "азиатская"
+  ],
+  "top_for": [
+   "суши",
+   "азиатская"
+  ],
+  "order": "Сеты роллов, паназиатские горячие блюда",
+  "price": "≈6–10 тыс. AMD",
+  "open": [
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.3 (208) / Яндекс 5.0 (584 оценок, 205 отзывов)",
+  "praise": [
+   "Лидер Яндекса по запросу «суши» (5.0, 580+ оценок)",
+   "Красивый интерьер",
+   "Роллы хвалят в отзывах"
+  ],
+  "cons": [
+   "Google 4.3",
+   "Адрес на Google — Исаакяна, 28 (тот же угол, не проверено)"
+  ],
+  "why_top": "Рейтинговый выбор: Яндекс-лидер по суши, сильных независимых рекомендаций по суши в Ереване не нашлось.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ5ULiOhu9akARAYVYXYSyFTM",
+   "yandex": "https://yandex.ru/maps/org/mao/31116776113/",
+   "gis": "https://2gis.am/yerevan/search/Mao",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/mao/31116776113/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_mao-1.jpg",
+    "source": "https://yandex.ru/maps/org/mao/31116776113/gallery/"
+   },
+   {
+    "src": "img/food/f_mao-2.jpg",
+    "source": "https://yandex.ru/maps/org/mao/31116776113/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_abu_hagop",
+  "n": "Abu Hagop",
+  "ll": [
+   40.183208,
+   44.512137
+  ],
+  "addr": "улица Пушкина, 44",
+  "dishes": [
+   "кебаб",
+   "шаурма"
+  ],
+  "top_for": [
+   "кебаб"
+  ],
+  "order": "Кебаб с йогуртом, алеппский кебаб, мухаммара",
+  "price": "≈3–6 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.4 / Яндекс 5.0 (337 оценок, 79 отзывов)",
+  "praise": [
+   "Сирийско-армянская семейная кухня с 1957 года (основатель из Алеппо)",
+   "Кебаб с йогуртом называют главным блюдом",
+   "Есть второй филиал на Пушкина, 35/22, он работает до 03:00"
+  ],
+  "cons": [
+   "Бывает жирновато",
+   "Медленный сервис по отзывам"
+  ],
+  "why_top": "Его рекомендуют Mirror Spectator, Armenia Discovery и Wanderlog, чаще всех хвалят именно кебаб.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ61z4eV-8akARRWBhBnUKBDM",
+   "yandex": "https://yandex.ru/maps/org/abu_hagop/40248635955/",
+   "gis": "https://2gis.am/yerevan/search/Abu%20Hagop",
+   "site": null
+  },
+  "sources": [
+   "https://mirrorspectator.com/2019/06/12/syrian-restaurants-in-armenia-a-pinch-of-home-a-taste-of-exile/",
+   "https://armeniadiscovery.com/en/restaurants/abu-hagop-restaurant",
+   "https://wanderlog.com/place/details/4087666/abu-hagop-restaurant",
+   "https://yandex.ru/maps/org/abu_hagop/40248635955/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_abu_hagop-1.jpg",
+    "source": "https://yandex.ru/maps/org/abu_hagop/40248635955/gallery/"
+   },
+   {
+    "src": "img/food/f_abu_hagop-2.jpg",
+    "source": "https://yandex.ru/maps/org/abu_hagop/40248635955/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_derian",
+  "n": "Derian (Дериан)",
+  "ll": [
+   40.175947,
+   44.51709
+  ],
+  "addr": "улица Павстоса Бюзанда, 1/3",
+  "dishes": [
+   "кебаб",
+   "армянская кухня",
+   "долма"
+  ],
+  "top_for": [
+   "кебаб"
+  ],
+  "order": "Ишли кюфта, мухаммара, долма из виноградных листьев, алеппские кебабы",
+  "price": "≈5–8 тыс. AMD",
+  "open": [
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ],
+   [
+    "12:30",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.8 / Яндекс 5.0 (129 оценок, 34 отзывов)",
+  "praise": [
+   "Аутентичная алеппская кухня",
+   "Google 4.8, Яндекс 5.0",
+   "Тихое место рядом с площадью Республики"
+  ],
+  "cons": [
+   "Цены выше среднего"
+  ],
+  "why_top": "Curiosity Magazine и Wanderlog называют его главным алеппским рестораном, оценки высокие на обеих картах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJwVSl1PC8akARSjrOzsJDs0U",
+   "yandex": "https://yandex.ru/maps/org/derian/214915321609/",
+   "gis": "https://2gis.am/yerevan/search/Derian",
+   "site": null
+  },
+  "sources": [
+   "https://curiositymag.com/2018/11/28/syrian-food-yerevan-armenia",
+   "https://wanderlog.com/place/details/1137209/derian",
+   "https://yandex.ru/maps/org/derian/214915321609/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_derian-1.jpg",
+    "source": "https://yandex.ru/maps/org/derian/214915321609/gallery/"
+   },
+   {
+    "src": "img/food/f_derian-2.jpg",
+    "source": "https://yandex.ru/maps/org/derian/214915321609/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_zeituna",
+  "n": "Zeituna Home of Food",
+  "ll": [
+   40.182067,
+   44.509499
+  ],
+  "addr": "проспект Маштоца, 20/4",
+  "dishes": [
+   "кебаб",
+   "шаурма",
+   "завтраки"
+  ],
+  "top_for": [
+   "кебаб"
+  ],
+  "order": "Кеббе, ливанские мезе, шиш-тавук, кебаб",
+  "price": "≈5–8 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ],
+   [
+    "10:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.4 (980) / Яндекс 4.9 (601 оценок, 116 отзывов)",
+  "praise": [
+   "Большой ливанский ресторан в центре, есть халяльное меню",
+   "Кеббе хвалят отдельно",
+   "Google 4.4 почти при 1000 отзывах"
+  ],
+  "cons": [
+   "Сервис ругают в каждом третьем отзыве"
+  ],
+  "why_top": "Wanderlog и Яндекс: самое крупное ближневосточное место в центре, массово и стабильно оценённое.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJJWOPVR69akARoRqyABm_Qj0",
+   "yandex": "https://yandex.ru/maps/org/zeituna_home_of_food/170854757435/",
+   "gis": "https://2gis.am/yerevan/search/Zeituna%20Home%20of%20Food",
+   "site": null
+  },
+  "sources": [
+   "https://wanderlog.com/place/details/1507023/zeituna-home-of-food",
+   "https://yandex.ru/maps/org/zeituna_home_of_food/170854757435/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_zeituna-1.jpg",
+    "source": "https://yandex.ru/maps/org/zeituna_home_of_food/170854757435/gallery/"
+   },
+   {
+    "src": "img/food/f_zeituna-2.jpg",
+    "source": "https://yandex.ru/maps/org/zeituna_home_of_food/170854757435/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_smoking_chef",
+  "n": "Smoking Chef",
+  "ll": [
+   40.185883,
+   44.507797
+  ],
+  "addr": "улица Сарьяна, 19",
+  "dishes": [
+   "стейк",
+   "рёбра"
+  ],
+  "top_for": [
+   "стейк",
+   "рёбра"
+  ],
+  "order": "Стейки сухой выдержки, томагавк, тартар, копчёные рёбра",
+  "price": "≈12–20 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.6 / Яндекс 5.0 (514 оценок, 157 отзывов)",
+  "praise": [
+   "Самые стабильные отзывы среди стейкхаусов («лучший ресторан Еревана»)",
+   "Собственное копчение",
+   "Google 4.6, Яндекс 5.0"
+  ],
+  "cons": [
+   "Дорого"
+  ],
+  "why_top": "Spotted by Locals, Wanderlog и Яндекс-отзывы ставят его первым в Ереване по стейкам.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJYQAhDja9akARI4mHOaO7cNo",
+   "yandex": "https://yandex.ru/maps/org/smoking_shef/224929037412/",
+   "gis": "https://2gis.am/yerevan/search/Smoking%20Chef",
+   "site": null
+  },
+  "sources": [
+   "https://www.spottedbylocals.com/yerevan/smoking-chef",
+   "https://wanderlog.com/place/details/1186649/smoking-chef",
+   "https://yandex.ru/maps/org/smoking_shef/224929037412/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_smoking_chef-1.jpg",
+    "source": "https://yandex.ru/maps/org/smoking_shef/224929037412/gallery/"
+   },
+   {
+    "src": "img/food/f_smoking_chef-2.jpg",
+    "source": "https://yandex.ru/maps/org/smoking_shef/224929037412/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_el_torro",
+  "n": "El Torro The Meat Bar",
+  "ll": [
+   40.186755,
+   44.50848
+  ],
+  "addr": "улица Сарьяна, 8",
+  "dishes": [
+   "стейк",
+   "рёбра"
+  ],
+  "top_for": [
+   "стейк"
+  ],
+  "order": "Рибай, тибон, мясные сеты",
+  "price": "≈12–18 тыс. AMD",
+  "open": [
+   [
+    "12:30",
+    "02:00"
+   ],
+   [
+    "12:30",
+    "02:00"
+   ],
+   [
+    "12:30",
+    "02:00"
+   ],
+   [
+    "12:30",
+    "02:00"
+   ],
+   [
+    "12:30",
+    "02:00"
+   ],
+   [
+    "12:30",
+    "02:00"
+   ],
+   [
+    "12:30",
+    "02:00"
+   ]
+  ],
+  "rating": "Google 3.9 / Яндекс 5.0 (285 оценок, 91 отзывов)",
+  "praise": [
+   "Специализированный мясной бар на Сарьяна",
+   "Стейки хвалят на Яндексе (22 из 30)",
+   "Работает до 02:00"
+  ],
+  "cons": [
+   "Google 3.9, сервис спорный"
+  ],
+  "why_top": "Второе место после Smoking Chef по обзорам Armenia Discovery и Яндекса (не проверено).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJ2fT6V269akAR39IC0_qbP6s",
+   "yandex": "https://yandex.ru/maps/org/el_torro_the_meat_bar/173569628833/",
+   "gis": "https://2gis.am/yerevan/search/El%20Torro%20The%20Meat%20Bar",
+   "site": null
+  },
+  "sources": [
+   "https://armeniadiscovery.com/en/restaurants/el-torro-the-meat-bar-yerevan",
+   "https://yandex.ru/maps/org/el_torro_the_meat_bar/173569628833/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_el_torro-1.jpg",
+    "source": "https://yandex.ru/maps/org/el_torro_the_meat_bar/173569628833/gallery/"
+   },
+   {
+    "src": "img/food/f_el_torro-2.jpg",
+    "source": "https://yandex.ru/maps/org/el_torro_the_meat_bar/173569628833/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_fein",
+  "n": "FEIN by Coffee House (Fein Specialty)",
+  "ll": [
+   40.183879,
+   44.513808
+  ],
+  "addr": "улица Езника Кохбаци, 50/2",
+  "dishes": [
+   "кофе",
+   "десерты",
+   "завтраки"
+  ],
+  "top_for": [
+   "кофе"
+  ],
+  "order": "Фильтр или эспрессо собственной обжарки, флэт уайт, десерт",
+  "price": "≈1,5–3 тыс. AMD",
+  "open": [
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.2 / Яндекс 5.0 (410 оценок, 201 отзывов)",
+  "praise": [
+   "Собственная обжарка, ростер Probat прямо в зале",
+   "Место встреч релокантов",
+   "Работает с 08:00 до полуночи"
+  ],
+  "cons": [
+   "Часть гостей называет её «перепиаренной», кофе ругают в 36 из 131 отзыва"
+  ],
+  "why_top": "Самая обсуждаемая кофейня в чатах (5 сообщений), её же подробно разбирает CoffeeHow (2026).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJP-soeOC9akARyLVaP7pMuQ8",
+   "yandex": "https://yandex.ru/maps/org/fein_specialty/156046822046/",
+   "gis": "https://2gis.am/yerevan/search/FEIN%20by%20Coffee%20House",
+   "site": null
+  },
+  "sources": [
+   "https://t.me/erevan12/37340",
+   "https://t.me/erevan12/42658",
+   "https://t.me/erevan12/33657",
+   "https://coffeehow.co/specialty-coffee-yerevan-fein/",
+   "https://yandex.ru/maps/org/fein_specialty/156046822046/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_fein-1.jpg",
+    "source": "https://yandex.ru/maps/org/fein_specialty/156046822046/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_lumen",
+  "n": "Lumen Coffee (Терьяна, 3А)",
+  "ll": [
+   40.18182,
+   44.512244
+  ],
+  "addr": "улица Терьяна, 3А",
+  "dishes": [
+   "кофе",
+   "завтраки",
+   "десерты"
+  ],
+  "top_for": [
+   "кофе",
+   "завтраки"
+  ],
+  "order": "Альтернативу (V60, аэропресс), флэт уайт, завтрак и десерт",
+  "price": "≈2–4 тыс. AMD",
+  "open": [
+   [
+    "08:30",
+    "22:30"
+   ],
+   [
+    "08:30",
+    "22:30"
+   ],
+   [
+    "08:30",
+    "22:30"
+   ],
+   [
+    "08:30",
+    "22:30"
+   ],
+   [
+    "08:30",
+    "22:30"
+   ],
+   [
+    "08:30",
+    "22:30"
+   ],
+   [
+    "08:30",
+    "22:30"
+   ]
+  ],
+  "rating": "Google — не найдено / Яндекс 5.0 (686 оценок, 330 отзывов)",
+  "praise": [
+   "Одна из первых third-wave кофеен в городе, своя обжарка",
+   "Спрятана во дворах, атмосферно",
+   "Десерты и завтраки хвалят"
+  ],
+  "cons": [],
+  "why_top": "Её советуют Moskvich Mag и OneTwoTrip; на Яндексе 5.0 при 690 оценках, есть второй филиал на Маштоца, 45.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Lumen%20Coffee%20Yerevan",
+   "yandex": "https://yandex.ru/maps/org/lyumen/226341819700/",
+   "gis": "https://2gis.am/yerevan/search/Lumen%20Coffee",
+   "site": null
+  },
+  "sources": [
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://www.onetwotrip.com/ru/blog/guides/asia/yerevan-cafes/",
+   "https://yandex.ru/maps/org/lyumen/226341819700/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_lumen-1.jpg",
+    "source": "https://yandex.ru/maps/org/lyumen/226341819700/gallery/"
+   },
+   {
+    "src": "img/food/f_lumen-2.jpg",
+    "source": "https://yandex.ru/maps/org/lyumen/226341819700/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_afrolab_roastery",
+  "n": "AfroLab Specialty Coffee Roastery",
+  "ll": [
+   40.182655,
+   44.512971
+  ],
+  "addr": "улица Пушкина, 40",
+  "dishes": [
+   "кофе",
+   "завтраки"
+  ],
+  "top_for": [
+   "кофе"
+  ],
+  "order": "Эспрессо-напитки и фильтр на зёрнах собственной обжарки",
+  "price": "≈2–3 тыс. AMD",
+  "open": [
+   [
+    "07:00",
+    "02:00"
+   ],
+   [
+    "07:00",
+    "02:00"
+   ],
+   [
+    "07:00",
+    "02:00"
+   ],
+   [
+    "07:00",
+    "02:00"
+   ],
+   [
+    "07:00",
+    "02:00"
+   ],
+   [
+    "07:00",
+    "02:00"
+   ],
+   [
+    "07:00",
+    "02:00"
+   ]
+  ],
+  "rating": "Google 4.5 (530) / Яндекс 5.0 (470 оценок, 197 отзывов)",
+  "praise": [
+   "Сильная спешелти-обжарка, хорошее зерно",
+   "Живая атмосфера во дворе Pushkin 40 (там же Minas и Gallia)",
+   "Работает с 07:00 до 02:00"
+  ],
+  "cons": [
+   "Чуть дороже других кофеен"
+  ],
+  "why_top": "Двое авторов Moskvich Mag советуют её отдельно, Яндекс-отзывы хвалят зерно, Google 4.5 при 530 отзывах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJY24q6Gy9akARt-2Bngw0TZE",
+   "yandex": "https://yandex.ru/maps/org/afrolab_roastery/232756172743/",
+   "gis": "https://2gis.am/yerevan/search/AfroLab%20Specialty%20Coffee%20Roastery",
+   "site": null
+  },
+  "sources": [
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://yandex.com.ge/navi/org/afrolab_roastery/232756172743/reviews",
+   "https://yandex.ru/maps/org/afrolab_roastery/232756172743/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_afrolab_roastery-1.jpg",
+    "source": "https://yandex.ru/maps/org/afrolab_roastery/232756172743/gallery/"
+   },
+   {
+    "src": "img/food/f_afrolab_roastery-2.jpg",
+    "source": "https://yandex.ru/maps/org/afrolab_roastery/232756172743/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_ground_zero",
+  "n": "Ground Zero Specialty Coffee & Roastery",
+  "ll": [
+   40.187162,
+   44.50971
+  ],
+  "addr": "улица Сарьяна, 1",
+  "dishes": [
+   "кофе",
+   "десерты",
+   "завтраки"
+  ],
+  "top_for": [
+   "кофе"
+  ],
+  "order": "Фильтр, капучино, десерт",
+  "price": "≈2–3 тыс. AMD",
+  "open": [
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ],
+   [
+    "08:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.2 (225) / Яндекс 5.0 (474 оценок, 151 отзывов)",
+  "praise": [
+   "Своя обжарка, с утра до полуночи",
+   "Яндекс 5.0 при 470 оценках",
+   "Начало улицы Сарьяна"
+  ],
+  "cons": [
+   "Google 4.2"
+  ],
+  "why_top": "Лидер Яндекса по запросу «спешелти кофе» рядом с Fein (рейтинговый выбор).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJBUNy4rO9akARXpYPrOhJfaM",
+   "yandex": "https://yandex.ru/maps/org/graund_zero_spetsializirovanny_kofe_i_rosteri/187272188529/",
+   "gis": "https://2gis.am/yerevan/search/Ground%20Zero%20Specialty%20Coffee%20%26%20Roastery",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/graund_zero_spetsializirovanny_kofe_i_rosteri/187272188529/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_ground_zero-1.jpg",
+    "source": "https://yandex.ru/maps/org/graund_zero_spetsializirovanny_kofe_i_rosteri/187272188529/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_gotcha",
+  "n": "Gotcha Boba Bar (Северный проспект)",
+  "ll": [
+   40.182355,
+   44.51453
+  ],
+  "addr": "Северный проспект, 8/2",
+  "dishes": [
+   "бабл-ти"
+  ],
+  "top_for": [
+   "бабл-ти"
+  ],
+  "order": "Классический молочный чай с тапиокой, фруктовый чай с поппинг-бобой",
+  "price": "≈2–3 тыс. AMD",
+  "open": [
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ],
+   [
+    "09:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.8 (404) / Яндекс 4.9 (137 оценок, 41 отзывов)",
+  "praise": [
+   "Главная бабл-ти сеть Еревана, много точек",
+   "Филиал на Северном: Google 4.8 при 400 отзывах",
+   "Открыт до полуночи"
+  ],
+  "cons": [
+   "На Каскаде у той же сети ≈3.5"
+  ],
+  "why_top": "Других заметных бабл-ти в городе почти нет, а у этого филиала Gotcha лучшие оценки (Cybo, Google, Яндекс).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJy-wUPOe9akAR3lueCjioDjA",
+   "yandex": "https://yandex.ru/maps/org/gotcha_northern_avenue/82885967536/",
+   "gis": "https://2gis.am/yerevan/search/Gotcha%20Boba%20Bar",
+   "site": null
+  },
+  "sources": [
+   "https://www.cybo.com/AM/avan-district/bubble-tea",
+   "https://yandex.ru/maps/org/gotcha_northern_avenue/82885967536/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_gotcha-1.jpg",
+    "source": "https://yandex.ru/maps/org/gotcha_northern_avenue/82885967536/gallery/"
+   },
+   {
+    "src": "img/food/f_gotcha-2.jpg",
+    "source": "https://yandex.ru/maps/org/gotcha_northern_avenue/82885967536/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_crumbs",
+  "n": "Crumbs Bread Factory",
+  "ll": [
+   40.186309,
+   44.513685
+  ],
+  "addr": "проспект Маштоца, 37",
+  "dishes": [
+   "завтраки",
+   "десерты",
+   "кофе"
+  ],
+  "top_for": [
+   "завтраки",
+   "десерты"
+  ],
+  "order": "Яйца Бенедикт, яйца на свежем багете, миндальный круассан, эклер",
+  "price": "≈3–5 тыс. AMD",
+  "open": [
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ]
+  ],
+  "rating": "Google 4.6 (438) / Яндекс 4.9 (188 оценок, 84 отзывов)",
+  "praise": [
+   "Круассан называют «лучшим в городе»",
+   "Свой хлеб (ореховый, цельнозерновой, оливковый)",
+   "С 08:00 ежедневно"
+  ],
+  "cons": [],
+  "why_top": "Входит в топ-10 завтраков Kojaro, хвалят на Spotted by Locals и Яндексе; Google 4.6.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJbQQTC-K8akARZuoaFPQ7yBY",
+   "yandex": "https://yandex.ru/maps/org/crumbs/120549321861/",
+   "gis": "https://2gis.am/yerevan/search/Crumbs%20Bread%20Factory",
+   "site": null
+  },
+  "sources": [
+   "https://www.kojaro.com/food/178195-10-best-breakfasts-brunches-yerevan-armenia/",
+   "https://yandex.com.ge/maps/org/crumbs/120549321861/",
+   "https://yandex.ru/maps/org/crumbs/120549321861/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_crumbs-1.jpg",
+    "source": "https://yandex.ru/maps/org/crumbs/120549321861/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_grand_candy",
+  "n": "Grand Candy (Маштоца, 5А)",
+  "ll": [
+   40.17867,
+   44.504666
+  ],
+  "addr": "проспект Маштоца, 5А",
+  "dishes": [
+   "десерты"
+  ],
+  "top_for": [
+   "десерты"
+  ],
+  "order": "Пончики с ванильным кремом (≈100–200 AMD), армянские конфеты и шоколад в подарок",
+  "price": "≈1–3 тыс. AMD",
+  "open": [
+   [
+    "10:00",
+    "20:00"
+   ],
+   [
+    "10:00",
+    "20:00"
+   ],
+   [
+    "10:00",
+    "20:00"
+   ],
+   [
+    "10:00",
+    "20:00"
+   ],
+   [
+    "10:00",
+    "20:00"
+   ],
+   [
+    "10:00",
+    "20:00"
+   ],
+   [
+    "10:00",
+    "20:00"
+   ]
+  ],
+  "rating": "Google — не найдено / Яндекс 5.0 (225 оценок, 34 отзывов)",
+  "praise": [
+   "Легендарная армянская кондитерская фабрика",
+   "Пончики по смешной цене",
+   "Хорошо для сувениров"
+  ],
+  "cons": [
+   "Это фирменный магазин, а не кафе"
+  ],
+  "why_top": "T—Ж советует пончики, а на Яндексе у всех точек оценки 4.9–5.0.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Grand%20Candy%20Yerevan",
+   "yandex": "https://yandex.ru/maps/org/grand_candy/50261865111/",
+   "gis": "https://2gis.am/yerevan/search/Grand%20Candy",
+   "site": null
+  },
+  "sources": [
+   "https://t-j.ru/list/food-erevan/",
+   "https://yandex.ru/maps/org/grand_candy/50261865111/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_grand_candy-1.jpg",
+    "source": "https://yandex.ru/maps/org/grand_candy/50261865111/gallery/"
+   },
+   {
+    "src": "img/food/f_grand_candy-2.jpg",
+    "source": "https://yandex.ru/maps/org/grand_candy/50261865111/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_wine_republic",
+  "n": "Wine Republic",
+  "ll": [
+   40.188997,
+   44.515825
+  ],
+  "addr": "улица Таманяна, 2",
+  "dishes": [
+   "вино",
+   "азиатская"
+  ],
+  "top_for": [
+   "вино"
+  ],
+  "order": "Армянские вина по бокалам, сырная тарелка, тайские блюда и салаты",
+  "price": "≈7–12 тыс. AMD",
+  "open": [
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.5 (581) / Яндекс 5.0 (588 оценок, 175 отзывов)",
+  "praise": [
+   "У Каскада, уютно, почти безграничная винная карта",
+   "Вино хвалят в 60 из 74 отзывов",
+   "Google 4.5, Яндекс 5.0"
+  ],
+  "cons": [],
+  "why_top": "Его советуют Absolute Armenia и Live the World, высокие оценки на двух картах.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJadWkth-9akARdw9p3n4BGe8",
+   "yandex": "https://yandex.ru/maps/org/vayn_repablik/1775593735/",
+   "gis": "https://2gis.am/yerevan/search/Wine%20Republic",
+   "site": null
+  },
+  "sources": [
+   "https://absolutearmenia.com/restaurants-in-yerevan-armenia/",
+   "https://livetheworld.com/post/the-best-wine-corners-of-the-capital-city-yerevan-64ro",
+   "https://yandex.ru/maps/org/vayn_repablik/1775593735/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_wine_republic-1.jpg",
+    "source": "https://yandex.ru/maps/org/vayn_repablik/1775593735/gallery/"
+   },
+   {
+    "src": "img/food/f_wine_republic-2.jpg",
+    "source": "https://yandex.ru/maps/org/vayn_repablik/1775593735/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_decant",
+  "n": "Decant",
+  "ll": [
+   40.18785,
+   44.510105
+  ],
+  "addr": "улица Московян, 38",
+  "dishes": [
+   "вино"
+  ],
+  "top_for": [
+   "вино"
+  ],
+  "order": "Попросить сомелье подобрать армянские вина малых виноделен",
+  "price": "≈5–10 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.8 / Яндекс 5.0 (162 оценок, 67 отзывов)",
+  "praise": [
+   "Вино хвалят в 51 из 53 упоминаний",
+   "Сильная экспертиза персонала",
+   "Google 4.8, Яндекс 5.0"
+  ],
+  "cons": [
+   "Небольшой бар, еды мало (не проверено)"
+  ],
+  "why_top": "Почти без негатива в отзывах на Яндексе и Google (рейтинговый выбор, в гайдах пока не встречается).",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJjXPjRwS9akARcJ-S8XtQZZ8",
+   "yandex": "https://yandex.ru/maps/org/decant/224889655773/",
+   "gis": "https://2gis.am/yerevan/search/Decant",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/decant/224889655773/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_decant-1.jpg",
+    "source": "https://yandex.ru/maps/org/decant/224889655773/gallery/"
+   },
+   {
+    "src": "img/food/f_decant-2.jpg",
+    "source": "https://yandex.ru/maps/org/decant/224889655773/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_tapastan",
+  "n": "Tapastan",
+  "ll": [
+   40.186881,
+   44.508665
+  ],
+  "addr": "улица Сарьяна, 6",
+  "dishes": [
+   "вино",
+   "армянская кухня"
+  ],
+  "top_for": [
+   "вино"
+  ],
+  "order": "Армянские тапас («кусочки радости»), вино по бокалу (≈800 AMD)",
+  "price": "≈5–8 тыс. AMD",
+  "open": [
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.6 (264) / Яндекс 5.0 (267 оценок, 81 отзывов)",
+  "praise": [
+   "Армянские тапас на винной улице Сарьяна",
+   "Недорогое вино по бокалам",
+   "Google 4.6"
+  ],
+  "cons": [],
+  "why_top": "Его советуют T—Ж и Afisha Daily («армянские тапас»), оценки высокие.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJv6YM_By9akARNXUc01Gzi5w",
+   "yandex": "https://yandex.ru/maps/org/tapastan/115967886417/",
+   "gis": "https://2gis.am/yerevan/search/Tapastan",
+   "site": null
+  },
+  "sources": [
+   "https://t-j.ru/list/food-erevan/",
+   "https://daily.afisha.ru/cities/10998-armyanskie-tapas-vinodelnya-i-pandoki-chto-i-gde-est-v-erevane/",
+   "https://yandex.ru/maps/org/tapastan/115967886417/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_tapastan-1.jpg",
+    "source": "https://yandex.ru/maps/org/tapastan/115967886417/gallery/"
+   },
+   {
+    "src": "img/food/f_tapastan-2.jpg",
+    "source": "https://yandex.ru/maps/org/tapastan/115967886417/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_dors",
+  "n": "Dors Craft Beer & Kitchen",
+  "ll": [
+   40.18046,
+   44.51082
+  ],
+  "addr": "улица Павстоса Бюзанда, 13 / Амиряна, 4/6",
+  "dishes": [
+   "пиво",
+   "бургеры"
+  ],
+  "top_for": [
+   "пиво"
+  ],
+  "order": "Cherry Ale на армянской вишне, IPA на цитре, Farmhouse Ale, фиш-энд-чипс, домашние колбаски",
+  "price": "≈4–7 тыс. AMD (33 cl ≈800–1200 AMD)",
+  "open": [
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ],
+   [
+    "11:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.4 (386) / Яндекс 5.0 (714 оценок, 260 отзывов)",
+  "praise": [
+   "«Один из лучших крафтовых баров» по Moskvich Mag",
+   "Своё пиво и домашняя кухня",
+   "Летняя терраса"
+  ],
+  "cons": [
+   "Сортов немного, около 7"
+  ],
+  "why_top": "Его советуют три гида (Absolute Armenia, Moskvich Mag, Wanderlog), а Dargett из списка другого агента его основной конкурент.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJZfBAppm9akARuWoQpuVRHBM",
+   "yandex": "https://yandex.ru/maps/org/dors_kraft_biyer_end_kitchen/167907282429/",
+   "gis": "https://2gis.am/yerevan/search/Dors%20Craft%20Beer%20%26%20Kitchen",
+   "site": null
+  },
+  "sources": [
+   "https://absolutearmenia.com/?p=1497",
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://wanderlog.com/place/details/739267/dors-craft-beer--kitchen",
+   "https://yandex.ru/maps/org/dors_kraft_biyer_end_kitchen/167907282429/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_dors-1.jpg",
+    "source": "https://yandex.ru/maps/org/dors_kraft_biyer_end_kitchen/167907282429/gallery/"
+   },
+   {
+    "src": "img/food/f_dors-2.jpg",
+    "source": "https://yandex.ru/maps/org/dors_kraft_biyer_end_kitchen/167907282429/gallery/"
+   }
+  ]
+ },
+ {
+  "id": "f_beer_academy",
+  "n": "Beer Academy (Пивная академия)",
+  "ll": [
+   40.188683,
+   44.518143
+  ],
+  "addr": "улица Московян, 8",
+  "dishes": [
+   "пиво",
+   "рёбра"
+  ],
+  "top_for": [
+   "пиво"
+  ],
+  "order": "Домашнее пиво (6 сортов), колбаски, большие мясные сеты, башня пива на 4 л",
+  "price": "≈5–8 тыс. AMD",
+  "open": [
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ],
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "rating": "Google 4.4 (408) / Яндекс 4.9 (560 оценок, 155 отзывов)",
+  "praise": [
+   "Собственная пивоварня, пиво только здесь",
+   "Немецкая тема, терраса у парка",
+   "Яндекс 4.9, Google 4.4"
+  ],
+  "cons": [],
+  "why_top": "Absolute Armenia, Armenia Discovery и Aspirantum: стабильный выбор для своего пива.",
+  "links": {
+   "google": "https://www.google.com/maps/place/?q=place_id:ChIJNdVcK-C8akARrIkNRGpZ3tY",
+   "yandex": "https://yandex.ru/maps/org/pivnaya_akademiya/2157610075/",
+   "gis": "https://2gis.am/yerevan/search/Beer%20Academy",
+   "site": null
+  },
+  "sources": [
+   "https://absolutearmenia.com/?p=1497",
+   "https://www.armeniadiscovery.com/en/restaurants/beer-academy",
+   "https://aspirantum.com/tips/best-armenian-beers-and-beer-houses-in-yerevan",
+   "https://yandex.ru/maps/org/pivnaya_akademiya/2157610075/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_beer_academy-1.jpg",
+    "source": "https://yandex.ru/maps/org/pivnaya_akademiya/2157610075/gallery/"
+   },
+   {
+    "src": "img/food/f_beer_academy-2.jpg",
+    "source": "https://yandex.ru/maps/org/pivnaya_akademiya/2157610075/gallery/"
+   }
+  ]
+ }
+]

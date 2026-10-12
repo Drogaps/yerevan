@@ -1,0 +1,1360 @@
+[
+ {
+  "id": "x_cview",
+  "n": "C.View Sky Bar (13 этаж Opera Suite)",
+  "ll": [
+   40.18934,
+   44.5124
+  ],
+  "cat": "view",
+  "light": "sunset",
+  "open": "unknown",
+  "hours_note": "Работает с вечера (днём не каждый день); часы уточнять по телефону/в Instagram. Бар занял крышу бывшего Forty-Four Sky Bar, который закрыт.",
+  "visit": 90,
+  "price": "коктейль ~4000–6000 AMD",
+  "best": "Приходить к 18:00–18:15, чтобы застать закат над Оперой и Каскадом, потом остаться на огни города. В выходные лучше бронировать стол у окна.",
+  "praise": [
+   "Вид с 13 этажа на Оперу, Каскад и Арарат в ясный день",
+   "Сильная коктейльная карта (хвалят yuzu spritz) и барменов",
+   "Пять минут пешком от Северного проспекта"
+  ],
+  "cons": [
+   "В выходные битком",
+   "Цены выше средних по городу"
+  ],
+  "fact": "Opera Suite стоит у Оперы, и с крыши видно сразу Оперу, Каскад и холм Матери Армении.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=C.View%20Sky%20Bar%20Opera%20Suite%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.5124%2C40.18934&z=17&text=C.View%20Sky%20Bar%20Opera%20Suite%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/C.View%20Sky%20Bar%20Opera%20Suite%20Yerevan"
+  },
+  "sources": [
+   "https://www.tripadvisor.com/Restaurant_Review-g293932-d24045065-Reviews-C_view_Sky_Bar-Yerevan.html",
+   "https://www.spyur.am/en/companies/cview-restaurant/49296",
+   "https://wanderlog.com/list/geoCategory/79378/best-rooftop-bars-in-yerevan"
+  ],
+  "photos": [
+   {
+    "src": "img/x_cview-1.jpg",
+    "author": "Stamboltsyan",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Opera_at_night.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_elsky",
+  "n": "El Sky Bar (7 этаж Yerevan Plaza)",
+  "ll": [
+   40.17385,
+   44.50571
+  ],
+  "cat": "view",
+  "light": "sunset",
+  "open": [
+   [
+    "19:00",
+    "01:00"
+   ],
+   [
+    "19:00",
+    "01:00"
+   ],
+   [
+    "19:00",
+    "01:00"
+   ],
+   [
+    "19:00",
+    "01:00"
+   ],
+   [
+    "19:00",
+    "01:00"
+   ],
+   [
+    "19:00",
+    "01:00"
+   ],
+   [
+    "19:00",
+    "01:00"
+   ]
+  ],
+  "hours_note": "По старым листингам ежедневно 19:00–01:00. Открытая терраса работает примерно с 15 апреля до 15 ноября, лучше уточнить по тел. +374 41 494949.",
+  "visit": 90,
+  "price": "коктейль ~3500–5000 AMD",
+  "best": "Ехать сразу после работы в октябре, пока открыта терраса: она закрывается в середине ноября. Самые красивые полчаса здесь сразу после захода солнца.",
+  "praise": [
+   "Летняя терраса на крыше и панорама города",
+   "Тематические вечеринки с диджеями",
+   "Самый популярный руфтоп в подборках Wanderlog (Google 4.3)"
+  ],
+  "cons": [
+   "Сервис хвалят не все (Tripadvisor 3.5)",
+   "Терраса сезонная"
+  ],
+  "fact": "Бар стоит на крыше бизнес-центра Yerevan Plaza на улице Григора Лусаворича, в двух шагах от Английского парка.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=El%20Sky%20Bar%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50571%2C40.17385&z=17&text=El%20Sky%20Bar%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/El%20Sky%20Bar%20Yerevan"
+  },
+  "sources": [
+   "https://wanderlog.com/list/geoCategory/79378/best-rooftop-bars-in-yerevan",
+   "https://www.livetheworld.com/activities/armenia/el-sky-bar",
+   "https://airbnb.cz/things-to-do/places/1560622"
+  ],
+  "photos": []
+ },
+ {
+  "id": "x_montmartre",
+  "n": "Montmartre — руфтоп отеля Paris",
+  "ll": [
+   40.17977,
+   44.51047
+  ],
+  "cat": "view",
+  "light": "sunset",
+  "open": "unknown",
+  "hours_note": "Терраса на 12 этаже работает в тёплый сезон, осенью уточнять. Отель у площади Свободы, ул. Пап Тагавори 4/6.",
+  "visit": 75,
+  "price": "бокал вина ~2500–4000 AMD",
+  "best": "Ясный вечер до заката, чтобы застать Арарат в розовом свете. Терраса сезонная, так что это вариант на октябрь, а не на зиму.",
+  "praise": [
+   "Один из лучших видов на Арарат с крыш центра (Tripadvisor 4.5)",
+   "Спокойнее и тише клубных руфтопов",
+   "Хорош для бокала вина на закате"
+  ],
+  "cons": [
+   "Терраса сезонная",
+   "Кухню хвалят меньше, чем вид"
+  ],
+  "fact": "Отель Paris стоит рядом с Оперой, и с его 12 этажа над крышами центра видна вся долина Арарата.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Montmartre%20Paris%20Hotel%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.51047%2C40.17977&z=17&text=Montmartre%20Paris%20Hotel%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Montmartre%20Paris%20Hotel%20Yerevan"
+  },
+  "sources": [
+   "https://parishotel.am/restaurant-rooftop-terrace/",
+   "https://www.tripadvisor.com/Hotel_Feature-g293932-d7004445-zft11257-Paris_Hotel.html",
+   "https://livetheworld.com/post/summer-chill-out-rooftop-bars-in-yerevan-part-1-zr5e"
+  ],
+  "photos": [
+   {
+    "src": "img/x_montmartre-1.jpg",
+    "author": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_davtashen",
+  "n": "Советские смотровые у Давташенского моста",
+  "ll": [
+   40.20802,
+   44.49499
+  ],
+  "cat": "view",
+  "light": "sunset",
+  "open": "always",
+  "hours_note": "Открытая площадка, вход с ул. Вагаршяна у въезда на мост. Темнеет быстро, берите фонарик.",
+  "visit": 40,
+  "price": "бесплатно",
+  "best": "Минут за 20 до заката: солнце садится над Разданским ущельем, а сам мост и Давташен загораются огнями. Нетуристическое место для любителей советского модернизма.",
+  "praise": [
+   "Вид на ущелье Раздана и Давташенский мост",
+   "Заброшенные смотровые павильоны в стиле советского модернизма",
+   "Туристов здесь нет совсем"
+  ],
+  "cons": [
+   "Летом 2026 волонтёры Green Green только вычистили завалы мусора, порядок может не держаться",
+   "После темноты слабое освещение"
+  ],
+  "fact": "Летом 2026 года волонтёры Green Green за несколько выходных вынесли с двух зеркальных смотровых площадок горы мусора, чтобы вернуть их горожанам.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Davtashen%20bridge%20viewpoint%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.49499%2C40.20802&z=17&text=Davtashen%20bridge%20viewpoint%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Davtashen%20bridge%20viewpoint%20Yerevan"
+  },
+  "sources": [
+   "https://t.me/ErevanRus/6955",
+   "https://t.me/ErevanRus/6997"
+  ],
+  "photos": [
+   {
+    "src": "img/x_davtashen-1.jpg",
+    "author": "Preacher lad",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Davtashen_bridge_03.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_matenadaran",
+  "n": "Матенадаран",
+  "ll": [
+   40.19246,
+   44.52221
+  ],
+  "cat": "culture",
+  "light": "day",
+  "open": [
+   null,
+   [
+    "10:00",
+    "17:50"
+   ],
+   [
+    "10:00",
+    "17:50"
+   ],
+   [
+    "10:00",
+    "17:50"
+   ],
+   [
+    "10:00",
+    "17:50"
+   ],
+   [
+    "10:00",
+    "17:50"
+   ],
+   [
+    "10:00",
+    "17:00"
+   ]
+  ],
+  "hours_note": "Вт–Сб 10:00–17:50. С 2026 года экспозиция открыта и по воскресеньям, 10:00–17:00. Пн выходной. В будни после 17:00 уже не успеть, так что это вариант на выходные.",
+  "visit": 90,
+  "price": "2000 AMD, экскурсия на иностранном языке 5000 AMD за группу",
+  "best": "Субботнее утро или день. После выходите на лестницу к Месропу Маштоцу: оттуда хорош вид вниз на проспект, а вечером здание красиво подсвечено.",
+  "praise": [
+   "Одно из крупнейших в мире собраний средневековых рукописей",
+   "Миниатюры Эчмиадзинского Евангелия 989 года",
+   "Здание и лестница, подсвеченные вечером"
+  ],
+  "cons": [
+   "В будни после работы уже закрыт"
+  ],
+  "fact": "Здесь хранится Эчмиадзинское Евангелие 989 года, старейшая из сохранившихся иллюстрированных армянских книг.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Matenadaran%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.52221%2C40.19246&z=17&text=Matenadaran%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Matenadaran%20Yerevan"
+  },
+  "sources": [
+   "https://matenadaran.am/en/matenadaran/museum-and-gallery/working-hours-and-tickets/",
+   "https://armenpress.am/en/article/927511",
+   "https://t.me/travelask_armenia/18582"
+  ],
+  "photos": [
+   {
+    "src": "img/x_matenadaran-1.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yerevan,_Matenadaran,_Armenia.jpg"
+   },
+   {
+    "src": "img/x_matenadaran-2.jpg",
+    "author": "Furkan Akkurt",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Manuscripts_at_the_Matenadaran_Yerevan_2026.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_parajanov",
+  "n": "Дом-музей Сергея Параджанова",
+  "ll": [
+   40.1789,
+   44.50007
+  ],
+  "cat": "culture",
+  "light": "sunset",
+  "open": [
+   [
+    "10:30",
+    "18:00"
+   ],
+   [
+    "10:30",
+    "18:00"
+   ],
+   [
+    "10:30",
+    "18:00"
+   ],
+   [
+    "10:30",
+    "18:00"
+   ],
+   [
+    "10:30",
+    "18:00"
+   ],
+   [
+    "10:30",
+    "18:00"
+   ],
+   [
+    "10:30",
+    "18:00"
+   ]
+  ],
+  "hours_note": "Ежедневно 10:30–18:00, последний вход в 17:15. Бесплатно в последнюю субботу месяца.",
+  "visit": 75,
+  "price": "1500 AMD, аудиогид 2000 AMD",
+  "best": "Будний вечер: от метро или центра доехать к 17:00, успеть к последнему входу в 17:15, а потом встретить закат на краю Разданского ущелья у музея. В ясный день виден Арарат.",
+  "praise": [
+   "Коллажи, куклы и шляпы Параджанова, ни на что не похоже",
+   "Дом стоит над Разданским ущельем, на закате открывается вид на Арарат",
+   "Единственный из главных музеев, куда можно успеть после 17:00 в будни"
+  ],
+  "cons": [
+   "Последний вход в 17:15, опаздывать нельзя"
+  ],
+  "fact": "Дом строили для Параджанова, но он умер в 1990 году, так и не успев в нём поселиться. Музей открыли через год после его смерти.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Sergei%20Parajanov%20Museum%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50007%2C40.1789&z=17&text=Sergei%20Parajanov%20Museum%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Sergei%20Parajanov%20Museum%20Yerevan"
+  },
+  "sources": [
+   "https://www.parajanovmuseum.am/tickets",
+   "https://www.sputnik8.com/ru/yerevan/pages/kuda-shodit-vecherom-v-erevane-ot-teatrov-do-dzhaz-klubov",
+   "https://armeniadiscovery.com/en/place/sergei-parajanov-museum"
+  ],
+  "photos": [
+   {
+    "src": "img/x_parajanov-1.jpg",
+    "author": "Eema97",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sergei_Parajanov_museum,_Yerevan.jpg"
+   },
+   {
+    "src": "img/x_parajanov-2.jpg",
+    "author": "Yerevantsi",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Parajanov_Museum_Yerevan.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_erebuni",
+  "n": "Крепость и музей Эребуни (Арин-Берд)",
+  "ll": [
+   40.14108,
+   44.53523
+  ],
+  "cat": "culture",
+  "light": "day",
+  "open": [
+   null,
+   [
+    "10:30",
+    "16:30"
+   ],
+   [
+    "10:30",
+    "16:30"
+   ],
+   [
+    "10:30",
+    "16:30"
+   ],
+   [
+    "10:30",
+    "16:30"
+   ],
+   [
+    "10:30",
+    "16:30"
+   ],
+   [
+    "10:30",
+    "16:30"
+   ]
+  ],
+  "hours_note": "Вт–Вс 10:30–16:30 (по OSM, на других сайтах 10:00–17:00). Пн выходной. Ехать на такси минут 15–20 от центра.",
+  "visit": 90,
+  "price": "ориентировочно 1000–1500 AMD",
+  "best": "Выходной день, после обеда: подняться на холм к руинам урартской цитадели, оттуда панорама на весь Ереван и Арарат. После закрытия можно спуститься пешком к району Нор Ареш.",
+  "praise": [
+   "Место, где в 782 г. до н. э. основали Ереван",
+   "Панорама города и Арарата с холма",
+   "Фрески и клинописная табличка царя Аргишти"
+  ],
+  "cons": [
+   "Закрывается рано, в будни после работы не успеть",
+   "Музей небольшой, по отзывам хватает получаса"
+  ],
+  "fact": "Клинописная табличка урартского царя Аргишти I, найденная на холме, датирует основание Эребуни 782 годом до н. э., на 29 лет раньше Рима.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Erebuni%20Museum%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.53523%2C40.14108&z=17&text=Erebuni%20Museum%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Erebuni%20Museum%20Yerevan"
+  },
+  "sources": [
+   "https://www.openstreetmap.org/way/49449975",
+   "https://armeniadiscovery.com/en/place/erebuni-museum",
+   "https://yandex.com/maps/org/erebuni_fortress/133435787894/"
+  ],
+  "photos": [
+   {
+    "src": "img/x_erebuni-1.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:2014_Erywa%C5%84,_Erebuni,_Ruiny_twierdzy_(13).jpg"
+   },
+   {
+    "src": "img/x_erebuni-2.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:2014_Erywa%C5%84,_Erebuni,_Ruiny_twierdzy_(22).jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_modern_art",
+  "n": "Музей современного искусства Еревана",
+  "ll": [
+   40.18,
+   44.50588
+  ],
+  "cat": "culture",
+  "light": "day",
+  "open": [
+   null,
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ]
+  ],
+  "hours_note": "Вт–Вс 11:00–18:00, касса до 17:30. Пн и праздники выходной.",
+  "visit": 60,
+  "price": "несколько сотен драм, экскурсия 4000 AMD",
+  "best": "Выходной день: час на армянский модернизм 1960–80-х, потом пешком по Маштоца к Каскаду и Сарьяна.",
+  "praise": [
+   "Первый в СССР музей современного искусства (1972)",
+   "Минас Аветисян, Сарьян-младшие, армянский нонконформизм",
+   "Мало людей, билет копеечный"
+  ],
+  "cons": [
+   "В будни после работы уже не успеть"
+  ],
+  "fact": "Музей открыли в 1972 году по инициативе художника Генриха Игитяна, и в СССР он стал первым музеем современного искусства.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Modern%20Art%20Museum%20of%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50588%2C40.18&z=17&text=Modern%20Art%20Museum%20of%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Modern%20Art%20Museum%20of%20Yerevan"
+  },
+  "sources": [
+   "https://mamy.am/en/contact/",
+   "https://www.spottedbylocals.com/yerevan/modern-art-museum/"
+  ],
+  "photos": [
+   {
+    "src": "img/x_modern_art-1.jpg",
+    "author": "23artashes",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Modern_Art_Museum,_Yerevan_35.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_gallery",
+  "n": "Национальная галерея Армении",
+  "ll": [
+   40.1788,
+   44.5148
+  ],
+  "cat": "culture",
+  "light": "day",
+  "open": [
+   null,
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "18:00"
+   ],
+   [
+    "11:00",
+    "17:00"
+   ]
+  ],
+  "hours_note": "Вт–Сб 11:00–18:00, Вс 11:00–17:00, касса закрывается за 30 минут. Пн выходной.",
+  "visit": 120,
+  "price": "2500 AMD, экскурсия 5000 AMD",
+  "best": "Выходной день, ближе к закрытию. Выйти к 18:00 на площадь Республики, когда загорается подсветка.",
+  "praise": [
+   "Крупнейшее собрание Айвазовского и Сарьяна",
+   "Стоит прямо на площади Республики",
+   "Европейская живопись и русский авангард"
+  ],
+  "cons": [
+   "Огромная, всё за один раз не обойти"
+  ],
+  "fact": "В галерее одна из крупнейших коллекций Айвазовского за пределами России, у которого были армянские корни.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=National%20Gallery%20of%20Armenia",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.5148%2C40.1788&z=17&text=National%20Gallery%20of%20Armenia",
+   "gis": "https://2gis.am/yerevan/search/National%20Gallery%20of%20Armenia"
+  },
+  "sources": [
+   "https://www.gallery.am/en/visit",
+   "https://www.artrabbit.com/organisations/national-gallery-of-armenia"
+  ],
+  "photos": [
+   {
+    "src": "img/x_gallery-1.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Plaza_de_la_Rep%C3%BAblica,_Erev%C3%A1n,_Armenia,_2016-10-02,_DD_113-114_HDR.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_katoghike",
+  "n": "Церковь Катогике и собор Св. Анны",
+  "ll": [
+   40.18434,
+   44.519
+  ],
+  "cat": "culture",
+  "light": "any",
+  "open": "unknown",
+  "hours_note": "Действующие храмы, обычно открыты с утра до вечера (примерно до 19–20). Вечерняя служба около 18:00.",
+  "visit": 20,
+  "price": "бесплатно",
+  "best": "После 18:00, на вечерней службе: при свечах и подсвеченных стенах особенно атмосферно. Стоит рядом с Абовяна, легко вписать в вечернюю прогулку.",
+  "praise": [
+   "Старейший сохранившийся храм в черте Еревана (XIII в.)",
+   "Крошечная базальтовая часовня перед новым собором",
+   "Очень центрально"
+  ],
+  "cons": [
+   "Внутри маленькая, осмотр займёт 10 минут"
+  ],
+  "fact": "Церковь пережила землетрясение 1679 года, потому что её заложили внутри более крупной базилики. Нашли её только при сносе в 1936 году.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Katoghike%20Church%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.519%2C40.18434&z=17&text=Katoghike%20Church%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Katoghike%20Church%20Yerevan"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Katoghike_Church,_Yerevan"
+  ],
+  "photos": [
+   {
+    "src": "img/x_katoghike-1.jpg",
+    "author": "Armenak Margarian",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Katoghike_Church,_Yerevan_11-28-2018.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_zoravor",
+  "n": "Церковь Сурб Зоравор Аствацацин (во дворе)",
+  "ll": [
+   40.18612,
+   44.5096
+  ],
+  "cat": "culture",
+  "light": "any",
+  "open": "unknown",
+  "hours_note": "Действующая церковь XVII века, обычно открыта днём и вечером. Вход из 2-го тупика Туманяна, во дворе жилых домов.",
+  "visit": 20,
+  "price": "бесплатно",
+  "best": "Ранним вечером, по пути с Северного проспекта: тихий двор, где можно спрятаться от городского шума. Найти её трудно, этим она и интересна.",
+  "praise": [
+   "Спрятана во дворе среди хрущёвок, найти её уже приключение",
+   "Одна из старейших церквей Еревана",
+   "Тихо и почти без туристов"
+  ],
+  "cons": [
+   "Смотреть недолго"
+  ],
+  "fact": "В крохотной часовне при церкви, по преданию, похоронен апостол Анания. Поэтому место считается одним из самых почитаемых в городе.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Surb%20Zoravor%20church%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.5096%2C40.18612&z=17&text=Surb%20Zoravor%20church%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Surb%20Zoravor%20church%20Yerevan"
+  },
+  "sources": [
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/",
+   "https://en.wikipedia.org/wiki/Zoravor_Surp_Astvatsatsin_Church"
+  ],
+  "photos": [
+   {
+    "src": "img/x_zoravor-1.jpg",
+    "author": "23artashes",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Surb_Zoravor_Astvatsatsin_Church,_Yerevan_02.jpg"
+   },
+   {
+    "src": "img/x_zoravor-2.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Zoravor,_Erev%C3%A1n,_Armenia,_2016-10-03,_DD_14.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_stgregory",
+  "n": "Собор Св. Григория Просветителя",
+  "ll": [
+   40.17207,
+   44.51687
+  ],
+  "cat": "culture",
+  "light": "sunset",
+  "open": "unknown",
+  "hours_note": "Действующий кафедральный собор (ул. Ервана Кочара), обычно открыт с утра до вечера. Свечи ставят в отдельной часовне.",
+  "visit": 30,
+  "price": "бесплатно",
+  "best": "На закате: туф собора розовеет, вечером он подсвечен. Стоит у метро «Зоравар Андраник», удобно заехать по пути с работы.",
+  "praise": [
+   "Крупнейший армянский собор в мире (2001)",
+   "Мощи Григория Просветителя, привезённые из Неаполя",
+   "Масштабная подсветка вечером"
+  ],
+  "cons": [
+   "Архитектура современная, атмосферы старины нет"
+  ],
+  "fact": "Собор освятили в 2001 году к 1700-летию принятия христианства в Армении, и он стал крупнейшим армянским храмом в мире.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Saint%20Gregory%20the%20Illuminator%20Cathedral%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.51687%2C40.17207&z=17&text=Saint%20Gregory%20the%20Illuminator%20Cathedral%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Saint%20Gregory%20the%20Illuminator%20Cathedral%20Yerevan"
+  },
+  "sources": [
+   "https://airial.travel/attractions/armenia/yerevan/saint-gregory-the-illuminator-cathedral-2lh6H2cF",
+   "https://www.armeniapedia.org/wiki/Gregory_Cathedral"
+  ],
+  "photos": [
+   {
+    "src": "img/x_stgregory-1.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:2014_Erywa%C5%84,_Katedra_%C5%9Bw._Grzegorza_O%C5%9Bwieciciela_(05).jpg"
+   },
+   {
+    "src": "img/x_stgregory-2.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yerevan,_Yerevan_Cathedral,_Saint_Gregory_the_Illuminator_Cathedral,_Armenia.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_komitas",
+  "n": "Пантеон Комитаса",
+  "ll": [
+   40.16145,
+   44.50179
+  ],
+  "cat": "culture",
+  "light": "day",
+  "open": "unknown",
+  "hours_note": "Парковый некрополь в Шенгавите (ул. Аршакуняц), открыт днём, вход свободный. Рядом Музей-институт Комитаса (10:00–16:30, Ср выходной, 1000 AMD).",
+  "visit": 40,
+  "price": "бесплатно",
+  "best": "Выходной день, пока светло: тихая аллея среди деревьев, а осенью золотые листья на могилах Сарьяна, Хачатуряна и Параджанова. Можно совместить с музеем Комитаса рядом.",
+  "praise": [
+   "Похоронены Комитас, Сарьян, Хачатурян, Параджанов, Фрунзик Мкртчян",
+   "Красивые авторские надгробия",
+   "Тишина и старые деревья"
+  ],
+  "cons": [
+   "После заката закрыт и не освещён"
+  ],
+  "fact": "На надгробии Параджанова высечены его кадры, а на могиле Фрунзика Мкртчяна стоит памятник с его знаменитой улыбкой.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Komitas%20Pantheon%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50179%2C40.16145&z=17&text=Komitas%20Pantheon%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Komitas%20Pantheon%20Yerevan"
+  },
+  "sources": [
+   "https://www.ecokayan.com/armenia/travel/explore/10-must-visit-museums-in-yerevan",
+   "https://armenpress.am/en/article/1261496"
+  ],
+  "photos": [
+   {
+    "src": "img/x_komitas-1.jpg",
+    "author": "Armenak Margarian",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Komitas_pantheon.jpg"
+   },
+   {
+    "src": "img/x_komitas-2.jpg",
+    "author": "Kevorkmail (talk)",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pantheon_komitas_kev.JPG"
+   }
+  ]
+ },
+ {
+  "id": "x_english_park",
+  "n": "Английский парк",
+  "ll": [
+   40.17396,
+   44.50812
+  ],
+  "cat": "park",
+  "light": "any",
+  "open": "always",
+  "hours_note": "Открытый городской парк, рядом с Национальной галереей и театром им. Сундукяна.",
+  "visit": 40,
+  "price": "бесплатно",
+  "best": "Тёплый вечер после работы: прогулка под старыми платанами, а потом шаг до площади Республики. Осенью листва тут особенно красивая.",
+  "praise": [
+   "Старейший парк Еревана с большими деревьями",
+   "В пяти минутах от площади Республики",
+   "Летние кафе и фонтаны"
+  ],
+  "cons": [
+   "Небольшой"
+  ],
+  "fact": "Это один из старейших парков Еревана, заложенный ещё в XIX веке, и деревья в нём ровесники того времени.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=English%20Park%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50812%2C40.17396&z=17&text=English%20Park%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/English%20Park%20Yerevan"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/English_Park,_Yerevan"
+  ],
+  "photos": [
+   {
+    "src": "img/x_english_park-1.jpg",
+    "author": "23artashes",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:English_Park,_Yerevan_08.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_lovers_park",
+  "n": "Парк Влюблённых",
+  "ll": [
+   40.19119,
+   44.50651
+  ],
+  "cat": "park",
+  "light": "sunset",
+  "open": [
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ],
+   [
+    "08:00",
+    "22:00"
+   ]
+  ],
+  "hours_note": "Ежедневно примерно 08:00–22:00. Пр. Баграмяна, 21, напротив Парламента.",
+  "visit": 40,
+  "price": "бесплатно",
+  "best": "Конец дня, с 17:00 до заката: пруд, мостики и подсветка, тихий час для двоих. Летом и в начале осени по вечерам бывают бесплатные концерты в амфитеатре.",
+  "praise": [
+   "Японский по духу ландшафт: пруд, водопады, мостики",
+   "Всё на уровне земли, без лестниц",
+   "Летние вечерние концерты и фестивали"
+  ],
+  "cons": [
+   "Закрывается около 22:00"
+  ],
+  "fact": "В 2007–2008 годах парк переделал швейцарский ландшафтный архитектор Пьер Рамбах, вдохновившись японскими садами.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Lovers%20Park%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50651%2C40.19119&z=17&text=Lovers%20Park%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Lovers%20Park%20Yerevan"
+  },
+  "sources": [
+   "https://armeniadiscovery.com/en/articles/lovers-park",
+   "https://evendo.com/locations/armenia/yerevan/arabkir/attraction/lovers-park"
+  ],
+  "photos": [
+   {
+    "src": "img/x_lovers_park-1.jpg",
+    "author": "GeoO",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lovers%27_Park,_Yerevan.jpg"
+   },
+   {
+    "src": "img/x_lovers_park-2.jpg",
+    "author": "23artashes",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lovers%27_park,_Yerevan,_2008_11.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_botanical",
+  "n": "Ереванский ботанический сад",
+  "ll": [
+   40.21086,
+   44.55684
+  ],
+  "cat": "park",
+  "light": "day",
+  "open": [
+   [
+    "09:00",
+    "20:00"
+   ],
+   [
+    "09:00",
+    "20:00"
+   ],
+   [
+    "09:00",
+    "20:00"
+   ],
+   [
+    "09:00",
+    "20:00"
+   ],
+   [
+    "09:00",
+    "20:00"
+   ],
+   [
+    "09:00",
+    "20:00"
+   ],
+   [
+    "09:00",
+    "20:00"
+   ]
+  ],
+  "hours_note": "Апрель–октябрь 09:00–20:00, ноябрь–март 09:00–17:30. Район Аван, на такси 15 минут. Частично на реконструкции.",
+  "visit": 90,
+  "price": "500 AMD",
+  "best": "Выходное утро или середина дня: осенняя листва, а с верхней точки в ясную погоду виден Арарат. В будний вечер сработает только в октябре, пока сад открыт до 20:00.",
+  "praise": [
+   "Большой тихий парк, где почти нет людей",
+   "В ясную погоду вид на Арарат и Арагац",
+   "Осенние краски"
+  ],
+  "cons": [
+   "Местами идёт реконструкция, верхнюю точку ещё перестраивают",
+   "Далековато от центра"
+  ],
+  "fact": "Сад заложили в 1935 году, и на его 80 гектарах растут тысячи видов растений.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Yerevan%20Botanical%20Garden",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.55684%2C40.21086&z=17&text=Yerevan%20Botanical%20Garden",
+   "gis": "https://2gis.am/yerevan/search/Yerevan%20Botanical%20Garden"
+  },
+  "sources": [
+   "https://www.birdingplaces.eu/birdingplaces/armenia/yerevan-botanical-garden",
+   "https://www.ecolur.org/en/news/cities/12639/",
+   "https://t.me/erevan12/16796"
+  ],
+  "photos": [
+   {
+    "src": "img/x_botanical-1.jpg",
+    "author": "Armineaghayan",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Botanical_garden_of_Yerevan_by_ArmAg_(15).jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_ring_park",
+  "n": "Кольцевой бульвар",
+  "ll": [
+   40.18523,
+   44.52314
+  ],
+  "cat": "park",
+  "light": "any",
+  "open": "always",
+  "hours_note": "Зелёное кольцо вокруг центра длиной около 3 км: от площади Шаумяна мимо Лебединого озера к улице Московян.",
+  "visit": 60,
+  "price": "бесплатно",
+  "best": "Вечерняя прогулка после ужина: кафе, памятники, уютные аллеи по дуге вокруг центра. Удобно связать с Лебединым озером и Оперой.",
+  "praise": [
+   "Сквозная пешая дуга через весь центр",
+   "Кафе, памятники (Нансен, Комитас, Байрон)",
+   "Освещён вечером"
+  ],
+  "cons": [
+   "Местами шумно из-за дорог по бокам"
+  ],
+  "fact": "Бульвар заложен по генплану Александра Таманяна 1924 года как зелёный пояс, отделяющий Кентрон от остального города.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Circular%20Park%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.52314%2C40.18523&z=17&text=Circular%20Park%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Circular%20Park%20Yerevan"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Circular_Park"
+  ],
+  "photos": [
+   {
+    "src": "img/x_ring_park-1.jpg",
+    "author": "23artashes",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bust_of_Fridtjof_Nansen,_Yerevan_12.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_park2800",
+  "n": "Парк 2800-летия Еревана",
+  "ll": [
+   40.17531,
+   44.50738
+  ],
+  "cat": "park",
+  "light": "night",
+  "open": "always",
+  "hours_note": "Парк открыт круглый год. Шоу фонтанов работает только в тёплый сезон, вечером около 21:30, и к ноябрю обычно уже не идёт.",
+  "visit": 30,
+  "price": "бесплатно",
+  "best": "После темноты: подсвеченные фонтаны и карта города, выложенная на земле. В октябре стоит проверить, работают ли ещё фонтаны.",
+  "praise": [
+   "Фонтаны с 2800 струями и вечерняя подсветка",
+   "Рядом с площадью Республики",
+   "Хорошо смотрится на фото ночью"
+  ],
+  "cons": [
+   "Фонтаны сезонные"
+  ],
+  "fact": "Парк открыли в 2019 году к 2800-летию Еревана на деньги благотворительного фонда семьи Варданян.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=2800th%20Anniversary%20Park%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50738%2C40.17531&z=17&text=2800th%20Anniversary%20Park%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/2800th%20Anniversary%20Park%20Yerevan"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yerevan_2800th_Anniversary_Park",
+   "https://news.am/en/news/884004",
+   "https://moskvichmag.ru/gorod/gde-horosho-v-erevane-rasskazyvayut-ego-novye-zhiteli-moskovskie-ekspaty/"
+  ],
+  "photos": [
+   {
+    "src": "img/x_park2800-1.jpg",
+    "author": "Armineaghayan",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yerevan_2800th_anniversary_park_(10).jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_lake",
+  "n": "Ереванское озеро",
+  "ll": [
+   40.1616,
+   44.47855
+  ],
+  "cat": "park",
+  "light": "sunset",
+  "open": "always",
+  "hours_note": "Набережная доступна всегда. От центра 10–15 минут на такси, это район Шенгавит, рядом с ущельем Раздана.",
+  "visit": 45,
+  "price": "бесплатно",
+  "best": "К закату: солнце садится за водой, а потом огни отражаются в озере. Подходит для выходной прогулки или пробежки.",
+  "praise": [
+   "Большое открытое пространство и широкий горизонт",
+   "Красивые отражения вечерних огней",
+   "Мало туристов"
+  ],
+  "cons": [
+   "Набережная обустроена не по всему берегу",
+   "Ехать на такси"
+  ],
+  "fact": "Это искусственное водохранилище, его создали в 1967 году, перегородив реку Раздан плотиной.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Yerevan%20Lake",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.47855%2C40.1616&z=17&text=Yerevan%20Lake",
+   "gis": "https://2gis.am/yerevan/search/Yerevan%20Lake"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yerevan_Lake"
+  ],
+  "photos": [
+   {
+    "src": "img/x_lake-1.jpg",
+    "author": "Aleksey Chalabyan a.k.a Xelgen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yerevan_lake_with_multiple_lightnings_in_background.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_aznavour",
+  "n": "Площадь Шарля Азнавура",
+  "ll": [
+   40.18169,
+   44.51694
+  ],
+  "cat": "view",
+  "light": "night",
+  "open": "always",
+  "hours_note": "Площадь у Русского театра им. Станиславского и кинотеатра «Москва», на ул. Абовяна.",
+  "visit": 15,
+  "price": "бесплатно",
+  "best": "Поздним вечером, после спектакля или кино: площадь подсвечена, вокруг работают кафе, а отсюда удобно пройти по Абовяна к Катогике.",
+  "praise": [
+   "Уютная камерная площадь в самом центре",
+   "Удобная точка для вечерней прогулки",
+   "Рядом театр, кино и кафе"
+  ],
+  "cons": [
+   "Маленькая, отдельной поездки не стоит"
+  ],
+  "fact": "Площадь назвали в честь Шарля Азнавура, сына армянских эмигрантов, который после землетрясения 1988 года много помогал Армении.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Charles%20Aznavour%20Square%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.51694%2C40.18169&z=17&text=Charles%20Aznavour%20Square%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Charles%20Aznavour%20Square%20Yerevan"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Charles_Aznavour_Square"
+  ],
+  "photos": [
+   {
+    "src": "img/x_aznavour-1.jpg",
+    "author": "23artashes",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Charles_Aznavour_Square,_Yerevan_07.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_sasuntsi",
+  "n": "Давид Сасунский и вокзал",
+  "ll": [
+   40.1549,
+   44.50717
+  ],
+  "cat": "view",
+  "light": "night",
+  "open": "always",
+  "hours_note": "Площадь у метро «Сасунци Давит», перед ж/д вокзалом.",
+  "visit": 30,
+  "price": "бесплатно",
+  "best": "Вечером, когда подсвечен памятник и шпиль сталинского вокзала. Добраться удобно на метро, а заодно увидеть советский Ереван, не похожий на туристический центр.",
+  "praise": [
+   "Мощный памятник эпическому герою работы Ерванда Кочара",
+   "Сталинский ампир вокзала со шпилем",
+   "Нетуристический Ереван"
+  ],
+  "cons": [
+   "Площадь транспортная, шумная"
+  ],
+  "fact": "Конную статую Ерванд Кочар закончил в 1959 году, и она стала одним из главных символов Еревана.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=David%20of%20Sassoun%20statue%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50717%2C40.1549&z=17&text=David%20of%20Sassoun%20statue%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/David%20of%20Sassoun%20statue%20Yerevan"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Statue_of_David_of_Sassoun"
+  ],
+  "photos": [
+   {
+    "src": "img/x_sasuntsi-1.jpg",
+    "author": "Armenak Margarian",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_statue_of_David_of_Sasun_25-05-2019.jpg"
+   },
+   {
+    "src": "img/x_sasuntsi-2.jpg",
+    "author": "Nina Stössinger",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:David_of_Sasun_Yerevan.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_gum",
+  "n": "Рынок ГУМ (Гумi шука)",
+  "ll": [
+   40.1674,
+   44.51494
+  ],
+  "cat": "market",
+  "light": "day",
+  "open": [
+   [
+    "08:00",
+    "18:00"
+   ],
+   [
+    "08:00",
+    "18:00"
+   ],
+   [
+    "08:00",
+    "18:00"
+   ],
+   [
+    "08:00",
+    "18:00"
+   ],
+   [
+    "08:00",
+    "18:00"
+   ],
+   [
+    "08:00",
+    "18:00"
+   ],
+   [
+    "08:00",
+    "18:00"
+   ]
+  ],
+  "hours_note": "Ежедневно примерно 08:00–18:00, часть лавок работает дольше. Ул. Мовсеса Хоренаци, 35. Знаменитый Пак Шука на Маштоца сейчас супермаркет, ехать туда незачем.",
+  "visit": 45,
+  "price": "сухофрукты от ~3000 AMD/кг",
+  "best": "В выходные до обеда, когда самый свежий выбор. После работы в будни тоже можно успеть до 18:00 за сухофруктами, суджухом и специями.",
+  "praise": [
+   "Горы сухофруктов, чурчхела (суджух), специи и пряности",
+   "Продавцы охотно дают попробовать",
+   "Отличные гостинцы домой"
+  ],
+  "cons": [
+   "Спрашивайте цену за кг заранее, вес легко недооценить"
+  ],
+  "fact": "Передний зал рынка целиком отдан сухофруктам, орехам и суджуху, и прежде всего армянскому абрикосу.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=GUM%20Market%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.51494%2C40.1674&z=17&text=GUM%20Market%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/GUM%20Market%20Yerevan"
+  },
+  "sources": [
+   "https://wander-lush.org/gum-market-yerevan-armenia/",
+   "https://expatexchange.com/article/22695/Living-in-Yerevan-Best-Markets-in-Yerevan",
+   "https://hetq.am/en/article/9035"
+  ],
+  "photos": [
+   {
+    "src": "img/x_gum-1.jpg",
+    "author": "Poshotenk",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Spices_at_GUM_Market_in_Yerevan,_Armenia.jpg"
+   },
+   {
+    "src": "img/x_gum-2.jpg",
+    "author": "Dor Shabashewitz",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Honey_and_herbs_at_GUM_market_in_Yerevan.jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_malkhas",
+  "n": "Malkhas Jazz Club",
+  "ll": [
+   40.18436,
+   44.51059
+  ],
+  "cat": "music",
+  "light": "night",
+  "open": [
+   [
+    "20:00",
+    "02:00"
+   ],
+   [
+    "20:00",
+    "02:00"
+   ],
+   [
+    "20:00",
+    "02:00"
+   ],
+   [
+    "20:00",
+    "02:00"
+   ],
+   [
+    "20:00",
+    "02:00"
+   ],
+   [
+    "20:00",
+    "02:00"
+   ],
+   [
+    "20:00",
+    "02:00"
+   ]
+  ],
+  "hours_note": "Ежедневно 20:00–02:00, программа с 21:00. Сам Левон Малхасян иногда играет после полуночи. Бронь через t.me/malkhasjazzclub или по тел. +374 10 535 350.",
+  "visit": 150,
+  "price": "вход/депозит уточнять, коктейль ~3000 AMD",
+  "best": "Пятница или суббота к 21:00, чтобы взять стол к началу программы. В будни тише, и тоже можно спокойно попасть.",
+  "praise": [
+   "Главный джаз-клуб города, живая музыка каждый вечер",
+   "Атмосфера старого клуба",
+   "Джемы и местные звёзды"
+  ],
+  "cons": [
+   "Внутри курят",
+   "Без брони в выходные мест нет"
+  ],
+  "fact": "Клуб основал пианист Левон Малхасян, «отец армянского джаза», и он до сих пор иногда выходит на сцену.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Malkhas%20Jazz%20Club%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.51059%2C40.18436&z=17&text=Malkhas%20Jazz%20Club%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Malkhas%20Jazz%20Club%20Yerevan"
+  },
+  "sources": [
+   "https://www.sputnik8.com/ru/yerevan/pages/kuda-shodit-vecherom-v-erevane-ot-teatrov-do-dzhaz-klubov",
+   "https://www.kupi.com/en-ae/explore/armenia/yerevan/malkhas-jazz-club",
+   "https://t.me/erevan12/14691"
+  ],
+  "photos": [
+   {
+    "src": "img/x_malkhas-1.jpg",
+    "author": "Արարատ Թրվանց",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%D4%BC%D6%87%D5%B8%D5%B6_%D5%84%D5%A1%D5%AC%D5%AD%D5%A1%D5%BD%D5%B5%D5%A1%D5%B6_(%D5%84%D5%A1%D5%AC%D5%AD%D5%A1%D5%BD).jpg"
+   }
+  ]
+ },
+ {
+  "id": "x_mezzo",
+  "n": "Mezzo Classic House Club",
+  "ll": [
+   40.1889,
+   44.51983
+  ],
+  "cat": "music",
+  "light": "night",
+  "open": "unknown",
+  "hours_note": "Ресторан-клуб на Исаакяна, 28. Живая музыка по вечерам, программа обычно с ~21:00. Бронь: +374 10 524 211, +374 98 206 206.",
+  "visit": 150,
+  "price": "выше среднего",
+  "best": "Вечер пятницы или субботы с бронью: джаз и приезжие артисты, после больших концертов здесь собираются афтепати.",
+  "praise": [
+   "Двухэтажный клуб: лаунж, ресторан и сцена",
+   "Часто играют зарубежные музыканты",
+   "Хвалят еду и сервис (4.5)"
+  ],
+  "cons": [
+   "Сильно накурено",
+   "Дорого"
+  ],
+  "fact": "После крупных концертов в Ереване именно в Mezzo часто собираются музыканты и публика на неформальные джемы.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Mezzo%20Classic%20House%20Club%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.51983%2C40.1889&z=17&text=Mezzo%20Classic%20House%20Club%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Mezzo%20Classic%20House%20Club%20Yerevan"
+  },
+  "sources": [
+   "https://www.livetheworld.com/activities/armenia/mezzo-classic-house-club-in-yerevan",
+   "https://livetheworld.com/post/where-to-spend-quality-evenings-in-yerevan-yk9x",
+   "https://thecascadetravel.com/blog/ultimate-guide-to-yerevan-nightlife-hotspots/"
+  ],
+  "photos": []
+ },
+ {
+  "id": "x_calumet",
+  "n": "Calumet Ethnic Lounge Bar",
+  "ll": [
+   40.18519,
+   44.50939
+  ],
+  "cat": "music",
+  "light": "night",
+  "open": "unknown",
+  "hours_note": "Пушкина, 56а, в подвальчике рядом с Malkhas. Работает вечером и ночью, пик в субботу около 23:00.",
+  "visit": 120,
+  "price": "недорого, коктейль ~2000–2500 AMD",
+  "best": "После ужина, с 21–22 часов: этно-лаунж с живой музыкой и смесью путешественников и местных. Хорошо идёт в паре с Malkhas через дорогу.",
+  "praise": [
+   "Любимое место путешественников",
+   "Живые выступления: джаз, рок, фолк",
+   "Неформально и недорого"
+  ],
+  "cons": [
+   "Тесно и шумно в выходные"
+  ],
+  "fact": "Бар назван в честь калюмета, индейской «трубки мира», и оформлен этнической эклектикой со всего света.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Calumet%20Ethnic%20Lounge%20Bar%20Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/?ll=44.50939%2C40.18519&z=17&text=Calumet%20Ethnic%20Lounge%20Bar%20Yerevan",
+   "gis": "https://2gis.am/yerevan/search/Calumet%20Ethnic%20Lounge%20Bar%20Yerevan"
+  },
+  "sources": [
+   "https://ecokayan.com/armenia/travel/explore/where-to-hang-out-in-yerevan-on-a-weekend",
+   "https://wanderlog.com/place/details/47895/calumet-ethnic-lounge-bar",
+   "https://www.livetheworld.com/activities/armenia/calumet-ethnic-lounge-bar-in-yerevan"
+  ],
+  "photos": [
+   {
+    "src": "img/x_calumet-1.jpg",
+    "author": "Armineaghayan",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Street_art,_Pushkin_street,_Yerevan_(1).jpg"
+   }
+  ]
+ }
+]

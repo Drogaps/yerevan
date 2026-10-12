@@ -1,0 +1,1240 @@
+[
+ {
+  "id": "f_ost",
+  "n": "OST Foods & Wine (OST)",
+  "ll": [
+   40.1860145,
+   44.5074907
+  ],
+  "addr": "ул. Сарьяна, 16 (OST Foods & Wine); фаст-фуд-формат OST — пр. Маштоца, 20",
+  "dishes": [
+   "лахмаджо",
+   "шашлык",
+   "кебаб",
+   "армянская кухня",
+   "вино"
+  ],
+  "order": "Лахмаджо (в т.ч. «Адана» с говядиной ангус), кебабы из говядины/курицы, солянка, армянское вино",
+  "price": "Сарьяна: 4 000–10 000 AMD; Маштоца: 2 000–4 000 AMD",
+  "open": [
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.2 (356) Сарьяна / 4.2 (350) Маштоца · Yandex 5.0 (957)",
+  "praise": [
+   "Многие называют лахмаджо одним из лучших в городе",
+   "Кебабы сочные, есть хорошая подборка армянских вин",
+   "Недорого и быстро (точка на Маштоца)"
+  ],
+  "cons": [
+   "Тесные столики, иногда медленное обслуживание",
+   "Отдельные отзывы: лахмаджо огромный, но пресноватый"
+  ],
+  "verdict": "По лахмаджо — да, один из топов города наряду с Tun Lahmajo и Lahmajun Gaidz; для «лахмаджо + шашлык с вином» лучше Сарьяна, 16, для быстрого перекуса — Маштоца, 20.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=OST+Foods+%26+Wine+16+Martiros+Saryan+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/ost/57494294420/",
+   "gis": "https://2gis.am/yerevan/search/OST",
+   "site": "https://ostrestaurant.taplink.ws/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/OST+lahmajun+Yerevan",
+   "https://yandex.ru/maps/org/ost/57494294420/reviews/",
+   "https://wanderlog.com/place/details/1137211/ost",
+   "https://aspirantum.com/tips/where-to-eat-in-yerevan",
+   "https://ost-bistro.taplink.ws/"
+  ],
+  "note": "Точка на Маштоца, 20: [40.1811824,44.5083092], 10:00–23:00 ежедневно (вс с 10:30). Часы на Сарьяна — до 00:00 (не проверено)",
+  "photos": [
+   {
+    "src": "img/food/f_ost-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=OST+Foods+%26+Wine+16+Martiros+Saryan+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_ost-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=OST+Foods+%26+Wine+16+Martiros+Saryan+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_ost-3.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=OST+Foods+%26+Wine+16+Martiros+Saryan+St+Yerevan"
+   }
+  ],
+  "open_note": "Сарьяна: до 00:00, открытие ~12:00 (не проверено); Маштоца: 10:00–23:00"
+ },
+ {
+  "id": "f_tavern_yerevan",
+  "n": "Таверна Ереван (Tavern Yerevan, Амиряна 5)",
+  "ll": [
+   40.1790472,
+   44.5100731
+  ],
+  "addr": "ул. Амиряна (Пап Тагавор), 5",
+  "dishes": [
+   "шашлык",
+   "лахмаджо",
+   "хаш",
+   "долма",
+   "армянская кухня",
+   "вино"
+  ],
+  "order": "Шашлык (хоровац) ассорти, лахмаджо, долма, ишхан, сибирский суп/хаш в сезон, на десерт гата",
+  "price": "4 000–14 000 AMD (обычно ~6 000–8 000 на человека)",
+  "open": [
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.5 (3739) · Yandex 5.0 (3491)",
+  "praise": [
+   "Классика армянской кухни в центре, щедрые порции и разумные цены",
+   "Внимательный персонал, иногда живая музыка/шоу",
+   "Принимают карты «Мир» (по отзывам из чата)"
+  ],
+  "cons": [
+   "Вечером многолюдно, лучше бронировать"
+  ],
+  "verdict": "Да, это самая надёжная сеть для знакомства с армянской кухней; лучший рейтинг у филиала на Терьяна, 91 (Google 4.7) и Пароняна, 7 (4.8), а главный и самый известный — Амиряна, 5.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Tavern+Yerevan+5+Pap+Tagavor+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/taverna_yerevan/75548457726/",
+   "gis": "https://2gis.am/yerevan/search/%D0%A2%D0%B0%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%20%D0%95%D1%80%D0%B5%D0%B2%D0%B0%D0%BD",
+   "site": "https://www.yeremyanprojects.com/en/restaurants/tavern-yerevan"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Tavern+Yerevan",
+   "https://yandex.ru/maps/org/taverna_yerevan/75548457726/",
+   "https://t.me/erevan12/35967",
+   "https://t.me/erevan12/12616",
+   "https://t.me/erevan12/12815",
+   "https://t.me/erevan12/17254"
+  ],
+  "note": "Другие филиалы: Терьяна 91 [40.1888819,44.5213219] (Google 4.7/1873, хаш в хитах меню); Паронян 7 [40.178792,44.501836] (4.8/711); Хоренаци [40.1729857,44.5113805]; Riverside — Исакова 48А (см. f_getap_pandok)",
+  "photos": [
+   {
+    "src": "img/food/f_tavern_yerevan-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tavern+Yerevan+5+Pap+Tagavor+Yerevan"
+   },
+   {
+    "src": "img/food/f_tavern_yerevan-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tavern+Yerevan+5+Pap+Tagavor+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_old_jrvezh",
+  "n": "Старый Джрвеж (Հին Ջրվեժ / Hin Jrvezh)",
+  "ll": [
+   40.1912573,
+   44.5887604
+  ],
+  "addr": "ул. Багреванда, 130 (район Джрвеж, у выезда на Гарни)",
+  "dishes": [
+   "хаш",
+   "шашлык",
+   "армянская кухня",
+   "долма"
+  ],
+  "order": "Хаш (в сезон, с утра), хоровац, сырная тарелка, мацун, лаваш из тонира",
+  "price": "6 000–8 000 AMD",
+  "open": [
+   [
+    "10:30",
+    "24:00"
+   ],
+   [
+    "10:30",
+    "24:00"
+   ],
+   [
+    "10:30",
+    "24:00"
+   ],
+   [
+    "10:30",
+    "24:00"
+   ],
+   [
+    "10:30",
+    "24:00"
+   ],
+   [
+    "10:30",
+    "24:00"
+   ],
+   [
+    "10:30",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.8 (262) · Yandex 5.0 (489)",
+  "praise": [
+   "Аутентичный «деревенский» интерьер из туфа, атмосфера старого Еревана",
+   "Вкусная домашняя армянская кухня, хаш в хитах меню",
+   "Дружелюбный персонал, иногда комплименты от заведения"
+  ],
+  "cons": [
+   "Далеко от центра — нужно такси (~15–20 мин)"
+  ],
+  "verdict": "Это и есть хашная на Багреванда, 130 (пункты 3 и 4 из списка — одно место); по отзывам одна из лучших загородных точек для хаша и хоровца, рейтинги выше, чем у центральных Кавказской пленницы и Таверны.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=%D5%80%D5%AB%D5%B6+%D5%8B%D6%80%D5%BE%D5%A5%D5%AA+Bagrevand+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/stary_dzhrvezh/139620755796/",
+   "gis": "https://2gis.am/yerevan/search/%D0%A1%D1%82%D0%B0%D1%80%D1%8B%D0%B9%20%D0%94%D0%B6%D1%80%D0%B2%D0%B5%D0%B6",
+   "site": null
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/stary_dzhrvezh/139620755796/reviews/",
+   "https://www.google.com/maps/search/khash+near+Bagrevand+St+Yerevan"
+  ],
+  "note": "Тел. +374 91 676400. В Яндексе есть ещё карточка «Hin Jrvezh» (in_dzhrvezh/8984475101) в с. Джрвеж — вероятно, дубль (не проверено)",
+  "photos": [
+   {
+    "src": "img/food/f_old_jrvezh-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=%D5%80%D5%AB%D5%B6+%D5%8B%D6%80%D5%BE%D5%A5%D5%AA+Bagrevand+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_old_jrvezh-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=%D5%80%D5%AB%D5%B6+%D5%8B%D6%80%D5%BE%D5%A5%D5%AA+Bagrevand+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_kavkazskaya_plennitsa",
+  "n": "Кавказская пленница",
+  "ll": [
+   40.1794626,
+   44.5101231
+  ],
+  "addr": "ул. Пап Тагавори (Амиряна), 4/6",
+  "dishes": [
+   "хаш",
+   "шашлык",
+   "хинкали",
+   "грузинская кухня",
+   "армянская кухня"
+  ],
+  "order": "Харчо, люля-кебаб, шашлык, хинкали; хаш — зимой по утрам (не проверено)",
+  "price": "4 000–14 000 AMD",
+  "open": [
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ],
+   [
+    "10:00",
+    "01:00"
+   ]
+  ],
+  "rating": "Google 4.3 (1803) · Yandex 5.0 (6690)",
+  "praise": [
+   "Тематический интерьер по фильму, каждые полчаса шоу/музыка",
+   "Вкусные харчо, люля, котлета по-киевски",
+   "Работает до 01:00"
+  ],
+  "cons": [
+   "Медленное обслуживание в загруженные вечера",
+   "В чате: «платишь за идею места», цены выше среднего"
+  ],
+  "verdict": "Скорее за атмосферу, чем за хаш: подтверждений, что хаш тут лучший, нет — для хаша сильнее Старый Джрвеж и Таверна Ереван (Терьяна).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7%D1%81%D0%BA%D0%B0%D1%8F+%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D0%B8%D1%86%D0%B0+4+Pap+Tagavori+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/kavkazskaya_plennitsa/160275560980/",
+   "gis": "https://2gis.am/yerevan/search/%D0%9A%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D0%B8%D1%86%D0%B0",
+   "site": "https://www.kavkazskayaplennica.am/"
+  },
+  "sources": [
+   "https://yandex.ru/maps/org/kavkazskaya_plennitsa/160275560980/reviews/",
+   "https://travel2unlimited.com/armenia-yerevan-kavkazskaya-plennitsa-restaurant/",
+   "https://t.me/erevan12/28443",
+   "https://t.me/erevan12/11617",
+   "https://t.me/erevan12/12614"
+  ],
+  "note": "Второй филиал: Саят-Новы 25 [40.1823755,44.5208716] (Google 4.1/594); в Яндексе также Налбандяна 27",
+  "photos": [
+   {
+    "src": "img/food/f_kavkazskaya_plennitsa-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7%D1%81%D0%BA%D0%B0%D1%8F+%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D0%B8%D1%86%D0%B0+4+Pap+Tagavori+Yerevan"
+   },
+   {
+    "src": "img/food/f_kavkazskaya_plennitsa-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7%D1%81%D0%BA%D0%B0%D1%8F+%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D0%B8%D1%86%D0%B0+4+Pap+Tagavori+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_mozzarella",
+  "n": "Mozzarella (пиццерия)",
+  "ll": [
+   40.1789143,
+   44.5148967
+  ],
+  "addr": "ул. Московяна, 33 / Арами, 2",
+  "dishes": [
+   "пицца",
+   "десерты",
+   "кофе"
+  ],
+  "order": "Пицца с прошутто или Капричоза, паста Альфредо, грибной суп «Капучино»",
+  "price": "4 000–8 000 AMD (не проверено)",
+  "open": [
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.6 (1999) · Yandex 5.0 (32)",
+  "praise": [
+   "Вкусная пицца и большое меню",
+   "Дружелюбный быстрый персонал",
+   "Фирменный грибной суп в чашке хвалят многие"
+  ],
+  "cons": [
+   "Обслуживание бывает неровным",
+   "Цены выше среднего, порции в доставке меньше"
+  ],
+  "verdict": "Хорошая центральная пиццерия с сильным рейтингом, но «лучшей пиццей» её не называют — для неаполитанской стоит сравнить с Pizza Ria и Napoletana.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Mozzarella+33+Moskovyan+Street+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/mozzarella/105767069269/",
+   "gis": "https://2gis.am/yerevan/search/Mozzarella",
+   "site": "https://www.instagram.com/mozzarella.yvn/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Mozzarella+Yerevan",
+   "https://www.spyur.am/en/companies/51956",
+   "https://wanderlog.com/place/details/9795265/mozzarella",
+   "https://yandex.com.ge/maps/org/mozzarella/148113475996/reviews"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_mozzarella-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Mozzarella+33+Moskovyan+Street+Yerevan"
+   },
+   {
+    "src": "img/food/f_mozzarella-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Mozzarella+33+Moskovyan+Street+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_pita",
+  "n": "Pita (греческий гирос)",
+  "ll": [
+   40.1784515,
+   44.5175562
+  ],
+  "addr": "ул. Вардананц, 4",
+  "dishes": [
+   "гирос",
+   "кебаб",
+   "шаурма"
+  ],
+  "order": "Гирос с курицей или свининой в пите (~1 550 AMD), сувлаки, греческий салат",
+  "price": "2 000–4 000 AMD",
+  "open": [
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "11:00",
+    "23:00"
+   ],
+   [
+    "13:00",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.3 (52) · Yandex 4.9 (44)",
+  "praise": [
+   "Свежий гирос с аутентичным греческим вкусом",
+   "Уютно и недорого",
+   "Доставка через сайт pita.am"
+  ],
+  "cons": [
+   "Единичные жалобы на сервис"
+  ],
+  "verdict": "Хорошая небольшая гиросная; самая известная альтернатива — сеть Mr. Gyros (Пап Тагавор 4/5, до 04:00), но у неё оценки ниже (3.4–4.0) и жалобы на маленькие порции.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Pita+4+Vardanants+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/pita/231733175164/",
+   "gis": "https://2gis.am/yerevan/search/Pita",
+   "site": "https://pita.am/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Pita+gyros+Yerevan",
+   "https://yandex.ru/maps/org/pita/231733175164/",
+   "https://pita.am/",
+   "https://t.me/erevan12/44605"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_pita-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pita+4+Vardanants+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_pita-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pita+4+Vardanants+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_getap_pandok",
+  "n": "Гетап пандок — Таверна Ереван Riverside (Պանդոկ Երևան գետափին)",
+  "ll": [
+   40.1728126,
+   44.4981403
+  ],
+  "addr": "пр. Адмирала Исакова, 48А (у реки Раздан)",
+  "dishes": [
+   "шашлык",
+   "армянская кухня",
+   "лахмаджо",
+   "хаш",
+   "вино"
+  ],
+  "order": "Шашлык/хоровац на мангале, тжвжик, лаваш из тонира; летом — столик у реки",
+  "price": "4 000–14 000 AMD (не проверено)",
+  "open": [
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ],
+   [
+    "09:30",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.6 (517) · Yandex 5.0 (1255)",
+  "praise": [
+   "Красивое место у реки, «будто не в городе»",
+   "Отличная еда и шашлык, как во всей сети Таверна",
+   "Хорошо для больших компаний и летних вечеров"
+  ],
+  "cons": [
+   "Сервис иногда «без тепла»",
+   "Нужно ехать на такси"
+  ],
+  "verdict": "«Пандок Ереван гетапин» = «Таверна у реки» — по названию это лучшее совпадение с «Гетап пандок» (не проверено); по шашлыку на уровне лучших филиалов сети. Есть и отдельный ресторан «Getap» на ул. Никиты Симоняна (Yandex 5.0/642, до 04:00; Google лишь 3.4/86, жалобы на сухой шашлык).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Tavern+Yerevan+riverside+48A+Admiral+Isakov+Ave+Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/search/Tavern%20Yerevan%20Riverside/",
+   "gis": "https://2gis.am/yerevan/search/%D0%A2%D0%B0%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%20%D0%95%D1%80%D0%B5%D0%B2%D0%B0%D0%BD%20Riverside",
+   "site": "https://www.yeremyanprojects.com/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Գետափ+պանդոկ",
+   "https://yandex.ru/maps/10262/yerevan/search/Гетап пандок/",
+   "https://yandex.ru/maps/10262/yerevan/search/Getap/"
+  ],
+  "note": "Альтернатива: Getap Restaurant [40.1835404,44.4952643], 11:00–04:00",
+  "photos": [
+   {
+    "src": "img/food/f_getap_pandok-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tavern+Yerevan+riverside+48A+Admiral+Isakov+Ave+Yerevan"
+   },
+   {
+    "src": "img/food/f_getap_pandok-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tavern+Yerevan+riverside+48A+Admiral+Isakov+Ave+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_gotcha",
+  "n": "gotcha boba bar (Северный проспект)",
+  "ll": [
+   40.1823801,
+   44.5145155
+  ],
+  "addr": "Северный проспект, 8",
+  "dishes": [
+   "бабл-ти",
+   "десерты",
+   "кофе"
+  ],
+  "order": "Brown sugar milk tea с тапиокой, фруктовый чай, матча; моти",
+  "price": "1 500–3 000 AMD",
+  "open": [
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ],
+   [
+    "10:00",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.8 (404) · Yandex 4.7 (Каскад) / 4.8",
+  "praise": [
+   "Свежие сбалансированные напитки, большое меню",
+   "Прямо на Северном проспекте, открыто до полуночи",
+   "Дружелюбный персонал"
+  ],
+  "cons": [
+   "Какую именно точку имели в виду — не проверено"
+  ],
+  "verdict": "Главная бабл-ти сеть Еревана и единственная прямо на Северном (д. 8); если нужен именно тайваньский бренд — рядом CoCo Bubble Tea (ул. Ин Ереванци, 2, 2-й этаж, Google 4.8/63, 9:00–23:30).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=gotcha+boba+bar+8+Northern+Ave+Yerevan",
+   "yandex": "https://yandex.ru/maps/10262/yerevan/search/gotcha%20boba/",
+   "gis": "https://2gis.am/yerevan/search/gotcha",
+   "site": "https://www.gotcha.am/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/bubble+tea+Northern+Avenue+Yerevan",
+   "https://www.gotcha.am/"
+  ],
+  "note": "Альтернатива CoCo Bubble Tea: [40.1827789,44.5152027]",
+  "photos": [
+   {
+    "src": "img/food/f_gotcha-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=gotcha+boba+bar+8+Northern+Ave+Yerevan"
+   },
+   {
+    "src": "img/food/f_gotcha-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=gotcha+boba+bar+8+Northern+Ave+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_frank_basta",
+  "n": "Frank by Баста",
+  "ll": [
+   40.1791215,
+   44.5127389
+  ],
+  "addr": "ул. Павстоса Бузанда, 5",
+  "dishes": [
+   "рёбра",
+   "бургеры",
+   "стейк",
+   "шаурма",
+   "пиво"
+  ],
+  "order": "Свиные рёбра BBQ (фирменное), бургер, шаурма от Frank, крафтовое пиво",
+  "price": "4 000–14 000 AMD",
+  "open": [
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ],
+   [
+    "12:00",
+    "01:00"
+   ]
+  ],
+  "rating": "Google 4.7 (697) · Yandex 5.0 (1357)",
+  "praise": [
+   "Рёбра мягкие и сочные — хвалят в большинстве отзывов",
+   "Приятная атмосфера, петербургский мясной бренд",
+   "Работает до 01:00"
+  ],
+  "cons": [
+   "Вечером нужна бронь"
+  ],
+  "verdict": "Да, по рёбрам это топ центра — у альтернатив (Bastard Meat Bar, 4.5) рейтинг ниже; «Баста Size», скорее всего, и есть Frank by Баста (не проверено).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Frank+by+Basta+5+Pavstos+Buzand+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/frank_by_basta/113039833181/",
+   "gis": "https://2gis.am/yerevan/search/Frank%20by%20Basta",
+   "site": "https://frankmeat.am/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Frank+by+Basta+Yerevan",
+   "https://yandex.ru/maps/org/frank_by_basta/113039833181/",
+   "https://frankmeat.am/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_frank_basta-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Frank+by+Basta+5+Pavstos+Buzand+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_frank_basta-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Frank+by+Basta+5+Pavstos+Buzand+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_mart",
+  "n": "Mart Coffee (Март)",
+  "ll": [
+   40.1798712,
+   44.5111682
+  ],
+  "addr": "ул. Павстоса Бузанда, 17",
+  "dishes": [
+   "кофе",
+   "завтраки",
+   "десерты"
+  ],
+  "order": "Завтраки весь день (скрембл-тост с лососем ~4 100 AMD), сырники со сгущёнкой, кофе в высоких стаканах",
+  "price": "2 000–6 000 AMD",
+  "open": [
+   [
+    "09:00",
+    "23:00"
+   ],
+   [
+    "09:00",
+    "23:00"
+   ],
+   [
+    "09:00",
+    "23:00"
+   ],
+   [
+    "09:00",
+    "23:00"
+   ],
+   [
+    "09:00",
+    "23:00"
+   ],
+   [
+    "09:00",
+    "23:00"
+   ],
+   [
+    "09:00",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.4 (272) · Yandex 5.0 (983)",
+  "praise": [
+   "Стильный современный интерьер, «инстаграмные» высокие стаканы",
+   "Отличные завтраки и сырники — многие ходят каждый день",
+   "Хороший кофе"
+  ],
+  "cons": [
+   "Дороговато",
+   "Мало мест, тесно в часы пик"
+  ],
+  "verdict": "Да, это один из самых красивых «скуратовских» по духу кофе-завтраков в центре; по кофе строже спешелти — AfroLab или Karmir.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=mart+coffee+17+Pavstos+Buzand+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/mart_coffee/231526803354/",
+   "gis": "https://2gis.am/yerevan/search/Mart%20coffee",
+   "site": "https://martcoffee.am/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Mart+coffee+Yerevan",
+   "https://yandex.ru/maps/org/mart_coffee/231526803354/",
+   "https://martcoffee.am/"
+  ],
+  "note": "Закрывается в 23:00; время открытия 09:00 — не проверено",
+  "photos": [
+   {
+    "src": "img/food/f_mart-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=mart+coffee+17+Pavstos+Buzand+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_mart-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=mart+coffee+17+Pavstos+Buzand+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_kavkaz",
+  "n": "Кавказ (Caucasus Tavern), 24/7",
+  "ll": [
+   40.1794619,
+   44.522829
+  ],
+  "addr": "ул. Анрапетутян, 82, 1-й этаж (комплекс «Кавказ»)",
+  "dishes": [
+   "хачапури",
+   "шашлык",
+   "армянская кухня",
+   "грузинская кухня",
+   "хаш"
+  ],
+  "order": "Хачапури по-аджарски/карин (готовят свежим даже ночью), гудбари, шашлык из свинины",
+  "price": "2 000–12 000 AMD",
+  "open": "always",
+  "rating": "Google 4.1 (1429) · Yandex 5.0 (1717)",
+  "praise": [
+   "Круглосуточно — свежий хачапури и в 11 вечера, и ночью",
+   "Хороший сервис в любое время",
+   "Большое меню армянской и грузинской кухни"
+  ],
+  "cons": [
+   "Бывает людно; часть отзывов — «еда обычная»"
+  ],
+  "verdict": "Лучший вариант, если хочется хачапури ночью; днём по хачапури сильнее специализированные грузинские места (Lali, Genatsvale).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Caucasus+Tavern+82+Hanrapetutyan+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/kavkaz/1729420273/",
+   "gis": "https://2gis.am/yerevan/search/%D0%9A%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7",
+   "site": "https://www.caucasus.am/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Caucasus+Tavern+82+Hanrapetutyan+Yerevan",
+   "https://yandex.ru/maps/org/kavkaz/1729420273/",
+   "https://atb.am/en/tourist/city/restaurants/restaurants_erevan/kavkaz"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_kavkaz-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Caucasus+Tavern+82+Hanrapetutyan+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_kavkaz-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Caucasus+Tavern+82+Hanrapetutyan+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_tokyooo",
+  "n": "Tokyooo (Токио)",
+  "ll": [
+   40.1828873,
+   44.5218786
+  ],
+  "addr": "ул. Налбандяна, 37",
+  "dishes": [
+   "суши",
+   "рамен",
+   "азиатская"
+  ],
+  "order": "Рамен (в т.ч. шин-веджи), сашими-сет, якитори-дон, роллы с конвейера",
+  "price": "4 000–10 000 AMD (не проверено)",
+  "open": [
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ],
+   [
+    "12:00",
+    "24:00"
+   ]
+  ],
+  "rating": "Google 4.4 (497) · Yandex 5.0 (815)",
+  "praise": [
+   "Аутентичная японская кухня, первый суши-конвейер в Армении",
+   "Свежие сашими, быстрый сервис",
+   "Персонал помогает с выбором"
+  ],
+  "cons": [
+   "Часть роллов — тонкие куски рыбы"
+  ],
+  "verdict": "Хороший японский ресторан с супами и роллами; по рамену сильнее специализированные Ramen-Ten (Абовяна 4, Google 4.7/1100) и Ramen Jan (Маштоца 19, 4.8).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Tokyooo+37+Nalbandyan+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/tokyooo/183465586798/",
+   "gis": "https://2gis.am/yerevan/search/Tokyooo",
+   "site": "https://tokyooo.am/"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Tokyooo+Yerevan",
+   "https://yandex.ru/maps/org/tokyooo/183465586798/",
+   "https://tokyooo.am/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_tokyooo-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tokyooo+37+Nalbandyan+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_tokyooo-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tokyooo+37+Nalbandyan+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_barbq",
+  "n": "Bar B.Q. (рядом с AfroLab)",
+  "ll": [
+   40.182719,
+   44.5127834
+  ],
+  "addr": "ул. Пушкина, 40 (в одном доме с AfroLab Roastery)",
+  "dishes": [
+   "кебаб",
+   "шаурма",
+   "шашлык",
+   "хачапури"
+  ],
+  "order": "Ангус-кебаб, свиная шаурма в пите, пиде, тан с лаймом и мятой; кофе — в соседнем AfroLab",
+  "price": "2 000–4 000 AMD",
+  "open": [
+   [
+    "11:00",
+    "03:00"
+   ],
+   [
+    "11:00",
+    "03:00"
+   ],
+   [
+    "11:00",
+    "03:00"
+   ],
+   [
+    "11:00",
+    "03:00"
+   ],
+   [
+    "11:00",
+    "03:00"
+   ],
+   [
+    "11:00",
+    "03:00"
+   ],
+   [
+    "11:00",
+    "03:00"
+   ]
+  ],
+  "rating": "Google 4.3 (511) · Yandex 5.0 (697)",
+  "praise": [
+   "В чате советуют ангус-кебаб, шаурму в пите и фирменный тан",
+   "Пиде и тесто хачапури очень хвалят",
+   "Работает до 03:00"
+  ],
+  "cons": [
+   "Часть отзывов: «обычная шаурма и кебаб за свои деньги»"
+  ],
+  "verdict": "Хороший уличный гриль в центре; соседний AfroLab Specialty Coffee Roastery (Google 4.5/530, 08:00–02:00) — один из лучших спешелти-кофе, поэтому связка «BarBQ + Afrolab» удачна.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Bar+B.Q.+40+Pushkin+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/bar_b_q_/98086661731/",
+   "gis": "https://2gis.am/yerevan/search/Bar%20B.Q.",
+   "site": null
+  },
+  "sources": [
+   "https://www.google.com/maps/search/AfroLab+BBQ+Yerevan",
+   "https://yandex.ru/maps/org/bar_b_q_/98086661731/",
+   "https://t.me/erevan12/44612",
+   "https://t.me/erevan12/42907",
+   "https://www.afrolab.am/"
+  ],
+  "note": "AfroLab Roastery: [40.1826419,44.5130054], Yandex /maps/org/afrolab_roastery/232756172743/",
+  "photos": [
+   {
+    "src": "img/food/f_barbq-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Bar+B.Q.+40+Pushkin+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_barbq-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Bar+B.Q.+40+Pushkin+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_neko_ramen",
+  "n": "Neko Ramen (Нэко рамен)",
+  "ll": [
+   40.186438,
+   44.5064295
+  ],
+  "addr": "ул. Демирчяна, 27 (вверх по лестнице с улицы)",
+  "dishes": [
+   "рамен",
+   "азиатская",
+   "десерты"
+  ],
+  "order": "Тантан-рамен, якисоба, огурцы по-китайски, моти; фо бо в новом меню",
+  "price": "2 000–4 000 AMD",
+  "open": [
+   [
+    "15:00",
+    "22:00"
+   ],
+   [
+    "12:00",
+    "22:00"
+   ],
+   [
+    "12:00",
+    "22:00"
+   ],
+   [
+    "12:00",
+    "22:00"
+   ],
+   [
+    "12:00",
+    "22:00"
+   ],
+   [
+    "12:00",
+    "22:00"
+   ],
+   [
+    "12:00",
+    "22:00"
+   ]
+  ],
+  "rating": "Google 4.3 (76) · Yandex 5.0 (248)",
+  "praise": [
+   "Многие называют рамен лучшим в городе — насыщенный тантан, мягкое яйцо",
+   "Уютное «скрытое» кафе, хорошая музыка",
+   "Недорого"
+  ],
+  "cons": [
+   "Небольшое, закрывается в 22:00"
+  ],
+  "verdict": "Один из любимых раменов у русскоязычных (Яндекс 5.0); главные конкуренты — Ramen-Ten (Абовяна 4, Google 4.7/1100) и Ramen Jan (Маштоца 19, 4.8/224).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Neko+Yerevan+Demirchyan+27",
+   "yandex": "https://yandex.ru/maps/org/neko_ramen/107152199722/",
+   "gis": "https://2gis.am/yerevan/search/Neko",
+   "site": null
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Neko+ramen+Yerevan",
+   "https://yandex.ru/maps/org/neko_ramen/107152199722/"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_neko_ramen-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Neko+Yerevan+Demirchyan+27"
+   },
+   {
+    "src": "img/food/f_neko_ramen-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Neko+Yerevan+Demirchyan+27"
+   }
+  ]
+ },
+ {
+  "id": "f_kebab_lab",
+  "n": "KEBAB.LAB",
+  "ll": [
+   40.1891685,
+   44.5203696
+  ],
+  "addr": "ул. Геворга Кочара, 6",
+  "dishes": [
+   "кебаб",
+   "шаурма",
+   "бургеры"
+  ],
+  "order": "Фирменный кебаб (донер) на хорошем мясе, бургер, хот-дог",
+  "price": "2 000–5 000 AMD (не проверено)",
+  "open": [
+   [
+    "12:00",
+    "23:00"
+   ],
+   [
+    "12:00",
+    "23:00"
+   ],
+   [
+    "12:00",
+    "23:00"
+   ],
+   [
+    "12:00",
+    "23:00"
+   ],
+   [
+    "12:00",
+    "23:00"
+   ],
+   [
+    "12:00",
+    "23:00"
+   ],
+   [
+    "12:00",
+    "23:00"
+   ]
+  ],
+  "rating": "Google 4.9 (31) · Yandex 4.9 (38)",
+  "praise": [
+   "Свежие качественные продукты, «правильная версия» уличного кебаба",
+   "Сочный бургер, хот-доги тоже хвалят",
+   "Часть Republic Group (Mao, Wine Republic, Asador)"
+  ],
+  "cons": [
+   "Новое место, отзывов пока мало"
+  ],
+  "verdict": "Очень высокие оценки, но выборка маленькая — «лучший кебаб» пока рано утверждать; в чатах также советуют Grill.am (кебаб с шампура на углях) и Bar B.Q.",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=KEBAB.LAB+6+Gevorg+Kochar+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/kebab_lab/9774147968/",
+   "gis": "https://2gis.am/yerevan/search/Kebab%20Lab",
+   "site": "https://kebablab.am/en"
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Kebab+Lab+Yerevan",
+   "https://kebablab.am/en",
+   "https://t.me/erevan12/50088"
+  ],
+  "photos": [
+   {
+    "src": "img/food/f_kebab_lab-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=KEBAB.LAB+6+Gevorg+Kochar+St+Yerevan"
+   },
+   {
+    "src": "img/food/f_kebab_lab-2.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=KEBAB.LAB+6+Gevorg+Kochar+St+Yerevan"
+   }
+  ]
+ },
+ {
+  "id": "f_karmir",
+  "n": "Karmir Specialty Coffee (фотолаборатория «Кармир»)",
+  "ll": [
+   40.1890552,
+   44.5195656
+  ],
+  "addr": "ул. Геворга Кочара, 23 (при фотолаборатории Karmir Photo Lab)",
+  "dishes": [
+   "кофе"
+  ],
+  "order": "Эспрессо/батч-брю на спешелти-зерне 85+, матча-тоник или матча-латте",
+  "price": "1 000–2 000 AMD",
+  "open": [
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ],
+   [
+    "10:00",
+    "21:00"
+   ]
+  ],
+  "rating": "Google 4.8 (32) · Yandex 5.0 (57); фотолаб — Google 4.9 (220)",
+  "praise": [
+   "Крепкий спешелти-кофе и хорошая матча",
+   "Уютно, отличная музыка",
+   "Можно заодно проявить плёнку"
+  ],
+  "cons": [
+   "Маленькое место, закрывается в 21:00"
+  ],
+  "verdict": "Отличный камерный спешелти-кофе; для сравнения по крепкому кофе — AfroLab Roastery (Пушкина 40).",
+  "links": {
+   "google": "https://www.google.com/maps/search/?api=1&query=Karmir+Specialty+Coffee+23+Gevorg+Kochar+St+Yerevan",
+   "yandex": "https://yandex.ru/maps/org/karmir_specialty_coffee/171198006029/",
+   "gis": "https://2gis.am/yerevan/search/Karmir",
+   "site": null
+  },
+  "sources": [
+   "https://www.google.com/maps/search/Karmin+photolab+cafe+Yerevan",
+   "https://yandex.ru/maps/org/karmir_specialty_coffee/171198006029/"
+  ],
+  "note": "Часы: пн 10:00–21:00 подтверждены, остальные дни — не проверено",
+  "photos": [
+   {
+    "src": "img/food/f_karmir-1.jpg",
+    "source": "https://www.google.com/maps/search/?api=1&query=Karmir+Specialty+Coffee+23+Gevorg+Kochar+St+Yerevan"
+   }
+  ]
+ }
+]
