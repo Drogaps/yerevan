@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ереван по вечерам</title>
+<meta name="description" content="Куда сходить в Ереване после работы и куда съездить на выходных, с учётом времени, заката, погоды и афиши.">
+<meta name="theme-color" content="#eef0ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131a1c" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Commissioner:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <h1>Ереван по вечерам</h1>
+      <button class="iconbtn" id="installBtn" hidden>Установить</button>
+    </div>
+    <div class="strip" id="strip"></div>
+  </header>
+
+  <div class="layout">
+    <section class="mapcol">
+      <div class="mapbox">
+        <div id="map" role="application" aria-label="Карта"></div>
+        <button class="locbtn" id="locBtn" aria-label="Показать меня на карте">Где я</button>
+      </div>
+    </section>
+
+    <section class="maincol">
+      <nav class="tabs" id="tabs" role="tablist"></nav>
+      <div id="view"></div>
+    </section>
+  </div>
+
+  <footer class="foot">
+    Карта © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
+    Погода: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Фото: Wikimedia Commons, авторы указаны в карточках.
+    Часы работы и цены меняются, перед поездкой проверяйте.
+  </footer>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="panel" id="panel" hidden aria-label="Карточка места"></aside>
+<div class="toast" id="toast" hidden></div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
