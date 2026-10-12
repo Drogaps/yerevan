@@ -1,0 +1,980 @@
+{
+ "updated": "2026-10-12",
+ "items": {
+  "f_ost": {
+   "google": [
+    4.2,
+    356
+   ],
+   "yandex": [
+    5.0,
+    957
+   ],
+   "gis": [
+    4.8,
+    28
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085805392"
+  },
+  "f_tavern_yerevan": {
+   "google": [
+    4.5,
+    3739
+   ],
+   "yandex": [
+    5.0,
+    3491
+   ],
+   "gis": [
+    4.8,
+    124
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084529849"
+  },
+  "f_old_jrvezh": {
+   "google": [
+    4.8,
+    262
+   ],
+   "yandex": [
+    5.0,
+    489
+   ],
+   "gis": null,
+   "gis_url": null
+  },
+  "f_kavkazskaya_plennitsa": {
+   "google": [
+    4.3,
+    1803
+   ],
+   "yandex": [
+    5.0,
+    6690
+   ],
+   "gis": [
+    4.8,
+    169
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084532048"
+  },
+  "f_mozzarella": {
+   "google": [
+    4.6,
+    1999
+   ],
+   "yandex": [
+    5.0,
+    32
+   ],
+   "gis": [
+    4.5,
+    26
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085331746"
+  },
+  "f_pita": {
+   "google": [
+    4.3,
+    52
+   ],
+   "yandex": [
+    4.9,
+    44
+   ],
+   "gis": [
+    5.0,
+    7
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001115205656"
+  },
+  "f_getap_pandok": {
+   "google": [
+    4.6,
+    517
+   ],
+   "yandex": [
+    5.0,
+    1255
+   ],
+   "gis": [
+    5.0,
+    25
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001093328107"
+  },
+  "f_gotcha": {
+   "google": [
+    4.8,
+    404
+   ],
+   "yandex": [
+    4.9,
+    137
+   ],
+   "gis": [
+    4.3,
+    14
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084536520"
+  },
+  "f_frank_basta": {
+   "google": [
+    4.7,
+    697
+   ],
+   "yandex": [
+    5.0,
+    1357
+   ],
+   "gis": [
+    4.7,
+    61
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085328792"
+  },
+  "f_mart": {
+   "google": [
+    4.4,
+    272
+   ],
+   "yandex": [
+    5.0,
+    983
+   ],
+   "gis": [
+    4.6,
+    24
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084537351"
+  },
+  "f_kavkaz": {
+   "google": [
+    4.1,
+    1429
+   ],
+   "yandex": [
+    5.0,
+    1717
+   ],
+   "gis": [
+    4.8,
+    52
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085622915"
+  },
+  "f_tokyooo": {
+   "google": [
+    4.4,
+    497
+   ],
+   "yandex": [
+    5.0,
+    815
+   ],
+   "gis": [
+    5.0,
+    14
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085797577"
+  },
+  "f_barbq": {
+   "google": [
+    4.3,
+    511
+   ],
+   "yandex": [
+    5.0,
+    697
+   ],
+   "gis": [
+    4.4,
+    12
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084206075"
+  },
+  "f_neko_ramen": {
+   "google": [
+    4.3,
+    76
+   ],
+   "yandex": [
+    5.0,
+    248
+   ],
+   "gis": [
+    5.0,
+    2
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001101262747"
+  },
+  "f_kebab_lab": {
+   "google": [
+    4.9,
+    31
+   ],
+   "yandex": [
+    4.9,
+    38
+   ],
+   "gis": null,
+   "gis_url": "https://2gis.am/yerevan/firm/70000001114772436"
+  },
+  "f_karmir": {
+   "google": [
+    4.8,
+    32
+   ],
+   "yandex": [
+    5.0,
+    57
+   ],
+   "gis": [
+    5.0,
+    5
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001086869289"
+  },
+  "f_kamancha": {
+   "google": [
+    4.2,
+    866
+   ],
+   "yandex": [
+    5.0,
+    2578
+   ],
+   "gis": [
+    4.8,
+    85
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084554308"
+  },
+  "f_ktoor": {
+   "google": [
+    4.1,
+    537
+   ],
+   "yandex": [
+    5.0,
+    2101
+   ],
+   "gis": [
+    4.8,
+    38
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084280912"
+  },
+  "f_dolmama": {
+   "google": [
+    4.2,
+    877
+   ],
+   "yandex": [
+    4.9,
+    611
+   ],
+   "gis": [
+    4.7,
+    25
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084451284"
+  },
+  "f_karas": {
+   "google": [
+    4.0,
+    635
+   ],
+   "yandex": [
+    4.9,
+    760
+   ],
+   "gis": [
+    4.6,
+    28
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084258581"
+  },
+  "f_grill_am": {
+   "google": [
+    4.1,
+    59
+   ],
+   "yandex": [
+    4.6,
+    253
+   ],
+   "gis": null,
+   "gis_url": "https://2gis.am/yerevan/firm/70000001088242667"
+  },
+  "f_artashi_mot": {
+   "google": [
+    4.1,
+    692
+   ],
+   "yandex": [
+    4.9,
+    1122
+   ],
+   "gis": [
+    5.0,
+    5
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001112364531"
+  },
+  "f_tun_lahmajo": {
+   "google": [
+    4.1,
+    2121
+   ],
+   "yandex": [
+    5.0,
+    6304
+   ],
+   "gis": [
+    4.8,
+    25
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001102637799"
+  },
+  "f_anteb": {
+   "google": [
+    4.5,
+    1085
+   ],
+   "yandex": [
+    5.0,
+    264
+   ],
+   "gis": [
+    5.0,
+    6
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084447027"
+  },
+  "f_elies_lahmajun": {
+   "google": [
+    4.9,
+    933
+   ],
+   "yandex": [
+    4.9,
+    92
+   ],
+   "gis": [
+    5.0,
+    2
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001094204275"
+  },
+  "f_lahmajun_gaidz": {
+   "google": [
+    4.9,
+    914
+   ],
+   "yandex": [
+    5.0,
+    177
+   ],
+   "gis": [
+    5.0,
+    8
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085769621"
+  },
+  "f_mer_taghe": {
+   "google": [
+    4.5,
+    438
+   ],
+   "yandex": [
+    5.0,
+    264
+   ],
+   "gis": [
+    5.0,
+    2
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084201927"
+  },
+  "f_tumanyan_khinkali": {
+   "google": [
+    3.9,
+    1294
+   ],
+   "yandex": [
+    5.0,
+    2529
+   ],
+   "gis": [
+    4.6,
+    71
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084215562"
+  },
+  "f_lali": {
+   "google": [
+    4.5,
+    328
+   ],
+   "yandex": [
+    5.0,
+    922
+   ],
+   "gis": [
+    4.9,
+    30
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085329334"
+  },
+  "f_golden_khinkali": {
+   "google": [
+    4.1,
+    228
+   ],
+   "yandex": [
+    5.0,
+    256
+   ],
+   "gis": [
+    4.7,
+    28
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001098577823"
+  },
+  "f_puri": {
+   "google": [
+    5.0,
+    2
+   ],
+   "yandex": [
+    4.9,
+    767
+   ],
+   "gis": null,
+   "gis_url": null
+  },
+  "f_genatsvale": {
+   "google": [
+    4.5,
+    333
+   ],
+   "yandex": [
+    4.8,
+    764
+   ],
+   "gis": [
+    4.3,
+    20
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001089534523"
+  },
+  "f_taverna_gata": {
+   "google": [
+    4.7,
+    1515
+   ],
+   "yandex": [
+    5.0,
+    1503
+   ],
+   "gis": [
+    4.5,
+    52
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085763915"
+  },
+  "f_dalan": {
+   "google": [
+    4.5,
+    1317
+   ],
+   "yandex": [
+    5.0,
+    312
+   ],
+   "gis": [
+    4.9,
+    27
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084457335"
+  },
+  "f_katsin": {
+   "google": [
+    4.3,
+    699
+   ],
+   "yandex": [
+    5.0,
+    1774
+   ],
+   "gis": [
+    5.0,
+    36
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084450903"
+  },
+  "f_napoletana": {
+   "google": [
+    4.5,
+    363
+   ],
+   "yandex": [
+    5.0,
+    444
+   ],
+   "gis": [
+    4.9,
+    10
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084484503"
+  },
+  "f_pizza_ria": {
+   "google": [
+    4.3,
+    129
+   ],
+   "yandex": [
+    5.0,
+    145
+   ],
+   "gis": null,
+   "gis_url": "https://2gis.am/yerevan/firm/70000001093615621"
+  },
+  "f_tumanyan_shaurma": {
+   "google": [
+    3.7,
+    833
+   ],
+   "yandex": [
+    4.8,
+    1089
+   ],
+   "gis": [
+    4.5,
+    37
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084316366"
+  },
+  "f_mr_gyros": {
+   "google": [
+    4.1,
+    40
+   ],
+   "yandex": [
+    4.8,
+    119
+   ],
+   "gis": [
+    5.0,
+    4
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001089782865"
+  },
+  "f_evn_diner": {
+   "google": [
+    4.7,
+    188
+   ],
+   "yandex": [
+    4.9,
+    117
+   ],
+   "gis": null,
+   "gis_url": "https://2gis.am/yerevan/firm/70000001090743312"
+  },
+  "f_black_angus": {
+   "google": [
+    4.6,
+    989
+   ],
+   "yandex": [
+    5.0,
+    440
+   ],
+   "gis": [
+    5.0,
+    12
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084413421"
+  },
+  "f_pit_stop": {
+   "google": [
+    4.1,
+    450
+   ],
+   "yandex": [
+    4.9,
+    792
+   ],
+   "gis": null,
+   "gis_url": null
+  },
+  "f_forest_burger": {
+   "google": [
+    4.9,
+    73
+   ],
+   "yandex": [
+    5.0,
+    248
+   ],
+   "gis": [
+    5.0,
+    8
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001090462936"
+  },
+  "f_ramen_ten": {
+   "google": [
+    4.7,
+    1100
+   ],
+   "yandex": [
+    5.0,
+    1638
+   ],
+   "gis": [
+    5.0,
+    20
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084412962"
+  },
+  "f_mao": {
+   "google": [
+    4.3,
+    208
+   ],
+   "yandex": [
+    5.0,
+    584
+   ],
+   "gis": [
+    3.6,
+    6
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001087911023"
+  },
+  "f_abu_hagop": {
+   "google": [
+    4.2,
+    377
+   ],
+   "yandex": [
+    5.0,
+    337
+   ],
+   "gis": [
+    5.0,
+    4
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084088324"
+  },
+  "f_derian": {
+   "google": [
+    4.8,
+    1209
+   ],
+   "yandex": [
+    5.0,
+    129
+   ],
+   "gis": null,
+   "gis_url": "https://2gis.am/yerevan/firm/70000001090668476"
+  },
+  "f_zeituna": {
+   "google": [
+    4.4,
+    980
+   ],
+   "yandex": [
+    4.9,
+    601
+   ],
+   "gis": [
+    4.7,
+    11
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084134194"
+  },
+  "f_smoking_chef": {
+   "google": [
+    4.6,
+    507
+   ],
+   "yandex": [
+    5.0,
+    514
+   ],
+   "gis": [
+    5.0,
+    6
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084005821"
+  },
+  "f_el_torro": {
+   "google": [
+    3.9,
+    114
+   ],
+   "yandex": [
+    5.0,
+    285
+   ],
+   "gis": [
+    3.7,
+    6
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085769209"
+  },
+  "f_fein": {
+   "google": [
+    4.2,
+    327
+   ],
+   "yandex": [
+    5.0,
+    410
+   ],
+   "gis": [
+    4.9,
+    104
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001102637803"
+  },
+  "f_lumen": {
+   "google": [
+    4.7,
+    552
+   ],
+   "yandex": [
+    5.0,
+    686
+   ],
+   "gis": [
+    4.9,
+    18
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084280447"
+  },
+  "f_afrolab_roastery": {
+   "google": [
+    4.5,
+    530
+   ],
+   "yandex": [
+    5.0,
+    470
+   ],
+   "gis": [
+    5.0,
+    13
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084114032"
+  },
+  "f_ground_zero": {
+   "google": [
+    4.2,
+    225
+   ],
+   "yandex": [
+    5.0,
+    474
+   ],
+   "gis": [
+    5.0,
+    9
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001083990324"
+  },
+  "f_crumbs": {
+   "google": [
+    4.6,
+    438
+   ],
+   "yandex": [
+    4.9,
+    188
+   ],
+   "gis": null,
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084151059"
+  },
+  "f_grand_candy": {
+   "google": [
+    4.7,
+    47
+   ],
+   "yandex": [
+    5.0,
+    225
+   ],
+   "gis": [
+    4.3,
+    3
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084307517"
+  },
+  "f_wine_republic": {
+   "google": [
+    4.5,
+    581
+   ],
+   "yandex": [
+    5.0,
+    588
+   ],
+   "gis": [
+    4.5,
+    11
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084422290"
+  },
+  "f_decant": {
+   "google": [
+    4.8,
+    107
+   ],
+   "yandex": [
+    5.0,
+    162
+   ],
+   "gis": [
+    5.0,
+    15
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001086717721"
+  },
+  "f_tapastan": {
+   "google": [
+    4.6,
+    264
+   ],
+   "yandex": [
+    5.0,
+    267
+   ],
+   "gis": [
+    5.0,
+    4
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085768426"
+  },
+  "f_dors": {
+   "google": [
+    4.4,
+    386
+   ],
+   "yandex": [
+    5.0,
+    714
+   ],
+   "gis": [
+    4.6,
+    17
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084458853"
+  },
+  "f_beer_academy": {
+   "google": [
+    4.4,
+    408
+   ],
+   "yandex": [
+    4.9,
+    560
+   ],
+   "gis": [
+    4.1,
+    18
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001086719940"
+  },
+  "c_lavash": {
+   "google": [
+    4.5,
+    5262
+   ],
+   "yandex": [
+    5.0,
+    5135
+   ],
+   "gis": [
+    4.9,
+    204
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084246718"
+  },
+  "c_sherep": {
+   "google": [
+    4.6,
+    2604
+   ],
+   "yandex": [
+    5.0,
+    4427
+   ],
+   "gis": [
+    4.9,
+    144
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001086735447"
+  },
+  "c_dargett": {
+   "google": [
+    4.6,
+    1361
+   ],
+   "yandex": [
+    5.0,
+    1648
+   ],
+   "gis": [
+    4.7,
+    32
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084050134"
+  },
+  "c_lahmajo": {
+   "google": [
+    4.6,
+    71
+   ],
+   "yandex": null,
+   "gis": [
+    5.0,
+    5
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001084562725"
+  },
+  "c_invino": {
+   "google": [
+    4.7,
+    431
+   ],
+   "yandex": [
+    5.0,
+    953
+   ],
+   "gis": [
+    5.0,
+    21
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001085769015"
+  },
+  "redbr": {
+   "google": [
+    4.6,
+    517
+   ],
+   "yandex": [
+    5.0,
+    1255
+   ],
+   "gis": [
+    5.0,
+    25
+   ],
+   "gis_url": "https://2gis.am/yerevan/firm/70000001093328107"
+  }
+ }
+}
