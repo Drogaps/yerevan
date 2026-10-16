@@ -130,7 +130,8 @@ async function loadWeather(){
   const url = "https://api.open-meteo.com/v1/forecast?latitude=" + WX_PTS.map(p => p[1]).join(",") + "&longitude=" + WX_PTS.map(p => p[2]).join(",")
     + "&current=temperature_2m,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code,cloud_cover,visibility,precipitation_probability,wind_speed_10m,snowfall&timezone=Asia%2FYerevan&forecast_days=7";
   try {
-    const r = await fetch(url); if (!r.ok) throw new Error(r.status);
+    const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 8000);
+    const r = await fetch(url, {signal: ctl.signal}); clearTimeout(to); if (!r.ok) throw new Error(r.status);
     const arr = await r.json(); const data = {};
     WX_PTS.forEach((p, i) => data[p[0]] = arr[i]);
     S.weather = data; store.set("y.wx", {at: Date.now(), data});
@@ -1133,7 +1134,7 @@ function importFromHash(){
   } catch(e){ setTimeout(() => toast("Ссылка повреждена"), 300); }
   history.replaceState(null, "", location.pathname);
 }
-async function loadJson(u){ try { const r = await fetch(u, {cache: "no-cache"}); return r.ok ? await r.json() : null; } catch(e){ return null; } }
+async function loadJson(u){ try { const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 15000); const r = await fetch(u, {cache: "no-cache", signal: ctl.signal}); clearTimeout(to); return r.ok ? await r.json() : null; } catch(e){ return null; } }
 async function loadExtra(){
   const [fu, ft, cx, dj, rj] = await Promise.all([loadJson("data/food_user.json"), loadJson("data/food_top.json"), loadJson("data/city_extra.json"), loadJson("data/dishes.json"), loadJson("data/ratings.json")]);
   DISH_IMG = dj || {};
@@ -1171,8 +1172,8 @@ function addPlace(x){
   if (x.cat === "music" || x.cat === "culture") INDOOR.add(x.id);
 }
 async function loadRoutes(){
-  const files = await Promise.all(["data/routes_city.json", "data/routes_trips.json"].map(loadJson));
-  loadJson("data/trips_meta.json").then(m => { if (m && m.routes){ TRIPS_META = Object.assign({}, TRIPS_META, m, {loaded: true}); renderTabs(); if (S.tab === "trips" || S.tab === "wk") renderView(); } });
+  const [files, m] = await Promise.all([Promise.all(["data/routes_city.json", "data/routes_trips.json"].map(loadJson)), loadJson("data/trips_meta.json")]);
+  if (m && m.routes) TRIPS_META = Object.assign({}, TRIPS_META, m, {loaded: true});
   files.forEach(f => { if (!f) return; (f.places || []).forEach(addPlace);
     (f.routes || []).forEach(r => { if (r && r.id && r.stops && !R.find(x => x.id === r.id)) R.push(r); }); });
 }
@@ -1195,6 +1196,9 @@ window.addEventListener("hashchange", () => { if (/^#(trip|wk)/.test(location.ha
 initMap();
 $("locBtn").addEventListener("click", () => startGeo(true));
 render();
-Promise.all([loadEvents(), loadCinema(), loadWeather(), loadExtra().then(loadRoutes)]).then(() => { drawPlaces(); render(); });
+// каждый источник рисуем по готовности: медленная погода или афиша не должны держать маршруты
+const safe = f => f().catch(err => console.warn("load failed", err));
+safe(() => loadExtra().catch(() => {}).then(loadRoutes)).then(() => { drawPlaces(); render(); });
+Promise.allSettled([loadEvents(), loadCinema(), loadWeather()]).then(() => { drawPlaces(); render(); });
 if (store.get("y.geoOn", false)) startGeo(false);
 setInterval(() => { renderStrip(); if (S.tab === "now" && panel.hidden && document.visibilityState === "visible" && !document.activeElement?.matches("input,select")) renderNow(); }, 5*60*1000);
