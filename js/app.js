@@ -724,12 +724,16 @@ function todayChip(k){
 function routeItems(r, opts = {}){
   let i = 0;
   return r.stops.map(s => {
-    if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4></div></li>`;
+    if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4>${stopExtras(s)}</div></li>`;
     i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices ? (s.price || (INFO[s.p] || {}).price) : null;
     const pv = pr ? priceNum(pr) : null;
     const price = pr && pv !== 0 ? `<span class="price" title="${esc(pr)}">${pv ? `≈ ${amd(pv)}` : esc(pr.length > 28 ? pr.slice(0, 26).trim() + "…" : pr)}</span>` : "";
-    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${price}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}${s.acc ? `<p class="acc"><b>Александру:</b> ${s.acc}</p>` : ""}</div></li>`;
+    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4>${s.must ? `<span class="must">обязательно</span>` : s.skip ? `<span class="skip">${esc(s.skip)}</span>` : ""}<button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${price}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}${s.acc ? `<p class="acc"><b>Александру:</b> ${s.acc}</p>` : ""}${s.cutoff ? `<p class="cutoff">${s.cutoff}</p>` : ""}${stopExtras(s)}</div></li>`;
   }).join("");
+}
+function stopExtras(s){
+  if (!(s.extra || []).length) return "";
+  return `<details class="sx"><summary>＋ по желанию здесь: ${s.extra.map(x => esc(x.h)).join(", ")}</summary><ul>${s.extra.map(x => `<li><b>${x.p && P[x.p] ? `<button class="plink" data-open="${x.p}">${esc(x.h)}</button>` : esc(x.h)}</b>${x.cost ? ` <span class="muted">${esc(x.cost)}</span>` : ""}<p>${x.t}</p>${x.acc ? `<p class="acc sm"><b>Александру:</b> ${esc(x.acc)}</p>` : ""}</li>`).join("")}</ul></details>`;
 }
 function routeDetail(r){
   const items = routeItems(r);
@@ -833,15 +837,27 @@ function renderWeekend(){
   const rs = (f.ids || []).map(id => R.find(x => x.id === id)).filter(Boolean);
   if (!rs.length){ view().innerHTML = `<p class="muted">Загружаю маршруты…</p>`; return; }
   const r = rs.find(x => x.id === S.wk) || rs[0]; S.wk = r.id;
-  const lbl = (f.labels || {})[r.id];
-  view().innerHTML = `<div class="wkhead"><h2>${esc(f.title)}</h2>${f.lead ? `<p>${esc(f.lead)}</p>` : ""}</div>
+  view().innerHTML = `<div class="wkhead"><h2>${esc(f.title)}</h2>
+      ${(f.program || []).length ? `<ul class="wkprog">${f.program.map(x => `<li><b>${esc(x.day)}, ${esc(x.time)}.</b> ${esc(x.what)}</li>`).join("")}</ul>` : ""}</div>
     <div class="wkdays" role="tablist">${rs.map(x => { const l = (f.labels || {})[x.id] || {}; return `<button role="tab" data-wk="${x.id}" aria-selected="${x.id === r.id}"><b>${esc(l.day || x.title)}</b><small>${esc(l.sub || x.time)}</small></button>`; }).join("")}</div>
-    ${(f.todo || []).length ? `<details class="wktodo"><summary>Что сделать до выезда</summary><ul>${f.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ul></details>` : ""}
-    ${tripDetail(r).replace('class="detail"', 'class="detail wkd"')}`;
+    ${wkDetail(r)}`;
   view().querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { S.wk = b.dataset.wk; store.set("y.wk", S.wk); renderWeekend(); window.scrollTo({top: Math.max(0, $("tabs").offsetTop - 4), behavior: "smooth"}); });
-  view().querySelectorAll(".series [data-trip]").forEach(b => b.onclick = () => { S.trip = b.dataset.trip; goTab("trips"); });
   bindTripDetail(r, renderWeekend, "wk=" + r.id);
   bindCommon();
+}
+function wkDetail(r){
+  const sp = tripSpan(r), meta = tripMeta(r);
+  const kf = [["Выезд", sp.start], ["Дома", sp.end], ["За рулём", meta.drive_min ? durTxt(meta.drive_min) : "—"], ["Расстояние", r.km]];
+  if (r.return_by) kf.push(["Машину сдать", r.return_by]);
+  return `<div class="detail wkd" id="rdetail">
+    <div class="kf">${kf.map(([h, v]) => `<div><small>${h}</small><b>${esc(v)}</b></div>`).join("")}</div>
+    ${(r.prep || []).length ? `<div class="prep"><h3>Перед выездом</h3><ul>${r.prep.map(t => `<li>${t}</li>`).join("")}</ul></div>` : ""}
+    <h2>${esc(r.title)}</h2>${r.why ? `<p class="why">${r.why}</p>` : ""}
+    <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
+    <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · ＋ дополнительно по желанию · <span class="cutoff-i"></span>до скольки надо уехать</p>
+    <ol class="tl">${routeItems(r, {prices: true})}</ol>
+    ${tripPrices(r)}${tripEat(r)}${tripFuel(r)}
+    ${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
 }
 function tripFeatured(){
   const f = TRIPS_META.featured; if (!wkActive()) return "";
@@ -859,7 +875,7 @@ function tripDetail(r){
   const tour = meta.tour;
   return `<div class="detail" id="rdetail"><h2>${esc(r.title)}</h2><p class="why">${r.why}</p>
     <div class="kf">${kf.map(([h, v]) => `<div><small>${h}</small><b>${esc(v)}</b></div>`).join("")}</div>
-    <div class="actions"><button class="btn primary" id="t-toplan">Открыть в «Плане» на сегодня</button><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
+    <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     ${tripPrices(r)}
     <ol class="tl">${routeItems(r, {prices: true})}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}
     ${tripEat(r)}${tripFuel(r)}${tripExtras(r)}

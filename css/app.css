@@ -363,3 +363,25 @@ nav.tabs button svg{width:18px;height:18px}
 .poi.fuel{border-color:var(--warn)}
 .tl .acc{font-size:13.5px;background:var(--water-soft);border-radius:7px;padding:5px 8px;margin-top:5px}
 .tl .acc b{color:var(--water)}
+.wkprog{list-style:none;margin:4px 0 10px;padding:0;font-size:14px}
+.wkprog li{padding:3px 0}
+.prep{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:10px 14px;margin:0 0 12px}
+.prep h3{margin:0 0 6px;font-size:15px;font-weight:600}
+.prep ul{margin:0;padding-left:18px;font-size:14px}
+.prep li{padding:2px 0}
+.wkd>h2{margin-top:6px}
+.must,.skip{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:1px 7px;margin-right:6px;vertical-align:2px}
+.must{background:var(--accent);color:#fff}
+@media (prefers-color-scheme: dark){.must{color:#1a0d10}}
+.skip{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.legend{font-size:12.5px;color:var(--muted);margin:4px 0 12px}
+.tl .cutoff{font-size:13.5px;background:var(--warn-soft);border-radius:7px;padding:5px 8px;margin-top:5px}
+.tl .cutoff::before,.cutoff-i{content:"⏱ ";}
+.sx{margin-top:6px;font-size:13.5px;border:1px dashed var(--line);border-radius:8px;padding:5px 8px}
+.sx summary{cursor:pointer;color:var(--accent);font-weight:500}
+.sx ul{list-style:none;margin:6px 0 0;padding:0}
+.sx li{padding:4px 0;border-top:1px solid var(--line)}
+.sx li p{margin:2px 0}
+.tl .acc.sm{font-size:12.5px;padding:3px 7px}
+.tl .sx li{display:block;padding:6px 0 4px;grid-template-columns:none}
+.tl .sx li::before{display:none}
