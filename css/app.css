@@ -346,3 +346,20 @@ nav.tabs button svg{width:18px;height:18px}
 .detail.wkd{margin-top:6px;border-top:0;padding-top:0}
 .featlink{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;cursor:pointer;color:var(--fg);font:inherit}
 .featlink span{font-size:13.5px;color:var(--muted)}
+.prices,.pois{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
+.prices h3,.pois h3{margin:0 0 8px;font-size:15px;font-weight:600}
+.plist,.ptips,.pois ul{list-style:none;margin:0;padding:0}
+.plist li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 12px;padding:5px 0;border-bottom:1px solid var(--line);font-size:14px}
+.plist li span{color:var(--muted)}
+.ptips{margin-top:8px}
+.ptips li{font-size:13.5px;padding:3px 0 3px 14px;position:relative}
+.ptips li::before{content:"•";position:absolute;left:2px;color:var(--accent)}
+.ptour{font-size:13.5px;margin:8px 0 0;color:var(--muted)}
+.pois li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.pois li:last-child,.plist li:last-child{border-bottom:0}
+.pois p{margin:2px 0 0;font-size:13.5px}
+.pi{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;background:var(--bg)}
+.poi{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;background:var(--panel);border:1.5px solid var(--water);box-shadow:0 1px 4px rgb(0 0 0 / .25)}
+.poi.fuel{border-color:var(--warn)}
+.tl .acc{font-size:13.5px;background:var(--water-soft);border-radius:7px;padding:5px 8px;margin-top:5px}
+.tl .acc b{color:var(--water)}
