@@ -754,7 +754,7 @@ const tripList = () => R.filter(r => r.kind === "day" && !tripMeta(r).hide && (t
 const tripKm = r => { const m = String(r.km).replace(/\s/g, "").match(/(\d+)/); return m ? +m[1] : 0; };
 const tripSpan = r => { const m = String(r.time).match(/(\d{1,2}:\d{2})\D+(\d{1,2}:\d{2})/); return m ? {start: m[1], end: m[2], min: toMin(m[2]) - toMin(m[1])} : {start: "", end: "", min: 0}; };
 const tripStops = r => r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
-const fuelCfg = () => ({cons: +store.get("y.tcons", TRIPS_META.fuel.consumption) || 8, price: +store.get("y.tfuel", TRIPS_META.fuel.price) || 560, people: Math.max(1, +store.get("y.tppl", TRIPS_META.fuel.people) || 2)});
+const fuelCfg = () => ({cons: +store.get("y.tcons", TRIPS_META.fuel.consumption) || 8, price: +store.get("y.tfuel", TRIPS_META.fuel.price) || 560, people: Math.max(1, +store.get("y.tppl", TRIPS_META.fuel.people) || 2), cars: Math.max(1, +store.get("y.tcars", 1) || 1)});
 const amd = n => n == null ? "—" : `${Math.round(n).toLocaleString("ru-RU")} ֏`;
 // "1500 драм (иностранцы)…" -> 1500; "бесплатно" -> 0; непонятно -> null
 function priceNum(s){
@@ -768,7 +768,7 @@ function priceNum(s){
 }
 function tripBudget(r){
   const km = tripKm(r), f = fuelCfg(), meta = tripMeta(r);
-  const fuel = Math.round(km / 100 * f.cons * f.price / 100) * 100;
+  const fuel = Math.round(km / 100 * f.cons * f.price * f.cars / 100) * 100;
   // цена из шага маршрута важнее цены из карточки места (например, канатка в одну сторону)
   const seen = new Set();
   const tickets = r.stops.filter(s => s.p && P[s.p] && !seen.has(s.p) && seen.add(s.p)).map(s => { const pr = s.price || (INFO[s.p] || {}).price; return {k: s.p, n: P[s.p].n, s: pr, v: priceNum(pr)}; }).filter(t => t.s && t.v !== 0);
@@ -800,6 +800,7 @@ function renderTrips(){
   S.tripShown = r && r.id;
   const tags = [...new Set(tripList().flatMap(x => tripMeta(x).tags || []))].sort((a, b) => a.localeCompare(b, "ru"));
   view().innerHTML = `
+    ${tripFeatured()}
     <p class="tintro">Поездки на своей машине на один день: выезд утром, вечером дома, без ночёвки. Время у точек примерное, бюджет считается из километража, билетов и обеда — цифры ниже можно поправить под себя.</p>
     <div class="filt">${TRIP_DIRS.map(([k, l]) => `<button data-tdir="${k}" aria-pressed="${S.tripDir === k}">${l} <span class="muted">${k === "all" ? tripList().length : counts(k)}</span></button>`).join("")}</div>
     <div class="tfilt">
@@ -817,10 +818,18 @@ function renderTrips(){
   if (r){
     $("t-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
     $("t-share")?.addEventListener("click", async () => { const u = `${location.origin}${location.pathname}#trip=${r.id}`; try { await navigator.clipboard.writeText(u); toast("Ссылка на маршрут скопирована"); } catch(e){ prompt("Ссылка на маршрут", u); } });
-    view().querySelectorAll("[data-bset]").forEach(i => i.onchange = () => { const v = +i.value; if (!(v > 0)) return; store.set({cons: "y.tcons", price: "y.tfuel", people: "y.tppl"}[i.dataset.bset], v); renderTrips(); });
+    view().querySelectorAll("[data-bset]").forEach(i => i.onchange = () => { const v = +i.value; if (!(v > 0)) return; store.set({cons: "y.tcons", price: "y.tfuel", people: "y.tppl", cars: "y.tcars"}[i.dataset.bset], v); renderTrips(); });
     const keys = tripStops(r); drawStops(["home", ...keys, "home"], {offset: 0});
   }
   bindCommon();
+}
+function tripFeatured(){
+  const f = TRIPS_META.featured; if (!f || (f.until && f.until < todayStr())) return "";
+  const rs = (f.ids || []).map(id => R.find(x => x.id === id)).filter(Boolean); if (!rs.length) return "";
+  return `<div class="feat"><h3>${esc(f.title)}</h3>${f.lead ? `<p>${esc(f.lead)}</p>` : ""}
+    <div class="rgrid">${rs.map(tripCard).join("")}</div>
+    ${(f.todo || []).length ? `<details><summary>Что сделать до выезда</summary><ul>${f.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ul></details>` : ""}
+    ${f.backup ? `<p class="muted" style="font-size:13px">${esc(f.backup)}</p>` : ""}</div>`;
 }
 function tripDetail(r){
   const sp = tripSpan(r), b = tripBudget(r), meta = tripMeta(r), n = tripStops(r).length;
@@ -832,13 +841,14 @@ function tripDetail(r){
     <div class="actions"><button class="btn primary" id="t-toplan">Открыть в «Плане» на сегодня</button><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     <div class="budget"><h3>Бюджет на ${b.people} ${b.people === 1 ? "человека" : b.people < 5 ? "человек" : "человек"}</h3>
       <table>
-        <tr><td>Бензин на машину<div class="sub">${b.km} км × ${b.cfg.cons} л/100 км × ${b.cfg.price} ֏/л</div></td><td class="v">${amd(b.fuel)}</td></tr>
+        <tr><td>Бензин${b.cfg.cars > 1 ? ` на ${b.cfg.cars} машины` : " на машину"}<div class="sub">${b.km} км × ${b.cfg.cons} л/100 км × ${b.cfg.price} ֏/л${b.cfg.cars > 1 ? ` × ${b.cfg.cars}` : ""}</div></td><td class="v">${amd(b.fuel)}</td></tr>
         ${b.tickets.map(t => `<tr><td>${esc(t.n)}<div class="sub">${esc(t.s)}</div></td><td class="v ${t.v == null ? "unk" : ""}">${t.v == null ? "?" : `${amd(t.v)} × ${b.people}`}</td></tr>`).join("")}
         <tr><td>Еда в дороге<div class="sub">обед и кофе, примерно на человека</div></td><td class="v">${amd(b.food)} × ${b.people}</td></tr>
         <tr class="tot"><td>Итого${b.unknown ? ' <span class="sub">без позиций со знаком «?»</span>' : ""}</td><td class="v">≈ ${amd(b.total)}</td></tr>
       </table>
       <div class="bset"><span>Пересчитать:</span>
-        <label>людей <input type="number" min="1" max="7" step="1" value="${b.cfg.people}" data-bset="people"></label>
+        <label>людей <input type="number" min="1" max="20" step="1" value="${b.cfg.people}" data-bset="people"></label>
+        <label>машин <input type="number" min="1" max="5" step="1" value="${b.cfg.cars}" data-bset="cars"></label>
         <label>расход, л/100 км <input type="number" min="3" max="25" step="0.5" value="${b.cfg.cons}" data-bset="cons"></label>
         <label>бензин, ֏/л <input type="number" min="100" max="2000" step="10" value="${b.cfg.price}" data-bset="price"></label>
       </div>
