@@ -276,7 +276,7 @@ function drawStops(keys, opts = {}){
   const seen = {};
   keys.forEach((k, i) => { if (!P[k]) return; (seen[k] = seen[k] || []).push(i + (opts.offset ?? 1)); });
   Object.entries(seen).forEach(([k, ns]) => {
-    if (k === "home" || k === "me"){ if (k === "home") routeLayer.addLayer(L.marker(P[k].ll, {icon: numIcon("Д"), title: P[k].n})); return; }
+    if (k === "home" || k === "me" || k === opts.start){ if (k !== "me") routeLayer.addLayer(L.marker(P[k].ll, {icon: numIcon(k === "home" ? "Д" : "С"), title: P[k].n})); return; }
     const m = L.marker(P[k].ll, {icon: numIcon(opts.noNumbers ? "•" : ns.join("·"), opts.hl === k), title: P[k].n, riseOnHover: true});
     m.bindTooltip(P[k].n, {direction: "top", offset: [0,-12]}); m.on("click", () => openPlace(k)); routeLayer.addLayer(m);
   });
@@ -741,7 +741,7 @@ function routeGmaps(r){
   const pts = r.stops.filter(s => s.p && P[s.p]).map(s => P[s.p].ll.join(",")).filter((p, i, a) => p !== a[i-1]);
   const walk = r.kind === "ev" && !r.stops.some(s => s.drive);
   if (walk) return `https://www.google.com/maps/dir/?api=1&origin=${pts[0]}&destination=${pts[pts.length-1]}${pts.length > 2 ? `&waypoints=${enc(pts.slice(1,-1).join("|"))}` : ""}&travelmode=walking`;
-  const home = P.home.ll.join(",");
+  const home = (r.start && P[r.start] ? P[r.start] : P.home).ll.join(",");
   const dest = r.kind === "ovn" ? pts[pts.length-1] : home;
   const wps = (r.kind === "ovn" ? pts.slice(0,-1) : pts).slice(0, 9).join("|");
   return `https://www.google.com/maps/dir/?api=1&origin=${home}&destination=${dest}&waypoints=${enc(wps)}&travelmode=driving`;
@@ -825,7 +825,7 @@ function bindTripDetail(r, rerender, hash){
   $("t-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
   $("t-share")?.addEventListener("click", async () => { const u = `${location.origin}${location.pathname}#${hash || "trip=" + r.id}`; try { await navigator.clipboard.writeText(u); toast("Ссылка скопирована"); } catch(e){ prompt("Ссылка", u); } });
   view().querySelectorAll("[data-bset]").forEach(i => i.onchange = () => { const v = +i.value; if (!(v > 0)) return; store.set({cons: "y.tcons", price: "y.tfuel", people: "y.tppl", cars: "y.tcars"}[i.dataset.bset], v); rerender(); });
-  const keys = tripStops(r); drawStops(r.walk ? keys : ["home", ...keys, "home"], {offset: r.walk ? 1 : 0});
+  const keys = tripStops(r).filter(k => k !== r.start); const st = r.start && P[r.start] ? r.start : "home"; drawStops(r.walk ? keys : [st, ...keys, st], {offset: r.walk ? 1 : 0, start: st});
 }
 // ---------- отдельная вкладка под конкретные выходные ----------
 const wkActive = () => { const f = TRIPS_META.featured; return !!(f && f.ids && (!f.until || f.until >= todayStr())); };
@@ -888,7 +888,7 @@ function tripSeries(r){
   return `<div class="series"><h3>${esc(ser.title)}</h3>${ser.note ? `<p class="muted">${esc(ser.note)}</p>` : ""}<ol>${items}</ol></div>`;
 }
 function routeYmaps(r){
-  const home = P.home.ll.join(","); const pts = tripStops(r).map(k => P[k].ll.join(","));
+  const home = (r.start && P[r.start] ? P[r.start] : P.home).ll.join(","); const pts = tripStops(r).filter(k => k !== r.start).map(k => P[k].ll.join(","));
   return `https://yandex.ru/maps/?rtext=${[home, ...pts, home].join("~")}&rtt=auto`;
 }
 
