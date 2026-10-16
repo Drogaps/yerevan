@@ -31,6 +31,7 @@ const S = {
   tab: store.get("y.tab", "now"),
   routeKind: store.get("y.rkind", "ev"),
   route: store.get("y.route", null),
+  trip: store.get("y.trip", null), tripDir: "all", tripLen: "all", tripTag: "all", tripSort: store.get("y.tsort", "home"),
   favs: store.get("y.favs", {}),          // k -> "want" | "been"
   events: [], eventsUpdated: null,
   weather: null,
@@ -335,12 +336,13 @@ function placeLinks(k){
 const yandexPt = ll => `https://yandex.ru/maps/?pt=${ll[1]},${ll[0]}&z=16&l=map`;
 
 // ---------- tabs ----------
-const TABS = [["now","Сейчас"],["food","Еда"],["plan","План"],["routes","Маршруты"],["afisha","Афиша"],["places","Места"],["info","Полезно"]];
+const TABS = [["now","Сейчас"],["food","Еда"],["plan","План"],["routes","Маршруты"],["trips","Выходной"],["afisha","Афиша"],["places","Места"],["info","Полезно"]];
 const ICONS = {
   now: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
   food: '<path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 2-2.5 5-2.5 8h3V21M16.5 3v8"/>',
   plan: '<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/>',
   routes: '<circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/>',
+  trips: '<path d="M3 13l2-5a2 2 0 0 1 1.9-1.3h10.2A2 2 0 0 1 19 8l2 5v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h18"/><circle cx="7.5" cy="15.5" r=".8"/><circle cx="16.5" cy="15.5" r=".8"/>',
   afisha: '<path d="M4 8V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a2 2 0 0 0 0 4v2a2 2 0 0 0 0 4v0a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a2 2 0 0 0 0-4V12a2 2 0 0 0 0-4z"/><path d="M10 5v14" stroke-dasharray="2 2"/>',
   places: '<path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
@@ -363,7 +365,7 @@ function renderStrip(){
 function render(){ renderTabs(); renderStrip(); renderView(); }
 function renderView(){
   evLayer.clearLayers();
-  ({now: renderNow, food: renderFood, plan: renderPlan, routes: renderRoutes, afisha: renderAfisha, places: renderPlaces, info: renderInfo}[S.tab] || renderNow)();
+  ({now: renderNow, food: renderFood, plan: renderPlan, routes: renderRoutes, trips: renderTrips, afisha: renderAfisha, places: renderPlaces, info: renderInfo}[S.tab] || renderNow)();
 }
 const view = () => $("view");
 const thumb = k => { const ph = (PHOTOS[k] || [])[0]; return ph ? `<img class="thumb" src="${ph.src}" alt="" loading="lazy">` : `<span class="thumb"></span>`; };
@@ -406,7 +408,7 @@ function renderNow(){
     <div class="quick">
       <button data-goto="food">${icon("food")}<span>Поесть</span></button>
       <button data-goto="afisha" data-af="today">${icon("afisha")}<span>Сегодня в афише</span></button>
-      <button data-goto="routes" data-rk="${weekday ? "ev" : "day"}">${icon("routes")}<span>${weekday ? "Маршрут на вечер" : "Выезд на день"}</span></button>
+      <button data-goto="${weekday ? "routes" : "trips"}" ${weekday ? 'data-rk="ev"' : ""}>${icon(weekday ? "routes" : "trips")}<span>${weekday ? "Маршрут на вечер" : "Выезд на день"}</span></button>
       <button data-goto="plan">${icon("plan")}<span>Мой план${plan.chain.length ? ` (${plan.chain.length})` : ""}</span></button>
     </div>
     <div class="summary">
@@ -684,11 +686,12 @@ function planGmaps(rows){
 // ---------- "Маршруты" ----------
 const KLABEL = {ev: "вечер", day: "целый день", ovn: "с ночёвкой"};
 function renderRoutes(){
+  if (S.routeKind === "day") S.routeKind = "ev";
   const list = R.filter(r => r.kind === S.routeKind);
   if (!list.find(r => r.id === S.route)) S.route = list[0] && list[0].id;
   const r = R.find(x => x.id === S.route);
   view().innerHTML = `
-    <div class="filt">${[["ev","Вечер после 17:00"],["day","Целый день"],["ovn","С ночёвкой"]].map(([k, l]) => `<button data-kind="${k}" aria-pressed="${S.routeKind === k}">${l} <span class="muted">${R.filter(x => x.kind === k).length}</span></button>`).join("")}</div>
+    <div class="filt">${[["ev","Вечер после 17:00"],["ovn","С ночёвкой"]].map(([k, l]) => `<button data-kind="${k}" aria-pressed="${S.routeKind === k}">${l} <span class="muted">${R.filter(x => x.kind === k).length}</span></button>`).join("")}<button data-goto="trips" class="muted" style="border-style:dashed">Поездки на день → «Выходной»</button></div>
     <div class="rgrid">${list.map(x => {
       const n = x.stops.filter(s => s.p).length;
       const cover = routeCover(x);
@@ -715,13 +718,18 @@ function todayChip(k){
   if (dn) out.push(dn.note);
   return out.length ? " " + chipsHtml(out) : "";
 }
-function routeDetail(r){
+function routeItems(r, opts = {}){
   let i = 0;
-  const items = r.stops.map(s => {
+  return r.stops.map(s => {
     if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4></div></li>`;
-    i++; const p = P[s.p] || {n: "…"};
-    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}</div></li>`;
+    i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices ? (INFO[s.p] || {}).price : null;
+    const pv = pr ? priceNum(pr) : null;
+    const price = pr && pv !== 0 ? `<span class="price" title="${esc(pr)}">${pv ? `≈ ${amd(pv)}` : esc(pr.length > 28 ? pr.slice(0, 26).trim() + "…" : pr)}</span>` : "";
+    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${price}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}</div></li>`;
   }).join("");
+}
+function routeDetail(r){
+  const items = routeItems(r);
   return `<div class="detail" id="rdetail"><h2>${esc(r.title)}</h2><p class="why">${r.why}</p>
     <div class="actions"><button class="btn primary" id="r-toplan">Открыть в «Плане» на сегодня</button><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a></div>
     <ol class="tl">${items}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
@@ -734,6 +742,114 @@ function routeGmaps(r){
   const dest = r.kind === "ovn" ? pts[pts.length-1] : home;
   const wps = (r.kind === "ovn" ? pts.slice(0,-1) : pts).slice(0, 9).join("|");
   return `https://www.google.com/maps/dir/?api=1&origin=${home}&destination=${dest}&waypoints=${enc(wps)}&travelmode=driving`;
+}
+
+// ---------- "Выходной": поездки на день на своей машине ----------
+let TRIPS_META = {routes: {}, fuel: {consumption: 8, price: 560, people: 2}};
+const TRIP_DIRS = [["all","Все направления"],["south","Юг"],["north","Север"],["east","Восток"],["west","Запад"]];
+const TRIP_LENS = [["all","Любая длина"],["short","до 8 ч"],["mid","8–11 ч"],["long","11 ч и больше"]];
+const TRIP_SORTS = [["home","домой пораньше"],["km","по километрам"],["cost","по бюджету"],["start","по времени выезда"]];
+const tripMeta = r => TRIPS_META.routes[r.id] || {};
+const tripList = () => R.filter(r => r.kind === "day" && !tripMeta(r).hide && (tripMeta(r).dir || !tripStops(r).every(k => inCity(k))));
+const tripKm = r => { const m = String(r.km).replace(/\s/g, "").match(/(\d+)/); return m ? +m[1] : 0; };
+const tripSpan = r => { const m = String(r.time).match(/(\d{1,2}:\d{2})\D+(\d{1,2}:\d{2})/); return m ? {start: m[1], end: m[2], min: toMin(m[2]) - toMin(m[1])} : {start: "", end: "", min: 0}; };
+const tripStops = r => r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+const fuelCfg = () => ({cons: +store.get("y.tcons", TRIPS_META.fuel.consumption) || 8, price: +store.get("y.tfuel", TRIPS_META.fuel.price) || 560, people: Math.max(1, +store.get("y.tppl", TRIPS_META.fuel.people) || 2)});
+const amd = n => n == null ? "—" : `${Math.round(n).toLocaleString("ru-RU")} ֏`;
+// "1500 драм (иностранцы)…" -> 1500; "бесплатно" -> 0; непонятно -> null
+function priceNum(s){
+  if (!s) return null; const t = String(s).toLowerCase();
+  if (/^бесплатно/.test(t)) return 0;
+  if (/[€$]|eur|usd/.test(t)) return null;
+  const c = t.replace(/\s(?=\d{3}\b)/g, "");
+  const rt = c.match(/(\d+)\s*(?:amd|драм|֏)?[^;.,]{0,20}туда[\s-]*(?:и\s*)?обратно/); // «9000 AMD туда-обратно» важнее цены в одну сторону
+  const m = rt || c.match(/(\d[\d]*)/); if (!m) return null;
+  const n = +m[1]; return n >= 100 ? n : null;
+}
+function tripBudget(r){
+  const km = tripKm(r), f = fuelCfg(), meta = tripMeta(r);
+  const fuel = Math.round(km / 100 * f.cons * f.price / 100) * 100;
+  const tickets = tripStops(r).map(k => ({k, n: P[k].n, s: (INFO[k] || {}).price, v: priceNum((INFO[k] || {}).price)})).filter(t => t.s && t.v !== 0);
+  const unknown = tickets.some(t => t.v == null);
+  const perTickets = tickets.reduce((a, t) => a + (t.v || 0), 0);
+  const food = meta.food ?? 5000;
+  const total = fuel + f.people * (perTickets + food);
+  return {km, fuel, tickets, unknown, perTickets, food, total, people: f.people, cfg: f};
+}
+function tripCard(r){
+  const sp = tripSpan(r), b = tripBudget(r), meta = tripMeta(r), cover = routeCover(r), n = tripStops(r).length;
+  const dir = TRIP_DIRS.find(d => d[0] === meta.dir);
+  return `<button class="rcard2 trip" data-trip="${r.id}" aria-pressed="${r.id === S.tripShown}">
+    <span class="rcov" ${cover ? `style="background-image:url('${cover}')"` : ""}><span class="rchips">${dir ? `<span class="chip dir">${dir[1]}</span>` : ""}${r.friends ? '<span class="chip you">для гостей</span>' : ""}${(meta.tags || []).slice(0, 2).map(t => `<span class="chip day">${esc(t)}</span>`).join("")}</span></span>
+    <span class="rbody"><b>${esc(r.title)}</b>
+      <span class="meta"><span>выезд ${sp.start}</span><span class="home">дома ${sp.end}</span><span>${esc(r.km)}</span>${meta.drive_min ? `<span>за рулём ${durTxt(meta.drive_min)}</span>` : ""}<span>${n} точ${n === 1 ? "ка" : n < 5 ? "ки" : "ек"}</span><span class="amd">≈ ${amd(b.total)}${b.unknown ? "+" : ""} на ${b.people}</span></span>
+      <span class="why muted" style="font-size:13px">${esc(firstSentence(r.why))}</span></span></button>`;
+}
+function renderTrips(){
+  let list = tripList();
+  const counts = k => tripList().filter(r => tripMeta(r).dir === k).length;
+  if (S.tripDir !== "all") list = list.filter(r => tripMeta(r).dir === S.tripDir);
+  if (S.tripLen !== "all") list = list.filter(r => { const m = tripSpan(r).min; return S.tripLen === "short" ? m <= 8*60 : S.tripLen === "mid" ? m > 8*60 && m < 11*60 : m >= 11*60; });
+  if (S.tripTag !== "all") list = list.filter(r => (tripMeta(r).tags || []).includes(S.tripTag));
+  const key = {home: r => toMin(tripSpan(r).end), km: tripKm, cost: r => tripBudget(r).total, start: r => toMin(tripSpan(r).start)}[S.tripSort] || (r => 0);
+  list = list.slice().sort((a, b) => key(a) - key(b));
+  // не затираем выбор из ссылки, пока маршруты из JSON ещё грузятся
+  const r = list.find(x => x.id === S.trip) || list[0];
+  S.tripShown = r && r.id;
+  const tags = [...new Set(tripList().flatMap(x => tripMeta(x).tags || []))].sort((a, b) => a.localeCompare(b, "ru"));
+  view().innerHTML = `
+    <p class="tintro">Поездки на своей машине на один день: выезд утром, вечером дома, без ночёвки. Время у точек примерное, бюджет считается из километража, билетов и обеда — цифры ниже можно поправить под себя.</p>
+    <div class="filt">${TRIP_DIRS.map(([k, l]) => `<button data-tdir="${k}" aria-pressed="${S.tripDir === k}">${l} <span class="muted">${k === "all" ? tripList().length : counts(k)}</span></button>`).join("")}</div>
+    <div class="tfilt">
+      <div class="filt">${TRIP_LENS.map(([k, l]) => `<button data-tlen="${k}" aria-pressed="${S.tripLen === k}">${l}</button>`).join("")}</div>
+      <label>тема <select id="ttag"><option value="all">любая</option>${tags.map(t => `<option value="${esc(t)}" ${S.tripTag === t ? "selected" : ""}>${esc(t)}</option>`).join("")}</select></label>
+      <label>сначала <select id="tsort">${TRIP_SORTS.map(([k, l]) => `<option value="${k}" ${S.tripSort === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+    </div>
+    ${list.length ? `<div class="rgrid">${list.map(tripCard).join("")}</div>` : `<p class="muted">Под такие условия маршрутов нет, снимите часть фильтров.</p>`}
+    ${r ? tripDetail(r) : ""}`;
+  view().querySelectorAll("[data-tdir]").forEach(b => b.onclick = () => { S.tripDir = b.dataset.tdir; renderTrips(); });
+  view().querySelectorAll("[data-tlen]").forEach(b => b.onclick = () => { S.tripLen = b.dataset.tlen; renderTrips(); });
+  $("ttag").onchange = e => { S.tripTag = e.target.value; renderTrips(); };
+  $("tsort").onchange = e => { S.tripSort = e.target.value; store.set("y.tsort", S.tripSort); renderTrips(); };
+  view().querySelectorAll("[data-trip]").forEach(b => b.onclick = () => { S.trip = b.dataset.trip; store.set("y.trip", S.trip); renderTrips(); $("rdetail")?.scrollIntoView({behavior: "smooth", block: "start"}); });
+  if (r){
+    $("t-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
+    $("t-share")?.addEventListener("click", async () => { const u = `${location.origin}${location.pathname}#trip=${r.id}`; try { await navigator.clipboard.writeText(u); toast("Ссылка на маршрут скопирована"); } catch(e){ prompt("Ссылка на маршрут", u); } });
+    view().querySelectorAll("[data-bset]").forEach(i => i.onchange = () => { const v = +i.value; if (!(v > 0)) return; store.set({cons: "y.tcons", price: "y.tfuel", people: "y.tppl"}[i.dataset.bset], v); renderTrips(); });
+    const keys = tripStops(r); drawStops(["home", ...keys, "home"], {offset: 0});
+  }
+  bindCommon();
+}
+function tripDetail(r){
+  const sp = tripSpan(r), b = tripBudget(r), meta = tripMeta(r), n = tripStops(r).length;
+  const dir = TRIP_DIRS.find(d => d[0] === meta.dir);
+  const kf = [["Выезд", sp.start], ["Дома", sp.end], ["В дороге всего", durTxt(sp.min)], ["За рулём", meta.drive_min ? durTxt(meta.drive_min) : "—"], ["Расстояние", r.km], ["Точек", n], ["Сложность", meta.diff || "—"], ["Машина", meta.car || "любая"], ["Сезон", meta.season || "—"], ["Направление", dir ? dir[1] : "—"]];
+  const tour = meta.tour;
+  return `<div class="detail" id="rdetail"><h2>${esc(r.title)}</h2><p class="why">${r.why}</p>
+    <div class="kf">${kf.map(([h, v]) => `<div><small>${h}</small><b>${esc(v)}</b></div>`).join("")}</div>
+    <div class="actions"><button class="btn primary" id="t-toplan">Открыть в «Плане» на сегодня</button><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
+    <div class="budget"><h3>Бюджет на ${b.people} ${b.people === 1 ? "человека" : b.people < 5 ? "человек" : "человек"}</h3>
+      <table>
+        <tr><td>Бензин на машину<div class="sub">${b.km} км × ${b.cfg.cons} л/100 км × ${b.cfg.price} ֏/л</div></td><td class="v">${amd(b.fuel)}</td></tr>
+        ${b.tickets.map(t => `<tr><td>${esc(t.n)}<div class="sub">${esc(t.s)}</div></td><td class="v ${t.v == null ? "unk" : ""}">${t.v == null ? "?" : `${amd(t.v)} × ${b.people}`}</td></tr>`).join("")}
+        <tr><td>Еда в дороге<div class="sub">обед и кофе, примерно на человека</div></td><td class="v">${amd(b.food)} × ${b.people}</td></tr>
+        <tr class="tot"><td>Итого${b.unknown ? ' <span class="sub">без позиций со знаком «?»</span>' : ""}</td><td class="v">≈ ${amd(b.total)}</td></tr>
+      </table>
+      <div class="bset"><span>Пересчитать:</span>
+        <label>людей <input type="number" min="1" max="7" step="1" value="${b.cfg.people}" data-bset="people"></label>
+        <label>расход, л/100 км <input type="number" min="3" max="25" step="0.5" value="${b.cfg.cons}" data-bset="cons"></label>
+        <label>бензин, ֏/л <input type="number" min="100" max="2000" step="10" value="${b.cfg.price}" data-bset="price"></label>
+      </div>
+      <p class="hint">Цены на билеты из карточек мест, многие не проверены — нажмите на точку в списке ниже и посмотрите источники.</p>
+    </div>
+    ${tour ? `<div class="tour"><h3>Сравнение с туром</h3><p><a href="${esc(tour.url)}" target="_blank" rel="noopener">${esc(tour.name)}</a>: ${esc(tour.dur || "")}${tour.extra ? `; ${esc(tour.extra)}` : ""}.</p>
+      <div class="vs"><div><small>Тур из Еревана</small><b>${esc(tour.price)}</b><span class="sub">транспорт и гид, без билетов</span></div><div><small>Своей машиной</small><b>≈ ${amd(b.total)} на ${b.people}</b><span class="sub">бензин, билеты и еда</span></div></div>
+      ${tour.note ? `<p>${esc(tour.note)}</p>` : ""}</div>` : ""}
+    <ol class="tl">${routeItems(r, {prices: true})}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
+}
+function routeYmaps(r){
+  const home = P.home.ll.join(","); const pts = tripStops(r).map(k => P[k].ll.join(","));
+  return `https://yandex.ru/maps/?rtext=${[home, ...pts, home].join("~")}&rtt=auto`;
 }
 
 // ---------- "Афиша" ----------
@@ -928,6 +1044,8 @@ async function shareLink(kind, obj, title){
   try { await navigator.clipboard.writeText(url); toast("Ссылка скопирована"); } catch(e){ prompt("Скопируйте ссылку", url); }
 }
 function importFromHash(){
+  const t = location.hash.match(/^#trip=([\w-]+)$/);
+  if (t){ S.tab = "trips"; S.trip = t[1]; store.set("y.tab", "trips"); store.set("y.trip", S.trip); history.replaceState(null, "", location.pathname); return; }
   const m = location.hash.match(/^#(p|f)=(.+)$/); if (!m) return;
   try {
     const o = b64d(m[2]);
@@ -975,6 +1093,7 @@ function addPlace(x){
 }
 async function loadRoutes(){
   const files = await Promise.all(["data/routes_city.json", "data/routes_trips.json"].map(loadJson));
+  loadJson("data/trips_meta.json").then(m => { if (m && m.routes){ TRIPS_META = Object.assign({}, TRIPS_META, m); if (S.tab === "trips") renderView(); } });
   files.forEach(f => { if (!f) return; (f.places || []).forEach(addPlace);
     (f.routes || []).forEach(r => { if (r && r.id && r.stops && !R.find(x => x.id === r.id)) R.push(r); }); });
 }
@@ -993,6 +1112,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.ser
 
 // ---------- boot ----------
 importFromHash();
+window.addEventListener("hashchange", () => { if (/^#trip=/.test(location.hash)){ importFromHash(); render(); } });
 initMap();
 $("locBtn").addEventListener("click", () => startGeo(true));
 render();
