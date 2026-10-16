@@ -846,6 +846,7 @@ function renderWeekend(){
     ${wkDetail(r)}`;
   view().querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { S.wk = b.dataset.wk; store.set("y.wk", S.wk); renderWeekend(); window.scrollTo({top: Math.max(0, $("tabs").offsetTop - 4), behavior: "smooth"}); });
   bindTripDetail(r, renderWeekend, "wk=" + r.id);
+  $("msgcopy")?.addEventListener("click", async () => { const t = r.msg.text; try { await navigator.clipboard.writeText(t); toast("Текст скопирован"); } catch(e){ prompt("Текст сообщения", t); } });
   bindCommon();
 }
 function wkDetail(r){
@@ -855,6 +856,9 @@ function wkDetail(r){
   return `<div class="detail wkd" id="rdetail">
     <div class="kf">${kf.map(([h, v]) => `<div><small>${h}</small><b>${esc(v)}</b></div>`).join("")}</div>
     ${(r.prep || []).length ? `<div class="prep"><h3>Перед выездом</h3><ul>${r.prep.map(t => `<li>${t}</li>`).join("")}</ul></div>` : ""}
+    ${r.msg ? `<div class="msg"><h3>${esc(r.msg.title)}</h3><p class="msgtext" id="msgtext">${esc(r.msg.text)}</p>
+      <div class="actions"><button class="btn primary" id="msgcopy">Скопировать текст</button>${r.msg.wa ? `<a class="btn" href="https://wa.me/${r.msg.wa}?text=${enc(r.msg.text)}" target="_blank" rel="noopener">Открыть в WhatsApp</a>` : ""}${r.msg.ig ? `<a class="btn" href="${esc(r.msg.ig)}" target="_blank" rel="noopener">Instagram</a>` : ""}</div>
+      ${r.msg.note ? `<p class="hint">${esc(r.msg.note)}</p>` : ""}</div>` : ""}
     <h2>${esc(r.title)}</h2>${r.why ? `<p class="why">${r.why}</p>` : ""}
     <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · <span class="opt">опция</span> только если захочется и успеваете · <span class="cutoff-i"></span>до скольки надо уехать</p>

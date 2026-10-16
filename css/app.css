@@ -388,3 +388,7 @@ nav.tabs button svg{width:18px;height:18px}
 .sx.eat{border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
 .sx.eat summary{color:var(--ok)}
 .opt{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:1px 7px;margin-right:4px;border:1px dashed var(--accent);color:var(--accent);vertical-align:1px}
+.msg{border:1.5px solid var(--ok);background:color-mix(in srgb,var(--ok) 8%,var(--panel));border-radius:12px;padding:10px 14px;margin:0 0 12px}
+.msg h3{margin:0 0 6px;font-size:15px;font-weight:600}
+.msgtext{margin:0;padding:8px 10px;background:var(--panel);border-radius:8px;font-size:14px;border:1px solid var(--line)}
+.msg .actions{margin:8px 0 0}
