@@ -31,7 +31,7 @@ const S = {
   tab: store.get("y.tab", "now"),
   routeKind: store.get("y.rkind", "ev"),
   route: store.get("y.route", null),
-  trip: store.get("y.trip", null), tripDir: "all", tripLen: "all", tripTag: "all", tripSort: store.get("y.tsort", "home"),
+  trip: store.get("y.trip", null), wk: store.get("y.wk", null), tripDir: "all", tripLen: "all", tripTag: "all", tripSort: store.get("y.tsort", "home"),
   favs: store.get("y.favs", {}),          // k -> "want" | "been"
   events: [], eventsUpdated: null,
   weather: null,
@@ -342,6 +342,7 @@ const ICONS = {
   food: '<path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 2-2.5 5-2.5 8h3V21M16.5 3v8"/>',
   plan: '<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/>',
   routes: '<circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 18h7a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/>',
+  wk: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8.5 14.5l2 2 4-4"/>',
   trips: '<path d="M3 13l2-5a2 2 0 0 1 1.9-1.3h10.2A2 2 0 0 1 19 8l2 5v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h18"/><circle cx="7.5" cy="15.5" r=".8"/><circle cx="16.5" cy="15.5" r=".8"/>',
   afisha: '<path d="M4 8V6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a2 2 0 0 0 0 4v2a2 2 0 0 0 0 4v0a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a2 2 0 0 0 0-4V12a2 2 0 0 0 0-4z"/><path d="M10 5v14" stroke-dasharray="2 2"/>',
   places: '<path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
@@ -351,7 +352,9 @@ const icon = k => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" s
 function goTab(k){ S.tab = k; store.set("y.tab", k); render(); window.scrollTo({top: Math.min(window.scrollY, Math.max(0, $("tabs").offsetTop - 4)), behavior: "smooth"}); }
 function renderTabs(){
   const nav = $("tabs"); nav.innerHTML = "";
-  TABS.forEach(([k, l]) => { const b = document.createElement("button"); b.setAttribute("role","tab"); b.setAttribute("aria-selected", S.tab === k); b.innerHTML = `${icon(k)}<span>${l}</span>`;
+  const tabs = wkActive() ? [["wk", (TRIPS_META.featured.tab || "Выходные")], ...TABS] : TABS;
+  if (S.tab === "wk" && !wkActive() && TRIPS_META.loaded) S.tab = "trips";
+  tabs.forEach(([k, l]) => { const b = document.createElement("button"); b.setAttribute("role","tab"); b.setAttribute("aria-selected", S.tab === k); b.innerHTML = `${icon(k)}<span>${l}</span>`;
     b.onclick = () => goTab(k); nav.appendChild(b); });
 }
 function renderStrip(){
@@ -365,7 +368,7 @@ function renderStrip(){
 function render(){ renderTabs(); renderStrip(); renderView(); }
 function renderView(){
   evLayer.clearLayers();
-  ({now: renderNow, food: renderFood, plan: renderPlan, routes: renderRoutes, trips: renderTrips, afisha: renderAfisha, places: renderPlaces, info: renderInfo}[S.tab] || renderNow)();
+  ({now: renderNow, food: renderFood, plan: renderPlan, routes: renderRoutes, trips: renderTrips, wk: renderWeekend, afisha: renderAfisha, places: renderPlaces, info: renderInfo}[S.tab] || renderNow)();
 }
 const view = () => $("view");
 const thumb = k => { const ph = (PHOTOS[k] || [])[0]; return ph ? `<img class="thumb" src="${ph.src}" alt="" loading="lazy">` : `<span class="thumb"></span>`; };
@@ -750,7 +753,7 @@ const TRIP_DIRS = [["all","Все направления"],["south","Юг"],["no
 const TRIP_LENS = [["all","Любая длина"],["short","до 8 ч"],["mid","8–11 ч"],["long","11 ч и больше"]];
 const TRIP_SORTS = [["home","домой пораньше"],["km","по километрам"],["cost","по бюджету"],["start","по времени выезда"]];
 const tripMeta = r => TRIPS_META.routes[r.id] || {};
-const tripList = () => R.filter(r => r.kind === "day" && !tripMeta(r).hide && (tripMeta(r).dir || !tripStops(r).every(k => inCity(k))));
+const tripList = () => R.filter(r => r.kind === "day" && !tripMeta(r).hide && !tripMeta(r).wk && (tripMeta(r).dir || !tripStops(r).every(k => inCity(k))));
 const tripKm = r => { const m = String(r.km).replace(/\s/g, "").match(/(\d+)/); return m ? +m[1] : 0; };
 const tripSpan = r => { const m = String(r.time).match(/(\d{1,2}:\d{2})\D+(\d{1,2}:\d{2})/); return m ? {start: m[1], end: m[2], min: toMin(m[2]) - toMin(m[1])} : {start: "", end: "", min: 0}; };
 const tripStops = r => r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
@@ -768,7 +771,7 @@ function priceNum(s){
 }
 function tripBudget(r){
   const km = tripKm(r), f = fuelCfg(), meta = tripMeta(r);
-  const fuel = Math.round(km / 100 * f.cons * f.price * f.cars / 100) * 100;
+  const fuel = meta.taxi != null ? meta.taxi : Math.round(km / 100 * f.cons * f.price * f.cars / 100) * 100;
   // цена из шага маршрута важнее цены из карточки места (например, канатка в одну сторону)
   const seen = new Set();
   const tickets = r.stops.filter(s => s.p && P[s.p] && !seen.has(s.p) && seen.add(s.p)).map(s => { const pr = s.price || (INFO[s.p] || {}).price; return {k: s.p, n: P[s.p].n, s: pr, v: priceNum(pr)}; }).filter(t => t.s && t.v !== 0);
@@ -776,7 +779,7 @@ function tripBudget(r){
   const perTickets = tickets.reduce((a, t) => a + (t.v || 0), 0);
   const food = meta.food ?? 5000;
   const total = fuel + f.people * (perTickets + food);
-  return {km, fuel, tickets, unknown, perTickets, food, total, people: f.people, cfg: f};
+  return {km, fuel, tickets, unknown, perTickets, food, total, people: f.people, cfg: f, taxi: meta.taxi != null, taxiNote: meta.taxi_note};
 }
 function tripCard(r){
   const sp = tripSpan(r), b = tripBudget(r), meta = tripMeta(r), cover = routeCover(r), n = tripStops(r).length;
@@ -815,16 +818,35 @@ function renderTrips(){
   $("ttag").onchange = e => { S.tripTag = e.target.value; renderTrips(); };
   $("tsort").onchange = e => { S.tripSort = e.target.value; store.set("y.tsort", S.tripSort); renderTrips(); };
   view().querySelectorAll("[data-trip]").forEach(b => b.onclick = () => { S.trip = b.dataset.trip; store.set("y.trip", S.trip); renderTrips(); $("rdetail")?.scrollIntoView({behavior: "smooth", block: "start"}); });
-  if (r){
-    $("t-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
-    $("t-share")?.addEventListener("click", async () => { const u = `${location.origin}${location.pathname}#trip=${r.id}`; try { await navigator.clipboard.writeText(u); toast("Ссылка на маршрут скопирована"); } catch(e){ prompt("Ссылка на маршрут", u); } });
-    view().querySelectorAll("[data-bset]").forEach(i => i.onchange = () => { const v = +i.value; if (!(v > 0)) return; store.set({cons: "y.tcons", price: "y.tfuel", people: "y.tppl", cars: "y.tcars"}[i.dataset.bset], v); renderTrips(); });
-    const keys = tripStops(r); drawStops(["home", ...keys, "home"], {offset: 0});
-  }
+  if (r) bindTripDetail(r, renderTrips);
+  bindCommon();
+}
+function bindTripDetail(r, rerender, hash){
+  $("t-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
+  $("t-share")?.addEventListener("click", async () => { const u = `${location.origin}${location.pathname}#${hash || "trip=" + r.id}`; try { await navigator.clipboard.writeText(u); toast("Ссылка скопирована"); } catch(e){ prompt("Ссылка", u); } });
+  view().querySelectorAll("[data-bset]").forEach(i => i.onchange = () => { const v = +i.value; if (!(v > 0)) return; store.set({cons: "y.tcons", price: "y.tfuel", people: "y.tppl", cars: "y.tcars"}[i.dataset.bset], v); rerender(); });
+  const keys = tripStops(r); drawStops(r.walk ? keys : ["home", ...keys, "home"], {offset: r.walk ? 1 : 0});
+}
+// ---------- отдельная вкладка под конкретные выходные ----------
+const wkActive = () => { const f = TRIPS_META.featured; return !!(f && f.ids && (!f.until || f.until >= todayStr())); };
+function renderWeekend(){
+  const f = TRIPS_META.featured || {};
+  const rs = (f.ids || []).map(id => R.find(x => x.id === id)).filter(Boolean);
+  if (!rs.length){ view().innerHTML = `<p class="muted">Загружаю маршруты…</p>`; return; }
+  const r = rs.find(x => x.id === S.wk) || rs[0]; S.wk = r.id;
+  const lbl = (f.labels || {})[r.id];
+  view().innerHTML = `<div class="wkhead"><h2>${esc(f.title)}</h2>${f.lead ? `<p>${esc(f.lead)}</p>` : ""}</div>
+    <div class="wkdays" role="tablist">${rs.map(x => { const l = (f.labels || {})[x.id] || {}; return `<button role="tab" data-wk="${x.id}" aria-selected="${x.id === r.id}"><b>${esc(l.day || x.title)}</b><small>${esc(l.sub || x.time)}</small></button>`; }).join("")}</div>
+    ${(f.todo || []).length ? `<details class="wktodo"><summary>Что сделать до выезда</summary><ul>${f.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ul></details>` : ""}
+    ${tripDetail(r).replace('class="detail"', 'class="detail wkd"')}`;
+  view().querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { S.wk = b.dataset.wk; store.set("y.wk", S.wk); renderWeekend(); window.scrollTo({top: Math.max(0, $("tabs").offsetTop - 4), behavior: "smooth"}); });
+  view().querySelectorAll(".series [data-trip]").forEach(b => b.onclick = () => { S.trip = b.dataset.trip; goTab("trips"); });
+  bindTripDetail(r, renderWeekend, "wk=" + r.id);
   bindCommon();
 }
 function tripFeatured(){
-  const f = TRIPS_META.featured; if (!f || (f.until && f.until < todayStr())) return "";
+  const f = TRIPS_META.featured; if (!wkActive()) return "";
+  return `<button class="feat featlink" data-goto="wk"><b>${esc(f.title)}</b><span>Наш план на эти дни вынесен в отдельную вкладку «${esc(f.tab || "Выходные")}» →</span></button>`;
   const rs = (f.ids || []).map(id => R.find(x => x.id === id)).filter(Boolean); if (!rs.length) return "";
   return `<div class="feat"><h3>${esc(f.title)}</h3>${f.lead ? `<p>${esc(f.lead)}</p>` : ""}
     <div class="rgrid">${rs.map(tripCard).join("")}</div>
@@ -841,7 +863,7 @@ function tripDetail(r){
     <div class="actions"><button class="btn primary" id="t-toplan">Открыть в «Плане» на сегодня</button><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     <div class="budget"><h3>Бюджет на ${b.people} ${b.people === 1 ? "человека" : b.people < 5 ? "человек" : "человек"}</h3>
       <table>
-        <tr><td>Бензин${b.cfg.cars > 1 ? ` на ${b.cfg.cars} машины` : " на машину"}<div class="sub">${b.km} км × ${b.cfg.cons} л/100 км × ${b.cfg.price} ֏/л${b.cfg.cars > 1 ? ` × ${b.cfg.cars}` : ""}</div></td><td class="v">${amd(b.fuel)}</td></tr>
+        <tr><td>${b.taxi ? `Такси<div class="sub">${esc(b.taxiNote || "")}</div>` : `Бензин${b.cfg.cars > 1 ? ` на ${b.cfg.cars} машины` : " на машину"}<div class="sub">${b.km} км × ${b.cfg.cons} л/100 км × ${b.cfg.price} ֏/л${b.cfg.cars > 1 ? ` × ${b.cfg.cars}` : ""}</div>`}</td><td class="v">${amd(b.fuel)}</td></tr>
         ${b.tickets.map(t => `<tr><td>${esc(t.n)}<div class="sub">${esc(t.s)}</div></td><td class="v ${t.v == null ? "unk" : ""}">${t.v == null ? "?" : `${amd(t.v)} × ${b.people}`}</td></tr>`).join("")}
         <tr><td>Еда в дороге<div class="sub">обед и кофе, примерно на человека</div></td><td class="v">${amd(b.food)} × ${b.people}</td></tr>
         <tr class="tot"><td>Итого${b.unknown ? ' <span class="sub">без позиций со знаком «?»</span>' : ""}</td><td class="v">≈ ${amd(b.total)}</td></tr>
@@ -1062,6 +1084,8 @@ async function shareLink(kind, obj, title){
   try { await navigator.clipboard.writeText(url); toast("Ссылка скопирована"); } catch(e){ prompt("Скопируйте ссылку", url); }
 }
 function importFromHash(){
+  const w = location.hash.match(/^#wk(?:=([\w-]+))?$/);
+  if (w){ S.tab = "wk"; if (w[1]){ S.wk = w[1]; store.set("y.wk", S.wk); } store.set("y.tab", "wk"); history.replaceState(null, "", location.pathname); return; }
   const t = location.hash.match(/^#trip=([\w-]+)$/);
   if (t){ S.tab = "trips"; S.trip = t[1]; store.set("y.tab", "trips"); store.set("y.trip", S.trip); history.replaceState(null, "", location.pathname); return; }
   const m = location.hash.match(/^#(p|f)=(.+)$/); if (!m) return;
@@ -1111,7 +1135,7 @@ function addPlace(x){
 }
 async function loadRoutes(){
   const files = await Promise.all(["data/routes_city.json", "data/routes_trips.json"].map(loadJson));
-  loadJson("data/trips_meta.json").then(m => { if (m && m.routes){ TRIPS_META = Object.assign({}, TRIPS_META, m); if (S.tab === "trips") renderView(); } });
+  loadJson("data/trips_meta.json").then(m => { if (m && m.routes){ TRIPS_META = Object.assign({}, TRIPS_META, m, {loaded: true}); renderTabs(); if (S.tab === "trips" || S.tab === "wk") renderView(); } });
   files.forEach(f => { if (!f) return; (f.places || []).forEach(addPlace);
     (f.routes || []).forEach(r => { if (r && r.id && r.stops && !R.find(x => x.id === r.id)) R.push(r); }); });
 }
@@ -1130,7 +1154,7 @@ if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.ser
 
 // ---------- boot ----------
 importFromHash();
-window.addEventListener("hashchange", () => { if (/^#trip=/.test(location.hash)){ importFromHash(); render(); } });
+window.addEventListener("hashchange", () => { if (/^#(trip|wk)/.test(location.hash)){ importFromHash(); render(); } });
 initMap();
 $("locBtn").addEventListener("click", () => startGeo(true));
 render();
