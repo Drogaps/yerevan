@@ -722,7 +722,7 @@ function routeItems(r, opts = {}){
   let i = 0;
   return r.stops.map(s => {
     if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4></div></li>`;
-    i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices ? (INFO[s.p] || {}).price : null;
+    i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices ? (s.price || (INFO[s.p] || {}).price) : null;
     const pv = pr ? priceNum(pr) : null;
     const price = pr && pv !== 0 ? `<span class="price" title="${esc(pr)}">${pv ? `≈ ${amd(pv)}` : esc(pr.length > 28 ? pr.slice(0, 26).trim() + "…" : pr)}</span>` : "";
     return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4><button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${price}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}</div></li>`;
@@ -769,7 +769,9 @@ function priceNum(s){
 function tripBudget(r){
   const km = tripKm(r), f = fuelCfg(), meta = tripMeta(r);
   const fuel = Math.round(km / 100 * f.cons * f.price / 100) * 100;
-  const tickets = tripStops(r).map(k => ({k, n: P[k].n, s: (INFO[k] || {}).price, v: priceNum((INFO[k] || {}).price)})).filter(t => t.s && t.v !== 0);
+  // цена из шага маршрута важнее цены из карточки места (например, канатка в одну сторону)
+  const seen = new Set();
+  const tickets = r.stops.filter(s => s.p && P[s.p] && !seen.has(s.p) && seen.add(s.p)).map(s => { const pr = s.price || (INFO[s.p] || {}).price; return {k: s.p, n: P[s.p].n, s: pr, v: priceNum(pr)}; }).filter(t => t.s && t.v !== 0);
   const unknown = tickets.some(t => t.v == null);
   const perTickets = tickets.reduce((a, t) => a + (t.v || 0), 0);
   const food = meta.food ?? 5000;
@@ -845,7 +847,13 @@ function tripDetail(r){
     ${tour ? `<div class="tour"><h3>Сравнение с туром</h3><p><a href="${esc(tour.url)}" target="_blank" rel="noopener">${esc(tour.name)}</a>: ${esc(tour.dur || "")}${tour.extra ? `; ${esc(tour.extra)}` : ""}.</p>
       <div class="vs"><div><small>Тур из Еревана</small><b>${esc(tour.price)}</b><span class="sub">транспорт и гид, без билетов</span></div><div><small>Своей машиной</small><b>≈ ${amd(b.total)} на ${b.people}</b><span class="sub">бензин, билеты и еда</span></div></div>
       ${tour.note ? `<p>${esc(tour.note)}</p>` : ""}</div>` : ""}
-    <ol class="tl">${routeItems(r, {prices: true})}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
+    <ol class="tl">${routeItems(r, {prices: true})}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}
+    ${tripSeries(r)}</div>`;
+}
+function tripSeries(r){
+  const ser = (TRIPS_META.series || []).find(x => (x.ids || []).includes(r.id)); if (!ser) return "";
+  const items = ser.ids.map(id => R.find(x => x.id === id)).filter(Boolean).map(x => `<li class="${x.id === r.id ? "cur" : ""}"><button class="plink" data-trip="${x.id}">${esc(x.title)}</button><span class="muted">${tripSpan(x).start}–${tripSpan(x).end}, ${esc(x.km)}</span></li>`).join("");
+  return `<div class="series"><h3>${esc(ser.title)}</h3>${ser.note ? `<p class="muted">${esc(ser.note)}</p>` : ""}<ol>${items}</ol></div>`;
 }
 function routeYmaps(r){
   const home = P.home.ll.join(","); const pts = tripStops(r).map(k => P[k].ll.join(","));
