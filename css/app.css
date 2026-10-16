@@ -385,3 +385,6 @@ nav.tabs button svg{width:18px;height:18px}
 .tl .acc.sm{font-size:12.5px;padding:3px 7px}
 .tl .sx li{display:block;padding:6px 0 4px;grid-template-columns:none}
 .tl .sx li::before{display:none}
+.sx.eat{border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
+.sx.eat summary{color:var(--ok)}
+.opt{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:1px 7px;margin-right:4px;border:1px dashed var(--accent);color:var(--accent);vertical-align:1px}

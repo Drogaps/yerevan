@@ -732,8 +732,11 @@ function routeItems(r, opts = {}){
   }).join("");
 }
 function stopExtras(s){
-  if (!(s.extra || []).length) return "";
-  return `<details class="sx"><summary>＋ по желанию здесь: ${s.extra.map(x => esc(x.h)).join(", ")}</summary><ul>${s.extra.map(x => `<li><b>${x.p && P[x.p] ? `<button class="plink" data-open="${x.p}">${esc(x.h)}</button>` : esc(x.h)}</b>${x.cost ? ` <span class="muted">${esc(x.cost)}</span>` : ""}<p>${x.t}</p>${x.acc ? `<p class="acc sm"><b>Александру:</b> ${esc(x.acc)}</p>` : ""}</li>`).join("")}</ul></details>`;
+  const xs = s.extra || []; if (!xs.length) return "";
+  const eat = xs.filter(x => x.eat), oth = xs.filter(x => !x.eat);
+  const item = x => `<li><b>${x.p && P[x.p] ? `<button class="plink" data-open="${x.p}">${esc(x.h)}</button>` : x.ll ? `<a href="${gmapsLL(x.ll)}" target="_blank" rel="noopener">${esc(x.h)}</a>` : esc(x.h)}</b>${x.cost ? ` <span class="muted">${esc(x.cost)}</span>` : ""}<p>${x.t}</p>${x.acc ? `<p class="acc sm"><b>Александру:</b> ${esc(x.acc)}</p>` : ""}</li>`;
+  return (oth.length ? `<details class="sx"><summary><span class="opt">опция</span> по желанию, если будет время: ${oth.map(x => esc(x.h)).join(", ")}</summary><ul>${oth.map(item).join("")}</ul></details>` : "")
+    + (eat.length ? `<details class="sx eat"><summary>🍴 поесть здесь: ${eat.map(x => esc(x.h.split(",")[0])).join(", ")}</summary><ul>${eat.map(item).join("")}</ul></details>` : "");
 }
 function routeDetail(r){
   const items = routeItems(r);
@@ -854,7 +857,7 @@ function wkDetail(r){
     ${(r.prep || []).length ? `<div class="prep"><h3>Перед выездом</h3><ul>${r.prep.map(t => `<li>${t}</li>`).join("")}</ul></div>` : ""}
     <h2>${esc(r.title)}</h2>${r.why ? `<p class="why">${r.why}</p>` : ""}
     <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
-    <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · ＋ дополнительно по желанию · <span class="cutoff-i"></span>до скольки надо уехать</p>
+    <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · <span class="opt">опция</span> только если захочется и успеваете · <span class="cutoff-i"></span>до скольки надо уехать</p>
     <ol class="tl">${routeItems(r, {prices: true})}</ol>
     ${tripPrices(r)}${tripEat(r)}${tripFuel(r)}
     ${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
@@ -908,6 +911,7 @@ function tripExtras(r){
 }
 const poiIcon = (txt, cls) => L.divIcon({className: "", html: `<div class="poi ${cls}">${txt}</div>`, iconSize: [22,22], iconAnchor: [11,11]});
 function drawTripPois(r){
+  r.stops.forEach(st => (st.extra || []).filter(x => x.eat && x.ll).forEach(x => routeLayer.addLayer(L.marker(x.ll, {icon: poiIcon("🍴", "eat"), title: x.h}).bindTooltip(x.h, {direction: "top", offset: [0,-10]}))));
   (r.eat || []).filter(e => e.ll).forEach(e => routeLayer.addLayer(L.marker(e.ll, {icon: poiIcon("🍴", "eat"), title: e.n}).bindTooltip(`${e.n}${e.where ? ", " + e.where : ""}`, {direction: "top", offset: [0,-10]})));
   (r.fuel || []).forEach(f => routeLayer.addLayer(L.marker(f.ll, {icon: poiIcon("⛽", "fuel"), title: f.n}).bindTooltip(`${f.n}${f.where ? ", " + f.where : ""}`, {direction: "top", offset: [0,-10]})));
 }
