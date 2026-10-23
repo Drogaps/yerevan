@@ -807,7 +807,7 @@ function renderTrips(){
   const key = {home: r => toMin(tripSpan(r).end), km: tripKm, start: r => toMin(tripSpan(r).start)}[S.tripSort] || (r => 0);
   list = list.slice().sort((a, b) => key(a) - key(b));
   // не затираем выбор из ссылки, пока маршруты из JSON ещё грузятся
-  const r = list.find(x => x.id === S.trip) || list[0];
+  const r = list.find(x => x.id === S.trip) || tripArchived().find(x => x.id === S.trip) || list[0];
   S.tripShown = r && r.id;
   const tags = [...new Set(tripList().flatMap(x => tripMeta(x).tags || []))].sort((a, b) => a.localeCompare(b, "ru"));
   view().innerHTML = `
@@ -820,6 +820,7 @@ function renderTrips(){
       <label>сначала <select id="tsort">${TRIP_SORTS.map(([k, l]) => `<option value="${k}" ${S.tripSort === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
     </div>
     ${list.length ? `<div class="rgrid">${list.map(tripCard).join("")}</div>` : `<p class="muted">Под такие условия маршрутов нет, снимите часть фильтров.</p>`}
+    ${tripArchive()}
     ${r ? tripDetail(r) : ""}`;
   view().querySelectorAll("[data-tdir]").forEach(b => b.onclick = () => { S.tripDir = b.dataset.tdir; renderTrips(); });
   view().querySelectorAll("[data-tlen]").forEach(b => b.onclick = () => { S.tripLen = b.dataset.tlen; renderTrips(); });
@@ -875,6 +876,15 @@ function tripFeatured(){
     <div class="rgrid">${rs.map(tripCard).join("")}</div>
     ${(f.todo || []).length ? `<details><summary>Что сделать до выезда</summary><ul>${f.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ul></details>` : ""}
     ${f.backup ? `<p class="muted" style="font-size:13px">${esc(f.backup)}</p>` : ""}</div>`;
+}
+// прошлые выходные: маршруты остаются доступны, но не мешают общему списку
+const tripArchived = () => (TRIPS_META.archive || []).flatMap(a => a.ids || []).map(id => R.find(x => x.id === id)).filter(Boolean);
+function tripArchive(){
+  const arch = (TRIPS_META.archive || []).map(a => ({a, rs: (a.ids || []).map(id => R.find(x => x.id === id)).filter(Boolean)})).filter(x => x.rs.length);
+  if (!arch.length) return "";
+  const open = tripArchived().some(x => x.id === S.trip);
+  return `<details class="tarch" ${open ? "open" : ""}><summary>Архив прошлых выходных <span class="muted">${arch.length}</span></summary>
+    ${arch.map(({a, rs}) => `<h3>${esc(a.title)}</h3><div class="rgrid">${rs.map(tripCard).join("")}</div>`).join("")}</details>`;
 }
 function tripDetail(r){
   const sp = tripSpan(r), meta = tripMeta(r), n = tripStops(r).length;
@@ -1191,14 +1201,17 @@ $("installBtn").addEventListener("click", async () => { if (!deferredPrompt) ret
 if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("sw.js").catch(() => {});
 
 // ---------- boot ----------
+const bootHash = !!location.hash;
 importFromHash();
+const bootTab = S.tab;
 window.addEventListener("hashchange", () => { if (/^#(trip|wk)/.test(location.hash)){ importFromHash(); render(); } });
 initMap();
 $("locBtn").addEventListener("click", () => startGeo(true));
 render();
 // каждый источник рисуем по готовности: медленная погода или афиша не должны держать маршруты
 const safe = f => f().catch(err => console.warn("load failed", err));
-safe(() => loadExtra().catch(() => {}).then(loadRoutes)).then(() => { drawPlaces(); render(); });
+// пока есть план на ближайшие выходные, приложение открывается на нём, если пользователь ещё никуда не ушёл
+safe(() => loadExtra().catch(() => {}).then(loadRoutes)).then(() => { if (!bootHash && S.tab === bootTab && wkActive()) S.tab = "wk"; drawPlaces(); render(); });
 Promise.allSettled([loadEvents(), loadCinema(), loadWeather()]).then(() => { drawPlaces(); render(); });
 if (store.get("y.geoOn", false)) startGeo(false);
 setInterval(() => { renderStrip(); if (S.tab === "now" && panel.hidden && document.visibilityState === "visible" && !document.activeElement?.matches("input,select")) renderNow(); }, 5*60*1000);

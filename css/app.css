@@ -326,6 +326,9 @@ nav.tabs button svg{width:18px;height:18px}
 .feat{border:1.5px solid var(--accent);border-radius:14px;padding:12px 14px;margin:8px 0 14px;background:var(--accent-soft)}
 .feat h3{margin:0 0 4px;font-family:var(--f-display);font-weight:400;font-size:21px}
 .feat p{margin:0 0 10px;font-size:14px;max-width:70ch}
+.tarch{margin:14px 0;border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.tarch summary{cursor:pointer;font-weight:600}
+.tarch h3{margin:12px 0 6px;font-size:15px}
 .feat details{margin:10px 0 6px;font-size:14px}
 .feat summary{cursor:pointer;font-weight:600}
 .feat ul{margin:6px 0 0;padding-left:20px}
