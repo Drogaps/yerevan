@@ -364,6 +364,7 @@ nav.tabs button svg{width:18px;height:18px}
 .pi{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;background:var(--bg)}
 .poi{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;background:var(--panel);border:1.5px solid var(--water);box-shadow:0 1px 4px rgb(0 0 0 / .25)}
 .poi.fuel{border-color:var(--warn)}
+.poi.charge{border-color:var(--ok)}
 .tl .acc{font-size:13.5px;background:var(--water-soft);border-radius:7px;padding:5px 8px;margin-top:5px}
 .tl .acc b{color:var(--water)}
 .wkprog{list-style:none;margin:4px 0 10px;padding:0;font-size:14px}

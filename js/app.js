@@ -865,7 +865,7 @@ function wkDetail(r){
     <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · <span class="opt">опция</span> только если захочется и успеваете · <span class="cutoff-i"></span>до скольки надо уехать</p>
     <ol class="tl">${routeItems(r, {prices: true})}</ol>
-    ${tripPrices(r)}${tripEat(r)}${tripFuel(r)}
+    ${tripPrices(r)}${tripEat(r)}${tripFuel(r)}${tripCharge(r)}${tripExtras(r)}
     ${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
 }
 function tripFeatured(){
@@ -896,7 +896,7 @@ function tripDetail(r){
     <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     ${tripPrices(r)}
     <ol class="tl">${routeItems(r, {prices: true})}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}
-    ${tripEat(r)}${tripFuel(r)}${tripExtras(r)}
+    ${tripEat(r)}${tripFuel(r)}${tripCharge(r)}${tripExtras(r)}
     ${tripSeries(r)}</div>`;
 }
 // цены: что платно на точках + важные советы по билетам, без итоговых сумм
@@ -920,6 +920,10 @@ function tripFuel(r){
   if (!(r.fuel || []).length) return "";
   return `<div class="pois"><h3>Заправки</h3><ul>${r.fuel.map(f => `<li><span class="pi fuel">⛽</span><div><b><a href="${gmapsLL(f.ll)}" target="_blank" rel="noopener">${esc(f.n)}</a></b> <span class="muted">${esc(f.where || "")}</span>${f.note ? `<p>${esc(f.note)}</p>` : ""}</div></li>`).join("")}</ul></div>`;
 }
+function tripCharge(r){
+  const c = r.charge; if (!c || !(c.list || []).length) return "";
+  return `<div class="pois"><h3>${esc(c.title || "Зарядки для электромобиля")}</h3>${c.note ? `<p class="hint">${c.note}</p>` : ""}<ul>${c.list.map(f => `<li><span class="pi charge">⚡</span><div><b><a href="${gmapsLL(f.ll)}" target="_blank" rel="noopener">${esc(f.n)}</a></b> <span class="muted">${esc(f.where || "")}</span>${f.note ? `<p>${esc(f.note)}</p>` : ""}</div></li>`).join("")}</ul></div>`;
+}
 function tripExtras(r){
   if (!(r.extras || []).length) return "";
   return `<div class="pois extras"><h3>Если захочется ещё</h3><ul>${r.extras.map(x => `<li><span class="pi">＋</span><div><b>${x.p && P[x.p] ? `<button class="plink" data-open="${x.p}">${esc(x.h)}</button>` : esc(x.h)}</b> <span class="muted">${esc(x.cost || "")}</span><p>${x.t}</p></div></li>`).join("")}</ul></div>`;
@@ -929,6 +933,7 @@ function drawTripPois(r){
   r.stops.forEach(st => (st.extra || []).filter(x => x.eat && x.ll).forEach(x => routeLayer.addLayer(L.marker(x.ll, {icon: poiIcon("🍴", "eat"), title: x.h}).bindTooltip(x.h, {direction: "top", offset: [0,-10]}))));
   (r.eat || []).filter(e => e.ll).forEach(e => routeLayer.addLayer(L.marker(e.ll, {icon: poiIcon("🍴", "eat"), title: e.n}).bindTooltip(`${e.n}${e.where ? ", " + e.where : ""}`, {direction: "top", offset: [0,-10]})));
   (r.fuel || []).forEach(f => routeLayer.addLayer(L.marker(f.ll, {icon: poiIcon("⛽", "fuel"), title: f.n}).bindTooltip(`${f.n}${f.where ? ", " + f.where : ""}`, {direction: "top", offset: [0,-10]})));
+  ((r.charge || {}).list || []).forEach(f => routeLayer.addLayer(L.marker(f.ll, {icon: poiIcon("⚡", "charge"), title: f.n}).bindTooltip(`${f.n}${f.where ? ", " + f.where : ""}`, {direction: "top", offset: [0,-10]})));
 }
 function tripSeries(r){
   const ser = (TRIPS_META.series || []).find(x => (x.ids || []).includes(r.id)); if (!ser) return "";
