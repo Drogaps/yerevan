@@ -722,10 +722,13 @@ function todayChip(k){
   if (dn) out.push(dn.note);
   return out.length ? " " + chipsHtml(out) : "";
 }
+// дорога на переезде: good — ровный асфальт, ok — асфальт с ямами, rough — грунт, низкой машине лучше не ехать
+const ROAD_Q = {good: "низкой машине ок", ok: "низкой машине ок, но медленно", rough: "низкой машине не советуем"};
+const roadTag = r => r ? `<p class="road ${r.q}"><b>${ROAD_Q[r.q] || ""}</b> · ${esc(r.t)}</p>` : "";
 function routeItems(r, opts = {}){
   let i = 0;
   return r.stops.map(s => {
-    if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4>${stopExtras(s)}</div></li>`;
+    if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4>${roadTag(s.road)}${stopExtras(s)}</div></li>`;
     i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices ? (s.price || (INFO[s.p] || {}).price) : null;
     const pv = pr ? priceNum(pr) : null;
     const price = pr && pv !== 0 ? `<span class="price" title="${esc(pr)}">${pv ? `≈ ${amd(pv)}` : esc(pr.length > 28 ? pr.slice(0, 26).trim() + "…" : pr)}</span>` : "";
@@ -844,7 +847,7 @@ function renderWeekend(){
   const r = rs.find(x => x.id === S.wk) || rs[0]; S.wk = r.id;
   view().innerHTML = `<div class="wkhead"><h2>${esc(f.title)}</h2>
       ${(f.program || []).length ? `<ul class="wkprog">${f.program.map(x => `<li><b>${esc(x.day)}, ${esc(x.time)}.</b> ${esc(x.what)}</li>`).join("")}</ul>` : ""}</div>
-    <div class="wkdays" role="tablist">${rs.map(x => { const l = (f.labels || {})[x.id] || {}; return `<button role="tab" data-wk="${x.id}" aria-selected="${x.id === r.id}"><b>${esc(l.day || x.title)}</b><small>${esc(l.sub || x.time)}</small></button>`; }).join("")}</div>
+    ${rs.length > 1 ? `<div class="wkdays" role="tablist">${rs.map(x => { const l = (f.labels || {})[x.id] || {}; return `<button role="tab" data-wk="${x.id}" aria-selected="${x.id === r.id}"><b>${esc(l.day || x.title)}</b><small>${esc(l.sub || x.time)}</small></button>`; }).join("")}</div>` : ""}
     ${wkDetail(r)}`;
   view().querySelectorAll("[data-wk]").forEach(b => b.onclick = () => { S.wk = b.dataset.wk; store.set("y.wk", S.wk); renderWeekend(); window.scrollTo({top: Math.max(0, $("tabs").offsetTop - 4), behavior: "smooth"}); });
   bindTripDetail(r, renderWeekend, "wk=" + r.id);
@@ -865,7 +868,7 @@ function wkDetail(r){
     <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
     <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · <span class="opt">опция</span> только если захочется и успеваете · <span class="cutoff-i"></span>до скольки надо уехать</p>
     <ol class="tl">${routeItems(r, {prices: true})}</ol>
-    ${tripPrices(r)}${tripEat(r)}${tripFuel(r)}${tripCharge(r)}${tripExtras(r)}
+    ${tripPrices(r)}${tripSwaps(r)}${tripExtras(r)}${tripEat(r)}${tripFuel(r)}${tripCharge(r)}
     ${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
 }
 function tripFeatured(){
@@ -924,9 +927,11 @@ function tripCharge(r){
   const c = r.charge; if (!c || !(c.list || []).length) return "";
   return `<div class="pois"><h3>${esc(c.title || "Зарядки для электромобиля")}</h3>${c.note ? `<p class="hint">${c.note}</p>` : ""}<ul>${c.list.map(f => `<li><span class="pi charge">⚡</span><div><b><a href="${gmapsLL(f.ll)}" target="_blank" rel="noopener">${esc(f.n)}</a></b> <span class="muted">${esc(f.where || "")}</span>${f.note ? `<p>${esc(f.note)}</p>` : ""}</div></li>`).join("")}</ul></div>`;
 }
-function tripExtras(r){
-  if (!(r.extras || []).length) return "";
-  return `<div class="pois extras"><h3>Если захочется ещё</h3><ul>${r.extras.map(x => `<li><span class="pi">＋</span><div><b>${x.p && P[x.p] ? `<button class="plink" data-open="${x.p}">${esc(x.h)}</button>` : esc(x.h)}</b> <span class="muted">${esc(x.cost || "")}</span><p>${x.t}</p></div></li>`).join("")}</ul></div>`;
+// «если передумаем»: замены на случай дождя, усталости или другого настроения
+const tripSwaps = r => tripExtras(r, "swaps", "Если передумаем", "↺");
+function tripExtras(r, key = "extras", title = "Если захочется ещё", icon = "＋"){
+  if (!(r[key] || []).length) return "";
+  return `<div class="pois extras"><h3>${title}</h3><ul>${r[key].map(x => `<li><span class="pi">${icon}</span><div><b>${x.p && P[x.p] ? `<button class="plink" data-open="${x.p}">${esc(x.h)}</button>` : esc(x.h)}</b> <span class="muted">${esc(x.cost || "")}</span><p>${x.t}</p></div></li>`).join("")}</ul></div>`;
 }
 const poiIcon = (txt, cls) => L.divIcon({className: "", html: `<div class="poi ${cls}">${txt}</div>`, iconSize: [22,22], iconAnchor: [11,11]});
 function drawTripPois(r){
