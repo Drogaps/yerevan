@@ -400,3 +400,23 @@ nav.tabs button svg{width:18px;height:18px}
 .msg h3{margin:0 0 6px;font-size:15px;font-weight:600}
 .msgtext{margin:0;padding:8px 10px;background:var(--panel);border-radius:8px;font-size:14px;border:1px solid var(--line)}
 .msg .actions{margin:8px 0 0}
+
+/* конструктор поездки */
+.tmode{margin-top:2px}
+.bwx{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:8px 12px;margin:8px 0;font-size:14px}
+.bwx p{margin:3px 0}
+.bwx .note{margin:8px 0 4px}
+.bitem{align-items:start}
+.bitem.on{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.bitem .bwhy{margin:4px 0 0;font-size:14px}
+.bitem .tip,.bitem .cutoff{margin:4px 0 0;font-size:13px}
+.bnotes{grid-column:1/-1;margin-top:4px}
+.bnotes p{margin:3px 0;font-size:13px;padding:4px 8px;border-radius:7px}
+.bnotes p.warn{background:var(--warn-soft);color:var(--warn)}
+.bnotes p.bad{background:var(--accent-soft);color:var(--accent)}
+.bnotes p.ok{color:var(--ok)}
+.bchain .ctl{flex-wrap:wrap;justify-content:flex-end}
+.bchain .ctl button:disabled{opacity:.35;cursor:default}
+@media (max-width:520px){.bchain li{grid-template-columns:78px minmax(0,1fr)}.bchain .ctl{grid-column:1/-1;justify-content:flex-start}}
+.bitem .tip{color:var(--muted)}
+.bitem .cutoff{background:var(--warn-soft);border-radius:7px;padding:4px 8px}
