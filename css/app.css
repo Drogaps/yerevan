@@ -420,3 +420,8 @@ nav.tabs button svg{width:18px;height:18px}
 @media (max-width:520px){.bchain li{grid-template-columns:78px minmax(0,1fr)}.bchain .ctl{grid-column:1/-1;justify-content:flex-start}}
 .bitem .tip{color:var(--muted)}
 .bitem .cutoff{background:var(--warn-soft);border-radius:7px;padding:4px 8px}
+.bwx p.bad{background:var(--accent-soft);color:var(--accent);padding:4px 8px;border-radius:7px;font-size:13px}
+.bfit{margin-top:6px}
+.bfit .st{white-space:normal;line-height:1.35}
+.bchain li.bsun{color:var(--warn);font-size:13px;padding:2px 0}
+.bchain li.bsun .nm{font-weight:600}

@@ -838,6 +838,7 @@ function renderTrips(){
 }
 function bindTripDetail(r, rerender, hash){
   $("t-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
+  $("t-build")?.addEventListener("click", () => { if (bFromRoute(r)){ closePlace(); goTab("trips"); } });
   $("t-share")?.addEventListener("click", async () => { const u = `${location.origin}${location.pathname}#${hash || "trip=" + r.id}`; try { await navigator.clipboard.writeText(u); toast("Ссылка скопирована"); } catch(e){ prompt("Ссылка", u); } });
   const keys = tripStops(r).filter(k => k !== r.start); const st = r.start && P[r.start] ? r.start : "home"; drawStops(r.walk ? keys : [st, ...keys, st], {offset: r.walk ? 1 : 0, start: st}); drawTripPois(r);
 }
@@ -869,7 +870,7 @@ function wkDetail(r){
       <div class="actions"><button class="btn primary" id="msgcopy">Скопировать текст</button>${r.msg.wa ? `<a class="btn" href="https://wa.me/${r.msg.wa}?text=${enc(r.msg.text)}" target="_blank" rel="noopener">Открыть в WhatsApp</a>` : ""}${r.msg.ig ? `<a class="btn" href="${esc(r.msg.ig)}" target="_blank" rel="noopener">Instagram</a>` : ""}</div>
       ${r.msg.note ? `<p class="hint">${esc(r.msg.note)}</p>` : ""}</div>` : ""}
     <h2>${esc(r.title)}</h2>${r.why ? `<p class="why">${r.why}</p>` : ""}
-    <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
+    <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button>${bCanImport(r) ? `<button class="btn primary" id="t-build">Поиграть в конструкторе</button>` : ""}</div>
     <p class="legend"><span class="must">обязательно</span> ради этого едем · <span class="skip">можно пропустить</span> если отстаёте · <span class="opt">опция</span> только если захочется и успеваете · <span class="cutoff-i"></span>до скольки надо уехать</p>
     <ol class="tl">${routeItems(r, {prices: true})}</ol>
     ${tripPrices(r)}${tripSwaps(r)}${tripExtras(r)}${tripEat(r)}${tripFuel(r)}${tripCharge(r)}
@@ -900,7 +901,7 @@ function tripDetail(r){
   const tour = meta.tour;
   return `<div class="detail" id="rdetail"><h2>${esc(r.title)}</h2><p class="why">${r.why}</p>
     <div class="kf">${kf.map(([h, v]) => `<div><small>${h}</small><b>${esc(v)}</b></div>`).join("")}</div>
-    <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button></div>
+    <div class="actions"><a class="btn" href="${routeGmaps(r)}" target="_blank" rel="noopener">Google Maps</a><a class="btn" href="${routeYmaps(r)}" target="_blank" rel="noopener">Яндекс Карты</a><button class="btn" id="t-share">Скопировать ссылку</button>${bCanImport(r) ? `<button class="btn" id="t-build">Поиграть в конструкторе</button>` : ""}</div>
     ${tripPrices(r)}
     <ol class="tl">${routeItems(r, {prices: true})}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}
     ${tripEat(r)}${tripFuel(r)}${tripCharge(r)}${tripExtras(r)}
@@ -956,14 +957,15 @@ function routeYmaps(r){
 
 // ---------- «Собрать самому»: конструктор поездки на день ----------
 // Районы и точки лежат в data/builder.json. Погода по точкам района на выбранный день (Open-Meteo, дневные значения и снег на земле).
-let BLD = null, BWX = null, BIDX = {};
+let BLD = null, BWX = null, BIDX = {}, BAREAS = {};
 S.tripMode = store.get("y.tmode", "list");
 const bld = Object.assign({date: null, t: null, areas: [], sel: [], order: null, stay: {}}, store.get("y.bld", {}));
 const saveBld = () => store.set("y.bld", {date: bld.date, t: bld.t, areas: bld.areas, sel: bld.sel, order: bld.order, stay: bld.stay});
 async function loadBuilder(){
   if (BLD) return; const j = await loadJson("data/builder.json"); if (!j) return;
-  BLD = j; BIDX = {};
-  j.areas.forEach(a => a.items.forEach(it => { if (!BIDX[it.p]) BIDX[it.p] = {it, area: a}; }));
+  BLD = j; BIDX = {}; BAREAS = {};
+  // одна точка может быть в нескольких районах (например, «Лчер» и у Гарни, и по дороге с Севана): данные берём из первого
+  j.areas.forEach(a => a.items.forEach(it => { if (!BIDX[it.p]) BIDX[it.p] = {it, area: a}; (BAREAS[it.p] = BAREAS[it.p] || []).push(a.id); }));
 }
 let bwxLoading = null;
 function loadBuilderWx(){
@@ -1003,8 +1005,8 @@ const wxLine = x => x ? `${Math.round(x.tmin)}…${Math.round(x.tmax)}°, ${WMO(
 const wxIcons = x => x ? (x.snowy ? " ❄" : "") + (x.windy ? " 💨" : "") + (x.wet ? " ☂" : "") : "";
 const BKIND = {sight: "монастырь, памятник", view: "вид", walk: "прогулка", food: "еда", fun: "развлечение"};
 function bItemNotes(it, area, ds){
-  const x = dayWx(it.wx || area.wx, ds), out = [], mon = parseYmd(ds).getMonth() + 1;
-  if (it.off && it.off.m.includes(mon)) out.push(["warn", it.off.t]);
+  const x = dayWx(it.wx || area.wx, ds), out = [];
+  if (bOff(it, ds)) out.push(["warn", it.off.t]);
   if (x){
     if (x.snowy && it.snow) out.push([x.heavy || it.p === "t_selim" ? "bad" : "warn", "Снег: " + it.snow]);
     else if (x.icy && it.snow) out.push(["warn", "Гололёд: " + it.snow]);
@@ -1012,6 +1014,12 @@ function bItemNotes(it, area, ds){
     if (x.wet && it.rain) out.push(["warn", "Дождь: " + it.rain]);
   }
   return out;
+}
+// не сезон: месяцы (m) или диапазон дат "MM-DD" (from–to, может переходить через Новый год)
+function bOff(it, ds){
+  const o = it.off; if (!o) return false;
+  if (o.m) return o.m.includes(+ds.slice(5, 7));
+  const md = ds.slice(5); return o.from <= o.to ? md >= o.from && md <= o.to : md >= o.from || md <= o.to;
 }
 // время между точками: замеры из builder.json, недостающие пары — через известные отрезки (Флойд), иначе оценка по прямой с запасом на горы
 let BLEG = null;
@@ -1037,11 +1045,14 @@ function bLegRaw(a, b, t){
 }
 // порядок: перебираем варианты и считаем день по часам: время за рулём + штраф, если обед не в 12:30–14:30 (второй приём пищи — ужин после 17:00),
 // если закатная точка далеко от заката и если точка на улице выпадает на темноту
-function bCost(o, start, t0, ss){
+function bCost(o, start, t0, ss, H = {}){
   let t = t0, cur = start, cost = 0, meals = 0;
   o.forEach(k => {
     const it = (BIDX[k] || {}).it || {}, tr = bLeg(cur, k, t).min; cost += tr; t += tr;
-    const stay = bld.stay[k] ?? it.stay ?? 45;
+    const stay = bld.stay[k] ?? it.stay ?? 45, h = H[k] || {};
+    // ждать открытия — потерянное время, приехать к закрытию или в выходной — плохо
+    if (h.closed) cost += 600;
+    else { if (h.f != null && t < h.f){ cost += h.f - t; t = h.f; } if (h.t != null && t + stay > h.t) cost += 100 + (t + stay - h.t)*2; }
     if (it.kind === "food" && meals++ > 0){ if (t < 17*60) cost += (17*60 - t)*0.6; }
     else if (it.kind === "food"){ if (t < 12*60 + 30) cost += (12*60 + 30 - t)*0.6; if (t > 14*60 + 30) cost += (t - 14*60 - 30)*0.4; }
     else if (t >= ss) cost += 120 + (t - ss);
@@ -1050,10 +1061,11 @@ function bCost(o, start, t0, ss){
   });
   return cost + bLeg(cur, start, t).min;
 }
+function bHours(keys){ const ds = bld.date || todayStr(), dow = dowOf(ds), H = {}; keys.forEach(k => H[k] = hoursFor(k, dow, ds)); return H; }
 function bBestOrder(keys, start){
   const n = keys.length; if (n <= 1) return keys.slice();
-  const t0 = toMin(bld.t || "08:30"), ss = sunsetMin(parseYmd(bld.date || todayStr()), 40.45, 44.95);
-  const cost = o => bCost(o, start, t0, ss);
+  const t0 = toMin(bld.t || "08:30"), ss = sunsetMin(parseYmd(bld.date || todayStr()), 40.45, 44.95), H = bHours(keys);
+  const cost = o => bCost(o, start, t0, ss, H);
   if (n <= 8){
     let best = keys.slice(), bc = cost(best); const a = keys.slice();
     const perm = l => { if (l === n){ const v = cost(a); if (v < bc){ bc = v; best = a.slice(); } return; }
@@ -1071,14 +1083,15 @@ function bBestOrder(keys, start){
       const t = o.slice(); const [x] = t.splice(i, 1); t.splice(j, 0, x); const v = cost(t); if (v < bc){ bc = v; o.splice(0, n, ...t); improved = true; } } }
   return o;
 }
-const bSel = () => bld.sel.filter(k => BIDX[k] && P[k] && bld.areas.includes(BIDX[k].area.id));
+const bInAreas = k => (BAREAS[k] || []).some(a => bld.areas.includes(a));
+const bSel = () => bld.sel.filter(k => BIDX[k] && P[k] && bInAreas(k));
 function bOrder(){
   const sel = bSel();
   if (bld.order && bld.order.length === sel.length && sel.every(k => bld.order.includes(k))) return bld.order.slice();
   return bBestOrder(sel, BLD.start);
 }
-function bSchedule(){
-  const ds = bld.date, dow = dowOf(ds), start = BLD.start, keys = bOrder();
+function bSchedule(keys = bOrder()){
+  const ds = bld.date, dow = dowOf(ds), start = BLD.start;
   const ss = sunsetMin(parseYmd(ds), 40.45, 44.95);
   let t = toMin(bld.t), cur = start, drive = 0, km = 0; const rows = [];
   keys.forEach(k => {
@@ -1095,6 +1108,38 @@ function bSchedule(){
   });
   const back = keys.length ? bLeg(cur, start, t) : {min: 0, d: 0}; drive += back.min; km += back.d*1.3;
   return {rows, back, home: t + back.min, drive, km: Math.round(km/10)*10, ss};
+}
+// «успеваем или нет»: для точки не из плана ищем лучшее место в текущем порядке и смотрим, что станет с днём
+const LATE_HOME = 21*60;
+function bFit(k, sch){
+  const base = sch.rows.map(r => r.k), t0 = toMin(bld.t), H = bHours([...base, k]);
+  let best = null, bc = Infinity;
+  for (let i = 0; i <= base.length; i++){ const o = base.slice(0, i).concat(k, base.slice(i)), c = bCost(o, BLD.start, t0, sch.ss, H); if (c < bc){ bc = c; best = o; } }
+  const s2 = bSchedule(best), row = s2.rows.find(r => r.k === k), prev = new Set(sch.rows.filter(r => r.notes.some(n => n[0] === "bad")).map(r => r.k));
+  const bad = row.notes.find(n => n[0] === "bad" && n[1].length < 40), broke = s2.rows.filter(r => r.k !== k && !prev.has(r.k) && r.notes.some(n => n[1] === "уже стемнеет")).map(r => P[r.k].n);
+  const pos = best.indexOf(k), after = pos > 0 ? P[best[pos - 1]].n : null;
+  return {home: s2.home, delta: s2.home - (base.length ? sch.home : toMin(bld.t)), at: row.start, bad: bad && bad[1], broke, after, late: s2.home > LATE_HOME};
+}
+function bFitChip(f){
+  const d = f.delta > 0 ? `+${durTxt(f.delta)}` : "без потерь";
+  if (f.bad) return `<span class="st bad">не успеть: ${esc(f.bad)}</span>`;
+  if (f.broke.length) return `<span class="st warn">${d}, но ${esc(f.broke[0])} уже в темноте</span>`;
+  return `<span class="st ${f.late ? "warn" : "ok"}">успеваете: ${f.after ? `после «${esc(f.after.replace(/^Ресторан |^Монастырь /, ""))}» ` : ""}в ${fmt(f.at)}, ${d}, дома ${fmt(f.home)}</span>`;
+}
+const bCanImport = r => !!BLD && (r.stops || []).filter(x => x.p && BIDX[x.p]).length >= 2;
+// открыть готовый маршрут в конструкторе: те же точки и порядок, дальше можно добавлять и убирать
+function bFromRoute(r){
+  const keys = [...new Set((r.stops || []).filter(x => x.p && BIDX[x.p] && P[x.p]).map(x => x.p))];
+  if (!keys.length) return false;
+  bld.sel = keys; bld.order = keys.slice(); bld.stay = {};
+  // время на точке берём из маршрута («35 мин», «обед 60 мин»), если оно там указано в минутах
+  (r.stops || []).forEach(x => { const m = x.p && BIDX[x.p] && /^\D{0,6}(\d+)\s*мин/.exec(x.stay || ""); if (m && +m[1] >= 10 && +m[1] !== BIDX[x.p].it.stay) bld.stay[x.p] = +m[1]; });
+  // для каждой точки берём район, где больше всего точек маршрута: Нораванк из Татева не тянет за собой Селим
+  const cnt = {}; keys.forEach(k => BAREAS[k].forEach(a => cnt[a] = (cnt[a] || 0) + 1));
+  bld.areas = [...new Set(keys.map(k => BAREAS[k].slice().sort((x, y) => cnt[y] - cnt[x])[0]))];
+  const t = tripSpan(r).start; if (/^\d\d:\d\d$/.test(t)) bld.t = t;
+  saveBld(); S.tripMode = "build"; store.set("y.tmode", "build");
+  return true;
 }
 function bInit(){
   const days = [...Array(10)].map((_, i) => { const d = new Date(); d.setDate(d.getDate() + i); return ymd(d); });
@@ -1120,7 +1165,7 @@ function renderBuilder(){
   const sch = bSchedule(), sel = new Set(bSel());
   const anySnow = areas.some(a => { const x = dayWx(a.wx, ds); return x && (x.snowy || x.icy); }) || [...sel].some(k => { const x = dayWx(BIDX[k].it.wx || BIDX[k].area.wx, ds); return x && x.snowy; });
   const startN = (P[BLD.start] || {n: "дом"}).n.replace(/^Старт:\s*/, "");
-  const hasFood = sch.rows.some(r => r.it.kind === "food"), long = sch.home - toMin(bld.t) > 6*60;
+  const hasFood = sch.rows.some(r => r.it.kind === "food"), long = sch.home - toMin(bld.t) > 6*60, shown = new Set();
   view().innerHTML = `${tripModeSwitch()}
     <p class="tintro">Выбираете день и районы, отмечаете, что хочется. Время в пути, закат и погода на этот день считаются сами. Порядок точек подбирается по карте, его можно поменять стрелками.</p>
     <div class="pctrl">
@@ -1130,15 +1175,15 @@ function renderBuilder(){
     </div>
     <div class="sect">Куда</div>
     <div class="filt">${BLD.areas.map(a => `<button data-barea="${a.id}" aria-pressed="${bld.areas.includes(a.id)}">${esc(a.short)}${wxIcons(dayWx(a.wx, ds))}</button>`).join("")}</div>
-    ${areas.length ? `<div class="bwx">${areas.map(a => `<p><b>${esc(a.short)}, ${humanDate(ds)}:</b> ${wxLine(dayWx(a.wx, ds))}</p>`).join("")}
+    ${areas.length ? `<div class="bwx">${areas.map(a => { const x = dayWx(a.wx, ds); return `<p><b>${esc(a.short)}, ${humanDate(ds)}:</b> ${wxLine(x)}</p>${a.snow && x && (x.snowy || x.icy) ? `<p class="bad">${esc(a.snow)}</p>` : ""}`; }).join("")}
       ${anySnow ? `<div class="note warn"><b>Снег или гололёд.</b> Ниже у точек отмечено, куда в такой день лучше не ехать. Утром проверьте сводку дорог МЧС <a href="https://rescue.mia.gov.am" target="_blank" rel="noopener">rescue.mia.gov.am</a>. На летней резине в горы не едем.</div>` : ""}
       ${!BWX ? `<p class="muted">Погода загружается…</p>` : ""}</div>` : ""}
     ${sch.rows.length ? `<div class="sect">План</div>
     <div class="summary"><span>выезд <b>${fmt(toMin(bld.t))}</b></span><span>дома ≈ <b>${fmt(sch.home)}</b></span><span>за рулём ≈ ${durTxt(sch.drive)}</span><span>≈ ${sch.km} км</span><span>закат <b>${fmt(sch.ss)}</b></span>
-      ${long && !hasFood ? `<span class="st warn">обед не выбран</span>` : ""}</div>
+      ${long && !hasFood ? `<span class="st warn">обед не выбран</span>` : ""}${sch.home > LATE_HOME ? `<span class="st warn">дома позже 21:00</span>` : ""}</div>
     <ol class="chain bchain">
       <li><span class="tm">${fmt(toMin(bld.t))}</span><span class="nm muted">Выезд: ${esc(startN)}</span><span></span></li>
-      ${sch.rows.map((r, i) => `<li>
+      ${sch.rows.map((r, i) => `${r.start >= sch.ss && (i === 0 || sch.rows[i-1].start < sch.ss) ? `<li class="bsun"><span class="tm">${fmt(sch.ss)}</span><span class="nm">закат, дальше темно</span></li>` : ""}<li>
         <span class="tm">${fmt(r.start)}–${fmt(r.leave)}</span>
         <span class="nm"><button class="plink" data-open="${r.k}">${esc(P[r.k].n)}</button></span>
         <span class="ctl"><button data-bmv="${i}" data-d="-1" aria-label="Раньше" ${i === 0 ? "disabled" : ""}>↑</button><button data-bmv="${i}" data-d="1" aria-label="Позже" ${i === sch.rows.length - 1 ? "disabled" : ""}>↓</button><button data-bstay="${r.k}" data-d="-15" aria-label="Меньше времени">−</button><span>${r.stay} мин</span><button data-bstay="${r.k}" data-d="15" aria-label="Больше времени">+</button><button data-bdel="${r.k}" aria-label="Убрать">×</button></span>
@@ -1156,14 +1201,16 @@ function renderBuilder(){
     </div>
     <p class="hint">Время в пути примерное, по нашим замерам и по прямой. Часы работы и цены проверяйте перед выездом.</p>` : areas.length ? `<p class="muted">Отметьте точки ниже, план соберётся сам.</p>` : `<p class="muted">Выберите хотя бы один район.</p>`}
     ${areas.map(a => `<div class="sect">${esc(a.n)}</div>${a.note ? `<p class="hint">${esc(a.note)}</p>` : ""}
-      <div class="list">${a.items.filter(it => P[it.p]).map(it => { const on = sel.has(it.p), notes = bItemNotes(it, a, ds), bad = notes.some(n => n[0] === "bad");
+      <div class="list">${a.items.filter(it => P[it.p] && !shown.has(it.p) && shown.add(it.p)).map(it => { const on = sel.has(it.p), notes = bItemNotes(it, a, ds), bad = notes.some(n => n[0] === "bad");
+        const row = on && sch.rows.find(r => r.k === it.p), fit = on ? null : bFit(it.p, sch);
         return `<div class="item bitem ${on ? "on" : ""} ${bad && !on ? "dim" : ""}">
           ${thumb(it.p)}
           <div style="min-width:0"><button class="plink nm" data-open="${it.p}">${esc(P[it.p].n)}</button>
             <div class="mt"><span>${it.stay} мин</span><span>${BKIND[it.kind] || ""}</span>${it.rec ? `<span class="st ok">советуем</span>` : ""}${it.sunset ? `<span class="st info">на закат</span>` : ""}${it.road === "rough" ? `<span class="st warn">грунтовка</span>` : ""}</div>
             <p class="bwhy">${esc(it.why)}</p>
             ${it.tip ? `<p class="tip">${esc(it.tip)}</p>` : ""}${it.imp ? `<p class="cutoff">${esc(it.imp)}</p>` : ""}
-            ${notes.length ? `<div class="bnotes">${notes.map(n => `<p class="${n[0]}">${esc(n[1])}</p>`).join("")}</div>` : ""}</div>
+            ${notes.length ? `<div class="bnotes">${notes.map(n => `<p class="${n[0]}">${esc(n[1])}</p>`).join("")}</div>` : ""}
+            <div class="bfit">${row ? `<span class="st info">в плане ${fmt(row.start)}–${fmt(row.leave)}</span>` : bFitChip(fit)}</div></div>
           <div class="acts"><button class="btn sm ${on ? "" : "ghost"}" data-bsel="${it.p}" aria-pressed="${on}">${on ? "Убрать" : "Добавить"}</button></div></div>`; }).join("")}</div>`).join("")}`;
   bindTripMode(renderTrips);
   const rr = () => { saveBld(); renderTrips(); };
