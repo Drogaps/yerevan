@@ -1046,9 +1046,10 @@ function bLegRaw(a, b, t){
 // порядок: перебираем варианты и считаем день по часам: время за рулём + штраф, если обед не в 12:30–14:30 (второй приём пищи — ужин после 17:00),
 // если закатная точка далеко от заката и если точка на улице выпадает на темноту
 function bCost(o, start, t0, ss, H = {}){
-  let t = t0, cur = start, cost = 0, meals = 0;
+  let t = t0, cur = start, cost = 0, meals = 0, prevFood = false;
   o.forEach(k => {
     const it = (BIDX[k] || {}).it || {}, tr = bLeg(cur, k, t).min; cost += tr; t += tr;
+    if (it.kind === "food" && prevFood) cost += 300; prevFood = it.kind === "food";
     const stay = bld.stay[k] ?? it.stay ?? 45, h = H[k] || {};
     // ждать открытия — потерянное время, приехать к закрытию или в выходной — плохо
     if (h.closed) cost += 600;
@@ -1111,17 +1112,29 @@ function bSchedule(keys = bOrder()){
 }
 // «успеваем или нет»: для точки не из плана ищем лучшее место в текущем порядке и смотрим, что станет с днём
 const LATE_HOME = 21*60;
+const bFood = k => ((BIDX[k] || {}).it || {}).kind === "food";
 function bFit(k, sch){
   const base = sch.rows.map(r => r.k), t0 = toMin(bld.t), H = bHours([...base, k]);
-  let best = null, bc = Infinity;
-  for (let i = 0; i <= base.length; i++){ const o = base.slice(0, i).concat(k, base.slice(i)), c = bCost(o, BLD.start, t0, sch.ss, H); if (c < bc){ bc = c; best = o; } }
+  let best = null, bc = Infinity, instead = null;
+  const cands = [];
+  if (bFood(k) && base.filter(bFood).length >= 2){
+    // обед и ужин уже есть: третий ресторан не добавляем, а показываем, что будет, если поставить его вместо одного из них
+    base.forEach((x, i) => { if (bFood(x)) cands.push({o: base.map((y, j) => j === i ? k : y), instead: x}); });
+  } else for (let i = 0; i <= base.length; i++){
+    if (bFood(k) && (bFood(base[i - 1]) || bFood(base[i]))) continue;
+    cands.push({o: base.slice(0, i).concat(k, base.slice(i))});
+  }
+  cands.forEach(c => { const v = bCost(c.o, BLD.start, t0, sch.ss, H); if (v < bc){ bc = v; best = c.o; instead = c.instead || null; } });
+  if (!best) return {none: true};
   const s2 = bSchedule(best), row = s2.rows.find(r => r.k === k), prev = new Set(sch.rows.filter(r => r.notes.some(n => n[0] === "bad")).map(r => r.k));
   const bad = row.notes.find(n => n[0] === "bad" && n[1].length < 40), broke = s2.rows.filter(r => r.k !== k && !prev.has(r.k) && r.notes.some(n => n[1] === "уже стемнеет")).map(r => P[r.k].n);
   const pos = best.indexOf(k), after = pos > 0 ? P[best[pos - 1]].n : null;
-  return {home: s2.home, delta: s2.home - (base.length ? sch.home : toMin(bld.t)), at: row.start, bad: bad && bad[1], broke, after, late: s2.home > LATE_HOME};
+  return {home: s2.home, delta: s2.home - (base.length ? sch.home : toMin(bld.t)), at: row.start, bad: bad && bad[1], broke, after, late: s2.home > LATE_HOME, instead: instead && P[instead].n, insteadK: instead};
 }
 function bFitChip(f){
-  const d = f.delta > 0 ? `+${durTxt(f.delta)}` : "без потерь";
+  if (f.none) return `<span class="st info">некуда поставить: рядом уже еда</span>`;
+  const d = f.delta > 0 ? `+${durTxt(f.delta)}` : f.delta < 0 ? `−${durTxt(-f.delta)}` : "без потерь";
+  if (f.instead) return `<span class="st ${f.bad ? "bad" : "info"}">вместо «${esc(f.instead.replace(/^Ресторан |[«»]/g, ""))}»: в ${fmt(f.at)}, дома ${fmt(f.home)}${f.bad ? ", " + esc(f.bad) : ""}</span>`;
   if (f.bad) return `<span class="st bad">не успеть: ${esc(f.bad)}</span>`;
   if (f.broke.length) return `<span class="st warn">${d}, но ${esc(f.broke[0])} уже в темноте</span>`;
   return `<span class="st ${f.late ? "warn" : "ok"}">успеваете: ${f.after ? `после «${esc(f.after.replace(/^Ресторан |^Монастырь /, ""))}» ` : ""}в ${fmt(f.at)}, ${d}, дома ${fmt(f.home)}</span>`;
@@ -1211,7 +1224,7 @@ function renderBuilder(){
             ${it.tip ? `<p class="tip">${esc(it.tip)}</p>` : ""}${it.imp ? `<p class="cutoff">${esc(it.imp)}</p>` : ""}
             ${notes.length ? `<div class="bnotes">${notes.map(n => `<p class="${n[0]}">${esc(n[1])}</p>`).join("")}</div>` : ""}
             <div class="bfit">${row ? `<span class="st info">в плане ${fmt(row.start)}–${fmt(row.leave)}</span>` : bFitChip(fit)}</div></div>
-          <div class="acts"><button class="btn sm ${on ? "" : "ghost"}" data-bsel="${it.p}" aria-pressed="${on}">${on ? "Убрать" : "Добавить"}</button></div></div>`; }).join("")}</div>`).join("")}`;
+          <div class="acts">${fit && fit.insteadK ? `<button class="btn sm ghost" data-bswap="${it.p}" data-for="${fit.insteadK}">Заменить</button>` : `<button class="btn sm ${on ? "" : "ghost"}" data-bsel="${it.p}" aria-pressed="${on}">${on ? "Убрать" : "Добавить"}</button>`}</div></div>`; }).join("")}</div>`).join("")}`;
   bindTripMode(renderTrips);
   const rr = () => { saveBld(); renderTrips(); };
   $("b-date").onchange = e => { bld.date = e.target.value; rr(); };
@@ -1221,6 +1234,8 @@ function renderBuilder(){
     if (bld.sel.includes(k)){ bld.sel = bld.sel.filter(x => x !== k); if (bld.order) bld.order = bld.order.filter(x => x !== k); }
     else { bld.sel.push(k); if (bld.order) bld.order = null; }
     rr(); });
+  view().querySelectorAll("[data-bswap]").forEach(b => b.onclick = () => { const k = b.dataset.bswap, x = b.dataset.for;
+    bld.sel = bld.sel.map(y => y === x ? k : y); if (bld.order) bld.order = bld.order.map(y => y === x ? k : y); rr(); });
   view().querySelectorAll("[data-bmv]").forEach(b => b.onclick = () => { const o = sch.rows.map(r => r.k), i = +b.dataset.bmv, j = i + +b.dataset.d; if (j < 0 || j >= o.length) return; [o[i], o[j]] = [o[j], o[i]]; bld.order = o; rr(); });
   view().querySelectorAll("[data-bstay]").forEach(b => b.onclick = () => { const k = b.dataset.bstay; const base = bld.stay[k] ?? BIDX[k].it.stay; bld.stay[k] = Math.max(10, base + +b.dataset.d); rr(); });
   view().querySelectorAll("[data-bdel]").forEach(b => b.onclick = () => { const k = b.dataset.bdel; bld.sel = bld.sel.filter(x => x !== k); if (bld.order) bld.order = bld.order.filter(x => x !== k); rr(); });
