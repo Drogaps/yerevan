@@ -63,6 +63,15 @@
      "tip": "Внутрь могут не пустить, смотрят снаружи. 10 минут пешком от парковки монастыря."
     },
     {
+     "p": "e_semo",
+     "stay": 60,
+     "kind": "food",
+     "rec": true,
+     "why": "Рыбный ресторан у воды на трассе Севан – Дилижан, его советовали знакомые: севанский сиг, большие порции, нормальные цены.",
+     "tip": "Закажите сига на мангале. В выходной позвоните заранее: +374 261 60002.",
+     "wind": "Столики у воды, в ветер садитесь внутри."
+    },
+    {
      "p": "e_ashot_erkat",
      "stay": 60,
      "kind": "food",
@@ -506,6 +515,17 @@
   "x_adonts|t_fioletovo": 115,
   "hagh|parz": 25,
   "t_fioletovo|t_jukhtak": 25,
-  "t_fioletovo|sevan": 55
+  "t_fioletovo|sevan": 55,
+  "e_semo|sevan": 8,
+  "e_semo|e_ashot_erkat": 8,
+  "e_semo|dilijan": 30,
+  "e_semo|f_kchuch": 30,
+  "e_semo|t_hayravank": 30,
+  "e_semo|e_lcher": 55,
+  "x_adonts|e_semo": 70,
+  "e_semo|t_fioletovo": 50,
+  "e_semo|parz": 50,
+  "e_semo|hagh": 45,
+  "e_semo|kecharis": 40
  }
 }
