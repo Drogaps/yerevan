@@ -425,3 +425,8 @@ nav.tabs button svg{width:18px;height:18px}
 .bfit .st{white-space:normal;line-height:1.35}
 .bchain li.bsun{color:var(--warn);font-size:13px;padding:2px 0}
 .bchain li.bsun .nm{font-weight:600}
+.tl li.ghost{opacity:.55}
+.tl li.ghost .n{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
+.tl li.ghost:hover{opacity:.85}
+.stars{color:var(--warn);font-size:13px;letter-spacing:1px;margin-left:6px;white-space:nowrap}
+.stars i{font-style:normal;opacity:.25}

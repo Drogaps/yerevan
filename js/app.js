@@ -447,7 +447,7 @@ function dayTrips(ds, tStart){
     const first = r.stops.find(s => s.t && /^\d/.test(s.t));
     const t0 = Math.max(tStart, first ? toMin(first.t) : 9*60);
     const ctx = mkCtx(ds, t0, fmt(ret), "taxi", {});
-    const stops = r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+    const stops = r.stops.filter(s => s.p && P[s.p] && !s.ghost).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
     let cur = "home", t = t0; const issues = [];
     for (const k of stops){
       const tr = travel(cur, k, t, "auto"); const ev = evaluate(k, t + tr.min, ctx);
@@ -471,7 +471,7 @@ function tripItem(x){
 }
 function openRouteInPlan(r, ds, t){
   if (!r) return;
-  const stops = r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+  const stops = r.stops.filter(s => s.p && P[s.p] && !s.ghost).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
   const walkStart = r.kind === "ev" && !r.stops[0].drive;
   plan.start = walkStart ? stops[0] : "home"; plan.chain = walkStart ? stops.slice(1) : stops;
   plan.t = t || (r.stops.find(s => s.t && /^\d/.test(s.t)) || {t: "17:00"}).t; plan.stay = {}; plan.date = ds || todayStr();
@@ -707,7 +707,7 @@ function renderRoutes(){
   view().querySelectorAll("[data-route]").forEach(b => b.onclick = () => { S.route = b.dataset.route; store.set("y.route", S.route); renderRoutes(); $("rdetail")?.scrollIntoView({behavior: "smooth", block: "start"}); });
   $("r-toplan")?.addEventListener("click", () => openRouteInPlan(r, todayStr()));
   bindCommon();
-  if (r){ const keys = r.stops.filter(s => s.p && P[s.p]).map(s => s.p); drawStops(keys, {foot: keys.every(k => inCity(k))}); }
+  if (r){ const keys = r.stops.filter(s => s.p && P[s.p] && !s.ghost).map(s => s.p); drawStops(keys, {foot: keys.every(k => inCity(k))}); }
 }
 function routeCover(r){
   const ks = r.stops.filter(s => s.p).map(s => s.p);
@@ -729,10 +729,11 @@ function routeItems(r, opts = {}){
   let i = 0;
   return r.stops.map(s => {
     if (s.drive) return `<li class="drive"><span class="t">${s.t}</span><span class="n">→</span><div><h4>${s.drive}</h4>${roadTag(s.road)}${stopExtras(s)}</div></li>`;
-    i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices ? (s.price || (INFO[s.p] || {}).price) : null;
+    if (!s.ghost) i++; const p = P[s.p] || {n: "…"}; const pr = opts.prices && !s.ghost ? (s.price || (INFO[s.p] || {}).price) : null;
     const pv = pr ? priceNum(pr) : null;
     const price = pr && pv !== 0 ? `<span class="price" title="${esc(pr)}">${pv ? `≈ ${amd(pv)}` : esc(pr.length > 28 ? pr.slice(0, 26).trim() + "…" : pr)}</span>` : "";
-    return `<li><span class="t">${s.t}</span><span class="n">${i}</span><div><h4>${s.must ? `<span class="must">обязательно</span>` : s.skip ? `<span class="skip">${esc(s.skip)}</span>` : ""}<button class="plink" data-open="${s.p}">${esc(p.n)}</button>${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${price}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}${s.acc ? `<p class="acc"><b>Александру:</b> ${s.acc}</p>` : ""}${s.cutoff ? `<p class="cutoff">${s.cutoff}</p>` : ""}${stopExtras(s)}</div></li>`;
+    const stars = s.stars ? `<span class="stars" title="${esc(s.stars_why || "")}">${"★".repeat(s.stars)}<i>${"★".repeat(3 - s.stars)}</i></span>` : "";
+    return `<li class="${s.ghost ? "ghost" : ""}"><span class="t">${s.ghost ? "≈" : ""}${s.t}</span><span class="n">${s.ghost ? "+" : i}</span><div><h4>${s.ghost ? `<span class="opt">${esc(s.ghost === true ? "опция" : s.ghost)}</span>` : s.must ? `<span class="must">обязательно</span>` : s.skip ? `<span class="skip">${esc(s.skip)}</span>` : ""}<button class="plink" data-open="${s.p}">${esc(p.n)}</button>${stars}${s.stay ? `<span class="stay">${s.stay}</span>` : ""}${price}${todayChip(s.p)}</h4>${s.fact ? `<p class="fact">${s.fact}</p>` : ""}${s.tip ? `<p class="tip">${s.tip}</p>` : ""}${s.acc ? `<p class="acc"><b>Александру:</b> ${s.acc}</p>` : ""}${s.cutoff ? `<p class="cutoff">${s.cutoff}</p>` : ""}${stopExtras(s)}</div></li>`;
   }).join("");
 }
 function stopExtras(s){
@@ -749,7 +750,7 @@ function routeDetail(r){
     <ol class="tl">${items}</ol>${(r.notes || []).map(n => `<div class="note ${n.warn ? "warn" : ""}"><b>${n.h}.</b> ${n.t}</div>`).join("")}</div>`;
 }
 function routeGmaps(r){
-  const pts = r.stops.filter(s => s.p && P[s.p]).map(s => P[s.p].ll.join(",")).filter((p, i, a) => p !== a[i-1]);
+  const pts = r.stops.filter(s => s.p && P[s.p] && !s.ghost).map(s => P[s.p].ll.join(",")).filter((p, i, a) => p !== a[i-1]);
   const walk = r.kind === "ev" && !r.stops.some(s => s.drive);
   if (walk) return `https://www.google.com/maps/dir/?api=1&origin=${pts[0]}&destination=${pts[pts.length-1]}${pts.length > 2 ? `&waypoints=${enc(pts.slice(1,-1).join("|"))}` : ""}&travelmode=walking`;
   const home = (r.start && P[r.start] ? P[r.start] : P.home).ll.join(",");
@@ -767,7 +768,7 @@ const tripMeta = r => TRIPS_META.routes[r.id] || {};
 const tripList = () => R.filter(r => r.kind === "day" && !tripMeta(r).hide && !tripMeta(r).wk && (tripMeta(r).dir || !tripStops(r).every(k => inCity(k))));
 const tripKm = r => { const m = String(r.km).replace(/\s/g, "").match(/(\d+)/); return m ? +m[1] : 0; };
 const tripSpan = r => { const m = String(r.time).match(/(\d{1,2}:\d{2})\D+(\d{1,2}:\d{2})/); return m ? {start: m[1], end: m[2], min: toMin(m[2]) - toMin(m[1])} : {start: "", end: "", min: 0}; };
-const tripStops = r => r.stops.filter(s => s.p && P[s.p]).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
+const tripStops = r => r.stops.filter(s => s.p && P[s.p] && !s.ghost).map(s => s.p).filter((p, i, a) => a.indexOf(p) === i);
 const fuelCfg = () => ({cons: +store.get("y.tcons", TRIPS_META.fuel.consumption) || 8, price: +store.get("y.tfuel", TRIPS_META.fuel.price) || 560, people: Math.max(1, +store.get("y.tppl", TRIPS_META.fuel.people) || 2), cars: Math.max(1, +store.get("y.tcars", 1) || 1)});
 const amd = n => n == null ? "—" : `${Math.round(n).toLocaleString("ru-RU")} ֏`;
 // "1500 драм (иностранцы)…" -> 1500; "бесплатно" -> 0; непонятно -> null
@@ -1139,7 +1140,7 @@ function bFitChip(f){
   if (f.broke.length) return `<span class="st warn">${d}, но ${esc(f.broke[0])} уже в темноте</span>`;
   return `<span class="st ${f.late ? "warn" : "ok"}">успеваете: ${f.after ? `после «${esc(f.after.replace(/^Ресторан |^Монастырь /, ""))}» ` : ""}в ${fmt(f.at)}, ${d}, дома ${fmt(f.home)}</span>`;
 }
-const bCanImport = r => !!BLD && (r.stops || []).filter(x => x.p && BIDX[x.p]).length >= 2;
+const bCanImport = r => !!BLD && (r.stops || []).filter(x => x.p && BIDX[x.p] && !x.ghost).length >= 2;
 // открыть готовый маршрут в конструкторе: те же точки и порядок, дальше можно добавлять и убирать
 function bFromRoute(r){
   const keys = [...new Set((r.stops || []).filter(x => x.p && BIDX[x.p] && P[x.p]).map(x => x.p))];
