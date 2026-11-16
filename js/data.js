@@ -41,7 +41,7 @@ var P = {
   amberd:{n:"Крепость Амберд", ll:[40.3885,44.2263], g:"Amberd Fortress"},
   kari:  {n:"Озеро Кари (3200 м)", ll:[40.4735,44.1837], g:"Kari Lake, Aragats"},
   zvart: {n:"Звартноц", ll:[40.1651,44.3371], g:"Zvartnots Cathedral"},
-  echm:  {n:"Эчмиадзин", ll:[40.1618,44.2911], g:"Etchmiadzin Cathedral"},
+  echm:  {n:"Эчмиадзинский кафедральный собор", ll:[40.1618,44.2911], g:"Etchmiadzin Cathedral"},
   gyumri:{n:"Гюмри, площадь Вардананц", ll:[40.7852,43.8416], g:"Vardanants Square, Gyumri"},
   kajaran:{n:"Каджаран", ll:[39.1510,46.1554], g:"Kajaran, Armenia"},
   kaputan:{n:"Озеро Капутан (Гоги)", ll:[39.0907,46.0591], g:"Kaputan lake Kajaran"},
